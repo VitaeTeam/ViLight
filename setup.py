@@ -53,12 +53,12 @@ if platform.system() in ['Linux', 'FreeBSD', 'DragonFly']:
         share_dir = user_share
     data_files += [
         # Menu icon
-        (os.path.join(share_dir, 'icons/hicolor/128x128/apps/'), ['icons/delight.png']),
-        (os.path.join(share_dir, 'pixmaps/'),                    ['icons/delight.png']),
+        (os.path.join(share_dir, 'icons/hicolor/128x128/apps/'), ['icons/vilight.png']),
+        (os.path.join(share_dir, 'pixmaps/'),                    ['icons/vilight.png']),
         # Menu entry
-        (os.path.join(share_dir, 'applications/'), ['delight.desktop']),
+        (os.path.join(share_dir, 'applications/'), ['vilight.desktop']),
         # App stream (store) metadata
-        (os.path.join(share_dir, 'metainfo/'), ['cc.devault.DeLight.appdata.xml']),
+        (os.path.join(share_dir, 'metainfo/'), ['cc.vitae.ViLight.appdata.xml']),
     ]
 
 class MakeAllBeforeSdist(setuptools.command.sdist.sdist):
@@ -123,7 +123,7 @@ setup(
     cmdclass={
         'sdist': MakeAllBeforeSdist,
     },
-    name="DeLight",
+    name="ViLight",
     version=version.PACKAGE_VERSION,
     install_requires=requirements + ['pyqt5'],
     extras_require={
@@ -174,12 +174,12 @@ setup(
         # On Darwin we don't use that font, so we don't add it to save space.
         **platform_package_data
     },
-    scripts=['delight'],
+    scripts=['vilight'],
     data_files=data_files,
-    description="Lightweight DeVault Wallet",
+    description="Lightweight Vitae Wallet",
     author="Proteus & Jon Spock",
-    author_email="hello@devault.cc",
+    author_email="hello@vitae.cc",
     license="MIT Licence",
-    url="https://devault.cc",
-    long_description="""Lightweight DeVault Wallet"""
+    url="https://vitae.cc",
+    long_description="""Lightweight Vitae Wallet"""
 )

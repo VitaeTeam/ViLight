@@ -6,7 +6,7 @@ PROJECT_ROOT="$(dirname "$(readlink -e "$0")")/../../.."
 CONTRIB="$PROJECT_ROOT/contrib"
 DISTDIR="$PROJECT_ROOT/dist"
 BUILDDIR="$CONTRIB/build-linux/appimage/build/appimage"
-APPDIR="$BUILDDIR/DeLight.AppDir"
+APPDIR="$BUILDDIR/ViLight.AppDir"
 CACHEDIR="$CONTRIB/build-linux/appimage/.cache/appimage"
 PYDIR="$APPDIR"/usr/lib/python3.6
 
@@ -16,7 +16,7 @@ PKG2APPIMAGE_COMMIT="eb8f3acdd9f11ab19b78f5cb15daa772367daf15"
 
 
 VERSION=`git describe --tags --dirty --always`
-APPIMAGE="$DISTDIR/DeLight-$VERSION-x86_64.AppImage"
+APPIMAGE="$DISTDIR/ViLight-$VERSION-x86_64.AppImage"
 
 rm -rf "$BUILDDIR"
 mkdir -p "$APPDIR" "$CACHEDIR" "$DISTDIR"
@@ -124,7 +124,7 @@ info "Preparing electrum-locale"
 )
 
 
-info "Installing DeLight and its dependencies"
+info "Installing ViLight and its dependencies"
 mkdir -p "$CACHEDIR/pip_cache"
 "$python" -m pip install --no-warn-script-location --cache-dir "$CACHEDIR/pip_cache" -r "$CONTRIB/deterministic-build/requirements.txt"
 "$python" -m pip install --no-warn-script-location --cache-dir "$CACHEDIR/pip_cache" -r "$CONTRIB/deterministic-build/requirements-binaries.txt"
@@ -133,8 +133,8 @@ mkdir -p "$CACHEDIR/pip_cache"
 
 
 info "Copying desktop integration"
-cp -fp "$PROJECT_ROOT/delight.desktop" "$APPDIR/delight.desktop"
-cp -fp "$PROJECT_ROOT/icons/delight.png" "$APPDIR/delight.png"
+cp -fp "$PROJECT_ROOT/vilight.desktop" "$APPDIR/vilight.desktop"
+cp -fp "$PROJECT_ROOT/icons/vilight.png" "$APPDIR/vilight.png"
 
 
 # add launcher

@@ -1,4 +1,4 @@
-package cc.devault.delight1
+package cc.vitae.vilight1
 
 import android.app.Dialog
 import android.arch.lifecycle.MutableLiveData

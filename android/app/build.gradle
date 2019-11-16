@@ -18,7 +18,7 @@ android {
     compileSdkVersion 28
 
     defaultConfig {
-        applicationId "cc.devault.delight"
+        applicationId "cc.vitae.vilight"
         minSdkVersion 16
 
         targetSdkVersion 28
@@ -103,7 +103,7 @@ android {
 
     applicationVariants.all { variant ->
         variant.outputs.all {
-            outputFileName = "delight-${variant.versionName}.apk"
+            outputFileName = "vilight-${variant.versionName}.apk"
         }
     }
 }

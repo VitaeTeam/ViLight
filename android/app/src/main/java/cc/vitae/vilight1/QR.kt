@@ -1,4 +1,4 @@
-package cc.devault.delight1
+package cc.vitae.vilight1
 
 import android.support.v4.app.Fragment
 import android.widget.ImageView

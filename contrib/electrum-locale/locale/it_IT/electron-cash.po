@@ -65,7 +65,7 @@ msgid "&Amount"
 msgstr ""
 
 #: gui/qt/cashacctqt.py:577
-msgid "&DeVault ID Name"
+msgid "&Vitae ID Name"
 msgstr ""
 
 #: gui/qt/main_window.py:2417
@@ -225,7 +225,7 @@ msgid "&Refresh GUI"
 msgstr ""
 
 #: gui/qt/main_window.py:674
-msgid "&Register DeVault ID..."
+msgid "&Register Vitae ID..."
 msgstr ""
 
 #: gui/qt/main_window.py:684
@@ -286,7 +286,7 @@ msgid "(Custom)"
 msgstr ""
 
 #: gui/qt/main_window.py:491
-msgid "(Old versions of DeLight before 3.3.6 produced invalid testnet wallets)."
+msgid "(Old versions of ViLight before 3.3.6 produced invalid testnet wallets)."
 msgstr ""
 
 #: plugins/labels/qt.py:86
@@ -331,7 +331,7 @@ msgstr ""
 
 #: gui/qt/main_window.py:5101
 #, python-brace-format
-msgid "1 DeVault IDs registration ({cash_accounts_name})"
+msgid "1 Vitae IDs registration ({cash_accounts_name})"
 msgstr ""
 
 #: gui/qt/util.py:47
@@ -355,11 +355,11 @@ msgid "<b>BIP38 support is disabled because a requisite library is not installed
 msgstr ""
 
 #: gui/qt/contact_list.py:463
-msgid "<br>Add anyone's DeVault ID to your Contacts"
+msgid "<br>Add anyone's Vitae ID to your Contacts"
 msgstr ""
 
 #: gui/qt/main_window.py:4858
-msgid "<p>How it works: <b>DeVault IDs</b> registrations work by issuing an <b>OP_RETURN</b> transaction to yourself, costing fractions of a penny.</p><p>The registrations are permanently written to the blockchain and associate a human-friendly name with your address.</p><p>After the registration transaction receives <i>1 confirmation</i>, you can use your new <b>DeVault ID name</b> as if it were an address and give it out to other people (DeLight or another DeVault ID enabled wallet is required).</p><p><span style=\"font-weight:100;\">You will be offered the opportunity to review the generated transaction before broadcasting it to the blockchain.</span></p>"
+msgid "<p>How it works: <b>Vitae IDs</b> registrations work by issuing an <b>OP_RETURN</b> transaction to yourself, costing fractions of a penny.</p><p>The registrations are permanently written to the blockchain and associate a human-friendly name with your address.</p><p>After the registration transaction receives <i>1 confirmation</i>, you can use your new <b>Vitae ID name</b> as if it were an address and give it out to other people (ViLight or another Vitae ID enabled wallet is required).</p><p><span style=\"font-weight:100;\">You will be offered the opportunity to review the generated transaction before broadcasting it to the blockchain.</span></p>"
 msgstr ""
 
 #: gui/qt/cashacctqt.py:610
@@ -390,8 +390,8 @@ msgid "A copy of your wallet file was created in"
 msgstr "È stata creata una copia del tuo portafogli in"
 
 #: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:1175
-msgid "A deterministic wallet will be created using the provided master private key. This wallet will be able to freely send and receive DeVault."
-msgstr "Un wallet deterministico verrà creato utilizzando la chiave privata principale. Questo wallet sarà liberamente in grado di inviare e ricevere DeVault."
+msgid "A deterministic wallet will be created using the provided master private key. This wallet will be able to freely send and receive Vitae."
+msgstr "Un wallet deterministico verrà creato utilizzando la chiave privata principale. Questo wallet sarà liberamente in grado di inviare e ricevere Vitae."
 
 #: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:1173
 msgid "A deterministic wallet will be created using the provided master public key. This wallet will be watching-only."
@@ -410,11 +410,11 @@ msgid "A network connectivity error occured. Please check your internet connecti
 msgstr ""
 
 #: gui/qt/cashacctqt.py:708
-msgid "A network timeout occurred while looking up this DeVault ID. You may want to check that your internet connection is up and not saturated processing other requests."
+msgid "A network timeout occurred while looking up this Vitae ID. You may want to check that your internet connection is up and not saturated processing other requests."
 msgstr ""
 
 #: gui/qt/__init__.py:589
-msgid "A new version of DeLight is available: {}"
+msgid "A new version of ViLight is available: {}"
 msgstr ""
 
 #: gui/qt/__init__.py:198
@@ -584,11 +584,11 @@ msgid "Advanced"
 msgstr "Progredito"
 
 #: gui/qt/main_window.py:4923
-msgid "After at least <i>1 confirmation</i>, you will be able to use your new <b>DeVault ID</b>, and it will be visible in DeLight in the <b>Addresses</b> tab."
+msgid "After at least <i>1 confirmation</i>, you will be able to use your new <b>Vitae ID</b>, and it will be visible in ViLight in the <b>Addresses</b> tab."
 msgstr ""
 
 #: plugins/keepkey/qt.py:385 plugins/trezor/qt.py:351
-msgid "After disabling passphrases, you can only pair this DeLight wallet if it had an empty passphrase. If its passphrase was not empty, you will need to create a new wallet with the install wizard. You can use this wallet again at any time by re-enabling passphrases and entering its passphrase."
+msgid "After disabling passphrases, you can only pair this ViLight wallet if it had an empty passphrase. If its passphrase was not empty, you will need to create a new wallet with the install wizard. You can use this wallet again at any time by re-enabling passphrases and entering its passphrase."
 msgstr ""
 
 #: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:30
@@ -651,7 +651,7 @@ msgid "Amount to be sent."
 msgstr "Quantità da inviare."
 
 #: gui/qt/main_window.py:2729
-msgid "An DeLight update is available"
+msgid "An ViLight update is available"
 msgstr ""
 
 #: gui/qt/exception_window.py:70
@@ -755,7 +755,7 @@ msgid "Automatic high DPI scaling"
 msgstr ""
 
 #: gui/qt/__init__.py:724 gui/qt/__init__.py:728
-msgid "Automatic high DPI scaling has been enabled for DeLight, which should result in improved graphics quality."
+msgid "Automatic high DPI scaling has been enabled for ViLight, which should result in improved graphics quality."
 msgstr ""
 
 #: gui/qt/main_window.py:4074
@@ -783,11 +783,11 @@ msgid "BIP39 seed"
 msgstr "Seed BIP39"
 
 #: gui/qt/seed_dialog.py:99
-msgid "BIP39 seeds can be imported in DeLight so that users can access funds locked in other wallets."
-msgstr "I seed BIP39 possono essere importati in DeLight così che l'utente può accedere a fondi presenti in altri wallet."
+msgid "BIP39 seeds can be imported in ViLight so that users can access funds locked in other wallets."
+msgstr "I seed BIP39 possono essere importati in ViLight così che l'utente può accedere a fondi presenti in altri wallet."
 
 #: gui/qt/seed_dialog.py:72
-msgid "BIP39 seeds can be imported into DeLight so that users can access funds from other wallets."
+msgid "BIP39 seeds can be imported into ViLight so that users can access funds from other wallets."
 msgstr ""
 
 #: gui/qt/seed_dialog.py:74
@@ -840,7 +840,7 @@ msgid "Banned Servers"
 msgstr ""
 
 #: gui/qt/network_dialog.py:365
-msgid "Banned servers ({}) are servers deemed unreliable and/or untrustworthy, and so they will never be connected-to by DeLight."
+msgid "Banned servers ({}) are servers deemed unreliable and/or untrustworthy, and so they will never be connected-to by ViLight."
 msgstr ""
 
 #: gui/text.py:63
@@ -862,7 +862,7 @@ msgid "Base unit of your wallet."
 msgstr "Unità base del tuo portafogli."
 
 #: gui/qt/main_window.py:712
-msgid "Before reporting a bug, upgrade to the most recent version of DeLight (latest release or git HEAD), and include the version number in your report."
+msgid "Before reporting a bug, upgrade to the most recent version of ViLight (latest release or git HEAD), and include the version number in your report."
 msgstr "Prima di segnalare un bug, aggiorna Electrum Cash alla versione più recente (ultima release o git HEAD) e nel report includi il numero di versione."
 
 #: ios/ElectronCash/electroncash_gui/ios_native/gui.py:2022
@@ -874,12 +874,12 @@ msgid "Bit rate [kbps]: "
 msgstr "Bitrate [kbps]: "
 
 #: gui/qt/main_window.py:1010
-msgid "DeVault address where the payment should be received. Note that each payment request uses a different DeVault address."
-msgstr "Indirizzi DeVault dove il pagamento dovrebbe essere ricevuto. Ricorda che ogni richiesta di pagamento utilizza indirizzi DeVault differenti."
+msgid "Vitae address where the payment should be received. Note that each payment request uses a different Vitae address."
+msgstr "Indirizzi Vitae dove il pagamento dovrebbe essere ricevuto. Ricorda che ogni richiesta di pagamento utilizza indirizzi Vitae differenti."
 
 #: gui/qt/main_window.py:1543
-msgid "DeVault transactions are in general not free. A transaction fee is paid by the sender of the funds."
-msgstr "Le transazioni DeVault generalmente non sono gratuite. Chi invia denaro paga una commissione di transazione."
+msgid "Vitae transactions are in general not free. A transaction fee is paid by the sender of the funds."
+msgstr "Le transazioni Vitae generalmente non sono gratuite. Chi invia denaro paga una commissione di transazione."
 
 #: gui/qt/main_window.py:2204
 msgid "Block explorer link copied to clipboard"
@@ -1044,60 +1044,60 @@ msgid "Cannot start QR scanner, no usable camera resolution found."
 msgstr ""
 
 #: gui/qt/cashacctqt.py:139
-msgid "Cannot verify DeVault ID as the network appears to be offline."
+msgid "Cannot verify Vitae ID as the network appears to be offline."
 msgstr ""
 
 #: gui/qt/main_window.py:1020
-msgid "DeVault ID"
+msgid "Vitae ID"
 msgstr ""
 
 #: gui/qt/cashacctqt.py:875 gui/qt/contact_list.py:201
 #: gui/qt/contact_list.py:234 gui/qt/contact_list.py:383
 #: gui/qt/contact_list.py:384 gui/qt/contact_list.py:385
-msgid "DeVault ID"
+msgid "Vitae ID"
 msgstr ""
 
 #: gui/qt/cashacctqt.py:776
-msgid "DeVault ID Details"
+msgid "Vitae ID Details"
 msgstr ""
 
 #: gui/qt/main_window.py:1064 gui/qt/cashacctqt.py:439 gui/qt/cashacctqt.py:838
-msgid "DeVault ID copied to clipboard"
+msgid "Vitae ID copied to clipboard"
 msgstr ""
 
 #: gui/qt/cashacctqt.py:570
-msgid "DeVault ID e.g. satoshi#123.45"
+msgid "Vitae ID e.g. satoshi#123.45"
 msgstr ""
 
 #: gui/qt/cashacctqt.py:885 gui/qt/address_list.py:463
 #: gui/qt/address_dialog.py:107
-msgid "DeVault ID has been made the default for this address"
+msgid "Vitae ID has been made the default for this address"
 msgstr ""
 
 #: gui/qt/cashacctqt.py:154
 #, python-brace-format
-msgid "DeVault ID not found: {name}"
+msgid "Vitae ID not found: {name}"
 msgstr ""
 
 #: gui/qt/contact_list.py:430
-msgid "DeVault ID pending confirmation and/or verification"
+msgid "Vitae ID pending confirmation and/or verification"
 msgstr ""
 
 #: gui/qt/contact_list.py:265
-msgid "DeVault ID verification failure"
+msgid "Vitae ID verification failure"
 msgstr ""
 
 #: gui/qt/address_list.py:425
-msgid "DeVault ID:"
+msgid "Vitae ID:"
 msgstr ""
 
 #: gui/qt/address_list.py:357
-msgid "DeVault IDs"
+msgid "Vitae IDs"
 msgstr ""
 
 #: gui/qt/main_window.py:4909
 #, python-brace-format
-msgid "DeVault IDs Registration: '{name}' -> {address}"
+msgid "Vitae IDs Registration: '{name}' -> {address}"
 msgstr ""
 
 #: gui/qt/address_list.py:297 gui/qt/utxo_list.py:215
@@ -1642,7 +1642,7 @@ msgstr ""
 
 #: gui/qt/address_list.py:365 gui/qt/utxo_list.py:229
 #: gui/qt/transaction_dialog.py:777
-msgid "Copy DeVault ID"
+msgid "Copy Vitae ID"
 msgstr ""
 
 #: gui/qt/transaction_dialog.py:709
@@ -1712,7 +1712,7 @@ msgid "Copy {}"
 msgstr "Copia {}"
 
 #: gui/qt/udev_installer.py:67
-msgid "Correct udev rules are required in order for a hardware wallet to be accessed by DeLight."
+msgid "Correct udev rules are required in order for a hardware wallet to be accessed by ViLight."
 msgstr ""
 
 #: lib/base_wizard.py:129
@@ -1736,7 +1736,7 @@ msgid "Could not dither or re-render image"
 msgstr ""
 
 #: gui/qt/cashacctqt.py:155
-msgid "Could not find the DeVault ID name specified. It either does not exist or there may have been a network connectivity error. Please double-check it and try again."
+msgid "Could not find the Vitae ID name specified. It either does not exist or there may have been a network connectivity error. Please double-check it and try again."
 msgstr ""
 
 #: plugins/trezor/qt.py:401 plugins/trezor/qt.py:437
@@ -2109,106 +2109,106 @@ msgid "Edit {}"
 msgstr "Modifica {}"
 
 #: lib/plugins.py:763
-msgid "DeLight cannot pair with your {}.\n\n"
+msgid "ViLight cannot pair with your {}.\n\n"
 "Before you request bitcoins to be sent to addresses in this wallet, ensure you can pair with your device, or that you have its seed (and passphrase, if any).  Otherwise all bitcoins you receive will be unspendable."
 msgstr ""
 
 #: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1418
-msgid "DeLight cannot proceed because this device is very low on disk space. Please free up some disk space and try again."
+msgid "ViLight cannot proceed because this device is very low on disk space. Please free up some disk space and try again."
 msgstr ""
 
 #: gui/qt/installwizard.py:513
-msgid "DeLight communicates with remote servers to get information about your transactions and addresses. The servers all fulfil the same purpose only differing in hardware. In most cases you simply want to let DeLight pick one at random.  However if you prefer feel free to select a server manually."
+msgid "ViLight communicates with remote servers to get information about your transactions and addresses. The servers all fulfil the same purpose only differing in hardware. In most cases you simply want to let ViLight pick one at random.  However if you prefer feel free to select a server manually."
 msgstr ""
 
 #: gui/qt/network_dialog.py:421
 #: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:493
-msgid "DeLight connects to several nodes in order to download block headers and find out the longest blockchain."
+msgid "ViLight connects to several nodes in order to download block headers and find out the longest blockchain."
 msgstr ""
 
 #: gui/qt/cashacctqt.py:398
-msgid "DeLight currently only supports DeVault ID types 1 & 2"
+msgid "ViLight currently only supports Vitae ID types 1 & 2"
 msgstr ""
 
 #: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:29
-msgid "DeLight is an SPV wallet for DeVault"
+msgid "ViLight is an SPV wallet for Vitae"
 msgstr ""
 
 #: lib/base_wizard.py:453
-msgid "DeLight is generating your addresses, please wait."
+msgid "ViLight is generating your addresses, please wait."
 msgstr ""
 
 #: gui/qt/installwizard.py:26
-msgid "DeLight is generating your addresses, please wait..."
+msgid "ViLight is generating your addresses, please wait..."
 msgstr ""
 
 #: plugins/shuffle/qt.py:1666
-msgid "DeLight is in offline mode."
+msgid "ViLight is in offline mode."
 msgstr ""
 
 #: gui/qt/__init__.py:333
 #, python-brace-format
-msgid "DeLight on Linux requires PyQt5 5.12+.\n\n"
+msgid "ViLight on Linux requires PyQt5 5.12+.\n\n"
 "You have version {version_string} installed.\n\n"
-"Please upgrade otherwise you may experience font rendering issues with emojis and other unicode characters used by DeLight."
+"Please upgrade otherwise you may experience font rendering issues with emojis and other unicode characters used by ViLight."
 msgstr ""
 
 #: gui/qt/network_dialog.py:432
 #: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:497
-msgid "DeLight sends your wallet addresses to a single server, in order to receive your transaction history."
+msgid "ViLight sends your wallet addresses to a single server, in order to receive your transaction history."
 msgstr ""
 
 #: gui/qt/installwizard.py:178
-msgid "DeLight wallet"
+msgid "ViLight wallet"
 msgstr ""
 
 #: gui/qt/main_window.py:540
-msgid "DeLight was unable to copy your wallet file to the specified location."
+msgid "ViLight was unable to copy your wallet file to the specified location."
 msgstr ""
 
 #: gui/qt/main_window.py:3247 gui/qt/main_window.py:3256
-msgid "DeLight was unable to deserialize the transaction:"
+msgid "ViLight was unable to deserialize the transaction:"
 msgstr ""
 
 #: gui/qt/contact_list.py:147
-msgid "DeLight was unable to export your contacts."
+msgid "ViLight was unable to export your contacts."
 msgstr ""
 
 #: gui/qt/main_window.py:3441
-msgid "DeLight was unable to export your labels."
+msgid "ViLight was unable to export your labels."
 msgstr ""
 
 #: gui/qt/__init__.py:675
-msgid "DeLight was unable to find the secp256k1 library on this system. Elliptic curve cryptography operations will be performed in slow Python-only mode."
+msgid "ViLight was unable to find the secp256k1 library on this system. Elliptic curve cryptography operations will be performed in slow Python-only mode."
 msgstr ""
 
 #: gui/qt/contact_list.py:134
-msgid "DeLight was unable to import your contacts."
+msgid "ViLight was unable to import your contacts."
 msgstr ""
 
 #: gui/qt/main_window.py:3426
-msgid "DeLight was unable to import your labels."
+msgid "ViLight was unable to import your labels."
 msgstr ""
 
 #: gui/qt/main_window.py:3232
-msgid "DeLight was unable to open your transaction file"
+msgid "ViLight was unable to open your transaction file"
 msgstr ""
 
 #: gui/qt/main_window.py:3164
 #: ios/ElectronCash/electroncash_gui/ios_native/gui.py:2229
-msgid "DeLight was unable to parse your transaction"
+msgid "ViLight was unable to parse your transaction"
 msgstr ""
 
 #: gui/qt/main_window.py:3391
-msgid "DeLight was unable to produce a private key-export."
+msgid "ViLight was unable to produce a private key-export."
 msgstr ""
 
 #: gui/qt/main_window.py:3466
-msgid "DeLight was unable to produce a transaction export."
+msgid "ViLight was unable to produce a transaction export."
 msgstr ""
 
 #: gui/qt/main_window.py:704
-msgid "DeLight's focus is speed, with low resource usage and simplifying DeVault. You do not need to perform regular backups, because your wallet can be recovered from a secret phrase that you can memorize or write on paper. Startup times are instant because it operates in conjunction with high-performance servers that handle the most complicated parts of the DeVault system."
+msgid "ViLight's focus is speed, with low resource usage and simplifying Vitae. You do not need to perform regular backups, because your wallet can be recovered from a secret phrase that you can memorize or write on paper. Startup times are instant because it operates in conjunction with high-performance servers that handle the most complicated parts of the Vitae system."
 msgstr ""
 
 #: plugins/email_requests/__init__.py:3
@@ -2270,7 +2270,7 @@ msgid "Enable posting messages with OP_RETURN."
 msgstr ""
 
 #: gui/qt/main_window.py:4107
-msgid "Enable this option if you wish to be notified as soon as a new version of DeLight becomes available"
+msgid "Enable this option if you wish to be notified as soon as a new version of ViLight becomes available"
 msgstr ""
 
 #: gui/qt/main_window.py:4071
@@ -2352,7 +2352,7 @@ msgid "Enter Seed"
 msgstr "Inserisci seed"
 
 #: gui/qt/cashacctqt.py:577
-msgid "Enter a DeVault ID name of the form Name#123.45, and DeLight will search for the contact and present you with its resolved address."
+msgid "Enter a Vitae ID name of the form Name#123.45, and ViLight will search for the contact and present you with its resolved address."
 msgstr ""
 
 #: gui/qt/main_window.py:521
@@ -2364,7 +2364,7 @@ msgid "Enter a label to name your device:"
 msgstr ""
 
 #: lib/base_wizard.py:136
-msgid "Enter a list of DeVault addresses (this will create a watching-only wallet), or a list of private keys."
+msgid "Enter a list of Vitae addresses (this will create a watching-only wallet), or a list of private keys."
 msgstr ""
 
 #: gui/qt/main_window.py:2507
@@ -2372,7 +2372,7 @@ msgid "Enter a list of outputs in the 'Pay to' field."
 msgstr "Inserisci una lista di output nel campo 'Paga a'."
 
 #: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:854
-msgid "Enter a list of private keys to create a regular spending wallet. Alternatively, you can create a 'watching-only' wallet by entering a list of DeVault addresses."
+msgid "Enter a list of private keys to create a regular spending wallet. Alternatively, you can create a 'watching-only' wallet by entering a list of Vitae addresses."
 msgstr ""
 
 #: plugins/keepkey/clientbase.py:46 plugins/trezor/clientbase.py:273
@@ -2532,7 +2532,7 @@ msgid "Error: duplicate master public key"
 msgstr "Errore: doppione di chiave pubblica principale"
 
 #: gui/qt/__init__.py:373
-msgid "Exit DeLight"
+msgid "Exit ViLight"
 msgstr ""
 
 #: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:512
@@ -2552,7 +2552,7 @@ msgid "Expired"
 msgstr "Scaduto"
 
 #: gui/qt/main_window.py:1132
-msgid "Expired requests have to be deleted manually from your list, in order to free the corresponding DeVault addresses."
+msgid "Expired requests have to be deleted manually from your list, in order to free the corresponding Vitae addresses."
 msgstr ""
 
 #: gui/qt/invoice_list.py:36 gui/qt/main_window.py:2647
@@ -2676,7 +2676,7 @@ msgid "Firmware Version"
 msgstr "Versione firmware"
 
 #: plugins/ledger/ledger.py:31
-msgid "Firmware version (or \"DeVault\" app) too old for CashAddr support. "
+msgid "Firmware version (or \"Vitae\" app) too old for CashAddr support. "
 msgstr ""
 
 #: gui/qt/fee_slider.py:34
@@ -2960,12 +2960,12 @@ msgid "Identity"
 msgstr "Identità"
 
 #: gui/qt/network_dialog.py:336
-msgid "If 'Connect only to preferred servers' is enabled, DeLight will only connect to servers marked as 'preferred' servers ({})."
+msgid "If 'Connect only to preferred servers' is enabled, ViLight will only connect to servers marked as 'preferred' servers ({})."
 msgstr ""
 
 #: gui/qt/network_dialog.py:323
 #: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:502
-msgid "If auto-connect is enabled, DeLight will always use a server that is on the longest blockchain."
+msgid "If auto-connect is enabled, ViLight will always use a server that is on the longest blockchain."
 msgstr ""
 
 #: gui/qt/main_window.py:4098
@@ -2977,7 +2977,7 @@ msgid "If enabled, a system notification will be presented when you receive fund
 msgstr ""
 
 #: gui/qt/network_dialog.py:331
-msgid "If enabled, restricts DeLight to connecting to servers only marked as 'preferred'."
+msgid "If enabled, restricts ViLight to connecting to servers only marked as 'preferred'."
 msgstr ""
 
 #: plugins/shuffle/qt.py:1248
@@ -2986,7 +2986,7 @@ msgstr ""
 
 #: gui/qt/network_dialog.py:324
 #: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:503
-msgid "If it is disabled, you have to choose a server you want to use. DeLight will warn you if your server is lagging."
+msgid "If it is disabled, you have to choose a server you want to use. ViLight will warn you if your server is lagging."
 msgstr ""
 
 #: gui/qt/console.py:65
@@ -3035,7 +3035,7 @@ msgid "If you do not know what this is, leave this field empty."
 msgstr "Se non sai che cos'è, lascia questo campo vuoto."
 
 #: gui/qt/main_window.py:4688
-msgid "If you enable it, DeLight will shuffle your coins for greater <b>privacy</b>. However, you will pay fractions of a penny per shuffle in transaction fees."
+msgid "If you enable it, ViLight will shuffle your coins for greater <b>privacy</b>. However, you will pay fractions of a penny per shuffle in transaction fees."
 msgstr ""
 
 #: plugins/keepkey/qt.py:35 plugins/trezor/qt.py:33
@@ -3060,7 +3060,7 @@ msgstr ""
 
 #: lib/base_wizard.py:277
 #: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:686
-msgid "If you want the wallet to use DeVault addresses use m/44'/339'/0'"
+msgid "If you want the wallet to use Vitae addresses use m/44'/339'/0'"
 msgstr ""
 
 #: lib/base_wizard.py:276
@@ -3108,15 +3108,15 @@ msgid "Import Addresses or Private Keys"
 msgstr ""
 
 #: lib/base_wizard.py:135
-msgid "Import DeVault Addresses"
+msgid "Import Vitae Addresses"
 msgstr "Importa indirizzi Bitcoin"
 
 #: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:853
-msgid "Import DeVault Addresses or Private Keys"
+msgid "Import Vitae Addresses or Private Keys"
 msgstr ""
 
 #: lib/base_wizard.py:86
-msgid "Import DeVault addresses or private keys"
+msgid "Import Vitae addresses or private keys"
 msgstr ""
 
 #: gui/qt/main_window.py:600 gui/qt/main_window.py:3632
@@ -3156,7 +3156,7 @@ msgid "Importing these keys will create a fully capable spending wallet."
 msgstr ""
 
 #: gui/qt/seed_dialog.py:103
-msgid "In addition, DeLight does not verify the checksum of BIP39 seeds; make sure you type your seed correctly."
+msgid "In addition, ViLight does not verify the checksum of BIP39 seeds; make sure you type your seed correctly."
 msgstr ""
 
 #: plugins/shuffle/__init__.py:7
@@ -3219,7 +3219,7 @@ msgid "Initialized"
 msgstr "Inizializzato"
 
 #: gui/qt/network_dialog.py:363
-msgid "Initially, the preferred list is the hard-coded list of known-good servers vetted by the DeVault developers."
+msgid "Initially, the preferred list is the hard-coded list of known-good servers vetted by the Vitae developers."
 msgstr ""
 
 #: gui/qt/transaction_dialog.py:424 gui/qt/transaction_dialog.py:697
@@ -3253,7 +3253,7 @@ msgstr "Procedura guidata di installazione"
 
 #: gui/qt/external_plugins_window.py:267
 msgid "Install plugins at your own risk.\n"
-"They have almost complete access to DeLight's internals."
+"They have almost complete access to ViLight's internals."
 msgstr ""
 
 #: gui/qt/udev_installer.py:139
@@ -3297,7 +3297,7 @@ msgstr "Quantità non valida"
 #: gui/qt/main_window.py:3006 gui/qt/main_window.py:3026
 #: ios/ElectronCash/electroncash_gui/ios_native/sign_decrypt_dialog.py:234
 #: ios/ElectronCash/electroncash_gui/ios_native/sign_decrypt_dialog.py:278
-msgid "Invalid DeVault address."
+msgid "Invalid Vitae address."
 msgstr ""
 
 #: gui/text.py:326 gui/stdio.py:169
@@ -3306,15 +3306,15 @@ msgstr "Indirizzo Bitcoin non valido"
 
 #: gui/qt/cashacctqt.py:142
 #, python-brace-format
-msgid "Invalid DeVault ID name specified: {name}"
+msgid "Invalid Vitae ID name specified: {name}"
 msgstr ""
 
 #: gui/qt/cashacctqt.py:717
-msgid "Invalid DeVault ID name, please try again"
+msgid "Invalid Vitae ID name, please try again"
 msgstr ""
 
 #: gui/qt/cashacctqt.py:747
-msgid "Invalid DeVault ID:"
+msgid "Invalid Vitae ID:"
 msgstr ""
 
 #: gui/text.py:336 gui/stdio.py:179
@@ -3341,7 +3341,7 @@ msgstr "Importo non valido"
 
 #: gui/qt/main_window.py:2293
 #: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1196
-msgid "Invalid devault URI:"
+msgid "Invalid vitae URI:"
 msgstr ""
 
 #: plugins/ledger/ledger.py:203
@@ -3393,7 +3393,7 @@ msgid "It sends and receives partially signed transactions from/to your cosigner
 msgstr "Invia e riceve transazioni parzialmente firmate dal/al portafogli dei cofirmatari."
 
 #: gui/qt/external_plugins_window.py:42
-msgid "It was not possible to copy the plugin archive into DeLight's plugin storage location. It was therefore not possible to install it."
+msgid "It was not possible to copy the plugin archive into ViLight's plugin storage location. It was therefore not possible to install it."
 msgstr ""
 
 #: gui/qt/util.py:491
@@ -3534,11 +3534,11 @@ msgid "Lookup"
 msgstr ""
 
 #: gui/qt/main_window.py:673
-msgid "Lookup &DeVault ID..."
+msgid "Lookup &Vitae ID..."
 msgstr ""
 
 #: gui/qt/cashacctqt.py:543
-msgid "Lookup DeVault ID"
+msgid "Lookup Vitae ID"
 msgstr ""
 
 #: gui/qt/main_window.py:3265
@@ -3571,11 +3571,11 @@ msgid "Make sure you install it with python3"
 msgstr ""
 
 #: gui/qt/main_window.py:464
-msgid "Make sure you own the seed phrase or the private keys, before you request DeVault to be sent to this wallet."
+msgid "Make sure you own the seed phrase or the private keys, before you request Vitae to be sent to this wallet."
 msgstr ""
 
 #: gui/qt/cashacctqt.py:884
-msgid "Make this DeVault ID the default for this address"
+msgid "Make this Vitae ID the default for this address"
 msgstr ""
 
 #: ios/ElectronCash/electroncash_gui/ios_native/send.py:738
@@ -3758,7 +3758,7 @@ msgid "Never type it on a website."
 msgstr "Non digitare su un sito web."
 
 #: gui/qt/contact_list.py:462
-msgid "New DeVault ID Contact"
+msgid "New Vitae ID Contact"
 msgstr ""
 
 #: gui/qt/main_window.py:2856 gui/qt/main_window.py:2858
@@ -3811,7 +3811,7 @@ msgid "No"
 msgstr ""
 
 #: gui/qt/cashacctqt.py:253 gui/qt/address_list.py:379
-msgid "No DeVault IDs"
+msgid "No Vitae IDs"
 msgstr ""
 
 #: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:429
@@ -3898,7 +3898,7 @@ msgid "No receiving address"
 msgstr ""
 
 #: gui/qt/cashacctqt.py:704
-msgid "No results found. However, your wallet is busy updating. This can interfere with DeVault ID lookups. You may want to try again when it is done."
+msgid "No results found. However, your wallet is busy updating. This can interfere with Vitae ID lookups. You may want to try again when it is done."
 msgstr ""
 
 #: lib/network.py:1693
@@ -4460,7 +4460,7 @@ msgid "Please report any bugs as issues on github:<br/>"
 msgstr "Segnala i bug su github:<br/>"
 
 #: gui/qt/main_window.py:4355
-msgid "Please restart DeLight to activate the new GUI settings"
+msgid "Please restart ViLight to activate the new GUI settings"
 msgstr ""
 
 #: gui/qt/main_window.py:2008
@@ -4515,7 +4515,7 @@ msgid "Please wait"
 msgstr "Rimani in attesa"
 
 #: gui/qt/update_checker.py:236
-msgid "Please wait while DeLight checks for available updates."
+msgid "Please wait while ViLight checks for available updates."
 msgstr ""
 
 #: gui/qt/installwizard.py:119 gui/text.py:354 gui/stdio.py:203
@@ -4667,7 +4667,7 @@ msgid "Proxy"
 msgstr ""
 
 #: gui/qt/network_dialog.py:410
-msgid "Proxy settings apply to all connections: with DeLight servers, but also with third-party services."
+msgid "Proxy settings apply to all connections: with ViLight servers, but also with third-party services."
 msgstr ""
 
 #: gui/qt/network_dialog.py:385
@@ -4827,15 +4827,15 @@ msgstr ""
 
 #: gui/qt/main_window.py:4837 gui/qt/main_window.py:4867
 #: gui/qt/main_window.py:4933
-msgid "Register A New DeVault ID"
+msgid "Register A New Vitae ID"
 msgstr ""
 
 #: gui/qt/contact_list.py:238
-msgid "Register DeVault ID..."
+msgid "Register Vitae ID..."
 msgstr ""
 
 #: gui/qt/main_window.py:1031
-msgid "Register a new DeVault ID for this address"
+msgid "Register a new Vitae ID for this address"
 msgstr ""
 
 #: gui/qt/address_list.py:380
@@ -5034,7 +5034,7 @@ msgid "Save invoice to file"
 msgstr "Salva fattura in un file"
 
 #: plugins/labels/__init__.py:5
-msgid "Save your wallet labels on a remote server, and synchronize them across multiple devices where you use DeLight."
+msgid "Save your wallet labels on a remote server, and synchronize them across multiple devices where you use ViLight."
 msgstr ""
 
 #: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:630
@@ -5127,7 +5127,7 @@ msgid "Select All"
 msgstr ""
 
 #: gui/qt/cashacctqt.py:503
-msgid "Select DeVault ID"
+msgid "Select Vitae ID"
 msgstr ""
 
 #: gui/qt/external_plugins_window.py:326
@@ -5343,7 +5343,7 @@ msgid "Show All Transactions"
 msgstr ""
 
 #: gui/qt/utxo_list.py:278
-msgid "Show DeVault IDs"
+msgid "Show Vitae IDs"
 msgstr ""
 
 #: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:317
@@ -5364,7 +5364,7 @@ msgid "Show Fiat balance for addresses"
 msgstr "Mostra saldo in moneta a corso forzoso per gli indirizzi"
 
 #: gui/qt/contact_list.py:247
-msgid "Show My DeVault IDs"
+msgid "Show My Vitae IDs"
 msgstr ""
 
 #: gui/qt/transaction_dialog.py:708
@@ -5546,7 +5546,7 @@ msgstr ""
 
 #: gui/qt/exception_window.py:77
 #: ios/ElectronCash/electroncash_gui/ios_native/crashreporter.py:58
-msgid "Something went wrong running DeLight."
+msgid "Something went wrong running ViLight."
 msgstr ""
 
 #: gui/qt/exception_window.py:75
@@ -5739,17 +5739,17 @@ msgid "Text copied to clipboard"
 msgstr "Testo copiato negli appunti"
 
 #: gui/qt/main_window.py:1133
-msgid "The DeVault address never expires and will always be part of this DeLight wallet."
+msgid "The Vitae address never expires and will always be part of this ViLight wallet."
 msgstr ""
 
 #: gui/qt/main_window.py:1019
-msgid "The DeVault ID (if any) associated with this address. It doesn't get saved with the request, but it is shown here for your convenience.\n\n"
-"You may use the DeVault IDs button to register a new DeVault ID for this address."
+msgid "The Vitae ID (if any) associated with this address. It doesn't get saved with the request, but it is shown here for your convenience.\n\n"
+"You may use the Vitae IDs button to register a new Vitae ID for this address."
 msgstr ""
 
 #: gui/qt/cashacctqt.py:168 gui/qt/cashacctqt.py:772
 #, python-brace-format
-msgid "The DeVault ID {name} uses an account type that is not supported by DeLight."
+msgid "The Vitae ID {name} uses an account type that is not supported by ViLight."
 msgstr ""
 
 #: plugins/digitalbitbox/digitalbitbox.py:212
@@ -5757,7 +5757,7 @@ msgid "The Digital Bitbox is already seeded. Choose an option:"
 msgstr ""
 
 #: gui/qt/external_plugins_window.py:119
-msgid "The DeLight Developers do NOT audit or vet any plugins."
+msgid "The ViLight Developers do NOT audit or vet any plugins."
 msgstr ""
 
 #: plugins/keepkey/clientbase.py:54 plugins/trezor/clientbase.py:283
@@ -5781,7 +5781,7 @@ msgid "The QR code does not appear to be a valid DVT address.\n"
 msgstr ""
 
 #: gui/qt/main_window.py:4920
-msgid "The Send Tab has been filled-in with your <b>DeVault IDs</b> registration data."
+msgid "The Send Tab has been filled-in with your <b>Vitae IDs</b> registration data."
 msgstr ""
 
 #: gui/qt/bip38_importer.py:136
@@ -5848,7 +5848,7 @@ msgstr ""
 
 #: gui/qt/installwizard.py:260
 #, python-format
-msgid "The format of your wallet '%s' must be upgraded for DeLight. This change will not be backward compatible"
+msgid "The format of your wallet '%s' must be upgraded for ViLight. This change will not be backward compatible"
 msgstr ""
 
 #: ios/ElectronCash/electroncash_gui/ios_native/sign_decrypt_dialog.py:343
@@ -5861,7 +5861,7 @@ msgstr ""
 
 #: gui/qt/main_window.py:2997
 #: ios/ElectronCash/electroncash_gui/ios_native/sign_decrypt_dialog.py:241
-msgid "The operation is undefined. Not just in DeLight, but in general."
+msgid "The operation is undefined. Not just in ViLight, but in general."
 msgstr ""
 
 #: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1675
@@ -5885,11 +5885,11 @@ msgid "The plugin archive you selected is missing a manifest. It was therefore n
 msgstr ""
 
 #: gui/qt/external_plugins_window.py:43
-msgid "The plugin is installed, but in the process of enabling and loading it, an error occurred. Restart DeLight and try again, or uninstall it and report it to it's developers."
+msgid "The plugin is installed, but in the process of enabling and loading it, an error occurred. Restart ViLight and try again, or uninstall it and report it to it's developers."
 msgstr ""
 
 #: gui/qt/external_plugins_window.py:44
-msgid "The plugin is targeted at a later version of DeLight."
+msgid "The plugin is targeted at a later version of ViLight."
 msgstr ""
 
 #: gui/qt/external_plugins_window.py:46
@@ -5905,7 +5905,7 @@ msgid "The plugin manifest lacks a valid display name."
 msgstr ""
 
 #: gui/qt/external_plugins_window.py:50
-msgid "The plugin manifest lacks a valid minimum DeLight version."
+msgid "The plugin manifest lacks a valid minimum ViLight version."
 msgstr ""
 
 #: gui/qt/external_plugins_window.py:51
@@ -5946,7 +5946,7 @@ msgid "The signature for the provided message has been pasted into the signature
 msgstr ""
 
 #: gui/qt/cashacctqt.py:700
-msgid "The specified DeVault ID does not appear to be associated with any address"
+msgid "The specified Vitae ID does not appear to be associated with any address"
 msgstr ""
 
 #: lib/wallet.py:137
@@ -5954,7 +5954,7 @@ msgid "The specified WIF key '{}' is a p2sh WIF key. These key types cannot be s
 msgstr ""
 
 #: gui/qt/main_window.py:4881
-msgid "The specified name cannot be used for a DeVault IDs registration. You must specify 1-99 alphanumeric (ASCII) characters, without spaces (underscores are permitted as well)."
+msgid "The specified name cannot be used for a Vitae IDs registration. You must specify 1-99 alphanumeric (ASCII) characters, without spaces (underscores are permitted as well)."
 msgstr ""
 
 #: ios/ElectronCash/electroncash_gui/ios_native/sign_decrypt_dialog.py:339
@@ -6125,7 +6125,7 @@ msgstr "Questo potrebbe risultare in una transazione con commissioni più elevat
 
 #: gui/qt/main_window.py:463
 #: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1050
-msgid "This means you will not be able to spend DeVault with it."
+msgid "This means you will not be able to spend Vitae with it."
 msgstr ""
 
 #: gui/qt/main_window.py:1250
@@ -6157,7 +6157,7 @@ msgid "This server is still indexing transactions. You should switch to another 
 msgstr ""
 
 #: plugins/shuffle/qt.py:1204
-msgid "This spending mode is the same as previous versions of DeLight, which did not offer CashShuffle."
+msgid "This spending mode is the same as previous versions of ViLight, which did not offer CashShuffle."
 msgstr ""
 
 #: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1705
@@ -6171,7 +6171,7 @@ msgstr ""
 
 #: gui/qt/main_window.py:2430
 #: ios/ElectronCash/electroncash_gui/ios_native/addrconv.py:47
-msgid "This tool helps convert between address formats for DeVault addresses.\n"
+msgid "This tool helps convert between address formats for Vitae addresses.\n"
 "You are encouraged to use the 'Cash address' format."
 msgstr ""
 
@@ -6192,7 +6192,7 @@ msgid "This type of script is not supported with {}."
 msgstr ""
 
 #: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:801
-msgid "This version of DeLight currently only supports sending to 1 address at a time! Sorry!"
+msgid "This version of ViLight currently only supports sending to 1 address at a time! Sorry!"
 msgstr ""
 
 #: gui/qt/main_window.py:2945
@@ -6716,7 +6716,7 @@ msgstr ""
 
 #: gui/qt/contact_list.py:423
 #, python-brace-format
-msgid "Validated DeVault ID: <b><pre>{emoji} {account_string}</pre></b>"
+msgid "Validated Vitae ID: <b><pre>{emoji} {account_string}</pre></b>"
 msgstr ""
 
 #: gui/qt/main_window.py:3070
@@ -6733,18 +6733,18 @@ msgstr "Controlla l'indirizzo sottostante.<br>Digita il carattere della scheda d
 
 #: gui/qt/contact_list.py:270
 #, python-brace-format
-msgid "Verify {count} DeVault ID"
-msgid_plural "Verify {count} DeVault IDs"
+msgid "Verify {count} Vitae ID"
+msgid_plural "Verify {count} Vitae IDs"
 msgstr[0] ""
 msgstr[1] ""
 
 #: gui/qt/cashacctqt.py:56
-msgid "Verifying DeVault ID"
+msgid "Verifying Vitae ID"
 msgstr ""
 
 #: gui/qt/cashacctqt.py:148 gui/qt/cashacctqt.py:691
 #, python-brace-format
-msgid "Verifying DeVault ID {name} please wait ..."
+msgid "Verifying Vitae ID {name} please wait ..."
 msgstr ""
 
 #: gui/qt/cashacctqt.py:106
@@ -6919,7 +6919,7 @@ msgstr "Attenzione: il prossimo indirizzo non verrà recuperato automaticamente 
 "Vuoi crearlo comunque?"
 
 #: gui/qt/contact_list.py:432
-msgid "Warning: This DeVault ID is not verified"
+msgid "Warning: This Vitae ID is not verified"
 msgstr ""
 
 #: plugins/virtualkeyboard/__init__.py:4
@@ -6927,7 +6927,7 @@ msgid "Warning: do not use this if it makes you pick a weaker password."
 msgstr "Attenzione: non usare se porta a scegliere una password debole."
 
 #: gui/qt/seed_dialog.py:102
-msgid "We do not guarantee that BIP39 imports will always be supported in DeLight."
+msgid "We do not guarantee that BIP39 imports will always be supported in ViLight."
 msgstr ""
 
 #: lib/base_wizard.py:249
@@ -7009,7 +7009,7 @@ msgid "You appear to have entered more than one item. Each wallet can only have 
 msgstr ""
 
 #: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:942
-msgid "You appear to have entered no valid DeVault addresses or private keys."
+msgid "You appear to have entered no valid Vitae addresses or private keys."
 msgstr ""
 
 #: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:615
@@ -7018,7 +7018,7 @@ msgid "You are about to delete the wallet '{}'. Unless you have other copies of 
 msgstr ""
 
 #: gui/qt/update_checker.py:227
-msgid "You are already on the latest version of DeLight."
+msgid "You are already on the latest version of ViLight."
 msgstr ""
 
 #: gui/qt/network_dialog.py:535
@@ -7036,7 +7036,7 @@ msgstr ""
 
 #: gui/qt/main_window.py:4868
 #, python-brace-format
-msgid "You are registering a new <a href='ca'>DeVault ID</a> for your address <a href='addr'><b><pre>{address}</pre></b></a>"
+msgid "You are registering a new <a href='ca'>Vitae ID</a> for your address <a href='addr'><b><pre>{address}</pre></b></a>"
 msgstr ""
 
 #: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1746
@@ -7048,7 +7048,7 @@ msgid "You are requesting the deletion of the currently active wallet. In order 
 msgstr ""
 
 #: gui/qt/__init__.py:641 plugins/labels/qt.py:91
-msgid "You are using DeLight in offline mode; restart DeLight if you want to get connected"
+msgid "You are using ViLight in offline mode; restart ViLight if you want to get connected"
 msgstr ""
 
 #: gui/qt/main_window.py:1319
@@ -7076,7 +7076,7 @@ msgid "You can have as many wallets as you like! Choose from one of the options 
 msgstr ""
 
 #: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:403
-msgid "You can restore a wallet that was created by any version of DeLight."
+msgid "You can restore a wallet that was created by any version of ViLight."
 msgstr ""
 
 #: plugins/trezor/qt.py:578
@@ -7100,7 +7100,7 @@ msgid "You have selected non-SSL mode for your server settings."
 msgstr ""
 
 #: gui/qt/main_window.py:1453
-msgid "You may enter:<ul><li> DeVault <b>Address</b> <b>★</b><li> Bitcoin Legacy <b>Address</b> <b>★</b><li> <b>DeVault ID</b> <b>★</b> e.g. <i>satoshi#123</i><li> <b>Contact name</b> <b>★</b> from the Contacts tab<li> <b>CoinText</b> e.g. <i>cointext:+1234567</i><li> <b>OpenAlias</b> e.g. <i>satoshi@domain.com</i></ul><br>&nbsp;&nbsp;&nbsp;<b>★</b> = Supports <b>pay-to-many</b>, where you may optionally enter multiple lines of the form:</span><br><pre>    recipient1, amount1 \n"
+msgid "You may enter:<ul><li> Vitae <b>Address</b> <b>★</b><li> Bitcoin Legacy <b>Address</b> <b>★</b><li> <b>Vitae ID</b> <b>★</b> e.g. <i>satoshi#123</i><li> <b>Contact name</b> <b>★</b> from the Contacts tab<li> <b>CoinText</b> e.g. <i>cointext:+1234567</i><li> <b>OpenAlias</b> e.g. <i>satoshi@domain.com</i></ul><br>&nbsp;&nbsp;&nbsp;<b>★</b> = Supports <b>pay-to-many</b>, where you may optionally enter multiple lines of the form:</span><br><pre>    recipient1, amount1 \n"
 "    recipient2, amount2 \n"
 "    etc...</pre>"
 msgstr ""
@@ -7119,7 +7119,7 @@ msgid "You may optionally append an OP_RETURN message to the payment URI and/or 
 msgstr ""
 
 #: ios/ElectronCash/electroncash_gui/ios_native/receive.py:501
-msgid "You may share this payment request as a 'devault:' style URI, or as a QR Code Image."
+msgid "You may share this payment request as a 'vitae:' style URI, or as a QR Code Image."
 msgstr ""
 
 #: plugins/shuffle/qt.py:1247 plugins/shuffle/qt.py:1250
@@ -7135,7 +7135,7 @@ msgid "You may try the \"Hardware Wallet Support\" tool (below)."
 msgstr ""
 
 #: plugins/keepkey/qt.py:27 plugins/trezor/qt.py:25
-msgid "You need to create a separate DeLight wallet for each passphrase you use as they each generate different addresses. Changing your passphrase does not lose other wallets, each is still accessible behind its own passphrase."
+msgid "You need to create a separate ViLight wallet for each passphrase you use as they each generate different addresses. Changing your passphrase does not lose other wallets, each is still accessible behind its own passphrase."
 msgstr ""
 
 #: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:454
@@ -7182,7 +7182,7 @@ msgid "Your contact list is empty."
 msgstr ""
 
 #: plugins/keepkey/qt.py:392 plugins/trezor/qt.py:358
-msgid "Your current DeLight wallet can only be used with an empty passphrase. You must create a separate wallet with the install wizard for other passphrases as each one generates a new set of addresses."
+msgid "Your current ViLight wallet can only be used with an empty passphrase. You must create a separate wallet with the install wizard for other passphrases as each one generates a new set of addresses."
 msgstr ""
 
 #: plugins/keepkey/keepkey.py:337
@@ -7215,11 +7215,11 @@ msgid "Your new imported wallet has been successfully created. Would you like to
 msgstr ""
 
 #: gui/qt/contact_list.py:297
-msgid "Your own DeVault IDs are now hidden"
+msgid "Your own Vitae IDs are now hidden"
 msgstr ""
 
 #: gui/qt/contact_list.py:295
-msgid "Your own DeVault IDs are now shown"
+msgid "Your own Vitae IDs are now shown"
 msgstr ""
 
 #: gui/qt/seed_dialog.py:158
@@ -7499,13 +7499,13 @@ msgstr[1] ""
 
 #: gui/qt/main_window.py:5098
 #, python-brace-format
-msgid "{number_of_cashaccounts} DeVault IDs registrations"
+msgid "{number_of_cashaccounts} Vitae IDs registrations"
 msgstr ""
 
 #: gui/qt/cashacctqt.py:261 gui/qt/cashacctqt.py:714
 #, python-brace-format
-msgid "{number} DeVault ID"
-msgid_plural "{number} DeVault IDs"
+msgid "{number} Vitae ID"
+msgid_plural "{number} Vitae IDs"
 msgstr[0] ""
 msgstr[1] ""
 
@@ -7584,7 +7584,7 @@ msgid "{} new transactions: {}"
 msgstr ""
 
 #: plugins/ledger/ledger.py:213
-msgid "{} not in DeVault mode"
+msgid "{} not in Vitae mode"
 msgstr ""
 
 #: ios/ElectronCash/electroncash_gui/ios_native/utils.py:369

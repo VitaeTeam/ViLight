@@ -5,10 +5,10 @@
 
     <data>
         <import type="android.view.View"/>
-        <import type="cc.devault.delight1.UtilKt"/>
+        <import type="cc.vitae.vilight1.UtilKt"/>
         <variable
             name="model"
-            type="cc.devault.delight1.AddressModel"/>
+            type="cc.vitae.vilight1.AddressModel"/>
     </data>
 
     <android.support.constraint.ConstraintLayout

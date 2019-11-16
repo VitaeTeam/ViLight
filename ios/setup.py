@@ -36,7 +36,7 @@ with io.open('README.rst', encoding='utf8') as readme:
 setup(
     name=compact_name, # comes from common.sh
     version=version,
-    description='A DeVault SPV Wallet',
+    description='A Vitae SPV Wallet',
     long_description=long_description,
     author='Proteus, Jon Spock, Calin Culianu',
     author_email='jonspock@protonmail.com',

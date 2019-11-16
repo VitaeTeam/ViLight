@@ -1,47 +1,47 @@
-DeLight - Lightweight DeVault client (an Electron-Cash fork)
+ViLight - Lightweight Vitae client (an Electron-Cash fork)
 =====================================
 
 ::
 
   Licence: MIT Licence
-  Author: The DeVault Developers
+  Author: The Vitae Developers
   Language: Python
-  Homepage: https://devault.cc/
+  Homepage: https://vitae.cc/
 
 
 Getting started
 ===============
 
-*Note: If running from source, Python 3.6 or above is required to run DeLight. If your system lacks Python 3.6, 
-you have other options, such as the* `binary releases <https://github.com/devaultcrypto/DeLight/releases/>`_.
+*Note: If running from source, Python 3.6 or above is required to run ViLight. If your system lacks Python 3.6, 
+you have other options, such as the* `binary releases <https://github.com/vitaecrypto/ViLight/releases/>`_.
 
-DeLight is a pure python application forked from Electrum. If you want to use the Qt interface, install the Qt dependencies::
+ViLight is a pure python application forked from Electrum. If you want to use the Qt interface, install the Qt dependencies::
 
     sudo apt-get install python3-pyqt5 python3-pyqt5.qtsvg
 
 If you downloaded the official package (tar.gz), you can run
-DeLight from its root directory (called Electrum), without installing it on your
+ViLight from its root directory (called Electrum), without installing it on your
 system; all the python dependencies are included in the 'packages'
-directory. To run DeLight from its root directory, just do::
+directory. To run ViLight from its root directory, just do::
 
-    ./delight
+    ./vilight
 
-You can also install DeLight on your system, by running this command::
+You can also install ViLight on your system, by running this command::
 
     sudo apt-get install python3-setuptools
     python3 setup.py install
 
 This will download and install the Python dependencies used by
-DeLight, instead of using the 'packages' directory.
+ViLight, instead of using the 'packages' directory.
 
 If you cloned the git repository, you need to compile extra files
-before you can run DeLight. Read the next section, "Development
+before you can run ViLight. Read the next section, "Development
 Version".
 
 Hardware Wallet - Ledger Nano S
 -------------------------------
 
-DeLight natively support Ledger Nano S hardware wallet. If you plan to use
+ViLight natively support Ledger Nano S hardware wallet. If you plan to use
 you need an additional dependency, namely btchip. To install it run this command::
 
     sudo pip3 install btchip-python
@@ -55,8 +55,8 @@ Development version
 
 Check out the code from Github::
 
-    git clone https://github.com/devaultcrypto/DeLight
-    cd DeLight
+    git clone https://github.com/vitaecrypto/ViLight
+    cd ViLight
 
 Run install (this should install dependencies)::
 

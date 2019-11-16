@@ -1,4 +1,4 @@
-package cc.devault.delight1
+package cc.vitae.vilight1
 
 import android.content.Context
 import android.view.View
@@ -44,7 +44,7 @@ class CrashhubDialog : CrashReportDialog() {
 
 class CrashhubSenderFactory : ReportSenderFactory {
     override fun create(context: Context, config: CoreConfiguration): ReportSender {
-        return CrashhubSender(config, "https://crashhub.devault.cc/crash")
+        return CrashhubSender(config, "https://crashhub.vitae.cc/crash")
     }
 }
 

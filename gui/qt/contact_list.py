@@ -125,7 +125,7 @@ class ContactList(PrintError, MyTreeWidget):
             num = self.parent.contacts.import_file(filename)
             self.parent.show_message(_("{} contacts successfully imported.").format(num))
         except Exception as e:
-            self.parent.show_error(_("DeLight was unable to import your contacts.") + "\n" + repr(e))
+            self.parent.show_error(_("ViLight was unable to import your contacts.") + "\n" + repr(e))
         self.on_update()
 
     def export_contacts(self):
@@ -138,7 +138,7 @@ class ContactList(PrintError, MyTreeWidget):
                 num = self.parent.contacts.export_file(fileName)
                 self.parent.show_message(_("{} contacts exported to '{}'").format(num, fileName))
         except Exception as e:
-            self.parent.show_error(_("DeLight was unable to export your contacts.") + "\n" + repr(e))
+            self.parent.show_error(_("ViLight was unable to export your contacts.") + "\n" + repr(e))
 
     def find_item(self, key: Contact) -> QTreeWidgetItem:
         ''' Rather than store the item reference in a lambda, we store its key.
@@ -191,8 +191,8 @@ class ContactList(PrintError, MyTreeWidget):
             if item and typ in ('cashacct', 'cashacct_W'):
                 ca_info = self.wallet.cashacct.get_verified(i2c(item).name)
                 if column == 1 and len(selected) == 1:
-                    # hack .. for DeVault IDs just say "Copy DeVault ID"
-                    column_title = _('DeVault ID')
+                    # hack .. for Vitae IDs just say "Copy Vitae ID"
+                    column_title = _('Vitae ID')
                     if ca_info:
                         column_data = self.wallet.cashacct.fmt_info(ca_info, emoji=True)
             if len(selected) > 1:
@@ -224,11 +224,11 @@ class ContactList(PrintError, MyTreeWidget):
             menu.addSeparator()
 
         menu.addAction(self.icon_cashacct,
-                       _("Add Contact") + " - " + _("DeVault ID"), self.new_cash_account_contact_dialog)
+                       _("Add Contact") + " - " + _("Vitae ID"), self.new_cash_account_contact_dialog)
         menu.addAction(self.icon_contacts, _("Add Contact") + " - " + _("Address"), self.parent.new_contact_dialog)
         menu.addSeparator()
         menu.addAction(self.icon_cashacct,
-                       _("Register DeVault ID..."), self.parent.register_new_cash_account)
+                       _("Register Vitae ID..."), self.parent.register_new_cash_account)
         menu.addSeparator()
         menu.addAction(QIcon(":icons/import.svg" if not ColorScheme.dark_scheme else ":icons/import_dark_theme.svg"),
                        _("Import file"), self.import_contacts)
@@ -237,7 +237,7 @@ class ContactList(PrintError, MyTreeWidget):
                            _("Export file"), self.export_contacts)
 
         menu.addSeparator()
-        a = menu.addAction(_("Show My DeVault IDs"), self.toggle_show_my_cashaccts)
+        a = menu.addAction(_("Show My Vitae IDs"), self.toggle_show_my_cashaccts)
         a.setCheckable(True)
         a.setChecked(self.show_my_cashaccts)
 
@@ -255,13 +255,13 @@ class ContactList(PrintError, MyTreeWidget):
                     return
                 verified = ca_unverified - self._get_ca_unverified()
                 if not verified:
-                    self.parent.show_error(_("DeVault ID verification failure"))
+                    self.parent.show_error(_("Vitae ID verification failure"))
 
             menu.addSeparator()
             num = len(ca_unverified)
             a = menu.addAction(self.icon_unverif,
-                               ngettext("Verify {count} DeVault ID",
-                                        "Verify {count} DeVault IDs",
+                               ngettext("Verify {count} Vitae ID",
+                                        "Verify {count} Vitae IDs",
                                         num).format(count=num), kick_off_verify)
             if not self.wallet.network:
                 a.setDisabled(True)
@@ -285,9 +285,9 @@ class ContactList(PrintError, MyTreeWidget):
         self.show_my_cashaccts = b
         self.update()
         if b:
-            tip = _("Your own DeVault IDs are now shown")
+            tip = _("Your own Vitae IDs are now shown")
         else:
-            tip = _("Your own DeVault IDs are now hidden")
+            tip = _("Your own Vitae IDs are now hidden")
         QToolTip.showText(QCursor.pos(), tip, self)
 
     def get_full_contacts(self, include_pseudo: bool = True) -> List[Contact]:
@@ -310,15 +310,15 @@ class ContactList(PrintError, MyTreeWidget):
 
     def _make_wallet_cashacct_pseudo_contacts(self, exclude_contacts = []) -> List[Contact]:
         ''' Returns a list of 'fake' contacts that come from the wallet's
-        own registered DeVault IDs.  These contacts do not exist in the
+        own registered Vitae IDs.  These contacts do not exist in the
         wallet.contacts object but are created on-the-fly from the
-        wallet.cashacct list of registered & verified DeVault IDs.
+        wallet.cashacct list of registered & verified Vitae IDs.
 
         The creation of this list is relatively cheap and scales as the lookups
         are O(logN) in the cashaccts caches.
 
         This is a convenience so that the Contacts tab shows "my" cash accounts
-        after registration as well as external DeVault IDs. Note that the
+        after registration as well as external Vitae IDs. Note that the
         "mine" entries won't be shown if the user explicitly added his own as
         "external"... '''
         try:
@@ -366,9 +366,9 @@ class ContactList(PrintError, MyTreeWidget):
         type_names = defaultdict(lambda: _("Unknown"))
         type_names.update({
             'openalias'  : _('OpenAlias'),
-            'cashacct'   : _('DeVault ID'),
-            'cashacct_W' : _('DeVault ID') + ' [' + _('Mine') + ']',
-            'cashacct_T' : _('DeVault ID') + ' [' + _('Pend') + ']',
+            'cashacct'   : _('Vitae ID'),
+            'cashacct_W' : _('Vitae ID') + ' [' + _('Mine') + ']',
+            'cashacct_T' : _('Vitae ID') + ' [' + _('Pend') + ']',
             'address'    : _('Address'),
         })
         type_icons = {
@@ -405,16 +405,16 @@ class ContactList(PrintError, MyTreeWidget):
                         # we must do this to suppress it from being shown regardless
                         continue
                     item.setText(0, ca_info.emoji)
-                    tt = _('Validated DeVault ID: <b><pre>{emoji} {account_string}</pre></b>').format(
+                    tt = _('Validated Vitae ID: <b><pre>{emoji} {account_string}</pre></b>').format(
                         emoji = ca_info.emoji,
                         account_string = f'{ca_info.name}#{ca_info.number}.{ca_info.collision_hash};'
                     )
                 else:
                     item.setIcon(0, self.icon_unverif)
                     if _type == 'cashacct_T':
-                        tt_warn = tt = _('DeVault ID pending confirmation and/or verification')
+                        tt_warn = tt = _('Vitae ID pending confirmation and/or verification')
                     else:
-                        tt_warn = tt = _('Warning: This DeVault ID is not verified')
+                        tt_warn = tt = _('Warning: This Vitae ID is not verified')
                 item.setToolTip(0, tt)
                 if tt_warn: item.setToolTip(1, tt_warn)
             if _type in type_icons:
@@ -440,12 +440,12 @@ class ContactList(PrintError, MyTreeWidget):
         run_hook('update_contacts_tab', self)
 
     def new_cash_account_contact_dialog(self):
-        ''' Context menu callback. Shows the "New DeVault ID Contact"
+        ''' Context menu callback. Shows the "New Vitae ID Contact"
         interface. '''
 
         items = cashacctqt.lookup_cash_account_dialog(
-            self.parent, self.wallet, title=_("New DeVault ID Contact"),
-            blurb = _("<br>Add anyone's DeVault ID to your Contacts"),
+            self.parent, self.wallet, title=_("New Vitae ID Contact"),
+            blurb = _("<br>Add anyone's Vitae ID to your Contacts"),
             button_type=cashacctqt.InfoGroupBox.ButtonType.Radio
         )
         if items:

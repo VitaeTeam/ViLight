@@ -33,7 +33,7 @@ issue_template = """<font face=arial color="#414141">
 #BauerJ's testing server
 #report_server = "https://crashhubtest.bauerj.eu/crash"
 # "Live" (Marcel's server)
-report_server = "https://crashhub.devault.cc/crash"
+report_server = "https://crashhub.vitae.cc/crash"
 
 Singleton = None
 

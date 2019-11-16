@@ -1,4 +1,4 @@
-package cc.devault.delight1
+package cc.vitae.vilight1
 
 import android.app.Activity
 import android.arch.lifecycle.Observer

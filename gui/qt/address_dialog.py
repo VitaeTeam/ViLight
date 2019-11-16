@@ -94,7 +94,7 @@ class AddressDialog(PrintError, WindowModalDialog):
             redeem_e.addCopyButton()
             vbox.addWidget(redeem_e)
 
-        # DeVault IDs
+        # Vitae IDs
         ca_infos = self.wallet.cashacct.get_cashaccounts(self.get_domain())
         vbox.addSpacing(10)
         self.cashacct_gb = gb = cashacctqt.InfoGroupBox(self, self.parent, show_addresses=False)
@@ -104,11 +104,11 @@ class AddressDialog(PrintError, WindowModalDialog):
             if item:
                 info, ch, mch = item
                 self.wallet.cashacct.set_address_default(info)
-                QToolTip.showText(QCursor.pos(), _("DeVault ID has been made the default for this address"), gb)
+                QToolTip.showText(QCursor.pos(), _("Vitae ID has been made the default for this address"), gb)
                 self.parent.ca_address_default_changed_signal.emit(info)
         gb.buttonGroup().buttonClicked.connect(on_button_click)
         vbox.addWidget(gb)
-        # /DeVault IDs
+        # /Vitae IDs
 
         vbox.addWidget(QLabel(_("History")))
         self.hw = HistoryList(self.parent)

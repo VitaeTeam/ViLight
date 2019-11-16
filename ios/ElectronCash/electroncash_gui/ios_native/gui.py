@@ -1047,7 +1047,7 @@ class ElectrumGui(PrintError):
         if not self.wallet: return
         if self.wallet.is_watching_only():
             self.show_message(title = _("This is a watching-only wallet"),
-                              message = _("This means you will not be able to spend DeVault with it."),
+                              message = _("This means you will not be able to spend Vitae with it."),
                               vc = vc,
                               onOk = onOk)
 
@@ -1192,8 +1192,8 @@ class ElectrumGui(PrintError):
                 out = web.parse_URI(URI, self.on_pr)
             except:
                 e = sys.exc_info()[1]
-                utils.NSLog("Invalid devault URI: %s, exception: %s", URI, str(e))
-                if showErr: self.show_error(_('Invalid devault URI:') + '\n' + str(e))
+                utils.NSLog("Invalid vitae URI: %s, exception: %s", URI, str(e))
+                if showErr: self.show_error(_('Invalid vitae URI:') + '\n' + str(e))
                 return False
             r = out.get('r')
             sig = out.get('sig')
@@ -1415,7 +1415,7 @@ class ElectrumGui(PrintError):
             self._no_wallet()
             self.refresh_all()
             self.show_message(title = _("Disk Space Low"),
-                              message = _("DeLight cannot proceed because this device is very low on disk space. Please free up some disk space and try again."))
+                              message = _("ViLight cannot proceed because this device is very low on disk space. Please free up some disk space and try again."))
             return True
         return False
 
@@ -2168,7 +2168,7 @@ class ElectrumGui(PrintError):
         UIPasteboard.generalPasteboard.string = text
         utils.show_notification(message=_(messagePrefix.strip() + " copied to clipboard"))
 
-    def open_devault_url(self, uri : str) -> None:
+    def open_vitae_url(self, uri : str) -> None:
         if not self.wallet:
             self.queued_payto_uri = uri
         else:
@@ -2226,7 +2226,7 @@ class ElectrumGui(PrintError):
         except:
             import traceback
             traceback.print_exc(file=sys.stderr)
-            self.show_error(_("DeLight was unable to parse your transaction"))
+            self.show_error(_("ViLight was unable to parse your transaction"))
         return False
 
     def present_on_boarding_wizard_if_needed(self) -> ObjCInstance:

@@ -166,7 +166,7 @@ class ElectrumGui:
 
     def do_send(self):
         if not Address.is_valid(self.str_recipient):
-            print(_('Invalid DeVault address'))
+            print(_('Invalid Vitae address'))
             return
         try:
             amount = int(PyDecimal(self.str_amount) * COIN)

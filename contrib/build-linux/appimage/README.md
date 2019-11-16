@@ -20,7 +20,7 @@ folder.
 2. Build image
 
     ```
-    $ sudo docker build --no-cache -t delight-appimage-builder-img \
+    $ sudo docker build --no-cache -t vilight-appimage-builder-img \
         -f contrib/build-linux/appimage/Dockerfile_ub1404 \
         contrib/build-linux/appimage
     ```
@@ -32,11 +32,11 @@ folder.
 
     ```
     $ sudo docker run -it \
-        --name delight-appimage-builder-cont \
-        -v $PWD:/opt/delight \
+        --name vilight-appimage-builder-cont \
+        -v $PWD:/opt/vilight \
         --rm \
-        --workdir /opt/delight/contrib/build-linux/appimage \
-        delight-appimage-builder-img \
+        --workdir /opt/vilight/contrib/build-linux/appimage \
+        vilight-appimage-builder-img \
         ./_build.sh REVISION_TAG_OR_BRANCH_OR_COMMIT_TAG
     ```
 

@@ -59,7 +59,7 @@ if jnius:
 
 script_dir = os.path.dirname(os.path.realpath(__file__))
 is_bundle = getattr(sys, 'frozen', False)
-is_local = not is_bundle and os.path.exists(os.path.join(script_dir, "delight.desktop"))
+is_local = not is_bundle and os.path.exists(os.path.join(script_dir, "vilight.desktop"))
 is_android = 'ANDROID_DATA' in os.environ
 
 if is_local:
@@ -314,7 +314,7 @@ if __name__ == '__main__':
     # On windows, allocate a console if needed
     if sys.platform.startswith('win'):
         require_console = '-v' in sys.argv or '--verbose' in sys.argv
-        console_title = _("DeLight - Verbose Output") if require_console else None
+        console_title = _("ViLight - Verbose Output") if require_console else None
         # Attempt to attach to ancestor process console. If create=True we will
         # create a new conole window if no ancestor process console exists.
         # (Presumably if user ran with -v, they expect console output).
@@ -367,7 +367,7 @@ if __name__ == '__main__':
         config_options['portable'] = False
 
     if config_options.get('portable'):
-        config_options['electron_cash_path'] = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'delight_data')
+        config_options['electron_cash_path'] = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'vilight_data')
 
     set_verbosity(config_options.get('verbose'))
 

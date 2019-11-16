@@ -1,9 +1,9 @@
 include LICENCE RELEASE-NOTES AUTHORS
 include README.rst
 include electron-cash.conf.sample
-include delight.desktop
+include vilight.desktop
 include *.py
-include delight
+include vilight
 include contrib/requirements/requirements.txt
 include contrib/requirements/requirements-hw.txt
 recursive-include lib *.py
