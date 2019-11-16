@@ -23,7 +23,7 @@ fun initSettings() {
     setDefaultValues(sp)
 
     settings.getBoolean("cashaddr_format").observeForever {
-        clsAddress.callAttr("show_cashaddr", true)
+        clsAddress.callAttr("show_cashaddr", false)
     }
     settings.getString("base_unit").observeForever {
         unitName = it!!

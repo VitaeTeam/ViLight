@@ -214,7 +214,7 @@ class ElectrumGui(PrintError):
         self.lastHeightSeen = -2
         self.lastSplitNotify = 0
 
-        self.show_cashaddr = True
+        self.show_cashaddr = False
 
         self.cash_addr_sig = utils.PySig()
 
@@ -986,7 +986,7 @@ class ElectrumGui(PrintError):
             self.wallet.storage.put('multiple_change', multiple)
 
     def prefs_get_use_cashaddr(self) -> bool:
-        return bool(self.config.get('show_cashaddr', True))
+        return bool(self.config.get('show_cashaddr', False))
 
     def prefs_set_decimal_point(self, dec: int) -> None:
         if dec in [2, 5, 8]:

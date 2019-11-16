@@ -140,7 +140,7 @@ class ElectrumGui(QObject, PrintError):
         self.gc_timer = QTimer(self); self.gc_timer.setSingleShot(True); self.gc_timer.timeout.connect(ElectrumGui.gc); self.gc_timer.setInterval(500) #msec
         self.nd = None
         self._last_active_window = None  # we remember the last activated ElectrumWindow as a Weak.ref
-        Address.show_cashaddr(self.is_cashaddr())
+        Address.show_cashaddr(False)
         # Dark Theme -- ideally set this before any widgets are created.
         self.set_dark_theme_if_needed()
         # /
@@ -757,7 +757,7 @@ class ElectrumGui(QObject, PrintError):
                 self.tray.showMessage("ViLight", message, QSystemTrayIcon.Information, 20000)
 
     def is_cashaddr(self):
-        return bool(self.config.get('show_cashaddr', True))
+        return bool(self.config.get('show_cashaddr', False))
 
     def toggle_cashaddr(self, on = None):
         was = self.is_cashaddr()
