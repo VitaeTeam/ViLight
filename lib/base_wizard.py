@@ -28,7 +28,7 @@ import os
 import sys
 from . import bitcoin
 from . import keystore
-from .keystore import bip44_derivation, bip44_derivation_339
+from .keystore import bip44_derivation, bip44_derivation_445
 from .wallet import (ImportedAddressWallet, ImportedPrivkeyWallet,
                      Standard_Wallet, Multisig_Wallet, wallet_types)
 from .i18n import _
@@ -266,14 +266,14 @@ class BaseWizard(object):
             # This is partially compatible with BIP45; assumes index=0
             default_derivation = "m/45'/0"
         else:
-            default_derivation = bip44_derivation_339(0)
+            default_derivation = bip44_derivation_445(0)
         self.derivation_dialog(f, default_derivation)
 
     def derivation_dialog(self, f, default_derivation):
         message = '\n'.join([
             _('Enter your wallet derivation here.'),
             _('If you are not sure what this is, leave this field unchanged.'),
-            _("If you want the wallet to use normal DeVault addresses use m/44'/339'/0'"),
+            _("If you want the wallet to use normal DeVault addresses use m/44'/445'/0'"),
             _("The placeholder value of {} is the default derivation for {} wallets.").format(default_derivation, self.wallet_type),
         ])
         self.line_dialog(run_next=f, title=_('Derivation for {} wallet').format(self.wallet_type), message=message, default=default_derivation, test=bitcoin.is_bip32_derivation)
@@ -329,7 +329,7 @@ class BaseWizard(object):
 
     def on_restore_bip39(self, seed, passphrase):
         f = lambda x: self.run('on_bip44', seed, passphrase, str(x))
-        self.derivation_dialog(f, bip44_derivation_339(0))
+        self.derivation_dialog(f, bip44_derivation_445(0))
 
     def create_keystore(self, seed, passphrase):
         k = keystore.from_seed(seed, passphrase, self.wallet_type == 'multisig')

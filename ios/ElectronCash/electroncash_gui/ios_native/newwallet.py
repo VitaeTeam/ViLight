@@ -665,7 +665,7 @@ class RestoreWallet1(NewWalletSeed2):
 
         if seed_type == 'bip39':
             # do bip39 stuff
-            default_derivation = keystore.bip44_derivation_339(0)
+            default_derivation = keystore.bip44_derivation_445(0)
             test=bitcoin.is_bip32_derivation
             def onOk(text : str) -> None:
                 der = text.strip()
@@ -683,7 +683,7 @@ class RestoreWallet1(NewWalletSeed2):
                                         message = ' '.join([_('Enter your wallet derivation here.'),
                                                              _('If you are not sure what this is, leave this field unchanged.'),
                                                              _("If you want the wallet to use legacy Vitae addresses use m/44'/0'/0'"),
-                                                             _("If you want the wallet to use Vitae addresses use m/44'/339'/0'")]),
+                                                             _("If you want the wallet to use Vitae addresses use m/44'/445'/0'")]),
                                         onOk = onOk, placeholder = _('Derivation') + '...', text = default_derivation
                                         )
         elif seed_type == 'old':
