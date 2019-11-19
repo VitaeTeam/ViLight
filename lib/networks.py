@@ -39,14 +39,14 @@ class AbstractNet:
 
 class MainNet(AbstractNet):
     TESTNET = False
-    WIF_PREFIX = 0x80
-    ADDRTYPE_P2PKH = 0
+    WIF_PREFIX = 0xD4
+    ADDRTYPE_P2PKH = 47
     ADDRTYPE_P2PKH_BITPAY = 28
-    ADDRTYPE_P2SH = 5
+    ADDRTYPE_P2SH = 13
     ADDRTYPE_P2SH_BITPAY = 40
     CASHADDR_PREFIX = "vitae"
     HEADERS_URL = None
-    GENESIS = "0000000038e62464371566f6a8d35c01aa54a7da351b2dbf85d92f30357f3a90"
+    GENESIS = "0000041e482b9b9691d98eefb48473405c0b8ec31b76df3797c74a78680ef818"
     DEFAULT_PORTS = {'t': '50001', 's': '50002'}
     DEFAULT_SERVERS = _read_json_dict('servers.json')  # DO NOT MODIFY IN CLIENT CODE
     TITLE = 'ViLight - Vitae Wallet'
@@ -56,17 +56,17 @@ class MainNet(AbstractNet):
     # this block. Consult the ElectrumX documentation.
     # To get this value you need to connect to an ElectrumX server you trust and issue it a protocol command.
     # blockchain.block.header (see ElectrumX docs)
-    VERIFICATION_BLOCK_MERKLE_ROOT = "47caa1d479807d32131ce1df843cf66c8a06603404377b3713a8bf1669e4ab09"
+    VERIFICATION_BLOCK_MERKLE_ROOT = "c9c7bd4fd286e13805e329435f5e45cc199c66eaceeb65a4c8bf0dde35f89dbf"
     VERIFICATION_BLOCK_HEIGHT = 20000
 
     # Version numbers for BIP32 extended keys
     # standard: xprv, xpub
     XPRV_HEADERS = {
-        'standard': 0x0488ade4,
+        'standard': 0x0221312B,
     }
 
     XPUB_HEADERS = {
-        'standard': 0x0488b21e,
+        'standard': 0x022D2533,
     }
 
 

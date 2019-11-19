@@ -29,17 +29,25 @@ import threading
 from . import util
 from . import networks
 from .bitcoin import *
+import pivx_quark_hash as quark_hash
+
 
 class VerifyError(Exception):
     '''Exception used for blockchain verification errors.'''
+
 
 CHUNK_FORKS = -3
 CHUNK_BAD = -2
 CHUNK_LACKED_PROOF = -1
 CHUNK_ACCEPTED = 0
+HEADER_SIZE = 80
+ZC_HEADER_SIZE = 112
+ZC_VERSION = 5
+
 
 def bits_to_work(bits):
     return (1 << 256) // (bits_to_target(bits) + 1)
+
 
 def bits_to_target(bits):
     if bits == 0:
@@ -54,6 +62,7 @@ def bits_to_target(bits):
         return word >> (8 * (3 - size))
     else:
         return word << (8 * (size - 3))
+
 
 def target_to_bits(target):
     if target == 0:
@@ -73,7 +82,8 @@ def target_to_bits(target):
     assert size < 256
     return compact | size << 24
 
-HEADER_SIZE = 80 # bytes
+
+HEADER_SIZE = 80  # bytes
 LWMA_AVERAGING_WINDOW = 72
 MAX_BITS = 0x1d00ffff
 MAX_TARGET = bits_to_target(MAX_BITS)
@@ -81,6 +91,7 @@ MAX_TARGET = bits_to_target(MAX_BITS)
 NULL_HEADER = bytes([0]) * HEADER_SIZE
 NULL_HASH_BYTES = bytes([0]) * 32
 NULL_HASH_HEX = NULL_HASH_BYTES.hex()
+
 
 def serialize_header(res):
     s = int_to_hex(res.get('version'), 4) \
@@ -91,19 +102,32 @@ def serialize_header(res):
         + int_to_hex(int(res.get('nonce')), 4)
     return s
 
+
 def deserialize_header(s, height):
+    hex_to_int = lambda s: int.from_bytes(s, byteorder='little')
     h = {}
-    h['version'] = int.from_bytes(s[0:4], 'little')
+    h['version'] = hex_to_int(s[0:4])
     h['prev_block_hash'] = hash_encode(s[4:36])
     h['merkle_root'] = hash_encode(s[36:68])
-    h['timestamp'] = int.from_bytes(s[68:72], 'little')
-    h['bits'] = int.from_bytes(s[72:76], 'little')
-    h['nonce'] = int.from_bytes(s[76:80], 'little')
+    h['timestamp'] = hex_to_int(s[68:72])
+    h['bits'] = hex_to_int(s[72:76])
+    h['nonce'] = hex_to_int(s[76:80])
+
+    try:
+        ZC_VERSION
+    except NameError:
+        pass
+    else:
+        if h['version'] >= ZC_VERSION:
+            h['accumulator_checkpoint'] = hash_encode(s[80:112])
     h['block_height'] = height
     return h
 
 def hash_header_hex(header_hex):
-    return hash_encode(Hash(bfh(header_hex)))
+    if header[0] >= ZC_VERSION:
+        return hash_encode(Hash(bfh(header)))
+    else:
+        return hash_encode(quark_hash.getPoWHash(bfh(header)))
 
 def hash_header(header):
     if header is None:
@@ -289,7 +313,7 @@ class Blockchain(util.PrintError):
             # Check the chain of hashes and the difficulty.
             bits = self.get_bits(header, chunk)
             # for now .... HACK -- > NEED TO ADD BACK
-            #self.verify_single_header(header, prev_header)
+            # self.verify_single_header(header, prev_header)
             self.verify_header(lwma_header, bits)
             prev_header = header
 
@@ -299,13 +323,15 @@ class Blockchain(util.PrintError):
         return os.path.join(d, filename)
 
     def save_chunk(self, base_height, chunk_data):
-        chunk_offset = (base_height - self.base_height) * HEADER_SIZE
+        chunk_offset = (base_height - self.base_height) * ZC_HEADER_SIZE
+        assert len(chunk_data) % ZC_HEADER_SIZE == 0
+
         if chunk_offset < 0:
             chunk_data = chunk_data[-chunk_offset:]
             chunk_offset = 0
         # Headers at and before the verification checkpoint are sparsely filled.
         # Those should be overwritten and should not truncate the chain.
-        top_height = base_height + (len(chunk_data) // HEADER_SIZE) - 1
+        top_height = base_height + (len(chunk_data) // ZC_HEADER_SIZE) - 1
         truncate = top_height > networks.net.VERIFICATION_BLOCK_HEIGHT
         self.write(chunk_data, chunk_offset, truncate)
         self.swap_with_parent()
@@ -458,9 +484,9 @@ class Blockchain(util.PrintError):
         return sorted(times)[len(times) // 2]
 
     def get_suitable_block_height(self, suitableheight, chunk=None):
-        #In order to avoid a block in a very skewed timestamp to have too much
-        #influence, we select the median of the 3 top most block as a start point
-        #Reference: github.com/Bitcoin-ABC/bitcoin-abc/master/src/pow.cpp#L201
+        # In order to avoid a block in a very skewed timestamp to have too much
+        # influence, we select the median of the 3 top most block as a start point
+        # Reference: github.com/Bitcoin-ABC/bitcoin-abc/master/src/pow.cpp#L201
         blocks2 = self.read_header(suitableheight, chunk)
         blocks1 = self.read_header(suitableheight-1, chunk)
         blocks = self.read_header(suitableheight-2, chunk)

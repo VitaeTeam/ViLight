@@ -45,9 +45,9 @@ def inv_dict(d):
     return {v: k for k, v in d.items()}
 
 
-base_units = {'DVT':8, 'mDVT':5}
+base_units = {'VITAE':8, 'mVITAE':5}
 inv_base_units = inv_dict(base_units)
-base_unit_labels = tuple(inv_base_units[dp] for dp in sorted(inv_base_units.keys(), reverse=True))  # ('DVT', 'mDVT', 'bits')
+base_unit_labels = tuple(inv_base_units[dp] for dp in sorted(inv_base_units.keys(), reverse=True))  # ('VITAE', 'mVITAE', 'bits')
 
 fee_levels = [_('Within 25 blocks'), _('Within 10 blocks'), _('Within 5 blocks'), _('Within 2 blocks'), _('In the next block')]
 
