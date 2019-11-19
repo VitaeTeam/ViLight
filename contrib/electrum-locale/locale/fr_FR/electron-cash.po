@@ -3058,7 +3058,7 @@ msgstr ""
 
 #: lib/base_wizard.py:277
 #: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:686
-msgid "If you want the wallet to use Vitae addresses use m/44'/339'/0'"
+msgid "If you want the wallet to use Vitae addresses use m/44'/445'/0'"
 msgstr ""
 
 #: lib/base_wizard.py:276

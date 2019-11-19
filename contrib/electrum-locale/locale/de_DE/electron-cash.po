@@ -3076,8 +3076,8 @@ msgstr "Wenn Sie glauben dass diese Geldbörse einen Transaktionsverlauf für Ad
 
 #: lib/base_wizard.py:277
 #: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:686
-msgid "If you want the wallet to use Vitae addresses use m/44'/339'/0'"
-msgstr "Wenn Sie möchten dass die Geldbörse Bitcoin-Cash-Adressen verwendet, verwenden Sie m/44'/339'/0'"
+msgid "If you want the wallet to use Vitae addresses use m/44'/445'/0'"
+msgstr "Wenn Sie möchten dass die Geldbörse Bitcoin-Cash-Adressen verwendet, verwenden Sie m/44'/445'/0'"
 
 #: lib/base_wizard.py:276
 #: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:685
