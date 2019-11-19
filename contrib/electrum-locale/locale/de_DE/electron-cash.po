@@ -4587,8 +4587,8 @@ msgid "Port"
 msgstr "Port"
 
 #: gui/qt/main_window.py:1491
-msgid "Posts a PERMANENT note to the DVT blockchain as part of this transaction."
-msgstr "Gibt eine PERMANENTE Notiz auf der DVT Blockchain als Teil dieser Transaktion bekannt."
+msgid "Posts a PERMANENT note to the VITAE blockchain as part of this transaction."
+msgstr "Gibt eine PERMANENTE Notiz auf der VITAE Blockchain als Teil dieser Transaktion bekannt."
 
 #: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1704
 msgid "Potentially Unsafe Operation"
@@ -5793,16 +5793,16 @@ msgstr "Der QR-Code enthält mehrere Ausgaben. Momentan wird nur eine einzelne A
 "Bitte versuchen Sie es erneut."
 
 #: ios/ElectronCash/electroncash_gui/ios_native/send.py:120
-msgid "The QR code does not appear to be a valid DVT address or payment request.\n"
+msgid "The QR code does not appear to be a valid VITAE address or payment request.\n"
 "Please try again."
-msgstr "Der QR-Code scheint keine gültige DVT-Adresse oder Zahlungsanfrage zu sein.\n"
+msgstr "Der QR-Code scheint keine gültige VITAE-Adresse oder Zahlungsanfrage zu sein.\n"
 "Bitte versuchen Sie es erneut."
 
 #: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:529
 #: ios/ElectronCash/electroncash_gui/ios_native/addrconv.py:106
-msgid "The QR code does not appear to be a valid DVT address.\n"
+msgid "The QR code does not appear to be a valid VITAE address.\n"
 "Please try again."
-msgstr "Der QR-Code scheint keine gültige DVT-Adresse zu sein.\n"
+msgstr "Der QR-Code scheint keine gültige VITAE-Adresse zu sein.\n"
 "Bitte versuchen Sie es erneut."
 
 #: gui/qt/main_window.py:4920

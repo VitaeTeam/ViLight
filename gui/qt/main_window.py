@@ -1480,7 +1480,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
         grid.addWidget(self.message_e, 2, 1, 1, -1)
 
         msg_opreturn = ( _('OP_RETURN data (optional).') + '\n\n'
-                        + _('Posts a PERMANENT note to the DVT blockchain as part of this transaction.')
+                        + _('Posts a PERMANENT note to the VITAE blockchain as part of this transaction.')
                         + '\n\n' + _('If you specify OP_RETURN text, you may leave the \'Pay to\' field blank.') )
         self.opreturn_label = HelpLabel(_('&OP_RETURN'), msg_opreturn)
         grid.addWidget(self.opreturn_label,  3, 0)
@@ -3839,9 +3839,9 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
         SSL_id_e.setReadOnly(True)
         id_widgets.append((SSL_id_label, SSL_id_e))
 
-        units = util.base_unit_labels  # ( 'DVT', 'mDVT', 'bits' )
+        units = util.base_unit_labels  # ( 'VITAE', 'mVITAE', 'bits' )
         msg = _('Base unit of your wallet.')\
-              + '\n1 DVT = 1,000 mDVT = 1,000,000 bits.\n' \
+              + '\n1 VITAE = 1,000 mVITAE = 1,000,000 bits.\n' \
               + _(' These settings affects the fields in the Send tab')+' '
         unit_label = HelpLabel(_('Base unit') + ':', msg)
         unit_combo = QComboBox()

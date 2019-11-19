@@ -207,7 +207,7 @@ class ElectrumGui(PrintError):
 
         self.onboardingWizard = None
 
-        self.decimal_point = config.get('decimal_point', 8) # default is DVT , not mDVT
+        self.decimal_point = config.get('decimal_point', 8) # default is VITAE , not mVITAE
         self.fee_unit = config.get('fee_unit', 0)
         self.num_zeros     = self.prefs_get_num_zeros()
         self.alias_info = None # TODO: IMPLEMENT alias stuff

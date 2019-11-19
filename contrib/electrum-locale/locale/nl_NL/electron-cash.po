@@ -4561,7 +4561,7 @@ msgid "Port"
 msgstr "Poort"
 
 #: gui/qt/main_window.py:1491
-msgid "Posts a PERMANENT note to the DVT blockchain as part of this transaction."
+msgid "Posts a PERMANENT note to the VITAE blockchain as part of this transaction."
 msgstr ""
 
 #: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1704
@@ -5764,13 +5764,13 @@ msgid "The QR code contains multiple outputs. At this time only a single output 
 msgstr ""
 
 #: ios/ElectronCash/electroncash_gui/ios_native/send.py:120
-msgid "The QR code does not appear to be a valid DVT address or payment request.\n"
+msgid "The QR code does not appear to be a valid VITAE address or payment request.\n"
 "Please try again."
 msgstr ""
 
 #: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:529
 #: ios/ElectronCash/electroncash_gui/ios_native/addrconv.py:106
-msgid "The QR code does not appear to be a valid DVT address.\n"
+msgid "The QR code does not appear to be a valid VITAE address.\n"
 "Please try again."
 msgstr ""
 
