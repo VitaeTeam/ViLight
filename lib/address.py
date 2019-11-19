@@ -483,7 +483,7 @@ class Address(namedtuple("AddressTuple", "hash160 kind")):
     _NUM_FMTS = 3  # <-- Be sure to update this if you add a format above!
 
     # Default to CashAddr
-    FMT_UI = FMT_CASHADDR
+    FMT_UI = FMT_LEGACY
 
     def __new__(cls, hash160, kind):
         assert kind in (cls.ADDR_P2PKH, cls.ADDR_P2SH)
