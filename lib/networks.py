@@ -44,12 +44,12 @@ class MainNet(AbstractNet):
     ADDRTYPE_P2PKH_BITPAY = 28
     ADDRTYPE_P2SH = 5
     ADDRTYPE_P2SH_BITPAY = 40
-    CASHADDR_PREFIX = "devault"
+    CASHADDR_PREFIX = "vitae"
     HEADERS_URL = None
     GENESIS = "0000000038e62464371566f6a8d35c01aa54a7da351b2dbf85d92f30357f3a90"
     DEFAULT_PORTS = {'t': '50001', 's': '50002'}
     DEFAULT_SERVERS = _read_json_dict('servers.json')  # DO NOT MODIFY IN CLIENT CODE
-    TITLE = 'DeLight - DeVault Wallet'
+    TITLE = 'ViLight - Vitae Wallet'
 
     # Note to Jonald or anyone reading this: the below is misleadingly named.  It's not a simple
     # MERKLE_ROOT but a MERKLE_PROOF which is basically the hashes of all MERKLE_ROOTS up until and including
@@ -82,7 +82,7 @@ class TestNet(AbstractNet):
     GENESIS = "00000000ed6c30b2e78a0eff7d20692c14099ce8eb04e205fcc08c474cfd6675"
     DEFAULT_PORTS = {'t':'51001', 's':'51002'}
     DEFAULT_SERVERS = _read_json_dict('servers_testnet.json')  # DO NOT MODIFY IN CLIENT CODE
-    TITLE = 'DeVault Cash Testnet'
+    TITLE = 'Vitae Cash Testnet'
 
     VERIFICATION_BLOCK_MERKLE_ROOT = "21a114cc2c1167af26be582ec9c49adc43f88f6227efe2aea40610d7de297d93"
     VERIFICATION_BLOCK_HEIGHT = 9563

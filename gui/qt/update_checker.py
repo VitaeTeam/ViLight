@@ -67,9 +67,9 @@ class UpdateChecker(QWidget, PrintError):
     download_url = "https://github.com/vitaecrypto/ViLight/releases"
 
     VERSION_ANNOUNCEMENT_SIGNING_ADDRESSES = (
-        address.Address.from_string("vitae:qrzq4dnhffx5fmydz3fjaq5275s3l2e5qvyjygmzsr", net=MainNet), # Spock's key
-        address.Address.from_string("vitae:qpn2x4w7pp079wleaty9nw0xh3ndjjdq0sndl5gpl2", net=MainNet), # 
-        address.Address.from_string("vitae:qr3dszpxtse8wxecz33emg5ggtz4n0qvkyahudhgm2", net=MainNet), # 
+        # address.Address.from_string("vitae:qrzq4dnhffx5fmydz3fjaq5275s3l2e5qvyjygmzsr", net=MainNet), # Spock's key
+        # address.Address.from_string("vitae:qpn2x4w7pp079wleaty9nw0xh3ndjjdq0sndl5gpl2", net=MainNet), # 
+        # address.Address.from_string("vitae:qr3dszpxtse8wxecz33emg5ggtz4n0qvkyahudhgm2", net=MainNet), # 
     )
 
     def __init__(self, parent=None):
