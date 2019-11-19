@@ -40,9 +40,9 @@ class AbstractNet:
 class MainNet(AbstractNet):
     TESTNET = False
     WIF_PREFIX = 0xD4
-    ADDRTYPE_P2PKH = 47
+    ADDRTYPE_P2PKH = 0x47
     ADDRTYPE_P2PKH_BITPAY = 28
-    ADDRTYPE_P2SH = 13
+    ADDRTYPE_P2SH = 0xD
     ADDRTYPE_P2SH_BITPAY = 40
     CASHADDR_PREFIX = "vitae"
     HEADERS_URL = None

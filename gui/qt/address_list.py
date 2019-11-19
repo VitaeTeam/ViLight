@@ -279,10 +279,7 @@ class AddressList(MyTreeWidget):
             alt_copy_text, alt_column_title = None, None
             if col == 0:
                 copy_text = addr.to_full_ui_string()
-                if Address.FMT_UI == Address.FMT_LEGACY:
-                    alt_copy_text, alt_column_title = addr.to_full_string(Address.FMT_CASHADDR), _('Cash Address')
-                else:
-                    alt_copy_text, alt_column_title = addr.to_full_string(Address.FMT_LEGACY), _('Legacy Address')
+                alt_copy_text, alt_column_title = addr.to_full_string(Address.FMT_LEGACY), _('Legacy Address')
             else:
                 copy_text = item.text(col)
             menu.addAction(_("Copy {}").format(column_title), lambda: doCopy(copy_text))
