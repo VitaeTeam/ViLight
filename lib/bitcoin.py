@@ -1056,8 +1056,8 @@ class Bip38Key:
 
     #// coin / network specific info affecting key decription and address decoding:
     # this gets populated by current value of NetworkConstants.net.WIF_PREFIX, etc
-    networkVersion   = 0x00 # byte // usually 0x0 for BTC/VITAE
-    privateKeyPrefix = 0x80 # byte // usually 0x80 for BTC/VITAE
+    networkVersion   = 0x47 # byte // usually 0x47 for VITAE
+    privateKeyPrefix = 0xD4 # byte // usually 0xD4 for VITAE
 
     # Internal class-level vars
     _scrypt_1 = None
