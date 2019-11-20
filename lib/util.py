@@ -425,7 +425,7 @@ def user_dir(prefer_local=False):
     if 'ANDROID_DATA' in os.environ:
         return android_data_dir()
     elif os.name == 'posix' and "HOME" in os.environ:
-        return os.path.join(os.environ["HOME"], ".delight" )
+        return os.path.join(os.environ["HOME"], ".vilight" )
     elif "APPDATA" in os.environ or "LOCALAPPDATA" in os.environ:
         app_dir = os.environ.get("APPDATA")
         localapp_dir = os.environ.get("LOCALAPPDATA")

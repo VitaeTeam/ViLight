@@ -100,6 +100,9 @@ def serialize_header(res):
         + int_to_hex(int(res.get('timestamp')), 4) \
         + int_to_hex(int(res.get('bits')), 4) \
         + int_to_hex(int(res.get('nonce')), 4)
+
+    if res.get('version') > 3:
+        s += rev_hex(res.get('accumulator_checkpoint'))
     return s
 
 
@@ -113,19 +116,16 @@ def deserialize_header(s, height):
     h['bits'] = hex_to_int(s[72:76])
     h['nonce'] = hex_to_int(s[76:80])
 
-    try:
-        ZC_VERSION
-    except NameError:
-        pass
-    else:
-        if h['version'] >= ZC_VERSION:
-            h['accumulator_checkpoint'] = hash_encode(s[80:112])
+    if height > 0:
+       h['accumulator_checkpoint'] = hash_encode(s[80:112])
+
     h['block_height'] = height
     return h
 
 def hash_header_hex(header_hex):
-    if header[0] >= ZC_VERSION:
-        return hash_encode(Hash(bfh(header)))
+    header = bfh(header_hex)
+    if header[0] >= 3:
+        return hash_encode(Hash(bfh(header_hex)))
     else:
         return hash_encode(quark_hash.getPoWHash(bfh(header)))
 
@@ -197,8 +197,8 @@ def root_from_proof(hash, branch, index):
 class HeaderChunk:
     def __init__(self, base_height, data):
         self.base_height = base_height
-        self.header_count = len(data) // HEADER_SIZE
-        self.headers = [deserialize_header(data[i * HEADER_SIZE : (i + 1) * HEADER_SIZE],
+        self.header_count = len(data) // ZC_HEADER_SIZE
+        self.headers = [deserialize_header(data[i * ZC_HEADER_SIZE : (i + 1) * ZC_HEADER_SIZE],
                                            base_height + i)
                         for i in range(self.header_count)]
 
@@ -277,7 +277,7 @@ class Blockchain(util.PrintError):
 
     def update_size(self):
         p = self.path()
-        self._size = os.path.getsize(p)//HEADER_SIZE if os.path.exists(p) else 0
+        self._size = os.path.getsize(p)//ZC_HEADER_SIZE if os.path.exists(p) else 0
 
     def verify_header(self, header, bits=None):
         this_header_hash = hash_header(header)
@@ -287,9 +287,7 @@ class Blockchain(util.PrintError):
             # checkpoint 
             if bits != header.get('bits'):
                 raise VerifyError("bits mismatch: %x vs %x" % (bits, header.get('bits')))
-            target = bits_to_target(bits)
-            if int('0x' + this_header_hash, 16) > target:
-                raise VerifyError("insufficient proof of work: %s vs target %s" % (int('0x' + this_header_hash, 16), target))
+
 
     def verify_single_header(self, header, prev_header):
         prev_header_hash = hash_header(prev_header)
@@ -305,7 +303,7 @@ class Blockchain(util.PrintError):
         if chunk_base_height != 0:
             prev_header = self.read_header(chunk_base_height - 1)
 
-        header_count = len(chunk_data) // HEADER_SIZE
+        header_count = len(chunk_data) // ZC_HEADER_SIZE
         self.print_error("start loop in verify_check with base_height = ",chunk_base_height)
         for i in range(header_count-73):
             header = chunk.get_header_at_index(i)
@@ -323,8 +321,8 @@ class Blockchain(util.PrintError):
         return os.path.join(d, filename)
 
     def save_chunk(self, base_height, chunk_data):
-        chunk_offset = (base_height - self.base_height) * ZC_HEADER_SIZE
-        assert len(chunk_data) % ZC_HEADER_SIZE == 0
+        chunk_offset = (base_height - self.base_height) * HEADER_SIZE
+        # assert len(chunk_data) % ZC_HEADER_SIZE == 0
 
         if chunk_offset < 0:
             chunk_data = chunk_data[-chunk_offset:]
@@ -387,8 +385,8 @@ class Blockchain(util.PrintError):
         delta = header.get('block_height') - self.base_height
         data = bfh(serialize_header(header))
         assert delta == self.size()
-        assert len(data) == HEADER_SIZE
-        self.write(data, delta*HEADER_SIZE)
+        assert len(data) == ZC_HEADER_SIZE
+        self.write(data, delta*ZC_HEADER_SIZE)
         self.swap_with_parent()
 
     def read_header(self, height, chunk=None):
@@ -407,8 +405,8 @@ class Blockchain(util.PrintError):
         name = self.path()
         if os.path.exists(name):
             with open(name, 'rb') as f:
-                f.seek(delta * HEADER_SIZE)
-                h = f.read(HEADER_SIZE)
+                f.seek(delta * ZC_HEADER_SIZE)
+                h = f.read(ZC_HEADER_SIZE)
             # Is it a pre-checkpoint header that has never been requested?
             if h == NULL_HEADER:
                 return None

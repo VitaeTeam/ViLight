@@ -1086,7 +1086,7 @@ class Network(util.DaemonThread):
         if index in self.requested_chunks:
             self.requested_chunks.remove(index)
 
-        header_hexsize = blockchain.HEADER_SIZE * 2
+        header_hexsize = blockchain.ZC_HEADER_SIZE * 2
         hexdata = result['hex']
         actual_header_count = len(hexdata) // header_hexsize
         # We accept less headers than we asked for, to cover the case where the distance to the tip was unknown.
@@ -1429,7 +1429,7 @@ class Network(util.DaemonThread):
         b = self.blockchains[0]
         filename = b.path()
         # NB: HEADER_SIZE = 80 bytes
-        length = blockchain.HEADER_SIZE * (networks.net.VERIFICATION_BLOCK_HEIGHT + 1)
+        length = blockchain.ZC_HEADER_SIZE * (networks.net.VERIFICATION_BLOCK_HEIGHT + 1)
         if not os.path.exists(filename) or os.path.getsize(filename) < length:
             with open(filename, 'wb') as f:
                 if length>0:
