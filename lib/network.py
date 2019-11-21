@@ -1241,7 +1241,7 @@ class Network(util.DaemonThread):
             hexheader = result
 
         # Simple header request.
-        header = blockchain.deserialize_header(bfh(hexheader), height)
+        header = blockchain.deserialize_header(bytes.fromhex(hexheader).ljust(blockchain.ZC_HEADER_SIZE, bfh("00")), height)
         # Is there a blockchain that already includes this header?
         chain = blockchain.check_header(header)
         if interface.mode == Interface.MODE_BACKWARD:
