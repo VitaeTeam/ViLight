@@ -1,4 +1,4 @@
-ViLight - Lightweight Vitae client (an Electron-Cash fork)
+ViLight - Lightweight Vitae client (an Electron-Cash fork,based on DeLight from DeVault)
 =====================================
 
 ::
