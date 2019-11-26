@@ -675,29 +675,18 @@ class Transaction:
         warnings.warn("warning: deprecated tx.nHashType()", FutureWarning, stacklevel=2)
         return 0x01 | (cls.SIGHASH_FORKID + (cls.FORKID << 8))
 
-    def serialize_preimage(self, i, nHashType=0x00000041):
-        if (nHashType & 0xff) != 0x41:
-            raise ValueError("other hashtypes not supported; submit a PR to fix this!")
-
+    def serialize_preimage(self, i):
         nVersion = int_to_hex(self.version, 4)
-        nHashType = int_to_hex(nHashType, 4)
+        nHashType = int_to_hex(1, 4)
         nLocktime = int_to_hex(self.locktime, 4)
         inputs = self.inputs()
         outputs = self.outputs()
         txin = inputs[i]
 
-        hashPrevouts = bh2u(Hash(bfh(''.join(self.serialize_outpoint(txin) for txin in inputs))))
-        hashSequence = bh2u(Hash(bfh(''.join(int_to_hex(txin.get('sequence', 0xffffffff - 1), 4) for txin in inputs))))
-        hashOutputs = bh2u(Hash(bfh(''.join(self.serialize_output(o) for o in outputs))))
-        outpoint = self.serialize_outpoint(txin)
-        preimage_script = self.get_preimage_script(txin)
-        scriptCode = var_int(len(preimage_script) // 2) + preimage_script
-        try:
-            amount = int_to_hex(txin['value'], 8)
-        except KeyError:
-            raise InputValueMissing
-        nSequence = int_to_hex(txin.get('sequence', 0xffffffff - 1), 4)
-        preimage = nVersion + hashPrevouts + hashSequence + outpoint + scriptCode + amount + nSequence + hashOutputs + nLocktime + nHashType
+        txins = var_int(len(inputs)) + ''.join(self.serialize_input(txin, self.get_preimage_script(txin) if i==k else '') for k, txin in enumerate(inputs))
+        txouts = var_int(len(outputs)) + ''.join(self.serialize_output(o) for o in outputs)
+        nVersion = int_to_hex(self.version, 4)
+        preimage = nVersion + txins + txouts + nLocktime + nHashType
         return preimage
 
     def serialize(self, estimate_size=False):
@@ -850,13 +839,13 @@ class Transaction:
                     sec, compressed = keypairs.get(x_pubkey)
                     pubkey = public_key_from_private_key(sec, compressed)
                     # add signature
-                    nHashType = 0x00000041 # hardcoded, perhaps should be taken from unsigned input dict
-                    pre_hash = Hash(bfh(self.serialize_preimage(i, nHashType)))
+                    nHashType = int_to_hex(1,4) # hardcoded, perhaps should be taken from unsigned input dict
+                    pre_hash = Hash(bfh(self.serialize_preimage(i)))
                     if self._sign_schnorr:
                         sig = self._schnorr_sign(pubkey, sec, pre_hash)
                     else:
                         sig = self._ecdsa_sign(sec, pre_hash)
-                    txin['signatures'][j] = bh2u(sig + bytes((nHashType & 0xff,)))
+                    txin['signatures'][j] = bh2u(sig) + '01'
                     txin['pubkeys'][j] = pubkey # needed for fd keys
                     self._inputs[i] = txin
         print_error("is_complete", self.is_complete())
