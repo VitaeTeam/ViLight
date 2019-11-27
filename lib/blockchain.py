@@ -574,8 +574,8 @@ class Blockchain(util.PrintError):
                 return CHUNK_FORKS
 
         try:
-            # if not proof_was_provided:
-            #     self.verify_chunk(base_height, hexdata)
+            if not proof_was_provided:
+                self.verify_chunk(base_height, hexdata)
             self.save_chunk(base_height, hexdata)
             return CHUNK_ACCEPTED
         except VerifyError as e:
