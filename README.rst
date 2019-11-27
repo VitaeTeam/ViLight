@@ -55,7 +55,7 @@ Development version
 
 Check out the code from Github::
 
-    git clone https://github.com/vitaecrypto/ViLight
+    git clone https://github.com/VitaeTeam/ViLight
     cd ViLight
 
 Run install (this should install dependencies)::

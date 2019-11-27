@@ -8,7 +8,7 @@
 
   !define PRODUCT_NAME "ViLight"
   !define INTERNAL_NAME "ViLight"
-  !define PRODUCT_WEB_SITE "https://github.com/vitaecrypto/ViLight"
+  !define PRODUCT_WEB_SITE "https://github.com/VitaeTeam/ViLight"
   !define PRODUCT_PUBLISHER "The Vitae Developers"
   !define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}"
 
