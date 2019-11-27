@@ -439,8 +439,8 @@ class Transaction:
     @classmethod
     def get_sorted_pubkeys(self, txin):
         # sort pubkeys and x_pubkeys, using the order of pubkeys
-        # Note: this function is CRITICAL to get the correct order of pubkeys in
-        # multisignatures; avoid changing.
+        if txin['type'] == 'coinbase':
+            return [], []
         x_pubkeys = txin['x_pubkeys']
         pubkeys = txin.get('pubkeys')
         if pubkeys is None:
@@ -479,7 +479,7 @@ class Transaction:
             if not isinstance(sig, str):
                 raise ValueError("sig was bytes, expected string")
             # sig_final is the signature with the sighashbyte at the end (0x41)
-            sig_final = sig + '41'
+            sig_final = sig
             if sig_final in txin.get('signatures'):
                 # skip if we already have this signature
                 continue
@@ -576,10 +576,7 @@ class Transaction:
             pubkey_size = self.estimate_pubkey_size_for_txin(txin)
             pk_list = ["00" * pubkey_size] * len(txin.get('x_pubkeys', [None]))
             # we assume that signature will be 0x48 bytes long if ECDSA, 0x41 if Schnorr
-            if sign_schnorr:
-                siglen = 0x41
-            else:
-                siglen = 0x48
+            siglen = 0x48
             sig_list = [ "00" * siglen ] * num_sig
         else:
             pubkeys, x_pubkeys = self.get_sorted_pubkeys(txin)
@@ -600,6 +597,7 @@ class Transaction:
         if _type == 'coinbase':
             return txin['scriptSig']
         pubkeys, sig_list = self.get_siglist(txin, estimate_size, sign_schnorr=False)
+        print_error(_type)
         script = ''.join(push_script(x) for x in sig_list)
         if _type == 'p2pk':
             pass
@@ -623,9 +621,12 @@ class Transaction:
 
     @classmethod
     def get_preimage_script(self, txin):
+        pubkeys, x_pubkeys = self.get_sorted_pubkeys(txin)
         _type = txin['type']
         if _type == 'p2pkh':
-            return txin['address'].to_script().hex()
+            pubkey = pubkeys[0]
+            pkh = bh2u(hash_160(bfh(pubkey)))
+            return pubkeyhash_to_p2pkh_script(pkh)
         elif _type == 'p2sh':
             pubkeys, x_pubkeys = self.get_sorted_pubkeys(txin)
             return multisig_script(pubkeys, txin['num_sig'])
@@ -839,14 +840,12 @@ class Transaction:
                     sec, compressed = keypairs.get(x_pubkey)
                     pubkey = public_key_from_private_key(sec, compressed)
                     # add signature
-                    nHashType = int_to_hex(1,4) # hardcoded, perhaps should be taken from unsigned input dict
                     pre_hash = Hash(bfh(self.serialize_preimage(i)))
                     if self._sign_schnorr:
                         sig = self._schnorr_sign(pubkey, sec, pre_hash)
                     else:
                         sig = self._ecdsa_sign(sec, pre_hash)
                     txin['signatures'][j] = bh2u(sig) + '01'
-                    txin['pubkeys'][j] = pubkey # needed for fd keys
                     self._inputs[i] = txin
         print_error("is_complete", self.is_complete())
         self.raw = self.serialize()
