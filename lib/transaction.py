@@ -35,6 +35,7 @@ from .address import (PublicKey, Address, Script, ScriptOutput, hash160,
                       UnknownAddress, OpCodes as opcodes)
 from . import schnorr
 from . import util
+from . import ecc
 import struct
 import warnings
 from typing import NamedTuple, List, Callable,Union
@@ -662,9 +663,9 @@ class Transaction:
         s += script
         s += int_to_hex(txin.get('sequence', 0xffffffff - 1), 4)
         # offline signing needs to know the input value
-        if ('value' in txin   # Legacy txs
-            and not (estimate_size or self.is_txin_complete(txin))):
-            s += int_to_hex(txin['value'], 8)
+        # if ('value' in txin   # Legacy txs
+        #     and not (estimate_size or self.is_txin_complete(txin))):
+        #     s += int_to_hex(txin['value'], 8)
         return s
 
     def BIP_LI01_sort(self):
@@ -837,29 +838,39 @@ class Transaction:
         return sig
 
 
-    def sign(self, keypairs):
+    def sign(self, keypairs) -> None:
+        # keypairs:  (x_)pubkey -> secret_bytes
         for i, txin in enumerate(self.inputs()):
-            num = txin['num_sig']
             pubkeys, x_pubkeys = self.get_sorted_pubkeys(txin)
-            for j, x_pubkey in enumerate(x_pubkeys):
-                signatures = list(filter(None, txin['signatures']))
-                if len(signatures) == num:
-                    # txin is complete
+            for j, (pubkey, x_pubkey) in enumerate(zip(pubkeys, x_pubkeys)):
+                if self.is_txin_complete(txin):
                     break
-                if x_pubkey in keypairs.keys():
-                    print_error("adding signature for", x_pubkey, "use schnorr?", self._sign_schnorr)
-                    sec, compressed = keypairs.get(x_pubkey)
-                    pubkey = public_key_from_private_key(sec, compressed)
-                    # add signature
-                    pre_hash = Hash(bfh(self.serialize_preimage(i)))
-                    if self._sign_schnorr:
-                        sig = self._schnorr_sign(pubkey, sec, pre_hash)
-                    else:
-                        sig = self._ecdsa_sign(sec, pre_hash)
-                    txin['signatures'][j] = bh2u(sig) + '01'
-                    self._inputs[i] = txin
+                if pubkey in keypairs:
+                    _pubkey = pubkey
+                elif x_pubkey in keypairs:
+                    _pubkey = x_pubkey
+                else:
+                    continue
+                # _logger.info(f"adding signature for {_pubkey}")
+                sec, compressed = keypairs.get(_pubkey)
+                sig = self.sign_txin(i, sec)
+                self.add_signature_to_txin(i, j, sig)
         print_error("is_complete", self.is_complete())
         self.raw = self.serialize()
+
+    def add_signature_to_txin(self, i, signingPos, sig):
+        txin = self._inputs[i]
+        txin['signatures'][signingPos] = sig
+        txin['scriptSig'] = None  # force re-serialization
+        txin['witness'] = None    # force re-serialization
+        self.raw = None
+
+    def sign_txin(self, txin_index, privkey_bytes) -> str:
+        pre_hash = Hash(bfh(self.serialize_preimage(txin_index)))
+        privkey = ecc.ECPrivkey(privkey_bytes)
+        sig = privkey.sign_transaction(pre_hash)
+        sig = bh2u(sig) + '01'
+        return sig
 
     def get_outputs(self):
         """convert pubkeys to addresses"""
