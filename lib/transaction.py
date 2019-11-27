@@ -37,6 +37,7 @@ from . import schnorr
 from . import util
 import struct
 import warnings
+from typing import NamedTuple, List, Callable,Union
 
 #
 # Workalike python implementation of Bitcoin's CDataStream class.
@@ -373,12 +374,14 @@ def multisig_script(public_keys, m):
 
 
 
-
+class TxOutput(NamedTuple):
+         type: int
+         address: str
+         value: Union[int, str]  # str when the output is set to max: '!'
 class Transaction:
 
     SIGHASH_FORKID = 0x40  # do not use this; deprecated
     FORKID = 0x000000  # do not use this; deprecated
-
     def __str__(self):
         if self.raw is None:
             self.raw = self.serialize()
@@ -538,8 +541,15 @@ class Transaction:
         return self
 
     @classmethod
-    def pay_script(self, output):
-        return output.to_script().hex()
+    def pay_script(self, output_type, addr):
+        if output_type == TYPE_SCRIPT:
+            return addr
+        elif output_type == TYPE_ADDRESS:
+            return address_to_script(str(addr))
+        elif output_type == TYPE_PUBKEY:
+            return public_key_to_p2pk_script(addr)
+        else:
+            raise TypeError('Unknown output type')
 
     @classmethod
     def estimate_pubkey_size_from_x_pubkey(cls, x_pubkey):
@@ -621,23 +631,23 @@ class Transaction:
 
     @classmethod
     def get_preimage_script(self, txin):
+        preimage_script = txin.get('preimage_script', None)
+        if preimage_script is not None:
+            return preimage_script
+
         pubkeys, x_pubkeys = self.get_sorted_pubkeys(txin)
-        _type = txin['type']
-        if _type == 'p2pkh':
+        if txin['type'] in ['p2sh', 'p2wsh', 'p2wsh-p2sh']:
+            return multisig_script(pubkeys, txin['num_sig'])
+        elif txin['type'] in ['p2pkh', 'p2wpkh', 'p2wpkh-p2sh']:
             pubkey = pubkeys[0]
             pkh = bh2u(hash_160(bfh(pubkey)))
             return pubkeyhash_to_p2pkh_script(pkh)
-        elif _type == 'p2sh':
-            pubkeys, x_pubkeys = self.get_sorted_pubkeys(txin)
-            return multisig_script(pubkeys, txin['num_sig'])
-        elif _type == 'p2pk':
-            pubkey = txin['pubkeys'][0]
+        elif txin['type'] == 'p2pk':
+            pubkey = pubkeys[0]
             return public_key_to_p2pk_script(pubkey)
-        elif _type == 'unknown':
-            # this approach enables most P2SH smart contracts (but take care if using OP_CODESEPARATOR)
-            return txin['scriptCode']
         else:
-            raise RuntimeError('Unknown txin type', _type)
+            raise TypeError('Unknown txin type', txin['type'])
+
 
     @classmethod
     def serialize_outpoint(self, txin):
@@ -660,12 +670,12 @@ class Transaction:
     def BIP_LI01_sort(self):
         # See https://github.com/kristovatlas/rfc/blob/master/bips/bip-li01.mediawiki
         self._inputs.sort(key = lambda i: (i['prevout_hash'], i['prevout_n']))
-        self._outputs.sort(key = lambda o: (o[2], self.pay_script(o[1])))
+        self._outputs.sort(key = lambda o: (o[2], self.pay_script(o[0], o[1])))
 
     def serialize_output(self, output):
         output_type, addr, amount = output
         s = int_to_hex(amount, 8)
-        script = self.pay_script(addr)
+        script = self.pay_script(output_type,  str(addr))
         s += var_int(len(script)//2)
         s += script
         return s
@@ -684,7 +694,8 @@ class Transaction:
         outputs = self.outputs()
         txin = inputs[i]
 
-        txins = var_int(len(inputs)) + ''.join(self.serialize_input(txin, self.get_preimage_script(txin) if i==k else '') for k, txin in enumerate(inputs))
+        txins = var_int(len(inputs)) + ''.join(self.serialize_input(txin, self.get_preimage_script(txin) if i==k else '')
+                                                   for k, txin in enumerate(inputs))
         txouts = var_int(len(outputs)) + ''.join(self.serialize_output(o) for o in outputs)
         nVersion = int_to_hex(self.version, 4)
         preimage = nVersion + txins + txouts + nLocktime + nHashType

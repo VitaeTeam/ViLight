@@ -28,6 +28,8 @@ from datetime import datetime
 from decimal import Decimal as PyDecimal  # Qt 5.12 also exports Decimal
 from functools import lru_cache
 import traceback
+from typing import NamedTuple, Union, TYPE_CHECKING, Tuple, Optional, Callable, Any
+
 import threading
 import hmac
 import stat
@@ -54,6 +56,8 @@ fee_levels = [_('Within 25 blocks'), _('Within 10 blocks'), _('Within 5 blocks')
 class NotEnoughFunds(Exception): pass
 
 class ExcessiveFee(Exception): pass
+
+class WalletFileException(Exception): pass
 
 class InvalidPassword(Exception):
     def __str__(self):
@@ -99,6 +103,51 @@ class PrintError:
 
     def print_msg(self, *msg):
         print_msg("[%s]" % self.diagnostic_name(), *msg)
+
+def export_meta(meta, fileName):
+    try:
+        with open(fileName, 'w+', encoding='utf-8') as f:
+            json.dump(meta, f, indent=4, sort_keys=True)
+    except (IOError, os.error) as e:
+        _logger.exception('')
+        raise FileExportFailed(e)
+
+def import_meta(path, validater, load_meta):
+    try:
+        with open(path, 'r', encoding='utf-8') as f:
+            d = validater(json.loads(f.read()))
+        load_meta(d)
+    #backwards compatibility for JSONDecodeError
+    except ValueError:
+        _logger.exception('')
+        raise FileImportFailed(_("Invalid JSON code."))
+    except BaseException as e:
+        _logger.exception('')
+        raise FileImportFailed(e)
+
+def make_aiohttp_session(proxy: Optional[dict], headers=None, timeout=None):
+    if headers is None:
+        headers = {'User-Agent': 'Electrum'}
+    if timeout is None:
+        timeout = aiohttp.ClientTimeout(total=30)
+    elif isinstance(timeout, (int, float)):
+        timeout = aiohttp.ClientTimeout(total=timeout)
+    ssl_context = ssl.create_default_context(purpose=ssl.Purpose.SERVER_AUTH, cafile=ca_path)
+
+    if proxy:
+        connector = SocksConnector(
+            socks_ver=SocksVer.SOCKS5 if proxy['mode'] == 'socks5' else SocksVer.SOCKS4,
+            host=proxy['host'],
+            port=int(proxy['port']),
+            username=proxy.get('user', None),
+            password=proxy.get('password', None),
+            rdns=True,
+            ssl=ssl_context,
+        )
+    else:
+        connector = aiohttp.TCPConnector(ssl=ssl_context)
+
+    return aiohttp.ClientSession(headers=headers, timeout=timeout, connector=connector)
 
 class ThreadJob(ABC, PrintError):
     """A job that is run periodically from a thread's main loop.  run() is

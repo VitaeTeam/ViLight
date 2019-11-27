@@ -32,7 +32,7 @@ import json
 
 import ecdsa
 import pyaes
-
+# from .address import Address
 from . import networks
 from .util import (bfh, bh2u, to_string, print_error, InvalidPassword,
                    assert_bytes, to_bytes, inv_dict, profiler)
@@ -40,7 +40,9 @@ from . import version
 from .ecc_fast import do_monkey_patching_of_python_ecdsa_internals_with_libsecp256k1
 do_monkey_patching_of_python_ecdsa_internals_with_libsecp256k1()
 from enum import IntEnum
-
+TYPE_ADDRESS = 0
+TYPE_PUBKEY  = 1
+TYPE_SCRIPT  = 2
 ################################## transactions
 # Derived from Bitcoin-ABC script.h
 class OpCodes(IntEnum):
@@ -457,6 +459,19 @@ def pubkeyhash_to_p2pkh_script(pubkey_hash160: str) -> str:
     script = bytes([OpCodes.OP_DUP, OpCodes.OP_HASH160]).hex()
     script += push_script(pubkey_hash160)
     script += bytes([OpCodes.OP_EQUALVERIFY, OpCodes.OP_CHECKSIG]).hex()
+    return script
+
+def address_to_script(addr: str, *, net=None) -> str:
+    if net is None: net = networks.net
+    addrtype, hash_160_ = b58_address_to_hash160(addr)
+    if addrtype == net.ADDRTYPE_P2PKH:
+        script = pubkeyhash_to_p2pkh_script(bh2u(hash_160_))
+    elif addrtype == net.ADDRTYPE_P2SH:
+        script = OpCodes.OP_HASH160.hex()
+        script += push_script(bh2u(hash_160_))
+        script += OpCodes.OP_EQUAL.hex()
+    else:
+        raise BitcoinException(f'unknown address type: {addrtype}')
     return script
 
 def pubkey_to_address(txin_type, pubkey, *, net=None):
