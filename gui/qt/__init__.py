@@ -656,7 +656,7 @@ class ElectrumGui(QObject, PrintError):
             return True
 
         # else..
-        howto_url='https://github.com/vitaecrypto/ViLight/blob/master/contrib/secp_HOWTO.md#libsecp256k1-0-for-electron-cash'
+        howto_url='https://github.com/VitaeTeam/ViLight/blob/master/contrib/secp_HOWTO.md#libsecp256k1-0-for-electron-cash'
         template = '''
         <html><body>
             <p>
