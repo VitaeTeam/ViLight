@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# Electron Cash - lightweight Bitcoin Cash client
+# ViLight - lightweight Vitae client
 # Copyright (C) 2012 thomasv@gitorious
 #
 # This file is:
@@ -499,8 +499,8 @@ def showHelpForButton(oid : objc_id) -> None:
         msg = _('This is the height of your local copy of the blockchain.')
     elif tag is TAG_HELP_AUTOSERVER:
         msg = ' '.join([
-            _("If auto-connect is enabled, Electron Cash will always use a server that is on the longest blockchain."),
-            _("If it is disabled, you have to choose a server you want to use. Electron Cash will warn you if your server is lagging.")
+            _("If auto-connect is enabled, ViLight will always use a server that is on the longest blockchain."),
+            _("If it is disabled, you have to choose a server you want to use. ViLight will warn you if your server is lagging.")
         ])
     msg = msg.replace("Electrum","ViLight")
     parent().show_message(msg, title = _("Information"))

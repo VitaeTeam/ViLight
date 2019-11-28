@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# Electron Cash - lightweight Bitcoin Cash client
+# ViLight - lightweight Vitae client
 # Copyright (C) 2012 thomasv@gitorious
 #
 # This file is:
@@ -207,14 +207,14 @@ class ElectrumGui(PrintError):
 
         self.onboardingWizard = None
 
-        self.decimal_point = config.get('decimal_point', 8) # default is VITAE , not mVITAE
+        self.decimal_point = config.get('decimal_point', 8)
         self.fee_unit = config.get('fee_unit', 0)
         self.num_zeros     = self.prefs_get_num_zeros()
         self.alias_info = None # TODO: IMPLEMENT alias stuff
         self.lastHeightSeen = -2
         self.lastSplitNotify = 0
 
-        self.show_cashaddr = False
+        Address.show_cashaddr(False)
 
         self.cash_addr_sig = utils.PySig()
 
@@ -960,6 +960,21 @@ class ElectrumGui(PrintError):
     def prefs_set_confirmed_only(self, b : bool) -> None:
         self.config.set_key('confirmed_only', bool(b))
 
+    @property
+    def prefs_use_schnorr(self) -> bool:
+        if not self.wallet: return False
+        return bool(self.wallet.is_schnorr_enabled())
+
+    @prefs_use_schnorr.setter
+    def prefs_use_schnorr(self, b):
+        if self.wallet:
+            self.wallet.set_schnorr_enabled(b)
+
+    @property
+    def prefs_is_schnorr_possible(self) -> bool:
+        if not self.wallet: return False
+        return self.wallet.is_schnorr_possible()
+
     def prefs_get_use_change(self) -> tuple: # returns the setting plus a second bool that indicates whether this setting can be modified
         if not self.wallet: return False, False
         r1 = self.wallet.use_change
@@ -1054,6 +1069,7 @@ class ElectrumGui(PrintError):
 
     # can be called from any thread, always runs in main thread
     def show_error(self, message, title = _("Error"), onOk = None, localRunLoop = False, vc = None):
+        message = str(message)  # ensure message is string in case calling code passed us an Exception subclass, see #1273
         return self.show_message(message=message, title=title, onOk=onOk, localRunLoop=localRunLoop, vc=vc)
 
     # full stop question for user -- appropriate for send tx dialog
@@ -1192,8 +1208,8 @@ class ElectrumGui(PrintError):
                 out = web.parse_URI(URI, self.on_pr)
             except:
                 e = sys.exc_info()[1]
-                utils.NSLog("Invalid vitae URI: %s, exception: %s", URI, str(e))
-                if showErr: self.show_error(_('Invalid vitae URI:') + '\n' + str(e))
+                utils.NSLog("Invalid bitcoincash URI: %s, exception: %s", URI, str(e))
+                if showErr: self.show_error(_('Invalid bitcoincash URI:') + '\n' + str(e))
                 return False
             r = out.get('r')
             sig = out.get('sig')
@@ -1351,7 +1367,14 @@ class ElectrumGui(PrintError):
         if self.wallet:
             if self.onboardingWizard and not self.onboardingWizard.isBeingDismissed():
                 self.onboardingWizard.presentingViewController.dismissViewControllerAnimated_completion_(False, None)
-            self.wallet.set_schnorr_enabled(False)  # hard-coded -- disable schnorr on iOS
+            # Below conditional is because we used to force Schnorr to 0 on all
+            # wallets on iOS, and now we have to "undo the damage" of that.
+            if self.wallet.storage.get('_ios_undid_force_no_sign_schnorr') is None:
+                # indicate that this branch should never be taken again
+                self.wallet.storage.put('_ios_undid_force_no_sign_schnorr', True)
+                if self.wallet.storage.get('sign_schnorr') == 0:
+                    # clear key only if it was 0
+                    self.wallet.storage.put('sign_schnorr', None)
             self.config.set_key('gui_last_wallet', self.wallet.storage.path)
             self.config.open_last_wallet() # this badly named function just sets the 'default wallet path' to the gui_last_wallet..
             vcs = self.tabController.viewControllers
@@ -1454,8 +1477,8 @@ class ElectrumGui(PrintError):
         except:
             pass
         if not self.config.get('use_exchange'):
-            self.config.set_key('use_exchange', 'CoinGecko')
-            utils.NSLog("Forced default exchange to 'CoinGecko'")
+            self.config.set_key('use_exchange', 'BitcoinAverage')
+            utils.NSLog("Forced default exchange to 'BitcoinAverage'")
         if self.check_low_diskspace():
             # Not enough disk space.
             # Will stop the daemon if running and show a pop-up window warning user.
@@ -1706,7 +1729,7 @@ class ElectrumGui(PrintError):
                                       onOk = lambda: self.show_wallet_share_actions(info = info, vc = vc, ipadAnchor = ipadAnchor, warnIfUnsafe = False))
                         return
             except:
-                self.show_error(sys.exc_info()[1], vc = vc)
+                self.show_error(str(sys.exc_info()[1]), vc = vc)
                 return
         waitDlg = None
         def Dismiss(compl = None, animated = True) -> None:
@@ -1939,7 +1962,24 @@ class ElectrumGui(PrintError):
                 status, msg =  self.daemon.network.broadcast_transaction(tx)
             else:
                 refund_address = self.wallet.get_receiving_addresses()[0]
-                status, msg = pr.send_payment(str(tx), refund_address) # merchant will broadcast tx for us.
+                ack_status, ack_msg = pr.send_payment(str(tx), refund_address) # merchant will broadcast tx for us.
+                if not ack_status:
+                    if ack_msg == "no url":
+                        # "no url" hard-coded in send_payment method
+                        # it means merchant doesn't need the tx sent to him
+                        # since he didn't specify a POST url.
+                        # so we just broadcast and rely on that result status.
+                        ack_msg = None
+                    else:
+                        return False, ack_msg
+                # at this point either ack_status is True or there is "no url"
+                # and we proceed anyway with the broadcast
+                status, msg = self.daemon.network.broadcast_transaction(tx)
+
+                # figure out what to return...
+                msg = ack_msg or msg  # prefer the merchant's ack_msg over the broadcast msg, but fallback to broadcast msg if no ack_msg.
+                status = bool(ack_status or status)  # if both broadcast and merchant ACK failed -- it's a failure. if either succeeded -- it's a success
+
                 #if status:
                 # TODO: invoice list stuff in a future release.
                 #    self.invoices.set_paid(pr, tx.txid())
@@ -2010,10 +2050,10 @@ class ElectrumGui(PrintError):
         self.refresh_components('helper')
 
     def is_touchid_possible(self) -> bool:
-        return self.keyEnclave.has_keys()
+        return bool(not utils.is_simulator() and self.keyEnclave.has_keys())
 
     def is_touchid_available(self) -> bool:
-        return self.is_touchid_possible() and self.keyEnclave.biometrics_available()
+        return bool(self.is_touchid_possible() and self.keyEnclave.biometrics_available())
 
     def check_touchid_for_gui(self, onOff : bool) -> bool:
         if not onOff: return False
@@ -2168,7 +2208,7 @@ class ElectrumGui(PrintError):
         UIPasteboard.generalPasteboard.string = text
         utils.show_notification(message=_(messagePrefix.strip() + " copied to clipboard"))
 
-    def open_vitae_url(self, uri : str) -> None:
+    def open_bitcoincash_url(self, uri : str) -> None:
         if not self.wallet:
             self.queued_payto_uri = uri
         else:
@@ -2313,9 +2353,11 @@ class ElectrumGui(PrintError):
         self.keyEnclave.decrypt_hex2str(hexpass, MyCallback, prompt = prompt)
 
     def setup_key_enclave(self, completion : Callable[[],None]) -> None:
-	        if (not self.keyEnclave.has_keys()
-                # below is a workaround for simulator crash when trying to
-                # create a key (simulator has no biometrics). -Calin 10/16/2019
+        # TODO: Find out why simulator crashes when trying to
+        # create a key (even when simulator has biometrics enabled).
+        #   -Calin 10/16/2019
+        if (not utils.is_simulator()
+                and not self.keyEnclave.has_keys()
                 and self.keyEnclave.biometrics_available()):
             # UGH.. they lost their keys, or never had them.  Zero out our enc_pws and our touchIdAsked files..
             self.encPasswords.clearAll()
@@ -2355,7 +2397,7 @@ class ElectrumGui(PrintError):
                 sys.__excepthook__(etype, eobj, tb)
         utils.do_in_main_thread(InMain, etype, eobj, tb)
 
-    # this method is called by Electron Cash libs to start the GUI
+    # this method is called by ViLight libs to start the GUI
     def main(self):
         self.createAndShowUI()
 

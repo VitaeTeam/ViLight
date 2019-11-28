@@ -35,7 +35,7 @@ def main():
 
     _printStats(config_options)  # Prints some startup/debug stats such as Python version and SSL version (this is done in another thread to hopefully not impact startup overhead too much, as importing ssl may be a bit heavy)
 
-    return "Bitcoin Cash FTW!"
+    return "Vitae FTW!"
 
 def _printStats(config_options):
     import threading
