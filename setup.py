@@ -144,6 +144,7 @@ setup(
         'electroncash_plugins.email_requests',
         'electroncash_plugins.hw_wallet',
         'electroncash_plugins.keepkey',
+        'pivx-quark-hash',
         'electroncash_plugins.labels',
         'electroncash_plugins.ledger',
         'electroncash_plugins.trezor',

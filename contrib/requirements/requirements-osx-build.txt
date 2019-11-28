@@ -5,3 +5,4 @@ altgraph
 pefile>=2017.8.1
 setuptools
 future
+pivx-quark-hash
