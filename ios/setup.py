@@ -56,7 +56,7 @@ setup(
         'License :: OSI Approved :: MIT license',
     ],
     install_requires=[
-        'certifi', 'chardet', 'dnspython', 'ecdsa>=0.9', 'idna',
+        'certifi', 'chardet','pivx_quark_hash','dnspython', 'ecdsa>=0.9', 'idna',
         'jsonrpclib-pelix', 'protobuf',
         'pyaes>=0.1a1',
         'PySocks>=1.6.6', 'qrcode', 'requests', 'six',
@@ -71,7 +71,7 @@ setup(
         # Mobile deployments
         'ios': {
             'app_requires': [
-                'rubicon-objc'
+                'rubicon-objc','pivx_quark_hash'
             ]
         },
     }
