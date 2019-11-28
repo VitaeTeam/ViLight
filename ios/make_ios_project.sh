@@ -253,7 +253,9 @@ rm -fr ${compact_name}/electroncash/*
 
 # Can add this back when it works uniformly without issues
 /usr/bin/env ruby update_project.rb
-
+echo 'Cloning pivx-quark-hash to app_packages'
+git clone https://github.com/random-zebra/pivx_quark_hash iOS/app_packages/pivx_quark_hash
+echo 'Done cloning pivx quarkhash'
 
 echo ''
 echo '**************************************************************************'
