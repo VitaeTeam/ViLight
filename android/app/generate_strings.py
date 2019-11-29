@@ -80,10 +80,11 @@ def main():
     lang_strings = defaultdict(list)
     for lang_region in [name for name in os.listdir(locale_dir)
                         if isdir(join(locale_dir, name))]:
-        lang, region = lang_region.split("_")
-        catalog = read_catalog(join(locale_dir, lang_region, "LC_MESSAGES",
-                                    "electron-cash.mo"))
-        lang_strings[lang].append((region, catalog))
+        print(lang_region)
+        if not lang_region=="__pycache__":
+             lang, region = lang_region.split("_")
+             catalog = read_catalog(join(locale_dir, lang_region, "LC_MESSAGES","electron-cash.mo"))
+             lang_strings[lang].append((region, catalog))
 
     src_strings = read_catalog(join(locale_dir, "messages.pot"))
     ids = make_ids(src_strings)
