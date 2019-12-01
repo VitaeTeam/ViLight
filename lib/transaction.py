@@ -35,7 +35,7 @@ from .address import (PublicKey, Address, Script, ScriptOutput, hash160,
                       UnknownAddress, OpCodes as opcodes)
 from . import schnorr
 from . import util
-from . import ecc
+from . import ecc_fast
 import struct
 import warnings
 from typing import NamedTuple, List, Callable,Union
