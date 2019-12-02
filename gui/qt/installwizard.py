@@ -8,10 +8,10 @@ from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 
-from electroncash import Wallet, WalletStorage
-from electroncash.util import UserCancelled, InvalidPassword, finalization_print_error
-from electroncash.base_wizard import BaseWizard
-from electroncash.i18n import _
+from vilight import Wallet, WalletStorage
+from vilight.util import UserCancelled, InvalidPassword, finalization_print_error
+from vilight.base_wizard import BaseWizard
+from vilight.i18n import _
 
 from .seed_dialog import SeedLayout, KeysLayout
 from .network_dialog import NetworkChoiceLayout

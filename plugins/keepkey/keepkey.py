@@ -2,14 +2,14 @@ from binascii import hexlify, unhexlify
 import traceback
 import sys
 
-from electroncash.util import bfh, bh2u, UserCancelled
-from electroncash.bitcoin import TYPE_ADDRESS, TYPE_SCRIPT, deserialize_xpub
-from electroncash import networks
-from electroncash.i18n import _
-from electroncash.transaction import deserialize, Transaction
-from electroncash.keystore import Hardware_KeyStore, is_xpubkey, parse_xpubkey
-from electroncash.address import Address
-from electroncash.plugins import Device
+from vilight.util import bfh, bh2u, UserCancelled
+from vilight.bitcoin import TYPE_ADDRESS, TYPE_SCRIPT, deserialize_xpub
+from vilight import networks
+from vilight.i18n import _
+from vilight.transaction import deserialize, Transaction
+from vilight.keystore import Hardware_KeyStore, is_xpubkey, parse_xpubkey
+from vilight.address import Address
+from vilight.plugins import Device
 
 from ..hw_wallet import HW_PluginBase
 from ..hw_wallet.plugin import is_any_tx_output_on_change_branch, validate_op_return_output_and_get_data

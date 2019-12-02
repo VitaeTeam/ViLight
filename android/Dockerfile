@@ -25,7 +25,7 @@ RUN apt-get update && \
     pip3 install polib requests
 COPY contrib/make_locale contrib/
 COPY gui gui
-COPY ios/ElectronCash/electroncash_gui/ios_native ios/ElectronCash/electroncash_gui/ios_native
+COPY ios/Vilight/vilight_gui/ios_native ios/Vilight/vilight_gui/ios_native
 COPY plugins plugins
 
 # The app itself. Specifically check for the keystore, otherwise it'll build an APK with no

@@ -23,9 +23,9 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-from electroncash.i18n import _
-from electroncash.address import Address
-from electroncash.util import PrintError
+from vilight.i18n import _
+from vilight.address import Address
+from vilight.util import PrintError
 
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *

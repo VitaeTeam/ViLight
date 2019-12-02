@@ -46,7 +46,7 @@ android {
                 install "-r", "$REPO_ROOT/contrib/deterministic-build/requirements.txt"
                 install "-r", "$REPO_ROOT/contrib/deterministic-build/requirements-android.txt"
             }
-            extractPackages "electroncash.locale"
+            extractPackages "vilight.locale"
         }
         ndk {
             abiFilters "x86", "x86_64", "armeabi-v7a", "arm64-v8a"
@@ -60,8 +60,8 @@ android {
             python {
                 srcDir REPO_ROOT
                 include "lib/**"                               // In ../.. (renamed below)
-                include("chaquopy/**", "electroncash_gui/**",  // In src/main/python
-                        "electroncash_plugins/**")             //
+                include("chaquopy/**", "vilight_gui/**",  // In src/main/python
+                        "vilight_plugins/**")             //
                 exclude "**/*.po", "**/*.pot"
             }
         }
@@ -126,7 +126,7 @@ afterEvaluate {
         def dstDir = task.destinationDir
         task.doLast {
             def src = "$dstDir/lib"
-            def dst = "$dstDir/electroncash"
+            def dst = "$dstDir/vilight"
             if (! file(src).renameTo(dst)) {
                 throw new GradleException("Failed to rename $src to $dst")
             }

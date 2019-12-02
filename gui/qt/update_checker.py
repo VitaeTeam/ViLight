@@ -29,10 +29,10 @@ from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 
-from electroncash.util import PrintError, print_error
-from electroncash.i18n import _
-from electroncash import version, bitcoin, address
-from electroncash.networks import MainNet
+from vilight.util import PrintError, print_error
+from vilight.i18n import _
+from vilight import version, bitcoin, address
+from vilight.networks import MainNet
 from .util import *
 import base64, sys, requests, threading, time
 

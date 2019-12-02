@@ -1,4 +1,4 @@
-from electroncash.i18n import _
+from vilight.i18n import _
 
 fullname = 'Ledger Wallet'
 description = 'Provides support for Ledger hardware wallet'

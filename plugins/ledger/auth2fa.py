@@ -1,10 +1,10 @@
 from PyQt5.QtWidgets import *
 
-from electroncash.i18n import _
-from electroncash_gui.qt.util import *
-from electroncash.util import print_error
-from electroncash.address import Address
-from electroncash import networks
+from vilight.i18n import _
+from vilight_gui.qt.util import *
+from vilight.util import print_error
+from vilight.address import Address
+from vilight import networks
 
 import copy
 

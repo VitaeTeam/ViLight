@@ -6,11 +6,11 @@
 #
 from . import utils
 from . import gui
-from electroncash import WalletStorage, Wallet
-from electroncash.address import Address, PublicKey
-from electroncash.util import timestamp_to_datetime, PrintError, profiler
-from electroncash.i18n import _, language
-from electroncash.transaction import Transaction
+from vilight import WalletStorage, Wallet
+from vilight.address import Address, PublicKey
+from vilight.util import timestamp_to_datetime, PrintError, profiler
+from vilight.i18n import _, language
+from vilight.transaction import Transaction
 
 import time, math, sys, os
 from collections import namedtuple

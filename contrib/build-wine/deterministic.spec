@@ -43,13 +43,13 @@ binaries += [('C:/tmp/libzbar-0.dll', '.')]
 binaries += [b for b in collect_dynamic_libs('PyQt5') if 'qwindowsvista' in b[0]]
 
 datas = [
-    (home+'lib/currencies.json', 'electroncash'),
-    (home+'lib/servers.json', 'electroncash'),
-    (home+'lib/servers_testnet.json', 'electroncash'),
-    (home+'lib/wordlist/english.txt', 'electroncash/wordlist'),
-    (home+'lib/locale', 'electroncash/locale'),
-    (home+'gui/qt/data/ecsupplemental_win.ttf', 'electroncash_gui/qt/data'),
-    (home+'plugins', 'electroncash_plugins'),
+    (home+'lib/currencies.json', 'vilight'),
+    (home+'lib/servers.json', 'vilight'),
+    (home+'lib/servers_testnet.json', 'vilight'),
+    (home+'lib/wordlist/english.txt', 'vilight/wordlist'),
+    (home+'lib/locale', 'vilight/locale'),
+    (home+'gui/qt/data/ecsupplemental_win.ttf', 'vilight_gui/qt/data'),
+    (home+'plugins', 'vilight_plugins'),
 ]
 datas += collect_data_files('trezorlib')
 datas += collect_data_files('btchip')
@@ -171,4 +171,4 @@ coll = COLLECT(
     debug=False,
     icon=home+'icons/electron.ico',
     console=False,
-    name=os.path.join('dist', 'electroncash'))
+    name=os.path.join('dist', 'vilight'))

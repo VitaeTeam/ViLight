@@ -35,10 +35,10 @@ import PyQt5.QtCore as QtCore
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import *
 
-from electroncash.i18n import _
+from vilight.i18n import _
 import sys
-from electroncash import PACKAGE_VERSION
-from electroncash.util import print_error, finalization_print_error
+from vilight import PACKAGE_VERSION
+from vilight.util import print_error, finalization_print_error
 from .main_window import ElectrumWindow
 from .util import destroyed_print_error
 

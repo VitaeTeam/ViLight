@@ -24,10 +24,10 @@
 # SOFTWARE.
 
 from .util import *
-import electroncash.web as web
-from electroncash.i18n import _
-from electroncash.util import timestamp_to_datetime, profiler, Weak
-from electroncash.plugins import run_hook
+import vilight.web as web
+from vilight.i18n import _
+from vilight.util import timestamp_to_datetime, profiler, Weak
+from vilight.plugins import run_hook
 
 
 TX_ICONS = [

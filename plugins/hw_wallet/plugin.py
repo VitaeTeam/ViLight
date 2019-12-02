@@ -24,12 +24,12 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-from electroncash.plugins import BasePlugin, hook
-from electroncash.i18n import _, ngettext
-from electroncash import Transaction
-from electroncash.bitcoin import TYPE_SCRIPT
-from electroncash.util import bfh, finalization_print_error
-from electroncash.address import OpCodes, Address, Script
+from vilight.plugins import BasePlugin, hook
+from vilight.i18n import _, ngettext
+from vilight import Transaction
+from vilight.bitcoin import TYPE_SCRIPT
+from vilight.util import bfh, finalization_print_error
+from vilight.address import OpCodes, Address, Script
 
 class HW_PluginBase(BasePlugin):
     # Derived classes provide:

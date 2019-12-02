@@ -71,11 +71,11 @@ class Plugins(DaemonThread):
     def __init__(self, config, gui_name):
         DaemonThread.__init__(self)
         try:
-            internal_plugins_namespace = __import__('electroncash_plugins')
+            internal_plugins_namespace = __import__('vilight_plugins')
         except ImportError:
             # Assume we're running within the source tree.
             find = imp.find_module('plugins')
-            internal_plugins_namespace = imp.load_module('electroncash_plugins', *find)
+            internal_plugins_namespace = imp.load_module('vilight_plugins', *find)
         self.internal_plugins_pkgpath = os.path.dirname(internal_plugins_namespace.__file__)
         self.config = config
         self.gui_name = gui_name
@@ -169,7 +169,7 @@ class Plugins(DaemonThread):
         if name in self.internal_plugins:
             return self.internal_plugins[name]
 
-        full_name = 'electroncash_plugins.' + name + '.' + self.gui_name
+        full_name = 'vilight_plugins.' + name + '.' + self.gui_name
         loader = pkgutil.find_loader(full_name)
         if not loader:
             raise RuntimeError("%s implementation for %s plugin not found"
@@ -205,9 +205,9 @@ class Plugins(DaemonThread):
             self.print_error("unable to load zip plugin '%s' package '%s'" % (plugin_file_path, name), str(e))
             return
 
-        sys.modules['electroncash_external_plugins.'+ name] = module
+        sys.modules['vilight_external_plugins.'+ name] = module
 
-        full_name = 'electroncash_external_plugins.' + name + '.' + self.gui_name
+        full_name = 'vilight_external_plugins.' + name + '.' + self.gui_name
         loader = pkgutil.find_loader(full_name)
         if not loader:
             raise RuntimeError("%s implementation for %s plugin not found"
@@ -419,8 +419,8 @@ class Plugins(DaemonThread):
 
     def uninstall_external_plugin(self, name):
         self.disable_external_plugin(name)
-        if 'electroncash_external_plugins.'+ name in sys.modules:
-            del sys.modules['electroncash_external_plugins.'+ name]
+        if 'vilight_external_plugins.'+ name in sys.modules:
+            del sys.modules['vilight_external_plugins.'+ name]
 
         metadata = self.external_plugin_metadata[name]
         plugin_file_path = metadata["__file__"]

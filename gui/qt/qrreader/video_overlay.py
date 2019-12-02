@@ -30,7 +30,7 @@ from PyQt5.QtGui import QPainter, QPaintEvent, QPen, QPainterPath, QColor, QTran
 from PyQt5.QtCore import QPoint, QSize, QRect, QRectF, Qt
 from PyQt5.QtSvg import QSvgRenderer
 
-from electroncash.qrreaders import QrCodeResult
+from vilight.qrreaders import QrCodeResult
 
 from .validator import QrReaderValidatorResult
 

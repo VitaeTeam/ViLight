@@ -12,8 +12,8 @@ val py by lazy {
     Python.start(AndroidPlatform(app))
     Python.getInstance()
 }
-fun libMod(name: String) = py.getModule("electroncash.$name")!!
-fun guiMod(name: String) = py.getModule("electroncash_gui.android.$name")!!
+fun libMod(name: String) = py.getModule("vilight.$name")!!
+fun guiMod(name: String) = py.getModule("vilight_gui.android.$name")!!
 val libNetworks by lazy { libMod("networks") }
 val guiDaemon by lazy { guiMod("daemon") }
 
@@ -62,7 +62,7 @@ class DaemonModel {
         watchdog.run()
     }
 
-    // This function is called from src/main/python/electroncash_gui/android/daemon.py.
+    // This function is called from src/main/python/vilight_gui/android/daemon.py.
     // It will sometimes be called on the main thread and sometimes on the network thread.
     @Suppress("unused")
     fun onCallback(event: String) {

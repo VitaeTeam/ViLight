@@ -16,7 +16,7 @@ os.chdir('..')
 code_directories = [
     'android/app/src/main/python',
     'gui',
-    'ios/ElectronCash/electroncash_gui',  # ios/ElectronCash could contain duplicate files
+    'ios/Vilight/vilight_gui',  # ios/Vilight could contain duplicate files
                                           # copied by make_ios_project.sh.
     'lib',
     'plugins',

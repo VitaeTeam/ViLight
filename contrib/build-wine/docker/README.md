@@ -20,7 +20,7 @@ folder.
 2. Build image
 
     ```
-    $ sudo docker build -t electroncash-wine-builder-img contrib/build-wine/docker
+    $ sudo docker build -t vilight-wine-builder-img contrib/build-wine/docker
     ```
 
     _Note 1:_ see [this](https://stackoverflow.com/a/40516974/7499128) if having dns problems
@@ -46,11 +46,11 @@ folder.
     $ REV=4.0.0  # Replace this with whatever Electron Cash revision tag you want to build
     $ git checkout $REV
     $ sudo docker run -it \
-        --name electroncash-wine-builder-cont \
-        -v $PWD:/opt/wine64/drive_c/electroncash \
+        --name vilight-wine-builder-cont \
+        -v $PWD:/opt/wine64/drive_c/vilight \
         --rm \
-        --workdir /opt/wine64/drive_c/electroncash/contrib/build-wine \
-        electroncash-wine-builder-img \
+        --workdir /opt/wine64/drive_c/vilight/contrib/build-wine \
+        vilight-wine-builder-img \
         ./_build.sh $REV
     ```
 

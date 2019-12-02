@@ -4,13 +4,13 @@
 #
 
 try:
-    from electroncash.bitcoin import TYPE_ADDRESS, push_script, var_int, msg_magic, Hash, verify_message, pubkey_from_signature, point_to_ser, public_key_to_p2pkh, EncodeAES_base64, MyVerifyingKey, int_to_hex, hmac_oneshot, EncodeAES_bytes, DecodeAES_bytes
-    from electroncash.bitcoin import serialize_xpub, deserialize_xpub
-    from electroncash.transaction import Transaction
-    from electroncash.i18n import _
-    from electroncash.keystore import Hardware_KeyStore
+    from vilight.bitcoin import TYPE_ADDRESS, push_script, var_int, msg_magic, Hash, verify_message, pubkey_from_signature, point_to_ser, public_key_to_p2pkh, EncodeAES_base64, MyVerifyingKey, int_to_hex, hmac_oneshot, EncodeAES_bytes, DecodeAES_bytes
+    from vilight.bitcoin import serialize_xpub, deserialize_xpub
+    from vilight.transaction import Transaction
+    from vilight.i18n import _
+    from vilight.keystore import Hardware_KeyStore
     from ..hw_wallet import HW_PluginBase
-    from electroncash.util import print_error, to_string, UserCancelled
+    from vilight.util import print_error, to_string, UserCancelled
 
     import time
     import hid

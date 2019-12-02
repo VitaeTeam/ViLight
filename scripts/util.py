@@ -1,7 +1,7 @@
 import select, time, queue
-from electroncash import Connection, Interface, SimpleConfig
+from vilight import Connection, Interface, SimpleConfig
 
-from electroncash.network import parse_servers
+from vilight.network import parse_servers
 from collections import defaultdict
 
 # electrum.util.set_verbosity(1)

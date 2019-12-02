@@ -967,7 +967,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ElectronCashFunkyBG.png" translatesAutoresizingMaskIntoConstraints="NO" id="yud-pJ-xw6">
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VilightFunkyBG.png" translatesAutoresizingMaskIntoConstraints="NO" id="yud-pJ-xw6">
                                 <rect key="frame" x="64" y="129" width="251" height="566"/>
                             </imageView>
                             <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ElecTRONCash.png" translatesAutoresizingMaskIntoConstraints="NO" id="5p7-9Z-k5r">
@@ -1603,7 +1603,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ElectronCashFunkyBG_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="mvt-WK-d9u">
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VilightFunkyBG_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="mvt-WK-d9u">
                                 <rect key="frame" x="28" y="95" width="306" height="632"/>
                             </imageView>
                             <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OnBoardingLock.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dob-Qg-7wJ">
@@ -1709,7 +1709,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ElectronCashFunkyBG_3.png" translatesAutoresizingMaskIntoConstraints="NO" id="h8k-qc-p09">
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VilightFunkyBG_3.png" translatesAutoresizingMaskIntoConstraints="NO" id="h8k-qc-p09">
                                 <rect key="frame" x="38" y="95" width="300" height="594"/>
                             </imageView>
                             <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OnBoardingShield.png" translatesAutoresizingMaskIntoConstraints="NO" id="PbD-G1-Frg">
@@ -1812,9 +1812,9 @@
         <image name="Back_Chevron_White.png" width="7" height="13"/>
         <image name="BeLectron_Insignia.png" width="154" height="138"/>
         <image name="ElecTRONCash.png" width="341.5" height="112"/>
-        <image name="ElectronCashFunkyBG.png" width="280.5" height="283"/>
-        <image name="ElectronCashFunkyBG_2.png" width="306" height="316"/>
-        <image name="ElectronCashFunkyBG_3.png" width="300" height="297"/>
+        <image name="VilightFunkyBG.png" width="280.5" height="283"/>
+        <image name="VilightFunkyBG_2.png" width="306" height="316"/>
+        <image name="VilightFunkyBG_3.png" width="300" height="297"/>
         <image name="OnBoardingLock.png" width="280" height="195"/>
         <image name="OnBoardingShield.png" width="284" height="212"/>
         <image name="Rect_For_Chk_18px.png" width="20" height="20"/>

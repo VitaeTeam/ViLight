@@ -26,5 +26,5 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-# ElectronCash libs expect this name to be here to auto-create the GUI, so expose it as such.
+# Vilight libs expect this name to be here to auto-create the GUI, so expose it as such.
 from .gui import ElectrumGui

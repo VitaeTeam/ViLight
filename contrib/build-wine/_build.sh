@@ -167,7 +167,7 @@ prepare_wine() {
         # if the verification fails you might need to get more keys from python.org
         # keys from https://www.python.org/downloads/#pubkeys
         info "Importing Python dev keyring (may take a few minutes)..."
-        KEYRING_PYTHON_DEV=keyring-electroncash-build-python-dev.gpg
+        KEYRING_PYTHON_DEV=keyring-vilight-build-python-dev.gpg
         gpg -v --no-default-keyring --keyring $KEYRING_PYTHON_DEV --import \
             "$here"/pgp/7ed10b6531d7c8e1bc296021fc624643487034e5.asc \
             || fail "Failed to import Python release signing keys"

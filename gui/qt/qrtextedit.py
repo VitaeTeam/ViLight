@@ -1,7 +1,7 @@
 
-from electroncash.i18n import _
-from electroncash.plugins import run_hook
-from electroncash import util
+from vilight.i18n import _
+from vilight.plugins import run_hook
+from vilight import util
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import QFileDialog
@@ -52,7 +52,7 @@ class ScanQRTextEdit(ButtonsTextEdit, MessageBoxMixin):
 
         image = QImage()
         if image.load(fileName):
-            from electroncash.qrreaders import get_qr_reader
+            from vilight.qrreaders import get_qr_reader
             qr_reader = get_qr_reader()
             if not qr_reader:
                 self.show_error(_("Unable to scan image file.") + "\n" +
@@ -101,7 +101,7 @@ class ScanQRTextEdit(ButtonsTextEdit, MessageBoxMixin):
         from . import ElectrumGui
         if ElectrumGui.instance.warn_if_cant_import_qrreader(self):
             return
-        from electroncash import get_config
+        from vilight import get_config
         from .qrreader import QrReaderCameraDialog
         try:
             self.qr_dialog = QrReaderCameraDialog(parent=self.top_level_window())

@@ -1,8 +1,8 @@
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import (QVBoxLayout, QGridLayout, QPushButton)
-from electroncash.plugins import BasePlugin, hook
-from electroncash.i18n import _
-from electroncash_gui.qt.util import MONOSPACE_FONT
+from vilight.plugins import BasePlugin, hook
+from vilight.i18n import _
+from vilight_gui.qt.util import MONOSPACE_FONT
 import random
 
 

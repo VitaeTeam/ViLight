@@ -32,14 +32,14 @@ from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 
-from electroncash.address import Address, PublicKey, ScriptOutput
-from electroncash.bitcoin import base_encode
-from electroncash.i18n import _, ngettext
-from electroncash.plugins import run_hook
-from electroncash import web
-from electroncash import cashacct
+from vilight.address import Address, PublicKey, ScriptOutput
+from vilight.bitcoin import base_encode
+from vilight.i18n import _, ngettext
+from vilight.plugins import run_hook
+from vilight import web
+from vilight import cashacct
 
-from electroncash.util import bfh, Weak, PrintError
+from vilight.util import bfh, Weak, PrintError
 from .util import *
 
 dialogs = []  # Otherwise python randomly garbage collects the dialogs...

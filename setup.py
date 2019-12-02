@@ -106,7 +106,7 @@ platform_package_data = {}
 
 if sys.platform in ('linux'):
     platform_package_data = {
-        'electroncash_gui.qt' : [
+        'vilight_gui.qt' : [
             'data/ecsupplemental_lnx.ttf',
             'data/fonts.xml'
         ],
@@ -114,7 +114,7 @@ if sys.platform in ('linux'):
 
 if sys.platform in ('win32', 'cygwin'):
     platform_package_data = {
-        'electroncash_gui.qt' : [
+        'vilight_gui.qt' : [
             'data/ecsupplemental_win.ttf'
         ],
     }
@@ -130,33 +130,33 @@ setup(
         'hardware': requirements_hw,
     },
     packages=[
-        'electroncash',
-        'electroncash.locale',
-        'electroncash.qrreaders',
-        'electroncash.utils',
-        'electroncash_gui',
-        'electroncash_gui.qt',
-        'electroncash_gui.qt.qrreader',
-        'electroncash_gui.qt.utils',
-        'electroncash_plugins',
-        'electroncash_plugins.audio_modem',
-        'electroncash_plugins.cosigner_pool',
-        'electroncash_plugins.email_requests',
-        'electroncash_plugins.hw_wallet',
-        'electroncash_plugins.keepkey',
-        'electroncash_plugins.labels',
-        'electroncash_plugins.ledger',
-        'electroncash_plugins.trezor',
-        'electroncash_plugins.digitalbitbox',
-        'electroncash_plugins.virtualkeyboard',
+        'vilight',
+        'vilight.locale',
+        'vilight.qrreaders',
+        'vilight.utils',
+        'vilight_gui',
+        'vilight_gui.qt',
+        'vilight_gui.qt.qrreader',
+        'vilight_gui.qt.utils',
+        'vilight_plugins',
+        'vilight_plugins.audio_modem',
+        'vilight_plugins.cosigner_pool',
+        'vilight_plugins.email_requests',
+        'vilight_plugins.hw_wallet',
+        'vilight_plugins.keepkey',
+        'vilight_plugins.labels',
+        'vilight_plugins.ledger',
+        'vilight_plugins.trezor',
+        'vilight_plugins.digitalbitbox',
+        'vilight_plugins.virtualkeyboard',
     ],
     package_dir={
-        'electroncash': 'lib',
-        'electroncash_gui': 'gui',
-        'electroncash_plugins': 'plugins',
+        'vilight': 'lib',
+        'vilight_gui': 'gui',
+        'vilight_plugins': 'plugins',
     },
     package_data={
-        'electroncash': [
+        'vilight': [
             'servers.json',
             'servers_testnet.json',
             'currencies.json',
@@ -166,7 +166,7 @@ setup(
             'libzbar*',
             'locale/*/LC_MESSAGES/electron-cash.mo',
         ],
-        'electroncash_plugins.shuffle' : [
+        'vilight_plugins.shuffle' : [
             'servers.json',
             'protobuf/*.proto'
         ],

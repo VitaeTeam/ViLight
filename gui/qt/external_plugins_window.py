@@ -31,8 +31,8 @@ from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 
-from electroncash.i18n import _
-from electroncash.plugins import ExternalPluginCodes, run_hook
+from vilight.i18n import _
+from vilight.plugins import ExternalPluginCodes, run_hook
 from .util import MyTreeWidget, MessageBoxMixin, WindowModalDialog, Buttons, CloseButton
 
 

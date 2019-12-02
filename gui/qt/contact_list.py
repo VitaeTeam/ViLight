@@ -23,12 +23,12 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-from electroncash.i18n import _, ngettext
-import electroncash.web as web
-from electroncash.address import Address
-from electroncash.contacts import Contact, contact_types
-from electroncash.plugins import run_hook
-from electroncash.util import FileImportFailed, PrintError, finalization_print_error
+from vilight.i18n import _, ngettext
+import vilight.web as web
+from vilight.address import Address
+from vilight.contacts import Contact, contact_types
+from vilight.plugins import run_hook
+from vilight.util import FileImportFailed, PrintError, finalization_print_error
 # TODO: whittle down these * imports to what we actually use when done with
 # our changes to this class -Calin
 from PyQt5.QtGui import *

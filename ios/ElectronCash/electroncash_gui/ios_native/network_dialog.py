@@ -31,12 +31,12 @@ from . import utils
 from . import gui
 from .custom_objc import *
 
-from electroncash.i18n import _
+from vilight.i18n import _
 
 import socket
 from collections import namedtuple
 
-from electroncash.network import serialize_server, deserialize_server
+from vilight.network import serialize_server, deserialize_server
 
 TAG_HELP_STATUS = 112
 TAG_HELP_SERVER = 122

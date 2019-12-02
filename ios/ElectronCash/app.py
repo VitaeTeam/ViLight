@@ -5,11 +5,11 @@
 # MIT License
 #
 import os
-from electroncash_gui.ios_native.monkeypatches import MonkeyPatches
-from electroncash.util import set_verbosity
-from electroncash_gui.ios_native import ElectrumGui
-from electroncash_gui.ios_native.utils import call_later, get_user_dir, cleanup_tmp_dir, is_debug_build, NSLogSuppress, NSLog
-from electroncash.simple_config import SimpleConfig
+from vilight_gui.ios_native.monkeypatches import MonkeyPatches
+from vilight.util import set_verbosity
+from vilight_gui.ios_native import ElectrumGui
+from vilight_gui.ios_native.utils import call_later, get_user_dir, cleanup_tmp_dir, is_debug_build, NSLogSuppress, NSLog
+from vilight.simple_config import SimpleConfig
 
 # NB: This is called from appdelegate.py "application_didFinishLaunchingWithOptions_"
 def main():
@@ -42,7 +42,7 @@ def _printStats(config_options):
     def thrdfunc(config_options):
         # lazy init of SSL
         import ssl, sys
-        from electroncash import version
+        from vilight import version
         NSLog("ViLight lib version: %s (using server protocol: %s)", version.PACKAGE_VERSION, version.PROTOCOL_VERSION)
         NSLog("Python version: %s", ' '.join(sys.version.split('\n')))
         NSLog("OpenSSL version: %s", ssl.OPENSSL_VERSION)

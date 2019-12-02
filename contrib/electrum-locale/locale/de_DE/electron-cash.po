@@ -24,7 +24,7 @@ msgstr "  (Wechselkurs nicht verfügbar)"
 msgid " These settings affects the fields in the Send tab"
 msgstr " Diese Einstellungen beeinflussen die Felder im Senden-Tab"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:2169
+#: ios/Vilight/vilight_gui/ios_native/gui.py:2169
 msgid " copied to clipboard"
 msgstr " in die Zwischenablage kopiert"
 
@@ -37,7 +37,7 @@ msgstr " {} gefunden"
 msgid "%2d minutes"
 msgstr "%2d Minuten"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:1197
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:1197
 #, python-format
 msgid "%d valid item(s)"
 msgstr "%d gültige Einträge"
@@ -56,7 +56,7 @@ msgid "&Address to convert"
 msgstr "Zu konvertierende &Adresse"
 
 #: gui/qt/main_window.py:177
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:313
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:313
 msgid "&Addresses"
 msgstr "&Adressen"
 
@@ -293,7 +293,7 @@ msgstr "(Alte Versionen von ViLight vor 3.3.6 haben ungültige Testnet-Geldbörs
 msgid "(Only deterministic wallets are supported)"
 msgstr "(Nur deterministische Geldbörsen werden unterstützt)"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:307
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:307
 msgid "(Script Output)"
 msgstr "(Skript-Ausgabe)"
 
@@ -325,7 +325,7 @@ msgstr "({} von {}):"
 msgid "+"
 msgstr "+"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:974
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:974
 msgid "..."
 msgstr "..."
 
@@ -346,7 +346,7 @@ msgstr "1 Stunde"
 msgid "1 week"
 msgstr "1 Woche"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/password_dialog.py:164
+#: ios/Vilight/vilight_gui/ios_native/password_dialog.py:164
 msgid ":"
 msgstr ":"
 
@@ -389,11 +389,11 @@ msgstr "Ein Kontakt mit dem Namen {contact.name} existiert bereits mit der gleic
 msgid "A copy of your wallet file was created in"
 msgstr "Eine Kopie ihrer Geldbörse wurde angelegt unter"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:1175
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:1175
 msgid "A deterministic wallet will be created using the provided master private key. This wallet will be able to freely send and receive Vitae."
 msgstr "Anhand des vorhandenen privaten Generalschlüssels wird nun eine deterministische Geldbörse erstellt. Hiermit wird es möglich sein Vitae zu senden und zu empfangen."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:1173
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:1173
 msgid "A deterministic wallet will be created using the provided master public key. This wallet will be watching-only."
 msgstr "Anhand des vorhandenen öffentlichen Generalschlüssels wird nun eine deterministische Geldbörse erstellt. Diese Geldbörse ist dann im Beobachtungsmodus."
 
@@ -425,15 +425,15 @@ msgstr "Ein benötigtes Qt-Modul, QtSvg wurde nicht gefunden. Bitte installieren
 msgid "A suggested fee is automatically added to this field. You may override it. The suggested fee increases with the size of the transaction."
 msgstr "Eine empfohlene Gebühr wird diesem Feld automatisch hinzugefügt, kann aber überschrieben werden. Die empfohlene Gebühr steigt mit der Größe der Transaktion."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:234
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:234
 msgid "A wallet with that name already exist. Please enter a different wallet name to proceed."
 msgstr "Eine Geldbörse mit diesem Namen existiert bereits. Bitte gebe einen anderen Namen ein um fortzufahren."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:573
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:573
 msgid "A wallet with that name already exists, please try again."
 msgstr "Eine Geldbörse mit diesem Namen existiert bereits. Bitte versuche es noch einmal."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1751
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1751
 msgid "A wallet with that name already exists. Cannot proceed."
 msgstr "Ein Geldbörse mit diesem Namen existiert bereits. Der Prozess kann nicht fortgesetzt werden."
 
@@ -489,12 +489,12 @@ msgstr "Eine optionale Bildschirmtastatur zum Passwortdialog hinzufügen."
 msgid "Add cosigner"
 msgstr "Mitsignierer hinzufügen"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:208
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:208
 msgid "Add new wallet"
 msgstr "Neue Geldbörse hinzufügen"
 
 #: gui/qt/cashacctqt.py:603
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:338
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:338
 msgid "Add to Contacts"
 msgstr "Zu Kontakten hinzufügen"
 
@@ -507,7 +507,7 @@ msgid "Adding {} of {} new addresses to wallet..."
 msgstr "Füge {} von {} neuen Adressen der Geldbörse hinzu..."
 
 #: gui/qt/main_window.py:2075
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:858
+#: ios/Vilight/vilight_gui/ios_native/send.py:858
 msgid "Additional fees"
 msgstr "Weitere Gebühren"
 
@@ -521,23 +521,23 @@ msgstr "Zusätzlich können Sie auch anfällig für Man-in-the-Middle-Angriffe s
 #: gui/qt/address_list.py:330 gui/qt/address_dialog.py:48
 #: gui/qt/utxo_list.py:56 gui/qt/contact_list.py:58 gui/qt/contact_list.py:235
 #: gui/qt/contact_list.py:386
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:571
-#: ios/ElectronCash/electroncash_gui/ios_native/private_key_dialog.py:55
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:641
-#: ios/ElectronCash/electroncash_gui/ios_native/addrconv.py:60
-#: ios/ElectronCash/electroncash_gui/ios_native/coins.py:627
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:571
+#: ios/Vilight/vilight_gui/ios_native/private_key_dialog.py:55
+#: ios/Vilight/vilight_gui/ios_native/receive.py:641
+#: ios/Vilight/vilight_gui/ios_native/addrconv.py:60
+#: ios/Vilight/vilight_gui/ios_native/coins.py:627
 msgid "Address"
 msgstr "Adresse"
 
 #: gui/qt/main_window.py:180
-#: ios/ElectronCash/electroncash_gui/ios_native/addrconv.py:22
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:226
+#: ios/Vilight/vilight_gui/ios_native/addrconv.py:22
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:226
 msgid "Address Converter"
 msgstr "Adresskonverter"
 
 #: gui/qt/transaction_dialog.py:736
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:332
-#: ios/ElectronCash/electroncash_gui/ios_native/coins.py:630
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:332
+#: ios/Vilight/vilight_gui/ios_native/coins.py:630
 msgid "Address Details"
 msgstr "Adressdetails"
 
@@ -555,11 +555,11 @@ msgid "Address is frozen"
 msgstr "Adresse ist eingefroren"
 
 #: gui/qt/main_window.py:3014 plugins/hw_wallet/plugin.py:75
-#: ios/ElectronCash/electroncash_gui/ios_native/sign_decrypt_dialog.py:250
+#: ios/Vilight/vilight_gui/ios_native/sign_decrypt_dialog.py:250
 msgid "Address not in wallet."
 msgstr "Adresse ist nicht in dieser Börse."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/addrconv.py:55
+#: ios/Vilight/vilight_gui/ios_native/addrconv.py:55
 msgid "Address to convert"
 msgstr "Zu konvertierende Adresse"
 
@@ -591,11 +591,11 @@ msgstr "Nach mindestens <i>1 Bestätigung</i>können Sie Ihr neues <b>Cash-Accou
 msgid "After disabling passphrases, you can only pair this ViLight wallet if it had an empty passphrase. If its passphrase was not empty, you will need to create a new wallet with the install wizard. You can use this wallet again at any time by re-enabling passphrases and entering its passphrase."
 msgstr "Nachdem das Passwort deaktiviert wurde, kann die Electrum-Cash-Geldbörse nur verbunden werden, wenn das Passwort leer war. Wenn das nicht der Fall ist, muss eine neue Geldbörse über den Assistenten erstellt werden. Falls das Passwort wieder aktiviert wird, kann diese Geldbörse wieder verwendet werden."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:30
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:30
 msgid "All"
 msgstr "Alle"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/history.py:491
+#: ios/Vilight/vilight_gui/ios_native/history.py:491
 msgid "All Transactions"
 msgstr "Alle Transaktionen"
 
@@ -603,11 +603,11 @@ msgstr "Alle Transaktionen"
 msgid "All of your traffic to the blockchain servers will be sent unencrypted."
 msgstr "All Ihr Traffic wird unverschlüsselt an die Blockchain Server gesendet."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:140
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:140
 msgid "All set and good to go."
 msgstr "Alles fertig und bereit."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:291
+#: ios/Vilight/vilight_gui/ios_native/receive.py:291
 msgid "Already Expired"
 msgstr "Bereits abgelaufen"
 
@@ -619,11 +619,11 @@ msgstr "Bereits auf dem neuesten Stand"
 #: gui/qt/history_list.py:68 gui/qt/history_list.py:71
 #: gui/qt/request_list.py:42 gui/qt/utxo_list.py:56 gui/text.py:103
 #: gui/text.py:176 gui/stdio.py:104
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:643
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:273
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:526
-#: ios/ElectronCash/electroncash_gui/ios_native/coins.py:596
-#: ios/ElectronCash/electroncash_gui/ios_native/history.py:542
+#: ios/Vilight/vilight_gui/ios_native/receive.py:643
+#: ios/Vilight/vilight_gui/ios_native/send.py:273
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:526
+#: ios/Vilight/vilight_gui/ios_native/coins.py:596
+#: ios/Vilight/vilight_gui/ios_native/history.py:542
 msgid "Amount"
 msgstr "Betrag"
 
@@ -632,17 +632,17 @@ msgid "Amount for OP_RETURN output must be zero."
 msgstr "Der Betrag für die OP_RETURN Ausgabe muss Null sein."
 
 #: gui/qt/transaction_dialog.py:381
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:529
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:529
 msgid "Amount received:"
 msgstr "Betrag erhalten:"
 
 #: gui/qt/transaction_dialog.py:383
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:534
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:534
 msgid "Amount sent:"
 msgstr "Betrag gesendet:"
 
 #: gui/qt/main_window.py:2068
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:851
+#: ios/Vilight/vilight_gui/ios_native/send.py:851
 msgid "Amount to be sent"
 msgstr "Zu sendender Betrag"
 
@@ -671,7 +671,7 @@ msgstr "Fehler beim Senden der Transaktion"
 msgid "An uninitialized Digital Bitbox is detected."
 msgstr "Eine nicht initialisierte Digital Bitbox wurde erkannt."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:1178
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:1178
 msgid "An unknown error occurred. Cannot proceed."
 msgstr "Ein unbekannter Fehler ist aufgetreten. Kann nicht fortfahren."
 
@@ -683,7 +683,7 @@ msgstr "{} (Unbenannt)"
 msgid "An unspecified exception was raised. Cannot open plugin."
 msgstr ""
 
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:30
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:30
 msgid "Any"
 msgstr "Jede"
 
@@ -691,7 +691,7 @@ msgstr "Jede"
 msgid "App-Global Options"
 msgstr "App-Globale Optionen"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:24
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:24
 msgid "Appearance"
 msgstr "Darstellung"
 
@@ -718,7 +718,7 @@ msgstr "Wollen Sie wirklich fortfahren?"
 msgid "Are you sure you want to uninstall the selected plugin?"
 msgstr "Sind Sie sicher, dass Sie das ausgewählte Plugin löschen möchten?"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:862
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:862
 msgid "Are you sure you wish to delete this contact?"
 msgstr "Bist du sicher, dass Sie diesen Kontakt löschen wollen?"
 
@@ -738,7 +738,7 @@ msgstr "Audio MODEM"
 msgid "Audio Modem Settings"
 msgstr "Audio-Modem Einstellungen"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/utils.py:1641
+#: ios/Vilight/vilight_gui/ios_native/utils.py:1641
 msgid "Authenticate, please"
 msgstr "Bitte authentifizieren"
 
@@ -796,19 +796,19 @@ msgstr "BIP39-Seeds enthalten keine Versionsnummer, was die Kompatibilität mit 
 
 #: gui/qt/installwizard.py:80 gui/qt/installwizard.py:114
 #: gui/qt/installwizard.py:115
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:102
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:609
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:77
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:81
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:33
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:82
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:600
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:69
-#: ios/ElectronCash/electroncash_gui/ios_native/coins.py:36
-#: ios/ElectronCash/electroncash_gui/ios_native/coins.py:257
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:63
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:332
-#: ios/ElectronCash/electroncash_gui/ios_native/history.py:493
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:102
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:609
+#: ios/Vilight/vilight_gui/ios_native/receive.py:77
+#: ios/Vilight/vilight_gui/ios_native/send.py:81
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:33
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:82
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:600
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:69
+#: ios/Vilight/vilight_gui/ios_native/coins.py:36
+#: ios/Vilight/vilight_gui/ios_native/coins.py:257
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:63
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:332
+#: ios/Vilight/vilight_gui/ios_native/history.py:493
 msgid "Back"
 msgstr "Zurück"
 
@@ -816,9 +816,9 @@ msgstr "Zurück"
 #: gui/qt/history_list.py:71 gui/qt/address_list.py:101
 #: gui/qt/address_list.py:104 gui/qt/address_list.py:330 gui/text.py:103
 #: gui/text.py:136 gui/stdio.py:104 gui/stdio.py:116
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:447
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:654
-#: ios/ElectronCash/electroncash_gui/ios_native/history.py:543
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:447
+#: ios/Vilight/vilight_gui/ios_native/gui.py:654
+#: ios/Vilight/vilight_gui/ios_native/history.py:543
 msgid "Balance"
 msgstr "Guthaben"
 
@@ -854,7 +854,7 @@ msgstr "Sperren treten normalerweise auf, wenn andere Mischer ungültige Eingabe
 "Sie können gelegentlich in seltenen Fällen passieren. Wenn dies jedoch geschieht, kontaktieren Sie bitte die Entwickler und melden Sie einen Fehlerbericht."
 
 #: gui/qt/main_window.py:3977
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:333
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:333
 msgid "Base unit"
 msgstr "Basiseinheit"
 
@@ -866,7 +866,7 @@ msgstr "Basiseinheit der Geldbörse."
 msgid "Before reporting a bug, upgrade to the most recent version of ViLight (latest release or git HEAD), and include the version number in your report."
 msgstr "Bevor Sie einen Fehler melden, aktualisieren Sie ViLight (aktuelle Version oder git HEAD) und teilen Sie uns die Versionsnummer im Fehlerbericht mit."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:2022
+#: ios/Vilight/vilight_gui/ios_native/gui.py:2022
 msgid "Biometrics Unavailable"
 msgstr "Biometrische Funktionen nicht verfügbar"
 
@@ -899,12 +899,12 @@ msgid "Both Receiving & Change (x2)"
 msgstr "Empfang & Wechsel (x2)"
 
 #: gui/qt/transaction_dialog.py:140
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:444
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:444
 msgid "Broadcast"
 msgstr "Senden"
 
 #: gui/qt/main_window.py:2212
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1982
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1982
 msgid "Broadcasting transaction..."
 msgstr "Sende Transaktion..."
 
@@ -920,7 +920,7 @@ msgstr "CPFP nicht länger gültig"
 msgid "CSV"
 msgstr "CSV"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:765
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:765
 msgid "Calculating Tx Details..."
 msgstr "Berechne Tx Details..."
 
@@ -932,41 +932,41 @@ msgstr "Netzwerk kann nicht verwendet werden, CashShuffle wird deaktiviert."
 #: gui/qt/installwizard.py:115 gui/qt/installwizard.py:522
 #: gui/qt/update_checker.py:103 gui/qt/update_checker.py:232
 #: plugins/keepkey/qt.py:84 plugins/trezor/qt.py:66
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:866
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:885
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:310
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:320
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:497
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:504
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:582
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:616
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:631
-#: ios/ElectronCash/electroncash_gui/ios_native/seed_dialog.py:147
-#: ios/ElectronCash/electroncash_gui/ios_native/seed_dialog.py:151
-#: ios/ElectronCash/electroncash_gui/ios_native/password_dialog.py:288
-#: ios/ElectronCash/electroncash_gui/ios_native/password_dialog.py:289
-#: ios/ElectronCash/electroncash_gui/ios_native/password_dialog.py:351
-#: ios/ElectronCash/electroncash_gui/ios_native/password_dialog.py:352
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:33
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:84
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:296
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:347
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:778
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:793
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:466
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:480
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:499
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:520
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:537
-#: ios/ElectronCash/electroncash_gui/ios_native/utils.py:539
-#: ios/ElectronCash/electroncash_gui/ios_native/utils.py:540
-#: ios/ElectronCash/electroncash_gui/ios_native/coins.py:192
-#: ios/ElectronCash/electroncash_gui/ios_native/coins.py:482
-#: ios/ElectronCash/electroncash_gui/ios_native/coins.py:629
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:876
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:927
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:853
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1080
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:866
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:885
+#: ios/Vilight/vilight_gui/ios_native/receive.py:310
+#: ios/Vilight/vilight_gui/ios_native/receive.py:320
+#: ios/Vilight/vilight_gui/ios_native/receive.py:497
+#: ios/Vilight/vilight_gui/ios_native/receive.py:504
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:582
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:616
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:631
+#: ios/Vilight/vilight_gui/ios_native/seed_dialog.py:147
+#: ios/Vilight/vilight_gui/ios_native/seed_dialog.py:151
+#: ios/Vilight/vilight_gui/ios_native/password_dialog.py:288
+#: ios/Vilight/vilight_gui/ios_native/password_dialog.py:289
+#: ios/Vilight/vilight_gui/ios_native/password_dialog.py:351
+#: ios/Vilight/vilight_gui/ios_native/password_dialog.py:352
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:33
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:84
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:296
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:347
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:778
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:793
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:466
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:480
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:499
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:520
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:537
+#: ios/Vilight/vilight_gui/ios_native/utils.py:539
+#: ios/Vilight/vilight_gui/ios_native/utils.py:540
+#: ios/Vilight/vilight_gui/ios_native/coins.py:192
+#: ios/Vilight/vilight_gui/ios_native/coins.py:482
+#: ios/Vilight/vilight_gui/ios_native/coins.py:629
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:876
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:927
+#: ios/Vilight/vilight_gui/ios_native/gui.py:853
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1080
 msgid "Cancel"
 msgstr "Abbrechen"
 
@@ -991,7 +991,7 @@ msgstr "Abbrechen..."
 msgid "Cancelled by user"
 msgstr "Durch Benutzer abgebrochen"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:592
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:592
 msgid "Cannot Delete Active Wallet"
 msgstr "Die derzeit aktive Geldbörse kann nicht gelöscht werden"
 
@@ -999,13 +999,13 @@ msgstr "Die derzeit aktive Geldbörse kann nicht gelöscht werden"
 msgid "Cannot add this cosigner:"
 msgstr "Mitsignierer konnte nicht hinzugefügt werden:"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:2206
+#: ios/Vilight/vilight_gui/ios_native/gui.py:2206
 msgid "Cannot display the requested transaction as you don't have a wallet open.\n\n"
 "Open a wallet and try again."
 msgstr "Die angeforderte Transaktion kann nicht angezeigt werden, da keine Geldbörse geöffnet ist.\n\n"
 "Öffnen Sie eine Geldbörse und versuchen es erneut."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:2220
+#: ios/Vilight/vilight_gui/ios_native/gui.py:2220
 msgid "Cannot display the requested transaction since you already have a modal dialog open.\n\n"
 "Close the current dialog and try again."
 msgstr "Die angeforderte Transaktion kann nicht angezeigt werden, da Sie bereits einen modalen Dialog geöffnet haben.\n\n"
@@ -1019,16 +1019,16 @@ msgstr "Python-Bibliothek nicht gefunden:"
 msgid "Cannot read file"
 msgstr "Datei konnte nicht gelesen werden"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:152
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:152
 msgid "Cannot send/receive new transactions."
 msgstr "Kann keine neuen Transaktionen senden/empfangen."
 
 #: gui/qt/main_window.py:3009
-#: ios/ElectronCash/electroncash_gui/ios_native/sign_decrypt_dialog.py:242
+#: ios/Vilight/vilight_gui/ios_native/sign_decrypt_dialog.py:242
 msgid "Cannot sign messages with this type of address."
 msgstr "Nachrichten können mit diesem Adresstyp nicht signiert werden."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:1205
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:1205
 msgid "Cannot specify private keys and addresses in the same wallet. Addresses will result in a watching-only wallet, and private keys in a spending wallet. Remove incompatible items (by swiping them left)."
 msgstr "Private Schlüssel und Adressen in derselben Geldbörse können nicht angegeben werden. Adressen führen zu einer Geldbörse im Beobachtungsmodus und private Schlüssel zu einer Geldbörse von der ausgegeben werden kann. Entfernen Sie inkompatible Elemente (indem Sie sie nach Links wischen)."
 
@@ -1105,7 +1105,7 @@ msgstr "Cash-Accounts Registrierung: '{name}' -> {address}"
 msgid "Cash Address"
 msgstr "Cash Adresse"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/addrconv.py:61
+#: ios/Vilight/vilight_gui/ios_native/addrconv.py:61
 msgid "Cash address"
 msgstr "Cash Adresse"
 
@@ -1113,7 +1113,7 @@ msgstr "Cash Adresse"
 msgid "CashAddr"
 msgstr "CashAddr"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:311
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:311
 msgid "CashAddr address format"
 msgstr "CashAddr Adressformat"
 
@@ -1197,25 +1197,25 @@ msgid "Chain fork(s) detected"
 msgstr "Chain-Fork(s) erkannt"
 
 #: gui/qt/network_dialog.py:534
-#: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:263
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:692
+#: ios/Vilight/vilight_gui/ios_native/network_dialog.py:263
+#: ios/Vilight/vilight_gui/ios_native/gui.py:692
 #, python-format
 msgid "Chain split detected at block %d"
 msgstr "Chain-Split in Block %d erkannt"
 
 #: gui/qt/address_list.py:172
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:202
-#: ios/ElectronCash/electroncash_gui/ios_native/coins.py:608
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:31
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:192
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:204
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:459
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:465
+#: ios/Vilight/vilight_gui/ios_native/receive.py:202
+#: ios/Vilight/vilight_gui/ios_native/coins.py:608
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:31
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:192
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:204
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:459
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:465
 msgid "Change"
 msgstr "Wechselgeld"
 
 #: gui/qt/cashacctqt.py:453 gui/qt/transaction_dialog.py:477
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:205
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:205
 msgid "Change Address"
 msgstr "Wechselgeld Adresse"
 
@@ -1231,8 +1231,8 @@ msgstr "PIN ändern"
 msgid "Change Password"
 msgstr "Password ändern"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:639
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:237
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:639
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:237
 msgid "Change or Set Password"
 msgstr "Passwort ändern oder festlegen"
 
@@ -1268,7 +1268,7 @@ msgstr "Child-Pays-For-Parent"
 msgid "Child pays for parent"
 msgstr "Child-Pays-For-Parent"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:314
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:314
 msgid "Choose Address"
 msgstr "Adresse auswählen"
 
@@ -1290,7 +1290,7 @@ msgstr "Sicherungs-Datei auswählen:"
 msgid "Choose a password to encrypt your wallet keys."
 msgstr "Wählen Sie ein Passwort um die Geldbörsenschlüssel zu verschlüsseln."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/sign_decrypt_dialog.py:145
+#: ios/Vilight/vilight_gui/ios_native/sign_decrypt_dialog.py:145
 msgid "Choose address or enter a public key"
 msgstr "Wählen Sie eine Adresse aus oder geben Sie einen öffentlichen Schlüssel ein"
 
@@ -1332,8 +1332,8 @@ msgstr "Wählen Sie einen Blockexplorer für Web-Funktionen"
 msgid "Choose..."
 msgstr "Auswählen..."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:234
-#: ios/ElectronCash/electroncash_gui/ios_native/coins.py:249
+#: ios/Vilight/vilight_gui/ios_native/send.py:234
+#: ios/Vilight/vilight_gui/ios_native/coins.py:249
 msgid "Clear"
 msgstr "Löschen"
 
@@ -1384,7 +1384,7 @@ msgstr "Coin"
 msgid "Coin & Address are frozen"
 msgstr "Coin & Adresse werden eingefroren"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/coins.py:32
+#: ios/Vilight/vilight_gui/ios_native/coins.py:32
 msgid "Coin Info"
 msgstr "Coin Info"
 
@@ -1417,7 +1417,7 @@ msgid "Coinbase not supported"
 msgstr "Coinbase nicht unterstützt"
 
 #: plugins/shuffle/qt.py:1394 plugins/shuffle/qt.py:1399
-#: ios/ElectronCash/electroncash_gui/ios_native/coins.py:243
+#: ios/Vilight/vilight_gui/ios_native/coins.py:243
 msgid "Coins"
 msgstr "Coins"
 
@@ -1433,7 +1433,7 @@ msgstr "Coins (UTXOs) bis zu diesem Betrag werden für das Mischen ausgewählt."
 msgid "Color theme"
 msgstr "Farbschema"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:800
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:800
 msgid "Coming Soon"
 msgstr "Demnächst verfügbar"
 
@@ -1449,7 +1449,7 @@ msgstr "Kon&sole"
 msgid "Con&tacts"
 msgstr "Kon&takte"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:861
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:861
 msgid "Confirm Delete"
 msgstr "Löschen bestätigen"
 
@@ -1473,7 +1473,7 @@ msgstr "Seed bestätigen"
 msgid "Confirm Seed Extension"
 msgstr "Seed-Erweiterung bestätigen"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:883
+#: ios/Vilight/vilight_gui/ios_native/send.py:883
 msgid "Confirm Send"
 msgstr "Senden bestätigen"
 
@@ -1485,7 +1485,7 @@ msgstr "Umschalten der Passphrase bestätigen"
 msgid "Confirm Transaction on your {}..."
 msgstr "Bestätigen Sie die Transaktion auf Ihrem {}..."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:25
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:25
 msgid "Confirm Wallet Password"
 msgstr "Geldbörsen-Passwort bestätigen"
 
@@ -1558,13 +1558,13 @@ msgid "Connected"
 msgstr "Verbunden"
 
 #: gui/qt/network_dialog.py:98
-#: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:275
-#: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:326
+#: ios/Vilight/vilight_gui/ios_native/network_dialog.py:275
+#: ios/Vilight/vilight_gui/ios_native/network_dialog.py:326
 msgid "Connected node"
 msgstr "Verbundene Knoten"
 
 #: gui/qt/network_dialog.py:526
-#: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:257
+#: ios/Vilight/vilight_gui/ios_native/network_dialog.py:257
 #, python-format
 msgid "Connected to %d nodes."
 msgstr "Mit %d Knoten verbunden."
@@ -1585,34 +1585,34 @@ msgstr "Verbindungsfehler"
 msgid "Connections"
 msgstr "Verbindungen"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:204
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:204
 msgid "Contact"
 msgstr "Kontakt"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:605
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:605
 msgid "Contact Info"
 msgstr "Kontaktinformationen"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:337
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:337
 msgid "Contact added"
 msgstr "Kontakt hinzugefügt"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:392
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:436
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:653
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:392
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:436
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:653
 msgid "Contact saved"
 msgstr "Kontakt gespeichert"
 
 #: gui/qt/main_window.py:610 gui/text.py:63
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:69
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:69
 msgid "Contacts"
 msgstr "Kontakte"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:30
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:30
 msgid "Control your own private keys"
 msgstr "Verwalten Sie Ihre eigenen privaten Schlüssel"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:227
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:227
 msgid "Convert between Legacy and Cashaddr formats"
 msgstr "Konvertieren zwischen altem und CashAddr Formaten"
 
@@ -1630,10 +1630,10 @@ msgid "Copy <b>{cash_account_name}</b>"
 msgstr "<b>{cash_account_name}</b> kopieren"
 
 #: gui/qt/transaction_dialog.py:742
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:867
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:291
-#: ios/ElectronCash/electroncash_gui/ios_native/coins.py:627
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:877
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:867
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:291
+#: ios/Vilight/vilight_gui/ios_native/coins.py:627
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:877
 msgid "Copy Address"
 msgstr "Adresse kopieren"
 
@@ -1658,7 +1658,7 @@ msgstr "Prevout kopieren"
 msgid "Copy Public Key"
 msgstr "Öffentlichen Schlüssel kopieren"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:896
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:896
 msgid "Copy Public key"
 msgstr "Öffentlichen Schlüssel kopieren"
 
@@ -1666,7 +1666,7 @@ msgstr "Öffentlichen Schlüssel kopieren"
 msgid "Copy QR Image"
 msgstr "QR-Bild kopieren"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:304
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:304
 msgid "Copy Script"
 msgstr "Skript kopieren"
 
@@ -1686,7 +1686,7 @@ msgstr "Ausgewählten Text kopieren"
 msgid "Copy URI"
 msgstr "URI kopieren"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/coins.py:628
+#: ios/Vilight/vilight_gui/ios_native/coins.py:628
 msgid "Copy UTXO"
 msgstr "UTXO kopieren"
 
@@ -1694,7 +1694,7 @@ msgstr "UTXO kopieren"
 msgid "Copy and Close"
 msgstr "Kopieren und Schließen"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:293
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:293
 msgid "Copy input hash"
 msgstr "Eingabehash kopieren"
 
@@ -1703,8 +1703,8 @@ msgid "Copy link"
 msgstr "Link kopieren"
 
 #: gui/qt/util.py:811
-#: ios/ElectronCash/electroncash_gui/ios_native/seed_dialog.py:148
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:779
+#: ios/Vilight/vilight_gui/ios_native/seed_dialog.py:148
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:779
 msgid "Copy to clipboard"
 msgstr "In Zwischenablage kopieren"
 
@@ -1771,7 +1771,7 @@ msgstr "Nachricht konnte nicht signiert werden"
 msgid "Could not sign message."
 msgstr "Nachricht konnte nicht signiert werden."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/crashreporter.py:66
+#: ios/Vilight/vilight_gui/ios_native/crashreporter.py:66
 msgid "Crash Reporter"
 msgstr "Absturzberichter"
 
@@ -1779,8 +1779,8 @@ msgstr "Absturzberichter"
 msgid "Create"
 msgstr "Erstellen"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:814
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:1543
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:814
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:1543
 msgid "Create New Standard Wallet"
 msgstr "Neue Standard-Geldbörse erstellen"
 
@@ -1788,7 +1788,7 @@ msgstr "Neue Standard-Geldbörse erstellen"
 msgid "Create a new seed"
 msgstr "Neuen Seed erstellen"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:846
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:846
 msgid "Create a wallet using a Master Key"
 msgstr "Geldbörse mit einem Master Key erstellen"
 
@@ -1824,7 +1824,7 @@ msgstr "Angepasster Gebührensatz in Satoshis pro Byte"
 msgid "Custom rate: "
 msgstr "Angepasster Betrag: "
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1638
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1638
 msgid "Daemon was not running."
 msgstr "Daemon wurde nicht ausgeführt."
 
@@ -1846,8 +1846,8 @@ msgstr "Dunkel/Hell"
 
 #: gui/qt/history_list.py:68 gui/qt/request_list.py:42 gui/text.py:103
 #: gui/stdio.py:104
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:508
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:519
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:508
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:519
 msgid "Date"
 msgstr "Datum"
 
@@ -1878,15 +1878,15 @@ msgstr "Standard"
 #: gui/qt/invoice_list.py:95 gui/qt/main_window.py:587
 #: gui/qt/main_window.py:2667 gui/qt/request_list.py:157
 #: gui/qt/contact_list.py:218
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:863
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:871
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:886
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:616
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:863
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:871
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:886
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:616
 msgid "Delete"
 msgstr "Löschen"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:614
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:632
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:614
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:632
 msgid "Delete Wallet"
 msgstr "Geldbörse löschen"
 
@@ -1898,12 +1898,12 @@ msgstr "Rechnung löschen?"
 msgid "Delete wallet file?"
 msgstr "Geldbörsendatei löschen?"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:682
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:687
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:682
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:687
 msgid "Derivation"
 msgstr "Ableitung"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:675
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:675
 msgid "Derivation Invalid"
 msgstr "Ableitung ungültig"
 
@@ -1911,7 +1911,7 @@ msgstr "Ableitung ungültig"
 msgid "Derivation for {} wallet"
 msgstr "Ableitung für {} Geldbörse"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:1026
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:1026
 msgid "Deriving addresses..."
 msgstr "Adressen werden abgeleitet..."
 
@@ -1919,22 +1919,22 @@ msgstr "Adressen werden abgeleitet..."
 #: gui/qt/invoice_list.py:36 gui/qt/history_list.py:68
 #: gui/qt/request_list.py:42 gui/qt/transaction_dialog.py:358 gui/text.py:103
 #: gui/text.py:175 gui/stdio.py:104
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:198
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:189
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:478
+#: ios/Vilight/vilight_gui/ios_native/receive.py:198
+#: ios/Vilight/vilight_gui/ios_native/send.py:189
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:478
 msgid "Description"
 msgstr "Beschreibung"
 
 #: gui/qt/main_window.py:1482
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:204
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:215
+#: ios/Vilight/vilight_gui/ios_native/receive.py:204
+#: ios/Vilight/vilight_gui/ios_native/send.py:215
 msgid "Description of the transaction (not mandatory)."
 msgstr "Beschreibung der Transaktion (optional)."
 
 #: gui/qt/invoice_list.py:92 gui/qt/history_list.py:240
 #: gui/qt/address_list.py:306 gui/qt/address_list.py:366
 #: gui/qt/utxo_list.py:237
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:598
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:598
 msgid "Details"
 msgstr "Details"
 
@@ -1984,7 +1984,7 @@ msgstr "Passphrasen deaktivieren"
 msgid "Disabled"
 msgstr "Deaktiviert"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1417
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1417
 msgid "Disk Space Low"
 msgstr "Speicherplatz niedrig"
 
@@ -2001,7 +2001,7 @@ msgid "Do not pair"
 msgstr "Nicht verbinden"
 
 #: gui/qt/seed_dialog.py:46
-#: ios/ElectronCash/electroncash_gui/ios_native/seed_dialog.py:91
+#: ios/Vilight/vilight_gui/ios_native/seed_dialog.py:91
 msgid "Do not store it electronically."
 msgstr "Speichern Sie ihn nicht elektronisch."
 
@@ -2033,7 +2033,7 @@ msgstr "Möchten Sie diesen Bericht absenden?"
 msgid "Do you wish to continue?"
 msgstr "Wollen Sie fortfahren?"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:409
+#: ios/Vilight/vilight_gui/ios_native/network_dialog.py:409
 msgid "Do you wish to follow the\n"
 "{}@{}\n"
 "branch?"
@@ -2041,13 +2041,13 @@ msgstr "Möchten Sie dem\n"
 "{}@{}\n"
 "Zweig folgen?"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:815
+#: ios/Vilight/vilight_gui/ios_native/gui.py:815
 msgid "Do you wish to hide the download progress banner?\n"
 "(You can re-enabled it in Settings later)"
 msgstr "Möchten Sie das Download-Fortschritts-Banner ausblenden?\n"
 "(Sie können es später in den Einstellungen wieder aktivieren)"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:427
+#: ios/Vilight/vilight_gui/ios_native/network_dialog.py:427
 msgid "Do you wish to use\n"
 "{}:{}\n"
 "as the blockchain server?"
@@ -2055,7 +2055,7 @@ msgstr "Möchten Sie\n"
 "{}:{}\n"
 "als Blockchain-Server verwenden?"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:403
+#: ios/Vilight/vilight_gui/ios_native/network_dialog.py:403
 msgid "Do you wish to use\n"
 "{}:{}\n"
 "as the wallet server?"
@@ -2075,15 +2075,15 @@ msgstr "Fertig"
 msgid "Download input data"
 msgstr "Eingabedaten herunterladen"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:144
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:144
 msgid "Downloading Headers"
 msgstr "Header herunterladen"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:406
+#: ios/Vilight/vilight_gui/ios_native/gui.py:406
 msgid "Downloading blockchain headers..."
 msgstr "Lade Blockchain-Header runter..."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:730
+#: ios/Vilight/vilight_gui/ios_native/gui.py:730
 msgid "Downloading headers {}% ..."
 msgstr "Lade Header runter {}% ..."
 
@@ -2099,17 +2099,17 @@ msgstr "Aufgrund potenzieller Sicherheitsrisiken können Sie SSL nur deaktiviere
 msgid "ENABLED"
 msgstr "AKTIVIERT"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:30
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:30
 msgid "Easily back up your wallet with a mnemonic seed phrase."
 msgstr "Sichern Sie Ihre Geldbörse mit einem mnemonischen Seed-Satz."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:566
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:868
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:566
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:868
 msgid "Edit Contact"
 msgstr "Kontakt bearbeiten"
 
 #: gui/qt/main_window.py:3911
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:275
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:275
 msgid "Edit fees manually"
 msgstr "Transaktionsgebühren manuell bearbeiten"
 
@@ -2124,7 +2124,7 @@ msgid "ViLight cannot pair with your {}.\n\n"
 msgstr "ViLight konnte sich nicht mit Ihrem {} verbinden.\n\n"
 "Bevor Sie Bitcoins an diese Geldbörse senden, versichern Sie sich, dass Sie das Gerät verbinden können oder die Seed-Worte (und eine eventuelle Passphrase) besitzen. Ansonsten können Sie keine Bitcoins ausgeben."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1418
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1418
 msgid "ViLight cannot proceed because this device is very low on disk space. Please free up some disk space and try again."
 msgstr "ViLight kann nicht fortfahren, da dieses Gerät sehr wenigen freien Festplattenplatz hat. Bitte machen Sie mehr Speicherplatz frei und versuchen es erneut."
 
@@ -2133,7 +2133,7 @@ msgid "ViLight communicates with remote servers to get information about your tr
 msgstr "ViLight kommunizert mit Servern, um Informationen über Ihre Adressen sowie Ihre Transaktionen zu erhalten. Alle Server dienen dem gleichen Zweck. In den meisten Fällen ist es einfacher, ViLight zufällig einen Server wählen zu lassen. Sie haben aber auch die Möglichkeit manuell einen von Ihnen bevorzugten Server zu wählen."
 
 #: gui/qt/network_dialog.py:421
-#: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:493
+#: ios/Vilight/vilight_gui/ios_native/network_dialog.py:493
 msgid "ViLight connects to several nodes in order to download block headers and find out the longest blockchain."
 msgstr "ViLight verbindet sich mit mehreren Knoten, um die Blockheader zu laden und die längste Blockchain aufzuspüren."
 
@@ -2141,7 +2141,7 @@ msgstr "ViLight verbindet sich mit mehreren Knoten, um die Blockheader zu laden 
 msgid "ViLight currently only supports Vitae ID types 1 & 2"
 msgstr "Vilight" unterstützt derzeit nur Cash-Account-Typen 1 & 2"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:29
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:29
 msgid "ViLight is an SPV wallet for Vitae"
 msgstr "ViLight ist eine SPV-Geldbörse für Vitae"
 
@@ -2167,7 +2167,7 @@ msgstr "ViLight auf Linux benötigt PyQt5 5.12+.\n\n"
 "Bitte aktualisieren Sie dies, sonst können Probleme mit dem Rendering von Schriftarten und anderen Unicode-Zeichen, die von Vilight verwendet werden, auftreten."
 
 #: gui/qt/network_dialog.py:432
-#: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:497
+#: ios/Vilight/vilight_gui/ios_native/network_dialog.py:497
 msgid "ViLight sends your wallet addresses to a single server, in order to receive your transaction history."
 msgstr "ViLight sendet Ihre Adressen an einen einzelnen Server, um Ihren Transaktionsverlauf zu empfangen."
 
@@ -2208,7 +2208,7 @@ msgid "ViLight was unable to open your transaction file"
 msgstr "ViLight konnte die Transaktionsdatei nicht öffnen"
 
 #: gui/qt/main_window.py:3164
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:2229
+#: ios/Vilight/vilight_gui/ios_native/gui.py:2229
 msgid "ViLight was unable to parse your transaction"
 msgstr "ViLight konnte Ihre Transaktion nicht verarbeiten"
 
@@ -2307,12 +2307,12 @@ msgstr "Verschlüsseln"
 msgid "Encrypt wallet file"
 msgstr "Datei der Geldbörse verschlüsseln"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/sign_decrypt_dialog.py:37
+#: ios/Vilight/vilight_gui/ios_native/sign_decrypt_dialog.py:37
 msgid "Encrypt/Decrypt Message"
 msgstr "Nachricht verschlüsseln/entschlüsseln"
 
 #: gui/qt/main_window.py:3100
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:918
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:918
 msgid "Encrypt/decrypt Message"
 msgstr "Nachricht verschlüsseln/entschlüsseln"
 
@@ -2336,7 +2336,7 @@ msgstr "Ver- oder Entschlüsselung werden mit {} noch nicht unterstützt"
 msgid "Encryption and decryption are not implemented by {}"
 msgstr "Eine Ver- oder Entschlüsselung ist mit {} nicht implementiert"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:31
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:31
 msgid "Enjoy high security"
 msgstr "Genießen Sie hohe Sicherheit"
 
@@ -2353,10 +2353,10 @@ msgid "Enter Passphrase"
 msgstr "Passphrase eingeben"
 
 #: gui/qt/password_dialog.py:61 gui/qt/password_dialog.py:202
-#: ios/ElectronCash/electroncash_gui/ios_native/password_dialog.py:258
-#: ios/ElectronCash/electroncash_gui/ios_native/password_dialog.py:267
-#: ios/ElectronCash/electroncash_gui/ios_native/password_dialog.py:305
-#: ios/ElectronCash/electroncash_gui/ios_native/password_dialog.py:314
+#: ios/Vilight/vilight_gui/ios_native/password_dialog.py:258
+#: ios/Vilight/vilight_gui/ios_native/password_dialog.py:267
+#: ios/Vilight/vilight_gui/ios_native/password_dialog.py:305
+#: ios/Vilight/vilight_gui/ios_native/password_dialog.py:314
 msgid "Enter Password"
 msgstr "Passwort eingeben"
 
@@ -2384,7 +2384,7 @@ msgstr "Geben Sie eine Liste von Bitcoin-Cash-Adressen (die erstellte Geldbörse
 msgid "Enter a list of outputs in the 'Pay to' field."
 msgstr "Geben Sie in das \"Zahle An\"-Feld eine Liste von Ausgaben ein."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:854
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:854
 msgid "Enter a list of private keys to create a regular spending wallet. Alternatively, you can create a 'watching-only' wallet by entering a list of Vitae addresses."
 msgstr "Geben Sie eine Liste privater Schlüssel ein, um eine normale Ausgabe-Geldbörse zu erstellen. Alternativ können Sie eine Geldbörse im 'Beobachtungsmodus' erstellen, indem Sie eine Liste der Vitae-Adressen eingeben."
 
@@ -2416,11 +2416,11 @@ msgstr "Geben Sie den Schlüssel des Mitsignierers ein"
 msgid "Enter cosigner seed"
 msgstr "Geben Sie die Seed des Mitsignierers ein"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:578
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:578
 msgid "Enter new wallet name"
 msgstr "Name der neuen Geldbörse eingeben"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/sign_decrypt_dialog.py:145
+#: ios/Vilight/vilight_gui/ios_native/sign_decrypt_dialog.py:145
 msgid "Enter or pick address"
 msgstr "Adresse eingeben oder auswählen"
 
@@ -2453,7 +2453,7 @@ msgid "Enter the recovery words by pressing the buttons according to what the de
 msgstr "Geben Sie die Wiederherstellungsworte ein, indem Sie die Buttons entsprechend der Anzeige auf dem Gerät betätigen. Sie können auch das Numpad verwenden.\n"
 "Verwenden Sie die Rücktaste um zum vorherigen Wort zurückzukehren.\n"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:24
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:24
 msgid "Enter the same password again"
 msgstr "Das selbe Passwort erneut eingeben"
 
@@ -2484,17 +2484,17 @@ msgid "Enter your password or choose another file."
 msgstr "Geben Sie Ihr Passwort ein oder wählen Sie eine andere Datei."
 
 #: gui/qt/main_window.py:2092
-#: ios/ElectronCash/electroncash_gui/ios_native/password_dialog.py:259
-#: ios/ElectronCash/electroncash_gui/ios_native/password_dialog.py:306
+#: ios/Vilight/vilight_gui/ios_native/password_dialog.py:259
+#: ios/Vilight/vilight_gui/ios_native/password_dialog.py:306
 msgid "Enter your password to proceed"
 msgstr "Passwort eingeben um fortzufahren"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:582
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:582
 msgid "Enter your seed phrase"
 msgstr "Gib deinen Seed-Satz ein"
 
 #: lib/base_wizard.py:274
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:683
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:683
 msgid "Enter your wallet derivation here."
 msgstr "Geben Sie die Ableitung Ihrer Geldbörse an."
 
@@ -2513,11 +2513,11 @@ msgstr "Digital-Bitbox zurücksetzen"
 #: gui/qt/util.py:226 gui/qt/__init__.py:523 gui/qt/__init__.py:525
 #: gui/qt/installwizard.py:237 gui/qt/installwizard.py:241 gui/text.py:362
 #: gui/stdio.py:209 plugins/shuffle/qt.py:1046
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:1038
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:1051
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:1056
-#: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:393
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1056
+#: ios/Vilight/vilight_gui/ios_native/send.py:1038
+#: ios/Vilight/vilight_gui/ios_native/send.py:1051
+#: ios/Vilight/vilight_gui/ios_native/send.py:1056
+#: ios/Vilight/vilight_gui/ios_native/network_dialog.py:393
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1056
 msgid "Error"
 msgstr "Fehler"
 
@@ -2549,7 +2549,7 @@ msgstr "Fehler: Öffentlicher Generalschlüssel doppelt vorhanden"
 msgid "Exit ViLight"
 msgstr "Vilight" beenden"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:512
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:512
 msgid "Expected conf."
 msgstr "Erwaretete Best."
 
@@ -2586,7 +2586,7 @@ msgstr "Transaktionsverlauf exportieren"
 msgid "Export file"
 msgstr "Datei exportieren"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1733
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1733
 msgid "Exporting Wallet..."
 msgstr "Geldbörse wird exportiert..."
 
@@ -2599,7 +2599,7 @@ msgid "Extend this seed with custom words"
 msgstr "Den Seed mit selbst ausgewählten Wörtern verlängern"
 
 #: gui/qt/cashacctqt.py:854
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:201
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:201
 msgid "External Address"
 msgstr "Externe Adresse"
 
@@ -2625,7 +2625,7 @@ msgid "Failed to send transaction to cosigning pool."
 msgstr "Fehler beim Senden der Transaktion an den Cosigner-Pool."
 
 #: gui/qt/main_window.py:2825
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:2006
+#: ios/Vilight/vilight_gui/ios_native/gui.py:2006
 msgid "Failed to update password"
 msgstr "Passwort konnte nicht geändert werden"
 
@@ -2634,12 +2634,12 @@ msgid "Failed to verify SSL certificate"
 msgstr "SSL-Zertifikat konnte nicht verifiziert werden"
 
 #: gui/qt/transaction_dialog.py:385 gui/text.py:177
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:195
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:556
+#: ios/Vilight/vilight_gui/ios_native/send.py:195
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:556
 msgid "Fee"
 msgstr "Gebühr"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:199
+#: ios/Vilight/vilight_gui/ios_native/send.py:199
 msgid "Fee manual edit"
 msgstr "Gebühren manuell bearbeiten"
 
@@ -2657,27 +2657,27 @@ msgid "Feel free to add your email address if you are willing to provide further
 msgstr "Bitte geben Sie Ihre E-Mail-Adresse ein, wenn Sie bereit sind, weitere Details zu geben, aber beachten Sie, dass sie in der relevanten github Issue erscheinen wird."
 
 #: gui/qt/main_window.py:4295
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:24
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:24
 msgid "Fees"
 msgstr "Transaktionsgebühren"
 
 #: gui/qt/main_window.py:4300
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:24
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:24
 msgid "Fiat"
 msgstr "Fiat"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:200
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:213
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:301
+#: ios/Vilight/vilight_gui/ios_native/receive.py:200
+#: ios/Vilight/vilight_gui/ios_native/receive.py:213
+#: ios/Vilight/vilight_gui/ios_native/send.py:301
 msgid "Fiat amount"
 msgstr "Fiat-Betrag"
 
 #: gui/qt/main_window.py:4288
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:358
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:358
 msgid "Fiat currency"
 msgstr "Fiat-Währung"
 
-#: gui/qt/util.py:509 ios/ElectronCash/electroncash_gui/ios_native/utils.py:311
+#: gui/qt/util.py:509 ios/Vilight/vilight_gui/ios_native/utils.py:311
 msgid "File"
 msgstr "Datei"
 
@@ -2698,11 +2698,11 @@ msgid "Fixed rate: "
 msgstr "Fixer Betrag: "
 
 #: gui/qt/network_dialog.py:113
-#: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:408
+#: ios/Vilight/vilight_gui/ios_native/network_dialog.py:408
 msgid "Follow this branch"
 msgstr "Diesem Zweig folgen"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:2270
+#: ios/Vilight/vilight_gui/ios_native/gui.py:2270
 msgid "For convenience, would you like to use Touch ID or Face ID to open this wallet?\n\n"
 "Your wallet password will still be used as a backup mechanism for when Touch/Face ID fails or is unavailable.\n\n"
 "Your wallet will continue to be protected and secure."
@@ -2739,8 +2739,8 @@ msgid "Format: address, amount"
 msgstr "Format: Adresse, Betrag"
 
 #: gui/qt/address_list.py:346
-#: ios/ElectronCash/electroncash_gui/ios_native/coins.py:638
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:904
+#: ios/Vilight/vilight_gui/ios_native/coins.py:638
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:904
 msgid "Freeze"
 msgstr "Einfrieren"
 
@@ -2782,11 +2782,11 @@ msgid "From the &blockchain"
 msgstr "Aus der &Blockchain"
 
 #: plugins/shuffle/qt.py:84
-#: ios/ElectronCash/electroncash_gui/ios_native/coins.py:144
-#: ios/ElectronCash/electroncash_gui/ios_native/coins.py:605
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:196
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:208
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:460
+#: ios/Vilight/vilight_gui/ios_native/coins.py:144
+#: ios/Vilight/vilight_gui/ios_native/coins.py:605
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:196
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:208
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:460
 msgid "Frozen"
 msgstr "Eingefroren"
 
@@ -2798,7 +2798,7 @@ msgstr "Voll"
 msgid "Full 2FA enabled. This is not supported yet."
 msgstr "Vollständige 2FA aktiviert. Das wird noch nicht unterstütz."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:30
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:30
 msgid "Funded"
 msgstr "Finanziert"
 
@@ -2826,24 +2826,24 @@ msgstr "Im Allgemeinen ist eine Gebühr von 1.0 Sats/B eine guter Mindestsatz, u
 msgid "Generate a new random wallet"
 msgstr "Neue zufällige Geldbörse generieren"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:323
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:323
 msgid "Generating seed..."
 msgstr "Seed wird generiert..."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1611
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1611
 msgid "Generating your addresses..."
 msgstr "Erstelle Ihre Adressen..."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:1280
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:1280
 msgid "Generating your wallet..."
 msgstr "Erstelle Ihre Geldbörse..."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:32
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:1556
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:32
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:1556
 msgid "Get Started"
 msgstr "Los geht's"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:1538
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:1538
 msgid "Get started now"
 msgstr "Jetzt loslegen"
 
@@ -2880,10 +2880,10 @@ msgid "Hardware Wallet Support..."
 msgstr "Hardware-Geldbörsen-Unterstützung..."
 
 #: gui/qt/utxo_list.py:56 gui/qt/network_dialog.py:98
-#: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:275
-#: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:279
-#: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:326
-#: ios/ElectronCash/electroncash_gui/ios_native/coins.py:598
+#: ios/Vilight/vilight_gui/ios_native/network_dialog.py:275
+#: ios/Vilight/vilight_gui/ios_native/network_dialog.py:279
+#: ios/Vilight/vilight_gui/ios_native/network_dialog.py:326
+#: ios/Vilight/vilight_gui/ios_native/coins.py:598
 msgid "Height"
 msgstr "Höhe"
 
@@ -2895,11 +2895,11 @@ msgstr "Hilfe"
 msgid "Here is your master public key."
 msgstr "Das ist Ihr öffentliche Generalschlüssel."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:814
+#: ios/Vilight/vilight_gui/ios_native/gui.py:814
 msgid "Hide Download Banner"
 msgstr "Download-Banner ausblenden"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:304
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:304
 msgid "Hide download banner"
 msgstr "Download-Banner ausblenden"
 
@@ -2926,8 +2926,8 @@ msgstr "Startbildschirm"
 
 #: gui/qt/network_dialog.py:172 gui/qt/network_dialog.py:704
 #: plugins/shuffle/qt.py:1583
-#: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:279
-#: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:329
+#: ios/Vilight/vilight_gui/ios_native/network_dialog.py:279
+#: ios/Vilight/vilight_gui/ios_native/network_dialog.py:329
 msgid "Host"
 msgstr "Server"
 
@@ -2980,7 +2980,7 @@ msgid "If 'Connect only to preferred servers' is enabled, ViLight will only conn
 msgstr "Wenn 'Nur mit bevorzugten Servern verbinden' aktiviert ist, wird ViLight nur mit Servern verbinden, die als 'bevorzugte' Server ({}) markiert sind."
 
 #: gui/qt/network_dialog.py:323
-#: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:502
+#: ios/Vilight/vilight_gui/ios_native/network_dialog.py:502
 msgid "If auto-connect is enabled, ViLight will always use a server that is on the longest blockchain."
 msgstr "Wenn die automatische Verbindung aktiviert ist, verbindet sich ViLight zum Server mit der längsten Blockchain."
 
@@ -3001,7 +3001,7 @@ msgid "If insufficient shuffled funds are available, you can wait a few minutes 
 msgstr "Wenn unzureichende gemischtes Guthaben verfügbar ist, können Sie ein paar Minuten warten, da Coins im Hintergrund gemischt werden."
 
 #: gui/qt/network_dialog.py:324
-#: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:503
+#: ios/Vilight/vilight_gui/ios_native/network_dialog.py:503
 msgid "If it is disabled, you have to choose a server you want to use. ViLight will warn you if your server is lagging."
 msgstr "Falls deaktiviert müssen Sie selbst einen Server zur Nutzung wählen. ViLight wird Sie warnen, falls der Server nachhinkt."
 
@@ -3030,7 +3030,7 @@ msgid "If unsure, most of the time it's safe to leave this option disabled. Howe
 msgstr "Die meiste Zeit ist es sicher diese Option deaktiviert zu lassen. Allerdings ist es sicherer sie zu aktivieren (das kann jedoch neue Serverbetreiber die ihre Server füllen möchten abschrecken)."
 
 #: lib/base_wizard.py:275
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:684
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:684
 msgid "If you are not sure what this is, leave this field unchanged."
 msgstr "Wenn Sie nicht wissen, was das ist, lassen Sie das Feld unverändert."
 
@@ -3075,12 +3075,12 @@ msgid "If you think this wallet may have a transaction history for addresses bey
 msgstr "Wenn Sie glauben dass diese Geldbörse einen Transaktionsverlauf für Adressen nach der Lücke hat, verwenden Sie dieses Werkzeug, um sie zu suchen. Wenn ein Verlauf für eine Adresse gefunden wurde, werden diese Adressen (plus alle dazwischenkommenden Adressen) zu Ihrer Geldbörse hinzugefügt."
 
 #: lib/base_wizard.py:277
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:686
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:686
 msgid "If you want the wallet to use Vitae addresses use m/44'/445'/0'"
 msgstr "Wenn Sie möchten dass die Geldbörse Bitcoin-Cash-Adressen verwendet, verwenden Sie m/44'/445'/0'"
 
 #: lib/base_wizard.py:276
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:685
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:685
 msgid "If you want the wallet to use legacy Bitcoin addresses use m/44'/0'/0'"
 msgstr "Wenn Sie möchten dass die Geldbörse alte Bitcoin-Adressen verwendet, verwenden Sie m/44'/0'/0'"
 
@@ -3098,12 +3098,12 @@ msgstr "Wenn Sie wählen möchten welche spezifischen Coins verwendet werden um 
 msgid "If your wallet contains funds, make sure you have saved its seed."
 msgstr "Wenn Ihre Geldbörse noch Guthaben enthält, achten Sie darauf, dass Sie den Seed besitzen."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:668
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:492
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:512
-#: ios/ElectronCash/electroncash_gui/ios_native/utils.py:876
-#: ios/ElectronCash/electroncash_gui/ios_native/coins.py:220
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:284
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:668
+#: ios/Vilight/vilight_gui/ios_native/receive.py:492
+#: ios/Vilight/vilight_gui/ios_native/receive.py:512
+#: ios/Vilight/vilight_gui/ios_native/utils.py:876
+#: ios/Vilight/vilight_gui/ios_native/coins.py:220
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:284
 msgid "Image"
 msgstr "Bild"
 
@@ -3113,14 +3113,14 @@ msgstr "Bild muss eine TOI{} Datei der Größe {}x{} sein"
 
 #: gui/qt/main_window.py:612 gui/qt/main_window.py:615
 #: gui/qt/main_window.py:3607
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:34
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:852
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:972
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:34
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:852
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:972
 msgid "Import"
 msgstr "Importieren"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:816
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:1545
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:816
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:1545
 msgid "Import Addresses or Private Keys"
 msgstr "Adressen oder private Schlüssel importieren"
 
@@ -3128,7 +3128,7 @@ msgstr "Adressen oder private Schlüssel importieren"
 msgid "Import Vitae Addresses"
 msgstr "Bitcoin-Adresse importieren"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:853
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:853
 msgid "Import Vitae Addresses or Private Keys"
 msgstr "Bitcoin-Cash-Adressen oder private Schlüssel importieren"
 
@@ -3156,19 +3156,19 @@ msgstr "Private Schlüssel importieren"
 msgid "Importing encrypted files is not supported."
 msgstr "Das Importieren verschlüsselter Dateien wird nicht unterstützt."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:1217
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:1217
 msgid "Importing these addresses will add them to your watching-only wallet."
 msgstr "Wenn Sie diese Adressen importieren, werden sie zu Ihrer Geldbörse im Beobachtungsmodus hinzugefügt."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:1215
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:1215
 msgid "Importing these addresses will create a watching-only wallet."
 msgstr "Wenn diese Adressen importiert werden, wird eine Geldbörse im Beobachtungsmodus erstellt."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:1212
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:1212
 msgid "Importing these keys will add addresses and keys to your spending wallet."
 msgstr "Wenn Sie diese Schlüssel importieren, werden Adressen und Schlüssel zu Ihrer Ausgabe-Geldbörse hinzugefügt."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:1210
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:1210
 msgid "Importing these keys will create a fully capable spending wallet."
 msgstr "Wenn Sie diese Schlüssel importieren, wird eine voll funktionierende Ausgabe-Geldbörse erstellt."
 
@@ -3222,8 +3222,8 @@ msgstr "Index"
 
 #: gui/qt/main_window.py:466 gui/qt/util.py:234 plugins/keepkey/qt.py:574
 #: plugins/trezor/qt.py:663
-#: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:506
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1079
+#: ios/Vilight/vilight_gui/ios_native/network_dialog.py:506
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1079
 msgid "Information"
 msgstr "Informationen"
 
@@ -3247,8 +3247,8 @@ msgstr[0] "Eingabe"
 msgstr[1] "Eingaben ({num_inputs})"
 
 #: gui/qt/main_window.py:4613
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:212
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:275
+#: ios/Vilight/vilight_gui/ios_native/receive.py:212
+#: ios/Vilight/vilight_gui/ios_native/send.py:275
 msgid "Input amount"
 msgstr "Eingabebetrag"
 
@@ -3260,7 +3260,7 @@ msgstr "Eingabedaten sind kein Transaktions-Hash."
 msgid "Input raw transaction"
 msgstr "Roh-Transaktionsdaten eingeben"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:99
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:99
 msgid "Inputs"
 msgstr "Eingaben"
 
@@ -3283,8 +3283,8 @@ msgid "Installed &Plugins"
 msgstr "Installierte &Plugins"
 
 #: gui/qt/main_window.py:2045
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:479
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:828
+#: ios/Vilight/vilight_gui/ios_native/send.py:479
+#: ios/Vilight/vilight_gui/ios_native/send.py:828
 msgid "Insufficient funds"
 msgstr "Guthaben nicht ausreichend"
 
@@ -3296,25 +3296,25 @@ msgstr "Integration"
 msgid "Internal error converting image"
 msgstr "Interner Fehler beim Konvertieren des Bild"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:1089
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:1089
 msgid "Invalid"
 msgstr "Ungültig"
 
 #: gui/qt/main_window.py:2574
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:472
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:488
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:1038
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:472
+#: ios/Vilight/vilight_gui/ios_native/send.py:488
+#: ios/Vilight/vilight_gui/ios_native/send.py:1038
 msgid "Invalid Address"
 msgstr "Ungültige Adresse"
 
 #: gui/qt/main_window.py:1965 gui/text.py:331 gui/stdio.py:174
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:1056
+#: ios/Vilight/vilight_gui/ios_native/send.py:1056
 msgid "Invalid Amount"
 msgstr "Ungültiger Betrag"
 
 #: gui/qt/main_window.py:3006 gui/qt/main_window.py:3026
-#: ios/ElectronCash/electroncash_gui/ios_native/sign_decrypt_dialog.py:234
-#: ios/ElectronCash/electroncash_gui/ios_native/sign_decrypt_dialog.py:278
+#: ios/Vilight/vilight_gui/ios_native/sign_decrypt_dialog.py:234
+#: ios/Vilight/vilight_gui/ios_native/sign_decrypt_dialog.py:278
 msgid "Invalid Vitae address."
 msgstr "Ungültige Bitcoin-Cash-Adresse."
 
@@ -3347,9 +3347,9 @@ msgstr "Ungültiger Generalschlüssel"
 msgid "Invalid PIN - please unplug the {} and plug it again before retrying"
 msgstr "Ungültige PIN - bitte entfernen Sie {} und fügen Sie es erneut ein, bevor Sie erneut versuchen"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:528
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:119
-#: ios/ElectronCash/electroncash_gui/ios_native/addrconv.py:105
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:528
+#: ios/Vilight/vilight_gui/ios_native/send.py:119
+#: ios/Vilight/vilight_gui/ios_native/addrconv.py:105
 msgid "Invalid QR Code"
 msgstr "Ungültiger QR-Code"
 
@@ -3358,7 +3358,7 @@ msgid "Invalid amount"
 msgstr "Ungültiger Betrag"
 
 #: gui/qt/main_window.py:2293
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1196
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1196
 msgid "Invalid vitae URI:"
 msgstr "Ungültige Bitcoin-Cash-URI:"
 
@@ -3370,7 +3370,7 @@ msgstr "Ungültiger Kanal."
 msgid "Invalid lines found:"
 msgstr "Fehlerhafte Zeilen gefunden:"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:567
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:567
 msgid "Invalid name, please try again."
 msgstr "Ungültiger Name, bitte versuchen Sie es erneut."
 
@@ -3390,7 +3390,7 @@ msgstr "Rechnungen"
 msgid "Is default for address"
 msgstr "Ist Standard für Adresse"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:675
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:675
 msgid "It appears the derivation you specified is invalid. Please try again"
 msgstr "Es scheint, dass die angegebene Ableitung ungültig ist. Bitte versuchen Sie es erneut"
 
@@ -3503,7 +3503,7 @@ msgstr "Alt"
 msgid "Legacy Address"
 msgstr "Alte Adresse"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/addrconv.py:62
+#: ios/Vilight/vilight_gui/ios_native/addrconv.py:62
 msgid "Legacy address"
 msgstr "Alte Adresse"
 
@@ -3543,7 +3543,7 @@ msgstr "Transaktion laden"
 msgid "Loading backup..."
 msgstr "Sicherung wird geladen..."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:562
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:562
 msgid "Locktime"
 msgstr "Sperrzeit"
 
@@ -3596,12 +3596,12 @@ msgstr "Stellen Sie sicher, im Besitz der Seed-Worte oder der privaten Schlüsse
 msgid "Make this Vitae ID the default for this address"
 msgstr "Dieses Cash-Account als Standard für diese Adresse machen"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:738
+#: ios/Vilight/vilight_gui/ios_native/send.py:738
 msgid "Manual fee"
 msgstr "Manuelle Gebühr"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:34
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:845
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:34
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:845
 msgid "Master Key"
 msgstr "Generalschlüssel"
 
@@ -3617,16 +3617,16 @@ msgstr "Öffentliche Generalschlüssel"
 msgid "Matrix"
 msgstr "Matrix"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:192
+#: ios/Vilight/vilight_gui/ios_native/send.py:192
 msgid "Max"
 msgstr "Max"
 
 #: gui/qt/main_window.py:4642
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:482
+#: ios/Vilight/vilight_gui/ios_native/send.py:482
 msgid "Max fee exceeded"
 msgstr "Maximale Gebühr überschritten"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:260
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:260
 msgid "Max static fee"
 msgstr "Max. statische Gebühr"
 
@@ -3663,7 +3663,7 @@ msgid "Minimum coin:"
 msgstr "Miniimale Coins:"
 
 #: gui/qt/main_window.py:2069
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:852
+#: ios/Vilight/vilight_gui/ios_native/send.py:852
 msgid "Mining fee"
 msgstr "Mining-Vergütung"
 
@@ -3675,7 +3675,7 @@ msgstr "Libsecp256k1 fehlt"
 msgid "Mobile pairing options"
 msgstr "Verbindungsoptionen zum Mobilgerät"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:238
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:238
 msgid "Modify wallet password & encryption settings"
 msgstr "Geldbörsen-Passwort & -Verschlüsselung ändern"
 
@@ -3699,15 +3699,15 @@ msgstr "Multisignaturbörse"
 msgid "Multiple results were found, please select an option from the items below:"
 msgstr "Mehrere Ergebnisse wurden gefunden, bitte wählen Sie eine Option aus den folgenden Elementen:"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:197
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:197
 msgid "My Change Address"
 msgstr "Meine Wechselgeld-Adresse"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:199
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:199
 msgid "My Receiving Address"
 msgstr "Meine Empfangs-Adresse"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:24
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:24
 msgid "My Wallet"
 msgstr "Meine Geldbörse"
 
@@ -3717,12 +3717,12 @@ msgstr "NICHT DIE GERÄTE PIN - siehe oben"
 
 #: gui/qt/external_plugins_window.py:75 gui/qt/external_plugins_window.py:475
 #: gui/qt/main_window.py:2864 gui/qt/contact_list.py:58
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:572
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:360
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:572
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:360
 msgid "Name"
 msgstr "Name"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:475
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:475
 msgid "Name is empty"
 msgstr "Name ist leer"
 
@@ -3735,11 +3735,11 @@ msgid "Needs update"
 msgstr "Update erforderlich"
 
 #: gui/qt/main_window.py:2773 gui/qt/network_dialog.py:48 gui/text.py:149
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:2068
+#: ios/Vilight/vilight_gui/ios_native/gui.py:2068
 msgid "Network"
 msgstr "Netzwerk"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:232
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:232
 msgid "Network Settings"
 msgstr "Netzwerkeinstellungen"
 
@@ -3752,7 +3752,7 @@ msgstr "Netzwerkstatus"
 
 #: gui/qt/invoice_list.py:51 gui/qt/exception_window.py:106
 #: gui/qt/request_list.py:59 gui/qt/util.py:49
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:287
+#: ios/Vilight/vilight_gui/ios_native/receive.py:287
 msgid "Never"
 msgstr "Nie"
 
@@ -3762,7 +3762,7 @@ msgid "Never ask for this wallet"
 msgstr "Nie für diese Geldbörse fragen"
 
 #: gui/qt/seed_dialog.py:44
-#: ios/ElectronCash/electroncash_gui/ios_native/seed_dialog.py:89
+#: ios/Vilight/vilight_gui/ios_native/seed_dialog.py:89
 msgid "Never disclose your seed."
 msgstr "Geben Sie niemals den Seed weiter."
 
@@ -3771,7 +3771,7 @@ msgid "Never show this again"
 msgstr "Niemals wieder anzeigen"
 
 #: gui/qt/seed_dialog.py:45
-#: ios/ElectronCash/electroncash_gui/ios_native/seed_dialog.py:90
+#: ios/Vilight/vilight_gui/ios_native/seed_dialog.py:90
 msgid "Never type it on a website."
 msgstr "Geben Sie ihn niemals auf einer Webseite ein."
 
@@ -3780,8 +3780,8 @@ msgid "New Vitae ID Contact"
 msgstr "Neuer Cash-Account-Kontakt"
 
 #: gui/qt/main_window.py:2856 gui/qt/main_window.py:2858
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:566
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:337
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:566
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:337
 msgid "New Contact"
 msgstr "Neuer Kontakt"
 
@@ -3789,19 +3789,19 @@ msgstr "Neuer Kontakt"
 msgid "New Password:"
 msgstr "Neues Passwort:"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:809
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:809
 msgid "New Wallet"
 msgstr "Neue Geldbörse"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:1342
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:1342
 msgid "New Wallet Created"
 msgstr "Neue Geldbörse erstellt"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:146
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:146
 msgid "New contact"
 msgstr "Neuer Kontakt"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:778
+#: ios/Vilight/vilight_gui/ios_native/gui.py:778
 msgid "New transaction received: {}"
 msgstr "Neue Transaktion empfangen: {}"
 
@@ -3810,21 +3810,21 @@ msgid "New transaction: {}"
 msgstr "Neue Transaktion: {}"
 
 #: gui/qt/bip38_importer.py:185 gui/qt/installwizard.py:116
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:33
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:166
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:291
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:391
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:832
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:33
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:166
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:291
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:391
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:832
 msgid "Next"
 msgstr "Weiter"
 
 #: plugins/keepkey/qt.py:349 plugins/trezor/qt.py:317
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:1344
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:818
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:820
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1072
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:2267
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:2269
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:1344
+#: ios/Vilight/vilight_gui/ios_native/gui.py:818
+#: ios/Vilight/vilight_gui/ios_native/gui.py:820
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1072
+#: ios/Vilight/vilight_gui/ios_native/gui.py:2267
+#: ios/Vilight/vilight_gui/ios_native/gui.py:2269
 msgid "No"
 msgstr "Nein"
 
@@ -3832,7 +3832,7 @@ msgstr "Nein"
 msgid "No Vitae IDs"
 msgstr "Keine Cash-Accounts"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:429
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:429
 msgid "No Match"
 msgstr "Keine Übereinstimmung"
 
@@ -3848,15 +3848,15 @@ msgstr "Kein QR-Code gefunden"
 msgid "No QR code was found in the selected image file."
 msgstr "In der ausgewählten Bilddatei wurde kein QR-Code gefunden."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1382
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1382
 msgid "No Wallet"
 msgstr "Keine Geldbörse"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1391
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1391
 msgid "No Wallet Is Open"
 msgstr "Keine Geldbörse ist geöffnet"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:431
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:431
 msgid "No addresses match the specified criteria"
 msgstr "Keine Adressen entsprechen den angegebenen Kriterien"
 
@@ -3864,7 +3864,7 @@ msgstr "Keine Adressen entsprechen den angegebenen Kriterien"
 msgid "No addresses with transaction histories were found in the specified scan range."
 msgstr "Im angegebenen Scanbereich wurden keine Adressen mit Transaktionsverlauf gefunden."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/coins.py:374
+#: ios/Vilight/vilight_gui/ios_native/coins.py:374
 msgid "No coins"
 msgstr "Keine Coins"
 
@@ -3893,7 +3893,7 @@ msgid "No matching x_key for sign_transaction"
 msgstr "Kein passender x_key für sign_transaction"
 
 #: gui/qt/main_window.py:1269
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:394
+#: ios/Vilight/vilight_gui/ios_native/receive.py:394
 msgid "No message or amount"
 msgstr "Keine Nachricht oder Betrag"
 
@@ -3902,16 +3902,16 @@ msgid "No more addresses in your wallet."
 msgstr "Es sind keine Adressen mehr in ihrer Geldbörse vorhanden."
 
 #: gui/qt/main_window.py:1960
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:1051
+#: ios/Vilight/vilight_gui/ios_native/send.py:1051
 msgid "No outputs"
 msgstr "Keine Ausgaben"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:311
+#: ios/Vilight/vilight_gui/ios_native/gui.py:311
 msgid "No payment requests found. Feel free to create one."
 msgstr "Keine Zahlungsanfragen gefunden. Sie können gerne eine erstellen."
 
 #: gui/qt/main_window.py:1265
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:389
+#: ios/Vilight/vilight_gui/ios_native/receive.py:389
 msgid "No receiving address"
 msgstr "Keine Empfangadresse"
 
@@ -3923,25 +3923,25 @@ msgstr "Keine Ergebnisse gefunden. Ihre Geldbörse wird jedoch aktualisiert. Die
 msgid "No such mempool or blockchain transaction exists."
 msgstr "Keine solche Mempool- oder Blockchain-Transaktion existiert."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/history.py:517
+#: ios/Vilight/vilight_gui/ios_native/history.py:517
 msgid "No transactions"
 msgstr "Keine Transaktionen"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/history.py:519
+#: ios/Vilight/vilight_gui/ios_native/history.py:519
 msgid "No transactions were found on the blockchain."
 msgstr "Keine Transaktionen auf der Blockchain gefunden."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:1219
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:1219
 msgid "No valid items remain. Cannot proceed -- go back and try again."
 msgstr "Keine gültigen Elemente verbleiben. Kann nicht fortfahren -- gehe zurück und versuche es erneut."
 
 #: gui/qt/main_window.py:1057 gui/qt/main_window.py:4209
 #: gui/qt/network_dialog.py:499
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:110
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:362
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:391
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:405
-#: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:233
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:110
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:362
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:391
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:405
+#: ios/Vilight/vilight_gui/ios_native/network_dialog.py:233
 msgid "None"
 msgstr "Keine"
 
@@ -3949,7 +3949,7 @@ msgstr "Keine"
 msgid "Normally, when you (re)generate a wallet from its seed, addresses are derived and added to the wallet until a block of addresses is found without a history. This is referred to as the gap."
 msgstr "Normalerweise, wenn Sie eine Geldbörse von einem Seed (re)generieren, werden Adressen abgeleitet und zur Geldbörse hinzugefügt, bis ein Block von Adressen ohne Verlauf gefunden wird. Dies wird als Lücke bezeichnet."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:610
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:610
 msgid "Not Deleted"
 msgstr "Nicht gelöscht"
 
@@ -3971,8 +3971,8 @@ msgstr "Keine Textdatei"
 
 #: gui/qt/main_window.py:915 gui/qt/main_window.py:2180
 #: gui/qt/network_dialog.py:526 gui/text.py:142 gui/stdio.py:122
-#: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:257
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:715
+#: ios/Vilight/vilight_gui/ios_native/network_dialog.py:257
+#: ios/Vilight/vilight_gui/ios_native/gui.py:715
 msgid "Not connected"
 msgstr "Nicht verbunden"
 
@@ -4029,18 +4029,18 @@ msgid "Number of zeros displayed after the decimal point. For example, if this i
 msgstr "Anzahl der Nachkommastellen. Wenn es z.B. auf 2 steht, wird \"1,\" als \"1,00\" dargestellt."
 
 #: gui/qt/bip38_importer.py:185 gui/qt/util.py:181 plugins/audio_modem/qt.py:65
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:594
-#: ios/ElectronCash/electroncash_gui/ios_native/seed_dialog.py:87
-#: ios/ElectronCash/electroncash_gui/ios_native/password_dialog.py:288
-#: ios/ElectronCash/electroncash_gui/ios_native/password_dialog.py:351
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:466
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:480
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:499
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:520
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:537
-#: ios/ElectronCash/electroncash_gui/ios_native/utils.py:362
-#: ios/ElectronCash/electroncash_gui/ios_native/utils.py:540
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1080
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:594
+#: ios/Vilight/vilight_gui/ios_native/seed_dialog.py:87
+#: ios/Vilight/vilight_gui/ios_native/password_dialog.py:288
+#: ios/Vilight/vilight_gui/ios_native/password_dialog.py:351
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:466
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:480
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:499
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:520
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:537
+#: ios/Vilight/vilight_gui/ios_native/utils.py:362
+#: ios/Vilight/vilight_gui/ios_native/utils.py:540
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1080
 msgid "OK"
 msgstr "OK"
 
@@ -4073,11 +4073,11 @@ msgstr "OP_RETURN Skript zu groß, darf nicht länger als 223 Bytes sein"
 
 #: gui/qt/main_window.py:852 gui/qt/main_window.py:865 gui/qt/__init__.py:641
 #: gui/text.py:130 plugins/shuffle/qt.py:112
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:153
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:230
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:619
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:625
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:719
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:153
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:230
+#: ios/Vilight/vilight_gui/ios_native/gui.py:619
+#: ios/Vilight/vilight_gui/ios_native/gui.py:625
+#: ios/Vilight/vilight_gui/ios_native/gui.py:719
 msgid "Offline"
 msgstr "Offline"
 
@@ -4114,13 +4114,13 @@ msgstr "Auf den meisten Systemen können Sie dies mit diesem Befehl tun:"
 msgid "One output per line."
 msgstr "Eine Ausgabe pro Zeile."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:141
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:650
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:141
+#: ios/Vilight/vilight_gui/ios_native/gui.py:650
 msgid "Online"
 msgstr "Online"
 
 #: gui/qt/main_window.py:4003
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:343
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:343
 msgid "Online Block Explorer"
 msgstr "Online-Block-Explorer"
 
@@ -4148,11 +4148,11 @@ msgstr "Nur Adressausgaben werden von {} unterstützt"
 msgid "Only wipe a device if you have the recovery seed written down and the device wallet(s) are empty, otherwise the bitcoins will be lost forever."
 msgstr "Löschen Sie das Gerät nur, wenn Sie über den Wiederherstellungs-Seed verfügen oder wenn die Geldbörse leer ist. Ansonsten sind die enthaltenen Bitcoins für immer verloren."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:1344
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:1344
 msgid "Open New Wallet"
 msgstr "Neue Geldbörse öffnen"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:628
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:628
 msgid "Open Wallet"
 msgstr "Geldbörse öffnen"
 
@@ -4172,12 +4172,12 @@ msgstr "OpenAlias"
 msgid "OpenAlias record, used to receive coins and to sign payment requests."
 msgstr "OpenAlias-Eintrag, kann zum Empfangen von Coins und zum Signieren von Zahlungsanfragen verwendet werden."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1683
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1890
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1683
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1890
 msgid "Opening encrypted wallet: '{}'"
 msgstr "Öffne verschlüsselte Geldbörse: '{}'"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1689
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1689
 msgid "Opening {}..."
 msgstr "Öffne {}..."
 
@@ -4190,12 +4190,12 @@ msgid "Optional Features"
 msgstr "Optionale Funktionen"
 
 #: gui/qt/seed_dialog.py:150
-#: ios/ElectronCash/electroncash_gui/ios_native/seed_dialog.py:144
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:232
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:790
-#: ios/ElectronCash/electroncash_gui/ios_native/coins.py:189
-#: ios/ElectronCash/electroncash_gui/ios_native/coins.py:479
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:924
+#: ios/Vilight/vilight_gui/ios_native/seed_dialog.py:144
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:232
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:790
+#: ios/Vilight/vilight_gui/ios_native/coins.py:189
+#: ios/Vilight/vilight_gui/ios_native/coins.py:479
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:924
 msgid "Options"
 msgstr "Optionen"
 
@@ -4204,8 +4204,8 @@ msgid "Outdated {} firmware for device labelled {}. Please download the updated 
 msgstr "Veraltete Firmware {} für Gerät mit Bezeichnung \"{}\" erkannt. Bitte laden Sie die aktuelle Firmware von {}"
 
 #: gui/qt/transaction_dialog.py:470 gui/qt/transaction_dialog.py:766
-#: ios/ElectronCash/electroncash_gui/ios_native/coins.py:190
-#: ios/ElectronCash/electroncash_gui/ios_native/coins.py:480
+#: ios/Vilight/vilight_gui/ios_native/coins.py:190
+#: ios/Vilight/vilight_gui/ios_native/coins.py:480
 #, python-brace-format
 msgid "Output"
 msgid_plural "Outputs ({num_outputs})"
@@ -4220,7 +4220,7 @@ msgstr "Ausgabebetrag"
 msgid "Output point"
 msgstr "Ausgabepunkt"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:100
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:100
 msgid "Outputs"
 msgstr "Ausgaben"
 
@@ -4273,21 +4273,21 @@ msgstr "Passphrasen erlauben es, beliebig viele Geldbörsen zu nutzen, die sich 
 msgid "Password"
 msgstr "Passwort"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1676
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1676
 msgid "Password Incorrect"
 msgstr "Passwort falsch"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1684
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1684
 msgid "Password Required"
 msgstr "Passwort erforderlich"
 
 #: gui/qt/password_dialog.py:150
-#: ios/ElectronCash/electroncash_gui/ios_native/password_dialog.py:193
+#: ios/Vilight/vilight_gui/ios_native/password_dialog.py:193
 msgid "Password Strength"
 msgstr "Passwortstärke"
 
 #: gui/qt/main_window.py:2827
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:2008
+#: ios/Vilight/vilight_gui/ios_native/gui.py:2008
 msgid "Password is disabled, this wallet is not protected"
 msgstr "Kein Passwort vergeben, diese Geldbörse ist nicht gesichert"
 
@@ -4302,7 +4302,7 @@ msgid "Password must have less than 64 characters."
 msgstr "Passwort muss weniger als 64 Zeichen haben."
 
 #: gui/qt/main_window.py:2827
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:2008
+#: ios/Vilight/vilight_gui/ios_native/gui.py:2008
 msgid "Password was updated successfully"
 msgstr "Passwort wurde erfolgreich aktualisiert"
 
@@ -4310,7 +4310,7 @@ msgstr "Passwort wurde erfolgreich aktualisiert"
 msgid "Password:"
 msgstr "Passwort:"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:574
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:574
 msgid "Paste an address or use QR"
 msgstr "Adresse einfügen oder QR verwenden"
 
@@ -4336,9 +4336,9 @@ msgid "Pay Now"
 msgstr "Jetzt bezahlen"
 
 #: gui/qt/cashacctqt.py:631 gui/qt/contact_list.py:215 gui/text.py:174
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:607
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:869
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:144
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:607
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:869
+#: ios/Vilight/vilight_gui/ios_native/send.py:144
 msgid "Pay to"
 msgstr "Zahle an"
 
@@ -4350,21 +4350,21 @@ msgstr "Zahle an mehrere"
 msgid "Payment Request"
 msgstr "Zahlungsanfrage"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1144
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1144
 msgid "Payment Request Error"
 msgstr "Zahlungsanfrage Fehler"
 
 #: gui/qt/main_window.py:1922 gui/qt/main_window.py:2144
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1936
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1936
 msgid "Payment request has expired"
 msgstr "Zahlungsanfrage ist abgelaufen"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:425
+#: ios/Vilight/vilight_gui/ios_native/receive.py:425
 msgid "Payment request saved"
 msgstr "Zahlungsanfrage gespeichert"
 
 #: gui/qt/main_window.py:2199 gui/text.py:358 gui/stdio.py:207
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1971
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1971
 msgid "Payment sent."
 msgstr "Zahlung gesendet."
 
@@ -4393,7 +4393,7 @@ msgid "Players"
 msgstr "Spieler"
 
 #: gui/qt/exception_window.py:87
-#: ios/ElectronCash/electroncash_gui/ios_native/crashreporter.py:56
+#: ios/Vilight/vilight_gui/ios_native/crashreporter.py:56
 msgid "Please briefly describe what led to the error (optional):"
 msgstr "Bitte beschreiben Sie kurz, was zum Fehler geführt hat (optional):"
 
@@ -4425,7 +4425,7 @@ msgstr "Bitte geben Sie den öffentlichen Generalschlüssel (xpub) des Mitsignie
 msgid "Please enter the master public key of cosigner #{}:"
 msgstr "Bitte geben Sie den öffentlichen Generalschlüssel des Mitsignierers #{} ein:"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:581
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:581
 msgid "Please enter the new name for this wallet:"
 msgstr "Bitte geben Sie den neuen Namen für diese Geldbörse ein:"
 
@@ -4460,19 +4460,19 @@ msgstr "Bitte installieren Sie die entsprechenden Bibliotheken für diese Plugin
 msgid "Please make sure that 'Browser support' is disabled on your {}."
 msgstr "Bitte stellen Sie sicher, dass 'Browser-Unterstützung' auf Ihrem {} deaktiviert ist."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/sign_decrypt_dialog.py:301
+#: ios/Vilight/vilight_gui/ios_native/sign_decrypt_dialog.py:301
 msgid "Please provide a public key or select an address"
 msgstr "Bitte geben Sie einen öffentlichen Schlüssel ein oder wählen Sie eine Adresse"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/sign_decrypt_dialog.py:327
+#: ios/Vilight/vilight_gui/ios_native/sign_decrypt_dialog.py:327
 msgid "Please provide a public key to use for decryption"
 msgstr "Bitte geben Sie einen öffentlichen Schlüssel für Entschlüsselung an"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/sign_decrypt_dialog.py:272
+#: ios/Vilight/vilight_gui/ios_native/sign_decrypt_dialog.py:272
 msgid "Please provide both a signature and a message to verify"
 msgstr "Bitte geben Sie eine Signatur und eine Nachricht an, die überprüft werden soll"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/sign_decrypt_dialog.py:323
+#: ios/Vilight/vilight_gui/ios_native/sign_decrypt_dialog.py:323
 msgid "Please provide cyphertext to decrypt"
 msgstr "Bitte geben Sie den Chiffretext zum Entschlüsseln an"
 
@@ -4493,7 +4493,7 @@ msgid "Please review the transaction, save it, and/or broadcast it at your leisu
 msgstr "Bitte überprüfen Sie die Transaktion, speichern und/oder senden Sie sie wenn Sie möchten."
 
 #: gui/qt/seed_dialog.py:38
-#: ios/ElectronCash/electroncash_gui/ios_native/seed_dialog.py:84
+#: ios/Vilight/vilight_gui/ios_native/seed_dialog.py:84
 #, python-format
 msgid "Please save these %d words on paper (order is important). "
 msgstr "Bitte speichern Sie diese %d Wörter auf Papier (Reihenfolge ist wichtig). "
@@ -4506,7 +4506,7 @@ msgstr "Bitte wählen Sie Ihr {}-Gerät:"
 msgid "Please share it with your cosigners."
 msgstr "Bitte teilen Sie ihn den Mitsignierern mit."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:931
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:931
 msgid "Please specify a master key to continue. Valid keys are long strings starting with either xpub/ypub/zpub or xprv/yprv/zprv."
 msgstr "Bitte geben Sie einen Generalschlüssel an, um fortzufahren. Gültige Schlüssel sind lange Zeichenketten, die entweder mit xpub/ypub/zpub oder xprv/yprv/zprv beginnen."
 
@@ -4530,8 +4530,8 @@ msgstr "Bitte aktualisieren Sie auf v0.1.27 oder höher"
 msgid "Please visit this page for instructions on how to correct the situation:"
 msgstr "Bitte besuchen Sie diese Seite für Anweisungen, wie die Situation zu korrigieren ist:"
 
-#: gui/qt/util.py:341 ios/ElectronCash/electroncash_gui/ios_native/utils.py:398
-#: ios/ElectronCash/electroncash_gui/ios_native/utils.py:400
+#: gui/qt/util.py:341 ios/Vilight/vilight_gui/ios_native/utils.py:398
+#: ios/Vilight/vilight_gui/ios_native/utils.py:400
 msgid "Please wait"
 msgstr "Bitte warten"
 
@@ -4549,7 +4549,7 @@ msgstr "Bitte warten..."
 msgid "Please wait... {num}/{total}"
 msgstr "Bitte warten... {num}/{total}"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:26
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:26
 msgid "Please write your seed phrase down, as it's the only way to recover your funds if you forget your password or your device is stolen."
 msgstr "Bitte schreiben Sie Ihre Seed-Phrase auf, da es die einzige Möglichkeit ist, Ihr Guthaben wiederherzustellen, wenn Sie Ihr Passwort vergessen oder Ihr Gerät gestohlen wird."
 
@@ -4582,7 +4582,7 @@ msgid "Pool size"
 msgstr "Pool-Größe"
 
 #: gui/qt/network_dialog.py:172 gui/qt/network_dialog.py:704
-#: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:329
+#: ios/Vilight/vilight_gui/ios_native/network_dialog.py:329
 msgid "Port"
 msgstr "Port"
 
@@ -4590,7 +4590,7 @@ msgstr "Port"
 msgid "Posts a PERMANENT note to the VITAE blockchain as part of this transaction."
 msgstr "Gibt eine PERMANENTE Notiz auf der VITAE Blockchain als Teil dieser Transaktion bekannt."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1704
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1704
 msgid "Potentially Unsafe Operation"
 msgstr "Mögliche Unsichere Operation"
 
@@ -4619,7 +4619,7 @@ msgstr "Drücke \"Weiter\" um diese Geldbörse zu öffnen."
 msgid "Press Enter"
 msgstr "Drücken Sie die Eingabetaste"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:238
+#: ios/Vilight/vilight_gui/ios_native/send.py:238
 msgid "Preview"
 msgstr "Vorschau"
 
@@ -4627,14 +4627,14 @@ msgstr "Vorschau"
 msgid "Privacy Warning"
 msgstr "Privatsphäre Warnung"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/private_key_dialog.py:25
+#: ios/Vilight/vilight_gui/ios_native/private_key_dialog.py:25
 msgid "Private Key"
 msgstr "Privater Schlüssel"
 
 #: gui/qt/main_window.py:2976 gui/qt/main_window.py:2981
 #: gui/qt/address_list.py:314
-#: ios/ElectronCash/electroncash_gui/ios_native/private_key_dialog.py:70
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:913
+#: ios/Vilight/vilight_gui/ios_native/private_key_dialog.py:70
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:913
 msgid "Private key"
 msgstr "Privater Schlüssel"
 
@@ -4651,7 +4651,7 @@ msgid "Proceed to Send Tab"
 msgstr "Weiter zum Senden-Tab"
 
 #: gui/qt/main_window.py:2097 gui/qt/main_window.py:2167
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:882
+#: ios/Vilight/vilight_gui/ios_native/send.py:882
 msgid "Proceed?"
 msgstr "Fortfahren?"
 
@@ -4696,7 +4696,7 @@ msgid "Proxy user"
 msgstr "Proxy-Benutzer"
 
 #: gui/qt/main_window.py:3117
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:896
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:896
 msgid "Public key"
 msgstr "Öffentlicher Schlüssel"
 
@@ -4708,10 +4708,10 @@ msgstr "Öffentliche Schlüssel"
 msgid "PyQt5 Upgrade Needed"
 msgstr "PyQt5 Upgrade erforderlich"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:503
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:360
-#: ios/ElectronCash/electroncash_gui/ios_native/addrconv.py:85
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:884
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:503
+#: ios/Vilight/vilight_gui/ios_native/send.py:360
+#: ios/Vilight/vilight_gui/ios_native/addrconv.py:85
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:884
 msgid "QR Not Available"
 msgstr "QR nicht verfügbar"
 
@@ -4720,9 +4720,9 @@ msgid "QR Reader Error"
 msgstr "QR-Leser-Fehler"
 
 #: gui/qt/main_window.py:2958
-#: ios/ElectronCash/electroncash_gui/ios_native/private_key_dialog.py:100
-#: ios/ElectronCash/electroncash_gui/ios_native/addrconv.py:95
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:722
+#: ios/Vilight/vilight_gui/ios_native/private_key_dialog.py:100
+#: ios/Vilight/vilight_gui/ios_native/addrconv.py:95
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:722
 msgid "QR code"
 msgstr "QR-Code"
 
@@ -4750,7 +4750,7 @@ msgstr "QR-Reader konnte nicht geladen werden. Dies kann passieren, wenn Sie ein
 msgid "QtSvg Missing"
 msgstr "QtSvg fehlt"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1060
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1060
 msgid "Question"
 msgstr "Frage"
 
@@ -4797,8 +4797,8 @@ msgid "Rebuild this wallet's history now?"
 msgstr "Verlauf dieser Geldbörse neu aufbauen?"
 
 #: gui/qt/main_window.py:165 gui/text.py:63
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:72
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:306
+#: ios/Vilight/vilight_gui/ios_native/receive.py:72
+#: ios/Vilight/vilight_gui/ios_native/gui.py:306
 msgid "Receive"
 msgstr "Empfangen"
 
@@ -4811,13 +4811,13 @@ msgid "Receive request URI copied to clipboard"
 msgstr "Empfangsanfrage URI in Zwischenablage kopiert"
 
 #: gui/qt/address_list.py:172
-#: ios/ElectronCash/electroncash_gui/ios_native/coins.py:608
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:31
+#: ios/Vilight/vilight_gui/ios_native/coins.py:608
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:31
 msgid "Receiving"
 msgstr "Eingehend"
 
 #: gui/qt/cashacctqt.py:453 gui/qt/transaction_dialog.py:476
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:203
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:203
 msgid "Receiving Address"
 msgstr "Empfangsadresse"
 
@@ -4825,7 +4825,7 @@ msgstr "Empfangsadresse"
 msgid "Receiving Addresses Only"
 msgstr "Nur Empfangsadressen"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:197
+#: ios/Vilight/vilight_gui/ios_native/receive.py:197
 msgid "Receiving address"
 msgstr "Empfängeradresse"
 
@@ -4838,11 +4838,11 @@ msgid "Recover from a seed you have previously written down"
 msgstr "Von einer zuvor aufgeschriebenen Seed wiederherstellen"
 
 #: gui/qt/main_window.py:2985 gui/qt/address_dialog.py:92
-#: ios/ElectronCash/electroncash_gui/ios_native/private_key_dialog.py:75
+#: ios/Vilight/vilight_gui/ios_native/private_key_dialog.py:75
 msgid "Redeem Script"
 msgstr "Redeem-Skript"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:27
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:27
 msgid "Reenter your seed phrase"
 msgstr "Seed-Satz erneut eingeben"
 
@@ -4864,10 +4864,10 @@ msgid "Register new..."
 msgstr "Neuen registrieren..."
 
 #: gui/qt/main_window.py:1797
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:299
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:707
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:1002
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:1147
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:299
+#: ios/Vilight/vilight_gui/ios_native/receive.py:707
+#: ios/Vilight/vilight_gui/ios_native/send.py:1002
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:1147
 msgid "Remove"
 msgstr "Entfernen"
 
@@ -4889,20 +4889,20 @@ msgstr "{list_of_contacts} aus Ihrer Kontaktliste entfernen?"
 msgid "Remove {number_of_contacts} contacts from your contact list?"
 msgstr "{number_of_contacts} Kontakte aus Ihrer Kontaktliste entfernen?"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:582
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:582
 msgid "Rename"
 msgstr "Umbenennen"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:580
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:629
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:580
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:629
 msgid "Rename Wallet"
 msgstr "Geldbörse umbenennen"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/crashreporter.py:55
+#: ios/Vilight/vilight_gui/ios_native/crashreporter.py:55
 msgid "Report Contents"
 msgstr "Inhalt des Berichts"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/crashreporter.py:113
+#: ios/Vilight/vilight_gui/ios_native/crashreporter.py:113
 msgid "Report Sent"
 msgstr "Bericht gesendet"
 
@@ -4914,17 +4914,17 @@ msgstr "Fehler berichten"
 msgid "Request &expires"
 msgstr "Anfrage &läuft ab"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:488
+#: ios/Vilight/vilight_gui/ios_native/receive.py:488
 msgid "Request URI"
 msgstr "Anfrage URI"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:201
+#: ios/Vilight/vilight_gui/ios_native/receive.py:201
 msgid "Request expires"
 msgstr "Anfrage läuft ab"
 
 #: gui/qt/address_list.py:312
-#: ios/ElectronCash/electroncash_gui/ios_native/coins.py:632
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:878
+#: ios/Vilight/vilight_gui/ios_native/coins.py:632
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:878
 msgid "Request payment"
 msgstr "Zahlung anfragen"
 
@@ -4940,7 +4940,7 @@ msgstr "Anfrage gesendet."
 msgid "Requested &amount"
 msgstr "Angeforderter &Betrag"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:199
+#: ios/Vilight/vilight_gui/ios_native/receive.py:199
 msgid "Requested amount"
 msgstr "Angefragter Betrag"
 
@@ -4948,8 +4948,8 @@ msgstr "Angefragter Betrag"
 msgid "Requestor"
 msgstr "Antragsteller"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:721
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:67
+#: ios/Vilight/vilight_gui/ios_native/receive.py:721
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:67
 msgid "Requests"
 msgstr "Anfragen"
 
@@ -4982,8 +4982,8 @@ msgstr "Server Problem lösen..."
 msgid "Restart the CashShuffle plugin now?"
 msgstr "Das CashShuffle Plugin jetzt neu starten?"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:815
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:1544
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:815
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:1544
 msgid "Restore from Seed"
 msgstr "Wiederherstellen von Seed"
 
@@ -5027,13 +5027,13 @@ msgstr "SSL-Zertifikat zum Signieren von Zahlungsanfragen."
 msgid "SSL is used to authenticate and encrypt your connections with the blockchain servers."
 msgstr "SSL wird verwendet, um Ihre Verbindungen mit den Blockchain-Servern zu authentifizieren und zu verschlüsseln."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:573
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:573
 msgid "Satoshi Nakamoto"
 msgstr "Satoshi Nakamoto"
 
 #: gui/qt/main_window.py:2658 gui/qt/qrcodewidget.py:141
 #: gui/qt/transaction_dialog.py:143
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:268
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:268
 msgid "Save"
 msgstr "Speichern"
 
@@ -5041,8 +5041,8 @@ msgstr "Speichern"
 msgid "Save QR Image"
 msgstr "QR-Bild speichern"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:34
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:266
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:34
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:266
 msgid "Save Wallet"
 msgstr "Geldbörse speichern"
 
@@ -5058,7 +5058,7 @@ msgstr "Rechnung als Datei speichern"
 msgid "Save your wallet labels on a remote server, and synchronize them across multiple devices where you use ViLight."
 msgstr "Speichern Sie Ihre Transaktionsbezeichnungen auf einem Server und nutzen Sie sie auf jedem Gerät mit ViLight."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:630
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:630
 msgid "Save/Export Wallet"
 msgstr "Geldbörse speichern/exportieren"
 
@@ -5087,7 +5087,7 @@ msgid "Scrambled words"
 msgstr "Vertauschte Wörter"
 
 #: gui/qt/main_window.py:2895 gui/qt/main_window.py:2980
-#: ios/ElectronCash/electroncash_gui/ios_native/private_key_dialog.py:64
+#: ios/Vilight/vilight_gui/ios_native/private_key_dialog.py:64
 msgid "Script type"
 msgstr "Skript-Typ"
 
@@ -5105,11 +5105,11 @@ msgstr "Wallet suchen, {key}F zum Verstecken"
 msgid "Searching for <b>{cash_account_name}</b> please wait ..."
 msgstr "Suche nach <b>{cash_account_name}</b>, Bitte warten ..."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1802
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1802
 msgid "Secure Enclave Key Reset"
 msgstr "Secure-Enclave-Schlüssel-Reset"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:2026
+#: ios/Vilight/vilight_gui/ios_native/gui.py:2026
 msgid "Secure Enclave Unavailable"
 msgstr "Secure-Enclave nicht verfügbar"
 
@@ -5122,8 +5122,8 @@ msgid "Security Warning"
 msgstr "Sicherheitswarnung"
 
 #: gui/qt/main_window.py:2769 gui/qt/seed_dialog.py:208
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:33
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:289
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:33
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:289
 msgid "Seed"
 msgstr "Seed"
 
@@ -5131,7 +5131,7 @@ msgstr "Seed"
 msgid "Seed Entered"
 msgstr "Seed eingegeben"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:389
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:389
 msgid "Seed Entry"
 msgstr "Seed Eingabe"
 
@@ -5191,7 +5191,7 @@ msgstr "Server automatisch auswählen"
 msgid "Select server manually"
 msgstr "Server manuell wählen"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:318
+#: ios/Vilight/vilight_gui/ios_native/receive.py:318
 msgid "Select when the payment request should expire"
 msgstr "Wählen Sie, wann die Zahlungsanfrage abgelaufen soll"
 
@@ -5216,9 +5216,9 @@ msgid "Select your transaction file"
 msgstr "Transaktionsdatei auswählen"
 
 #: gui/qt/main_window.py:164 gui/text.py:63
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:67
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:236
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:305
+#: ios/Vilight/vilight_gui/ios_native/send.py:67
+#: ios/Vilight/vilight_gui/ios_native/send.py:236
+#: ios/Vilight/vilight_gui/ios_native/gui.py:305
 msgid "Send"
 msgstr "Senden"
 
@@ -5250,7 +5250,7 @@ msgstr "Über Lautsprecher abspielen"
 msgid "Send via e-mail"
 msgstr "Per E-Mail versenden"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/crashreporter.py:117
+#: ios/Vilight/vilight_gui/ios_native/crashreporter.py:117
 msgid "Sending Report..."
 msgstr "Bericht wird gesendet..."
 
@@ -5263,7 +5263,7 @@ msgstr "Server"
 msgid "Server Error"
 msgstr "Server-Fehler"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:150
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:150
 msgid "Server Lagging"
 msgstr "Server hängt hinterher"
 
@@ -5284,7 +5284,7 @@ msgid "Server hosting your email account"
 msgstr "Server des E-Mail-Postfachs"
 
 #: gui/qt/main_window.py:881
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:679
+#: ios/Vilight/vilight_gui/ios_native/gui.py:679
 msgid "Server is lagging ({} blocks)"
 msgstr "Server hängt ({} Blöcke) hinterher"
 
@@ -5320,46 +5320,46 @@ msgstr "PIN festlegen"
 #: plugins/shuffle/qt.py:1097 plugins/email_requests/qt.py:215
 #: plugins/keepkey/qt.py:575 plugins/labels/qt.py:46
 #: plugins/audio_modem/qt.py:46 plugins/trezor/qt.py:664
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:55
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:55
 msgid "Settings"
 msgstr "Einstellungen"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:500
+#: ios/Vilight/vilight_gui/ios_native/receive.py:500
 msgid "Share Request"
 msgstr "Anfrage teilen"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:496
+#: ios/Vilight/vilight_gui/ios_native/receive.py:496
 msgid "Share as QR Image..."
 msgstr "Als QR-Bild teilen..."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:495
+#: ios/Vilight/vilight_gui/ios_native/receive.py:495
 msgid "Share as URI..."
 msgstr "Als URI teilen..."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:203
+#: ios/Vilight/vilight_gui/ios_native/receive.py:203
 msgid "Share request"
 msgstr "Anfrage teilen"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:878
-#: ios/ElectronCash/electroncash_gui/ios_native/coins.py:185
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:888
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:878
+#: ios/Vilight/vilight_gui/ios_native/coins.py:185
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:888
 msgid "Share/Save QR..."
 msgstr "QR teilen/speichern..."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:786
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:786
 msgid "Share/Save..."
 msgstr "Teilen/Speichern..."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:183
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:184
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:183
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:184
 msgid "Show"
 msgstr "Anzeigen"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:292
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:292
 msgid "Show Address QR"
 msgstr "Adresse als QR anzeigen"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/history.py:473
+#: ios/Vilight/vilight_gui/ios_native/history.py:473
 msgid "Show All Transactions"
 msgstr "Alle Transaktionen anzeigen"
 
@@ -5367,20 +5367,20 @@ msgstr "Alle Transaktionen anzeigen"
 msgid "Show Vitae IDs"
 msgstr "Cash-Accounts anzeigen"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:317
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:317
 msgid "Show Coin Info"
 msgstr "Coin Info anzeigen"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:885
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:885
 msgid "Show Coins (UTXOs)"
 msgstr "Coins anzeigen (UTXOs)"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:340
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:340
 msgid "Show Contact"
 msgstr "Kontakt anzeigen"
 
 #: gui/qt/main_window.py:4290
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:378
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:378
 msgid "Show Fiat balance for addresses"
 msgstr "Fiat-Betrag für Adressen anzeigen"
 
@@ -5396,14 +5396,14 @@ msgstr "Zeige Prev Tx"
 msgid "Show QR Code"
 msgstr "QR-Code zeigen"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:305
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:305
 msgid "Show Script QR"
 msgstr "Skript QR anzeigen"
 
 #: gui/qt/transaction_dialog.py:101 gui/qt/qrtextedit.py:18
 #: gui/qt/qrtextedit.py:33
-#: ios/ElectronCash/electroncash_gui/ios_native/seed_dialog.py:149
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:780
+#: ios/Vilight/vilight_gui/ios_native/seed_dialog.py:149
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:780
 msgid "Show as QR code"
 msgstr "Als QR-Code anzeigen"
 
@@ -5416,11 +5416,11 @@ msgid "Show help"
 msgstr "Hilfe anzeigen"
 
 #: gui/qt/main_window.py:4289
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:369
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:369
 msgid "Show history rates"
 msgstr "Historische Werte zeigen"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:294
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:294
 msgid "Show input hash QR"
 msgstr "Eingabehash QR anzeigen"
 
@@ -5495,7 +5495,7 @@ msgid "Shuffling Paused"
 msgstr "Mischen pausiert"
 
 #: gui/qt/main_window.py:3066 gui/qt/transaction_dialog.py:137
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:435
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:435
 msgid "Sign"
 msgstr "Signieren"
 
@@ -5503,12 +5503,12 @@ msgstr "Signieren"
 msgid "Sign all transactions using Schnorr signatures."
 msgstr "Alle Transaktionen mit Schnorr Signaturen signieren."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/sign_decrypt_dialog.py:37
+#: ios/Vilight/vilight_gui/ios_native/sign_decrypt_dialog.py:37
 msgid "Sign/Verify Message"
 msgstr "Nachricht signieren/verifizieren"
 
 #: gui/qt/main_window.py:3042
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:917
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:917
 msgid "Sign/verify Message"
 msgstr "Nachricht signieren/verifizieren"
 
@@ -5521,7 +5521,7 @@ msgid "Signature"
 msgstr "Signatur"
 
 #: gui/qt/main_window.py:3037
-#: ios/ElectronCash/electroncash_gui/ios_native/sign_decrypt_dialog.py:289
+#: ios/Vilight/vilight_gui/ios_native/sign_decrypt_dialog.py:289
 msgid "Signature verified"
 msgstr "Signatur bestätigt"
 
@@ -5542,17 +5542,17 @@ msgid "Signing message..."
 msgstr "Signiere Nachricht..."
 
 #: gui/qt/main_window.py:2132 plugins/digitalbitbox/digitalbitbox.py:609
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1925
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1925
 msgid "Signing transaction..."
 msgstr "Transaktion wird signiert..."
 
 #: gui/qt/main_window.py:2993
-#: ios/ElectronCash/electroncash_gui/ios_native/sign_decrypt_dialog.py:237
+#: ios/Vilight/vilight_gui/ios_native/sign_decrypt_dialog.py:237
 msgid "Signing with an address actually means signing with the corresponding private key, and verifying with the corresponding public key. The address you have entered does not have a unique public key, so these operations cannot be performed."
 msgstr "Mit einer Adresse zu signieren, bedeutet, mit dem zugehörigen privaten Schlüssel zu signieren und die Signatur mit dem öffentlichen Schlüssel zu prüfen. Da die eingegebene Adresse nicht über einen eindeutigen öffentlichen Schlüssel verfügt, kann die Operation nicht angewendet werden."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:361
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:550
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:361
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:550
 msgid "Size:"
 msgstr "Größe:"
 
@@ -5566,12 +5566,12 @@ msgid "Some of your unshuffled funds may be temporarily locked while the shuffle
 msgstr "Einiges Ihres nicht gemischten Guthaben kann vorübergehend gesperrt werden, während der Mischvorgang ausgeführt wird. Wenn Sie dieses Guthaben sofort freischalten möchten, können Sie den \"Mischen pausieren\"-Button benutzen, um dies zu tun."
 
 #: gui/qt/exception_window.py:77
-#: ios/ElectronCash/electroncash_gui/ios_native/crashreporter.py:58
+#: ios/Vilight/vilight_gui/ios_native/crashreporter.py:58
 msgid "Something went wrong running ViLight."
 msgstr "Etwas ist schief gelaufen mit ViLight."
 
 #: gui/qt/exception_window.py:75
-#: ios/ElectronCash/electroncash_gui/ios_native/crashreporter.py:58
+#: ios/Vilight/vilight_gui/ios_native/crashreporter.py:58
 msgid "Sorry!"
 msgstr "Entschuldigung!"
 
@@ -5580,11 +5580,11 @@ msgid "Sorry, but we were unable to check for updates. Please try again later."
 msgstr "Entschuldigung, aber wir konnten nicht nach Updates suchen. Bitte versuchen Sie es später noch einmal."
 
 #: gui/qt/main_window.py:4291
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:388
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:388
 msgid "Source"
 msgstr "Quelle"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:847
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:847
 msgid "Specify a master key to re-create a deterministic wallet."
 msgstr "Geben Sie einen Generalschlüssel an, um eine deterministische Geldbörse neu zu erstellen."
 
@@ -5597,11 +5597,11 @@ msgid "Specify the <b>account name</b> below (limited to 99 characters):"
 msgstr "Geben Sie den <b>Kontonamen</b> unten an (begrenzt auf 99 Zeichen):"
 
 #: gui/qt/utxo_list.py:197
-#: ios/ElectronCash/electroncash_gui/ios_native/coins.py:248
+#: ios/Vilight/vilight_gui/ios_native/coins.py:248
 msgid "Spend"
 msgstr "Ausgegeben"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:945
+#: ios/Vilight/vilight_gui/ios_native/send.py:945
 msgid "Spend From"
 msgstr "Von hier ausgeben"
 
@@ -5617,20 +5617,20 @@ msgstr "Ungemischte ausgeben"
 msgid "Spend from"
 msgstr "Von hier ausgeben"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:907
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:907
 msgid "Spend from this Address"
 msgstr "Von dieser Adresse ausgeben"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/coins.py:641
+#: ios/Vilight/vilight_gui/ios_native/coins.py:641
 msgid "Spend from this UTXO"
 msgstr "Von diesem UTXO ausgeben"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/coins.py:474
+#: ios/Vilight/vilight_gui/ios_native/coins.py:474
 msgid "Spend from this UTXO + Selected"
 msgstr "Von diesem UTXO + Ausgewählten ausgeben"
 
 #: gui/qt/main_window.py:4171
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:296
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:296
 msgid "Spend only confirmed coins"
 msgstr "Nur bestätigte Coins ausgeben"
 
@@ -5654,7 +5654,7 @@ msgstr "Ausgeben und Verknüpfen von Coins mit CashShuffle deaktiviert kann Ihre
 msgid "Spending and linking these coins may compromise your privacy not only for new received coins, but also for your past spending of shuffled coins."
 msgstr "Ausgeben und Verknüpfen dieser Beträge kann Ihre Privatsphäre nicht nur für neu empfangene Beträge, sondern auch für Ihre bisherigen Ausgaben von gemischten Coins gefährden."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:163
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:163
 msgid "Standard Wallet"
 msgstr "Standard-Geldbörse"
 
@@ -5669,15 +5669,15 @@ msgstr "Scan starten"
 #: gui/qt/invoice_list.py:36 gui/qt/request_list.py:42
 #: gui/qt/network_dialog.py:426 plugins/shuffle/qt.py:1599
 #: plugins/shuffle/qt.py:1673 plugins/shuffle/qt.py:1688
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:642
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:587
-#: ios/ElectronCash/electroncash_gui/ios_native/history.py:544
+#: ios/Vilight/vilight_gui/ios_native/receive.py:642
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:587
+#: ios/Vilight/vilight_gui/ios_native/history.py:544
 msgid "Status"
 msgstr "Status"
 
 #: gui/qt/transaction_dialog.py:366
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:484
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:233
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:484
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:233
 msgid "Status:"
 msgstr "Status:"
 
@@ -5686,10 +5686,10 @@ msgid "Step {}/24.  Enter seed word as explained on your {}:"
 msgstr "Schritt {} von 24. Seed-Wort wie auf dem {} erklärt angeben:"
 
 #: gui/qt/main_window.py:2828 gui/qt/main_window.py:4355
-#: ios/ElectronCash/electroncash_gui/ios_native/sign_decrypt_dialog.py:260
-#: ios/ElectronCash/electroncash_gui/ios_native/sign_decrypt_dialog.py:289
-#: ios/ElectronCash/electroncash_gui/ios_native/sign_decrypt_dialog.py:343
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:2009
+#: ios/Vilight/vilight_gui/ios_native/sign_decrypt_dialog.py:260
+#: ios/Vilight/vilight_gui/ios_native/sign_decrypt_dialog.py:289
+#: ios/Vilight/vilight_gui/ios_native/sign_decrypt_dialog.py:343
+#: ios/Vilight/vilight_gui/ios_native/gui.py:2009
 msgid "Success"
 msgstr "Erfolgreich"
 
@@ -5717,13 +5717,13 @@ msgstr "Private Schlüssel entleeren"
 msgid "Synchronize now?"
 msgstr "Jetzt synchronisieren?"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:147
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:147
 msgid "Synchronizing"
 msgstr "Synchronisiere"
 
 #: gui/qt/main_window.py:877 gui/text.py:133 gui/stdio.py:113
 #: plugins/labels/qt.py:184
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:643
+#: ios/Vilight/vilight_gui/ios_native/gui.py:643
 msgid "Synchronizing..."
 msgstr "Synchronisiere..."
 
@@ -5735,27 +5735,27 @@ msgstr "System"
 msgid "TREZOR wallet"
 msgstr "TREZOR Geldbörse"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:480
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:480
 msgid "Tap to add a description"
 msgstr "Drücken um eine Beschreibung hinzuzufügen"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:833
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:833
 msgid "Tap to add text..."
 msgstr "Drücken um Text hinzuzufügen..."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:24
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:24
 msgid "Tap to enter a password"
 msgstr "Drücken um ein Passwort einzugeben"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/crashreporter.py:63
-#: ios/ElectronCash/electroncash_gui/ios_native/sign_decrypt_dialog.py:154
-#: ios/ElectronCash/electroncash_gui/ios_native/sign_decrypt_dialog.py:163
+#: ios/Vilight/vilight_gui/ios_native/crashreporter.py:63
+#: ios/Vilight/vilight_gui/ios_native/sign_decrypt_dialog.py:154
+#: ios/Vilight/vilight_gui/ios_native/sign_decrypt_dialog.py:163
 msgid "Tap to enter text..."
 msgstr "Drücken um Text einzugeben..."
 
 #: gui/qt/main_window.py:4769 gui/qt/util.py:815
 #: gui/qt/transaction_dialog.py:662
-#: ios/ElectronCash/electroncash_gui/ios_native/seed_dialog.py:115
+#: ios/Vilight/vilight_gui/ios_native/seed_dialog.py:115
 msgid "Text copied to clipboard"
 msgstr "Der Text wurde in die Zwischenablage kopiert"
 
@@ -5786,20 +5786,20 @@ msgstr "Die Vilight-Entwickler inspizieren oder prüfen Plugins NICHT."
 msgid "The PIN cannot be longer than 9 characters."
 msgstr "Die PIN darf nicht länger als 9 Zeichen sein."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:117
+#: ios/Vilight/vilight_gui/ios_native/send.py:117
 msgid "The QR code contains multiple outputs. At this time only a single output is supported.\n"
 "Please try again."
 msgstr "Der QR-Code enthält mehrere Ausgaben. Momentan wird nur eine einzelne Ausgabe unterstützt.\n"
 "Bitte versuchen Sie es erneut."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:120
+#: ios/Vilight/vilight_gui/ios_native/send.py:120
 msgid "The QR code does not appear to be a valid VITAE address or payment request.\n"
 "Please try again."
 msgstr "Der QR-Code scheint keine gültige VITAE-Adresse oder Zahlungsanfrage zu sein.\n"
 "Bitte versuchen Sie es erneut."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:529
-#: ios/ElectronCash/electroncash_gui/ios_native/addrconv.py:106
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:529
+#: ios/Vilight/vilight_gui/ios_native/addrconv.py:106
 msgid "The QR code does not appear to be a valid VITAE address.\n"
 "Please try again."
 msgstr "Der QR-Code scheint keine gültige VITAE-Adresse zu sein.\n"
@@ -5821,10 +5821,10 @@ msgstr "Die Gebührenbetrag kann vom Sender frei gewählt werden. Die Verarbeitu
 msgid "The amount will be displayed in red if you do not have enough funds in your wallet."
 msgstr "Der Betrag wird in rot angezeigt, falls nicht genügend Guthaben in der Geldbörse ist."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:503
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:360
-#: ios/ElectronCash/electroncash_gui/ios_native/addrconv.py:85
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:884
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:503
+#: ios/Vilight/vilight_gui/ios_native/send.py:360
+#: ios/Vilight/vilight_gui/ios_native/addrconv.py:85
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:884
 msgid "The camera is not available for reading QR codes"
 msgstr "Die Kamera ist nicht verfügbar, um QR-Codes zu lesen"
 
@@ -5876,7 +5876,7 @@ msgstr "Folgende konnten nicht importiert werden"
 msgid "The format of your wallet '%s' must be upgraded for ViLight. This change will not be backward compatible"
 msgstr "Das Format der Geldbörse \"%s\" muss für ViLight aktualisiert werden. Diese Änderung ist nicht rückwärtskompatiblel"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/sign_decrypt_dialog.py:343
+#: ios/Vilight/vilight_gui/ios_native/sign_decrypt_dialog.py:343
 msgid "The message has been successfully decrypted"
 msgstr "Die Nachricht wurde erfolgreich entschlüsselt"
 
@@ -5885,11 +5885,11 @@ msgid "The mnemonic needs to be 12, 18 or 24 words."
 msgstr "Die Mnemonik muss 12, 18 oder 24 Wörter sein."
 
 #: gui/qt/main_window.py:2997
-#: ios/ElectronCash/electroncash_gui/ios_native/sign_decrypt_dialog.py:241
+#: ios/Vilight/vilight_gui/ios_native/sign_decrypt_dialog.py:241
 msgid "The operation is undefined. Not just in ViLight, but in general."
 msgstr "Diese Operation ist nicht definiert - nicht nur in Vilight sondern überhaupt."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1675
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1675
 msgid "The password was incorrect for this encrypted wallet, please try again."
 msgstr "Das Passwort für diese verschlüsselte Geldbörse ist falsch, bitte versuchen Sie es erneut."
 
@@ -5941,21 +5941,21 @@ msgstr "Dem Plugin-Manifest fehlt ein gültiger Paketnamen."
 msgid "The plugin manifest lacks a valid version."
 msgstr "Dem Plugin-Manifest fehlt eine gültige Version."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:936
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:936
 msgid "The provided key does not appear to be a valid master key. Valid keys are long strings starting with either xpub/ypub/zpub or xprv/yprv/zprv. Please try again."
 msgstr "Der angegebene Schlüssel scheint kein gültiger Generalschlüssel zu sein. Gültige Schlüssel sind lange Zeichenketten, die mit xpub/ypub/zpub oder xprv/yprv/zprv beginnen. Bitte versuchen Sie es erneut."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/history.py:607
+#: ios/Vilight/vilight_gui/ios_native/history.py:607
 msgid "The requested transaction has dropped out of the wallet history.\n\n"
 "If this problem persists, please contact us at https://www.vitaetoken.io/."
 msgstr "Die angeforderte Transaktion ist aus dem Geldbörsen-Verlauf herausgefallen.\n\n"
 "Wenn dieses Problem weiterhin besteht, kontaktieren Sie uns bitte unter https://www.vitaetoken.io/."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:642
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:642
 msgid "The seed you entered does not appear to be a valid wallet seed."
 msgstr "Der von Ihnen eingegebene Seed scheint kein gültiger Geldbörsen-Seed zu sein."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:540
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:540
 msgid "The seed you entered does not match the generated seed. Go back to the previous screen and double-check it, then try again."
 msgstr "Der von Ihnen eingegebene Seed stimmt nicht mit dem generierten Seed überein. Gehen Sie zurück zum vorherigen Dialog und überprüfen Sie ihn, versuchen Sie es erneut."
 
@@ -5967,7 +5967,7 @@ msgstr "Die ausgewählte Datei scheint eine Binärdatei zu sein."
 msgid "The server did not answer; network may be down."
 msgstr "Der Server hat nicht geantwortet; das Netzwerk könnte nicht verfügbar sein."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/sign_decrypt_dialog.py:260
+#: ios/Vilight/vilight_gui/ios_native/sign_decrypt_dialog.py:260
 msgid "The signature for the provided message has been pasted into the signature text box."
 msgstr "Die Signatur für die angegebene Nachricht wurde in das Signatur Textfeld eingefügt."
 
@@ -5983,7 +5983,7 @@ msgstr "Der angegebene WIF-Schlüssel '{}' ist ein p2sh WIF-Schlüssel. Diese Sc
 msgid "The specified name cannot be used for a Vitae IDs registration. You must specify 1-99 alphanumeric (ASCII) characters, without spaces (underscores are permitted as well)."
 msgstr "Der angegebene Name kann nicht für eine Cash-Accounts-Registrierung verwendet werden. Sie müssen 1-99 alphanumerische (ASCII) Zeichen angeben, ohne Leerzeichen (Unterstriche sind ebenfalls erlaubt)."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/sign_decrypt_dialog.py:339
+#: ios/Vilight/vilight_gui/ios_native/sign_decrypt_dialog.py:339
 msgid "The specified public key cannot decrypt this cyphertext.\n"
 "Please specify the correct key to decrypt."
 msgstr "Der angegebene öffentliche Schlüssel kann diesen Chiffretext nicht entschlüsseln.\n"
@@ -6061,7 +6061,7 @@ msgid "The {} device is now in an inconsistent state.\n\n"
 msgstr "Das {} Gerät befindet sich jetzt in einem inkonsistenten Zustand.\n\n"
 "Sie müssen das Gerät möglicherweise entfernen und wieder einstecken, und was Sie taten wiederholen."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:308
+#: ios/Vilight/vilight_gui/ios_native/gui.py:308
 msgid "There are no transactions for this wallet on the blockchain."
 msgstr "Es gibt keine Transaktionen für diese Geldbörse auf der Blockchain."
 
@@ -6088,11 +6088,11 @@ msgid "There was an error processing the payment request"
 msgstr "Es gab einen Fehler bei der Bearbeitung der Zahlungsanfrage"
 
 #: gui/qt/network_dialog.py:422
-#: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:494
+#: ios/Vilight/vilight_gui/ios_native/network_dialog.py:494
 msgid "This blockchain is used to verify the transactions sent by your transaction server."
 msgstr "Diese Blockchain wird genutzt, um die Transaktionen von Ihrem Transaktionsserver zu prüfen."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:2027
+#: ios/Vilight/vilight_gui/ios_native/gui.py:2027
 msgid "This device lacks the secure enclave service. As such, Touch/Face ID based wallet authentication is unavailable."
 msgstr "Diesem Gerät fehlt Secure-Enclave-Dienst. Deswegen ist die Touch-/Face-ID-basierte Geldbörsen-Authentifizierung nicht verfügbar."
 
@@ -6125,17 +6125,17 @@ msgid "This is a preferred server"
 msgstr "Dies ist ein bevorzugter Server"
 
 #: gui/qt/main_window.py:3277
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1049
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1049
 msgid "This is a watching-only wallet"
 msgstr "Diese Geldbörse ist im Beobachtungsmodus"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:1199
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:1199
 msgid "This is a watching-only wallet, so the given private keys will be converted to watching addresses."
 msgstr "Dies ist eine Geldbörse im Beobachtungsmodus, weswegen die privaten Schlüssel in beobachtete Adressen umgewandelt werden."
 
 #: gui/qt/main_window.py:3011 gui/qt/main_window.py:3083
-#: ios/ElectronCash/electroncash_gui/ios_native/sign_decrypt_dialog.py:247
-#: ios/ElectronCash/electroncash_gui/ios_native/sign_decrypt_dialog.py:316
+#: ios/Vilight/vilight_gui/ios_native/sign_decrypt_dialog.py:247
+#: ios/Vilight/vilight_gui/ios_native/sign_decrypt_dialog.py:316
 msgid "This is a watching-only wallet."
 msgstr "Diese Geldbörse ist im Beobachtungsmodus."
 
@@ -6144,7 +6144,7 @@ msgid "This is the fee rate that will be used for this transaction."
 msgstr "Dies ist der Gebührensatz, der für diese Transaktion verwendet wird."
 
 #: gui/qt/network_dialog.py:439
-#: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:499
+#: ios/Vilight/vilight_gui/ios_native/network_dialog.py:499
 msgid "This is the height of your local copy of the blockchain."
 msgstr "Das ist die Höhe Ihrer lokalen Kopie der Blockchain."
 
@@ -6153,12 +6153,12 @@ msgid "This may result in higher transactions fees."
 msgstr "Dies könnte zu höheren Transaktionsgebühren führen."
 
 #: gui/qt/main_window.py:463
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1050
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1050
 msgid "This means you will not be able to spend Vitae with it."
 msgstr "Das bedeutet, dass sie die Vitae nicht ausgeben können."
 
 #: gui/qt/main_window.py:1250
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1173
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1173
 msgid "This payment request will be signed."
 msgstr "Die Zahlungsanfrage wird signiert."
 
@@ -6166,14 +6166,14 @@ msgstr "Die Zahlungsanfrage wird signiert."
 msgid "This plugin facilitates the use of multi-signatures wallets."
 msgstr "Dieses Plugin vereinfacht die Nutzung von Multisignaturbörsen."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:282
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:287
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:291
+#: ios/Vilight/vilight_gui/ios_native/receive.py:282
+#: ios/Vilight/vilight_gui/ios_native/receive.py:287
+#: ios/Vilight/vilight_gui/ios_native/receive.py:291
 msgid "This request expires: {}"
 msgstr "Diese Anfrage läuft ab: {}"
 
 #: gui/qt/seed_dialog.py:39
-#: ios/ElectronCash/electroncash_gui/ios_native/seed_dialog.py:85
+#: ios/Vilight/vilight_gui/ios_native/seed_dialog.py:85
 msgid "This seed will allow you to recover your wallet in case of computer failure."
 msgstr "Mit diesem Seed lässt sich Ihre Geldbörse nach einem Computerausfall wiederherstellen."
 
@@ -6189,7 +6189,7 @@ msgstr "Dieser Server indiziert immer noch Transaktionen. Sie sollten derweilen 
 msgid "This spending mode is the same as previous versions of ViLight, which did not offer CashShuffle."
 msgstr "Dieser Ausgabemodus ist der gleiche wie die früheren Versionen von ViLight, die nicht CashShuffle anbieten."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1705
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1705
 msgid "This spending wallet is not encrypted and not password protected. Sharing it over the internet could result in others intercepting the data and for you to potentially lose funds.\n\n"
 "Continue anyway?"
 msgstr "Diese Ausgabe-Geldbörse ist nicht verschlüsselt und nicht passwortgeschützt. Das Teilen über das Internet könnte dazu führen, dass andere Daten abfangen und dass Sie möglicherweise Geld verlieren.\n\n"
@@ -6200,7 +6200,7 @@ msgid "This testnet wallet has an invalid master key format."
 msgstr "Diese Testnet-Geldbörse hat ein ungültiges Generalschlüsselformat."
 
 #: gui/qt/main_window.py:2430
-#: ios/ElectronCash/electroncash_gui/ios_native/addrconv.py:47
+#: ios/Vilight/vilight_gui/ios_native/addrconv.py:47
 msgid "This tool helps convert between address formats for Vitae addresses.\n"
 "You are encouraged to use the 'Cash address' format."
 msgstr "Dieses Werkzeug hilft, zwischen Adressformaten für Vitae-Adressen umzuwandeln.\n"
@@ -6214,7 +6214,7 @@ msgstr "Dieses Tool installiert Hardware-Geldbörsen \"udev-Regeln\" auf Ihrem S
 msgid "This transaction is not saved. Close anyway?"
 msgstr "Die Transaktion wurde nicht gespeichert. Trotzdem schließen?"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:454
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:454
 msgid "This transaction is not signed and thus lacks a transaction ID."
 msgstr "Diese Transaktion ist nicht signiert und somit fehlt es an einer Transaktions-ID."
 
@@ -6222,16 +6222,16 @@ msgstr "Diese Transaktion ist nicht signiert und somit fehlt es an einer Transak
 msgid "This type of script is not supported with {}."
 msgstr "Der Skripttyp wird mit {} nicht unterstüzt."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:801
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:801
 msgid "This version of ViLight currently only supports sending to 1 address at a time! Sorry!"
 msgstr "Diese Version von ViLight unterstützt derzeit nur das Senden an eine Adresse gleichzeitig! Sorry!"
 
 #: gui/qt/main_window.py:2945
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:2045
+#: ios/Vilight/vilight_gui/ios_native/gui.py:2045
 msgid "This wallet has no seed"
 msgstr "Diese Geldbörse hat keinen Seed"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/coins.py:289
+#: ios/Vilight/vilight_gui/ios_native/coins.py:289
 msgid "This wallet has no unspent outputs (coins) to display."
 msgstr "Diese Geldbörse hat keine nicht ausgegebenen Ausgaben (Coins) zum Anzeigen."
 
@@ -6270,30 +6270,30 @@ msgid "To continue, touch the Digital Bitbox's light for 3 seconds."
 msgstr "Um fortzufahren, drücken Sie 3 Sekunden lang auf das Licht der Digital Bitbox."
 
 #: lib/base_wizard.py:174
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:849
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:849
 msgid "To create a spending wallet, please enter a master private key (xprv/yprv/zprv)."
 msgstr "Um eine vollständige Geldbörse zu erzeugen, geben Sie einen privaten Generalschlüssel (xprv, yprv oder zprv) ein."
 
 #: lib/base_wizard.py:173
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:848
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:848
 msgid "To create a watching-only wallet, please enter your master public key (xpub/ypub/zpub)."
 msgstr "Um eine Geldbörse im Beobachtungsmodus zu erzeugen, geben Sie einen öffentlichen Generalschlüssel (xpub, ypub oder zpub) ein."
 
 #: gui/qt/exception_window.py:80
-#: ios/ElectronCash/electroncash_gui/ios_native/crashreporter.py:58
+#: ios/Vilight/vilight_gui/ios_native/crashreporter.py:58
 msgid "To help us diagnose and fix the problem, you can send us a bug report that contains useful debug information:"
 msgstr "Um uns bei der Fehlersuche und -behebung zu unterstützen, können Sie uns einen Fehlerbericht mit nützlichen Fehlerinformationen senden:"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:1201
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:1201
 msgid "To import addresses into a spending wallet, you must use their private key."
 msgstr "Um Adressen in eine Ausgabe-Geldbörse zu importieren, müssen Sie ihren privaten Schlüssel verwenden."
 
 #: gui/qt/installwizard.py:391
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:401
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:401
 msgid "To make sure that you have properly saved your seed, please retype it here."
 msgstr "Um sicherzugehen daß Sie den Seed tatsächlich gesichert haben, bitte hier erneut eingeben."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1392
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1392
 msgid "To proceed, please select a wallet to open."
 msgstr "Um fortzufahren, wählen Sie bitte eine Geldbörse zum Öffnen."
 
@@ -6313,9 +6313,9 @@ msgstr "CashAddr Anzeige umschalten"
 msgid "Toggle CashShuffle"
 msgstr "CashShuffle umschalten"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:825
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:827
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:828
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:825
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:827
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:828
 msgid "Toggle Format"
 msgstr "Format umschalten"
 
@@ -6339,7 +6339,7 @@ msgstr "Zu viele QR-Codes erkannt."
 msgid "Too small"
 msgstr "Zu klein"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:24
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:24
 msgid "Tools"
 msgstr "Werkzeuge"
 
@@ -6347,25 +6347,25 @@ msgstr "Werkzeuge"
 msgid "Total size"
 msgstr "Gesamtgröße"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1998
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1998
 msgid "Touch/Face ID disabled for wallet"
 msgstr "Touch-/Face-ID für Geldbörse deaktiviert"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1994
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:2260
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1994
+#: ios/Vilight/vilight_gui/ios_native/gui.py:2260
 msgid "Touch/Face ID enabled for wallet"
 msgstr "Touch-/Face-ID für Geldbörse aktiviert"
 
 #: gui/qt/transaction_dialog.py:90
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:598
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:598
 msgid "Transaction"
 msgstr "Transaktion"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/coins.py:631
+#: ios/Vilight/vilight_gui/ios_native/coins.py:631
 msgid "Transaction Details"
 msgstr "Transaktionsdetails"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/history.py:621
+#: ios/Vilight/vilight_gui/ios_native/history.py:621
 msgid "Transaction History"
 msgstr "Transaktionsverlauf"
 
@@ -6374,20 +6374,20 @@ msgid "Transaction ID"
 msgstr "Transaktions-ID"
 
 #: gui/qt/transaction_dialog.py:95
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:425
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:791
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:425
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:791
 msgid "Transaction ID:"
 msgstr "Transaktions-ID:"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:233
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:233
 msgid "Transaction Input {}"
 msgstr "Transaktionseingabe {}"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/history.py:608
+#: ios/Vilight/vilight_gui/ios_native/history.py:608
 msgid "Transaction Not Found"
 msgstr "Transaktion nicht gefunden"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:233
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:233
 msgid "Transaction Output {}"
 msgstr "Transaktionsausgabe {}"
 
@@ -6403,7 +6403,7 @@ msgstr "Transaktion konnte aufgrund von Staub-Ausgaben nicht gesendet werden (St
 msgid "Transaction could not be broadcast due to missing, already-spent, or otherwise invalid inputs."
 msgstr "Transaktion konnte nicht gesendet werden, da fehlende, bereits ausgegebene oder anderweitig ungültige Eingaben vorhanden sind."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:143
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:143
 msgid "Transaction history may not yet be current."
 msgstr "Transaktionsverlauf ist möglicherweise noch nicht aktuell."
 
@@ -6416,8 +6416,8 @@ msgid "Transaction saved successfully"
 msgstr "Transaktion erfolgreich gespeichert"
 
 #: gui/qt/transaction_dialog.py:379
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:527
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:900
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:527
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:900
 msgid "Transaction unrelated to your wallet"
 msgstr "Transaktion ohne Bezug zu Ihrer Geldbörse"
 
@@ -6430,9 +6430,9 @@ msgid "Transaction:"
 msgstr "Transaktion:"
 
 #: gui/qt/main_window.py:4299
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:194
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:67
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:24
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:194
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:67
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:24
 msgid "Transactions"
 msgstr "Transaktionen"
 
@@ -6453,11 +6453,11 @@ msgid "Tx"
 msgstr "Tx"
 
 #: gui/qt/contact_list.py:58 plugins/shuffle/qt.py:2025
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:585
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:585
 msgid "Type"
 msgstr "Typ"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:612
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:612
 msgid "Type 'delete' to proceed"
 msgstr "Zum Fortfahren 'Löschen' eingeben"
 
@@ -6466,8 +6466,8 @@ msgid "Type: '{}' below to proceed"
 msgstr "Unten '{}' eigeben, um fortzufahren"
 
 #: plugins/shuffle/qt.py:1393 plugins/shuffle/qt.py:1398
-#: ios/ElectronCash/electroncash_gui/ios_native/coins.py:597
-#: ios/ElectronCash/electroncash_gui/ios_native/coins.py:628
+#: ios/Vilight/vilight_gui/ios_native/coins.py:597
+#: ios/Vilight/vilight_gui/ios_native/coins.py:628
 msgid "UTXO"
 msgstr "UTXO"
 
@@ -6491,7 +6491,7 @@ msgstr "Konnte CSV nicht erstellen"
 msgid "Unable to export history"
 msgstr "Transaktionsverlauf konnte nicht exportiert werden"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:225
+#: ios/Vilight/vilight_gui/ios_native/receive.py:225
 msgid "Unable to get a receiving address from your wallet!"
 msgstr "Keine Empfangadresse von Ihrer Geldbörse erhalten!"
 
@@ -6547,8 +6547,8 @@ msgid "Unfortunately, this message cannot be signed by the {}. Only alphanumeric
 msgstr "Leider kann diese Nachricht nicht von {} signiert werden. Nur alphanumerische Nachrichten werden kürzer als 140 Zeichen werden unterstützt. Bitte entfernen Sie alle zusätzlichen Zeichen (Tabulator, Zeilenumschaltung) und versuchen Sie es erneut."
 
 #: gui/qt/address_list.py:344
-#: ios/ElectronCash/electroncash_gui/ios_native/coins.py:638
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:904
+#: ios/Vilight/vilight_gui/ios_native/coins.py:638
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:904
 msgid "Unfreeze"
 msgstr "Freigeben"
 
@@ -6574,16 +6574,16 @@ msgstr "Deinstallieren"
 
 #: gui/qt/contact_list.py:380 gui/qt/transaction_dialog.py:352 lib/util.py:539
 #: lib/exchange_rate.py:487
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:657
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:426
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:448
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:554
-#: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:331
-#: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:362
-#: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:363
-#: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:371
-#: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:392
-#: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:490
+#: ios/Vilight/vilight_gui/ios_native/receive.py:657
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:426
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:448
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:554
+#: ios/Vilight/vilight_gui/ios_native/network_dialog.py:331
+#: ios/Vilight/vilight_gui/ios_native/network_dialog.py:362
+#: ios/Vilight/vilight_gui/ios_native/network_dialog.py:363
+#: ios/Vilight/vilight_gui/ios_native/network_dialog.py:371
+#: ios/Vilight/vilight_gui/ios_native/network_dialog.py:392
+#: ios/Vilight/vilight_gui/ios_native/network_dialog.py:490
 msgid "Unknown"
 msgstr "Unbekannt"
 
@@ -6591,7 +6591,7 @@ msgstr "Unbekannt"
 msgid "Unshuffled available:"
 msgstr "Ungemischt verfügbar:"
 
-#: lib/wallet.py:720 ios/ElectronCash/electroncash_gui/ios_native/send.py:780
+#: lib/wallet.py:720 ios/Vilight/vilight_gui/ios_native/send.py:780
 msgid "Unsigned"
 msgstr "Unsigniert"
 
@@ -6599,7 +6599,7 @@ msgstr "Unsigniert"
 msgid "Unsupported Account Type"
 msgstr "Nicht unterstützter Kontotyp"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:116
+#: ios/Vilight/vilight_gui/ios_native/send.py:116
 msgid "Unsupported QR Code"
 msgstr "Nicht unterstützter QR-Code"
 
@@ -6611,7 +6611,7 @@ msgstr "Nicht unterstütztes Ausgabeskript."
 msgid "Unsupported payment data type."
 msgstr "Nicht unterstützter Zahlungsdatentyp."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:30
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:30
 msgid "Unused"
 msgstr "Unbenutzt"
 
@@ -6631,7 +6631,7 @@ msgstr "Update verfügbar, klicken Sie für Details"
 msgid "Update check failed"
 msgstr "Update-Überprüfung fehlgeschlagen"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:146
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:146
 msgid "Updating transaction history."
 msgstr "Transaktionsverlauf wird aktualisiert."
 
@@ -6663,12 +6663,12 @@ msgstr "SSL verwenden"
 msgid "Use Tor Proxy"
 msgstr "Tor-Proxy nutzen"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:2269
+#: ios/Vilight/vilight_gui/ios_native/gui.py:2269
 msgid "Use Touch/Face ID"
 msgstr "Touch-/Face-ID verwenden"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:817
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:1546
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:817
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:1546
 msgid "Use a Master Key"
 msgstr "Einen Generalschlüssel verwenden"
 
@@ -6677,18 +6677,18 @@ msgid "Use a hardware device"
 msgstr "Ein Hardware-Gerät verwenden"
 
 #: gui/qt/network_dialog.py:110 gui/qt/network_dialog.py:183
-#: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:404
-#: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:428
+#: ios/Vilight/vilight_gui/ios_native/network_dialog.py:404
+#: ios/Vilight/vilight_gui/ios_native/network_dialog.py:428
 msgid "Use as server"
 msgstr "Als Server nutzen"
 
 #: gui/qt/main_window.py:4123
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:281
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:281
 msgid "Use change addresses"
 msgstr "Wechselgeld-Adressen verwenden"
 
 #: gui/qt/main_window.py:4142
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:288
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:288
 msgid "Use multiple change addresses"
 msgstr "Mehrere Wechselgeld-Adressen verwenden"
 
@@ -6704,24 +6704,24 @@ msgstr "Öffentliche oder private Schlüssel verwenden"
 msgid "Use setconfig to set ssl_chain and ssl_privkey."
 msgstr "Verwenden Sie 'setconfig' um 'ssl_chain' und 'ssl_privkey' zu setzen."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:401
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:401
 msgid "Use the quick suggestions to save time."
 msgstr "Nutzen Sie die Schnellvorschläge, um Zeit zu sparen."
 
 #: gui/qt/password_dialog.py:176
-#: ios/ElectronCash/electroncash_gui/ios_native/password_dialog.py:145
+#: ios/Vilight/vilight_gui/ios_native/password_dialog.py:145
 msgid "Use this dialog to add a password to your wallet."
 msgstr "Nutzen Sie diesen Dialog, um zur Geldbörse ein Passwort hinzuzufügen."
 
 #: gui/qt/password_dialog.py:182
-#: ios/ElectronCash/electroncash_gui/ios_native/password_dialog.py:151
+#: ios/Vilight/vilight_gui/ios_native/password_dialog.py:151
 msgid "Use this dialog to change your password."
 msgstr "Nutzen Sie diesen Dialog, um das Passwort zu ändern."
 
 #: gui/qt/address_list.py:180
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:31
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:194
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:467
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:31
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:194
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:467
 msgid "Used"
 msgstr "Benutzt"
 
@@ -6741,7 +6741,7 @@ msgstr "Wechselgeld-Adressen erschweren es Dritten, Ihre Transaktionen zu verfol
 msgid "Using this mode presents a potential security risk."
 msgstr "Die Nutzung dieses Modus stellt ein potenzielles Sicherheitsrisiko dar."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:1086
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:1086
 msgid "Valid"
 msgstr "Gültig"
 
@@ -6754,7 +6754,7 @@ msgstr "Gültiges Cash-Account: <b><pre>{emoji} {account_string}</pre></b>"
 msgid "Verify"
 msgstr "Verifizieren"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:920
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:920
 msgid "Verify Message"
 msgstr "Nachricht überprüfen"
 
@@ -6808,11 +6808,11 @@ msgstr "Rechnung ansehen"
 
 #: gui/qt/history_list.py:248 gui/qt/address_list.py:322
 #: gui/qt/contact_list.py:223
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:870
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:295
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:783
-#: ios/ElectronCash/electroncash_gui/ios_native/coins.py:644
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:910
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:870
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:295
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:783
+#: ios/Vilight/vilight_gui/ios_native/coins.py:644
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:910
 msgid "View on block explorer"
 msgstr "In Blockexplorer anzeigen"
 
@@ -6828,7 +6828,7 @@ msgstr "Registrierungs tx anzeigen"
 msgid "View registration tx..."
 msgstr "Registrierungs tx anzeigen..."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:243
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:243
 msgid "View the wallet seed phrase used for wallet recovery"
 msgstr "Geldbörsen-Seed-Phrase für Geldbörsen-Wiederherstellung anzeigen"
 
@@ -6837,7 +6837,7 @@ msgid "View tx"
 msgstr "Zeige tx"
 
 #: gui/qt/console.py:62 gui/qt/seed_dialog.py:42
-#: ios/ElectronCash/electroncash_gui/ios_native/seed_dialog.py:88
+#: ios/Vilight/vilight_gui/ios_native/seed_dialog.py:88
 msgid "WARNING"
 msgstr "WARNUNG"
 
@@ -6865,22 +6865,22 @@ msgstr "Geldbörse"
 msgid "Wallet Information"
 msgstr "Geldbörseninformationen"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:642
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:642
 msgid "Wallet Operations"
 msgstr "Geldbörsen-Operationen"
 
 #: gui/qt/main_window.py:2799
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:25
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:25
 msgid "Wallet Password"
 msgstr "Geldbörsen-Passwort"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:641
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:242
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:641
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:242
 msgid "Wallet Recovery Seed"
 msgstr "Geldbörsen-Wiederherstellungsphrase"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/seed_dialog.py:127
-#: ios/ElectronCash/electroncash_gui/ios_native/seed_dialog.py:145
+#: ios/Vilight/vilight_gui/ios_native/seed_dialog.py:127
+#: ios/Vilight/vilight_gui/ios_native/seed_dialog.py:145
 msgid "Wallet Seed"
 msgstr "Geldbörsen-Seed"
 
@@ -6888,11 +6888,11 @@ msgstr "Geldbörsen-Seed"
 msgid "Wallet backup created"
 msgstr "Sicherung der Geldbörse erstellt"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:606
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:606
 msgid "Wallet deleted successfully"
 msgstr "Geldbörse erfolgreich gelöscht"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1723
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1723
 msgid "Wallet file"
 msgstr "Geldbörsen-Datei"
 
@@ -6908,15 +6908,15 @@ msgstr "Geldbörse hat keine Adresse zum entleeren"
 msgid "Wallet name"
 msgstr "Name der Geldbörse"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:232
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:232
 msgid "Wallet name is empty. Please enter a wallet name to proceed."
 msgstr "Geldbörsen-Name ist leer. Bitte geben Sie einen Geldbörsen-Namen ein, um fortzufahren."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:236
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:236
 msgid "Wallet password is empty. Please set a wallet password to proceed. You can disable wallet password protection later if you wish."
 msgstr "Geldbörsen-Passwort ist leer. Bitte setzen Sie ein Geldbörsen-Passwort um fortzufahren. Sie können den Passwortschutz später deaktivieren, wenn Sie das möchten."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:238
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:238
 msgid "Wallet passwords do not match. Please confirm the password you wish to set for your wallet by entering the same password twice."
 msgstr "Geldbörsen-Passwörter stimmen nicht überein. Bitte bestätigen Sie das Passwort, das Sie für Ihre Geldbörse festlegen möchten, indem Sie das gleiche Passwort zweimal eingeben."
 
@@ -6924,7 +6924,7 @@ msgstr "Geldbörsen-Passwörter stimmen nicht überein. Bitte bestätigen Sie da
 msgid "Wallet removed: {}"
 msgstr "Geldbörse entfernt: {}"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1766
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1766
 msgid "Wallet successfully renamed"
 msgstr "Geldbörse erfolgreich umbenannt"
 
@@ -6932,7 +6932,7 @@ msgstr "Geldbörse erfolgreich umbenannt"
 msgid "Wallet type"
 msgstr "Typ der Geldbörse"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:303
+#: ios/Vilight/vilight_gui/ios_native/gui.py:303
 msgid "Wallets"
 msgstr "Geldbörsen"
 
@@ -6965,11 +6965,11 @@ msgstr "Wir garantieren nicht, dass BIP39-Import in ViLight immer verfügbar sei
 msgid "We encountered an error while connecting to your device:"
 msgstr "Beim Verbinden mit dem Gerät ist ein Fehler aufgetreten:"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:2023
+#: ios/Vilight/vilight_gui/ios_native/gui.py:2023
 msgid "We will flag this wallet as requesting to use Touch/Face ID, however it is currently disabled on the device. Please enable Touch/Face ID from the iOS General settings in order to use biometrics for this wallet."
 msgstr "Wir werden diese Geldbörse markieren Touch-/Face-ID zu verwenden, aber dies ist derzeit auf dem Gerät deaktiviert. Bitte aktivieren Sie Touch-/Face-ID in den iOS-Einstellungen, um Biometrie für diese Geldbörse zu verwenden."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:29
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:29
 msgid "Welcome to"
 msgstr "Willkommen bei"
 
@@ -7018,32 +7018,32 @@ msgid "Write down the seed word shown on your {}"
 msgstr "Schreiben Sie das Seed-Wort auf, das auf Ihrem {} gezeigt wird"
 
 #: lib/base_wizard.py:350 lib/base_wizard.py:358
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:731
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1530
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:731
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1530
 msgid "Wrong key type"
 msgstr "Falscher Schlüsseltyp"
 
 #: gui/qt/main_window.py:3039
-#: ios/ElectronCash/electroncash_gui/ios_native/sign_decrypt_dialog.py:291
+#: ios/Vilight/vilight_gui/ios_native/sign_decrypt_dialog.py:291
 msgid "Wrong signature"
 msgstr "Falsche Signatur"
 
 #: plugins/keepkey/qt.py:349 plugins/trezor/qt.py:317
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:817
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1072
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:2267
+#: ios/Vilight/vilight_gui/ios_native/gui.py:817
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1072
+#: ios/Vilight/vilight_gui/ios_native/gui.py:2267
 msgid "Yes"
 msgstr "Ja"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:929
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:929
 msgid "You appear to have entered more than one item. Each wallet can only have a single master key. To use multiple master keys, create a new wallet for each key."
 msgstr "Sie scheinen mehr als ein Element eingegeben zu haben. Jede Geldbörse kann nur einen einzigen Generalschlüssel haben. Um mehrere Generalschlüssel zu verwenden, erstellen Sie eine neue Geldbörse für jeden Schlüssel."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:942
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:942
 msgid "You appear to have entered no valid Vitae addresses or private keys."
 msgstr "Sie scheinen keine gültigen Bitcoin-Cash-Adressen oder privaten Schlüssel eingegeben zu haben."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:615
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:615
 msgid "You are about to delete the wallet '{}'. Unless you have other copies of this wallet or you wrote its seed down, you may lose funds!\n\n"
 "In order to proceed, please type the word 'delete' in the box below:"
 msgstr "Sie sind dabei, die Geldbörse '{}' zu löschen. Wenn Sie keine anderen Kopien dieser Geldbörse haben oder Sie den Seed nicht aufgeschrieben haben, können Sie Geld verlieren!\n\n"
@@ -7054,7 +7054,7 @@ msgid "You are already on the latest version of ViLight."
 msgstr "Sie haben bereits die neueste Version von ViLight."
 
 #: gui/qt/network_dialog.py:535
-#: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:264
+#: ios/Vilight/vilight_gui/ios_native/network_dialog.py:264
 msgid "You are following branch"
 msgstr "Du folgst dem Zweig"
 
@@ -7071,11 +7071,11 @@ msgstr "Sie geben jetzt <b><i>ungemischte</i></b> Coins aus. Sind Sie sicher?"
 msgid "You are registering a new <a href='ca'>Vitae ID</a> for your address <a href='addr'><b><pre>{address}</pre></b></a>"
 msgstr "Sie registrieren ein neues <a href='ca'>Cash-Account</a> für Ihre Adresse <a href='addr'><b><pre>{address}</pre></b></a>"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1746
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1746
 msgid "You are renaming the currently open encrypted wallet '{}'."
 msgstr "Sie benennen die aktuell geöffnete verschlüsselte Geldbörse '{}' um."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:593
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:593
 msgid "You are requesting the deletion of the currently active wallet. In order to delete this wallet, please switch to another wallet, then select this option again on this wallet."
 msgstr "Sie möchten die aktuell aktive Geldbörse löschen. Um diese Geldbörse zu löschen, wechseln Sie bitte auf eine andere Geldbörse, und wählen Sie diese Option erneut auf dieser Geldbörse."
 
@@ -7095,7 +7095,7 @@ msgstr "Du verwendest eine OP_RETURN-Nachricht. Dies wird dauerhaft in die Block
 msgid "You can add or remove any server from this list and optionally elect to only connect to preferred servers."
 msgstr "Sie können einen Server aus dieser Liste hinzufügen oder entfernen und optional wählen nur mit bevorzugten Servern zu verbinden."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1392
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1392
 msgid "You can also create a new wallet by selecting the 'Add new wallet' option."
 msgstr "Sie können auch eine neue Geldbörse erstellen, indem Sie die Option \"Neue Geldbörse hinzufügen\" auswählen."
 
@@ -7103,11 +7103,11 @@ msgstr "Sie können auch eine neue Geldbörse erstellen, indem Sie die Option \"
 msgid "You can download the new version from:<br>{}"
 msgstr "Du kannst die neue Version herunterladen von:<br>{}"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:811
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:811
 msgid "You can have as many wallets as you like! Choose from one of the options below:"
 msgstr "Du kannst so viele Geldbörsen haben wie du möchtest! Wähle aus einer der folgenden Optionen:"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:403
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:403
 msgid "You can restore a wallet that was created by any version of ViLight."
 msgstr "Sie können eine Geldbörse wiederherstellen, egal von welcher ViLight Version diese erstellt wurde."
 
@@ -7119,11 +7119,11 @@ msgstr "Du kannst den Homescreen auf deinem Gerät einstellen, um ihn zu persona
 msgid "You cannot access your coins or a backup without the password."
 msgstr "Sie können ohne das Passwort nicht auf die Coins oder ein Backup zugreifen."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:610
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:610
 msgid "You didn't enter the text 'delete' in the previous dialog. For your own safety, the wallet file was not deleted."
 msgstr "Sie haben den Text 'Löschen' im vorherigen Dialog nicht eingegeben. Für Ihre Sicherheit wurde die Geldbörsen-Datei nicht gelöscht."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/contacts.py:141
+#: ios/Vilight/vilight_gui/ios_native/contacts.py:141
 msgid "You don't have any contacts yet. Create a new contact now!"
 msgstr "Sie haben noch keine Kontakte. Erstellen Sie jetzt einen neuen Kontakt!"
 
@@ -7152,7 +7152,7 @@ msgid "You may optionally append an OP_RETURN message to the payment URI and/or 
 msgstr "Sie können optional eine OP_RETURN-Nachricht an die Zahlungs-URI und/oder QR, die Sie generieren, anhängen.\n\n"
 "Hinweis: Nicht alle Wallets unterstützen OP_RETURN Parameter, also stellen Sie sicher, dass die Wallet des anderen OP_RETURN URIs unterstützt."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:501
+#: ios/Vilight/vilight_gui/ios_native/receive.py:501
 msgid "You may share this payment request as a 'vitae:' style URI, or as a QR Code Image."
 msgstr "Sie können diese Zahlungsanfrage als 'vitae:' Stil URI oder als QR-Code-Bild teilen."
 
@@ -7172,7 +7172,7 @@ msgstr "Sie können das \"Hardware-Geldbörsen-Unterstützung\" Werkzeug (unten)
 msgid "You need to create a separate ViLight wallet for each passphrase you use as they each generate different addresses. Changing your passphrase does not lose other wallets, each is still accessible behind its own passphrase."
 msgstr "Sie müssen eine weitere Vilight-Geldbörse für jede Passphrase erstellen, da sie unterschiedliche Adressen generieren. Das Benutzen einer anderen Passphrase führt nicht zum Verlust der Geldbörse, jede ist weiterhin hinter ihrer Passphrase erreichbar."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:454
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:454
 msgid "You need to sign this transaction in order for it to get a transaction ID."
 msgstr "Sie müssen diese Transaktion signieren, um eine Transaktions-ID erhalten kann."
 
@@ -7180,7 +7180,7 @@ msgstr "Sie müssen diese Transaktion signieren, um eine Transaktions-ID erhalte
 msgid "You should enable PIN protection.  Your PIN is the only protection for your bitcoins if your device is lost or stolen."
 msgstr "Sie sollten den PIN-Schutz aktivieren. Der PIN ist der einzige Schutz für Ihre Bitcoins, wenn das Gerät verloren geht."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:570
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:570
 msgid "You specified the same name!"
 msgstr "Sie haben den gleichen Namen angegeben!"
 
@@ -7202,14 +7202,14 @@ msgstr "Ihre Ledger Geldbörse möchte Ihnen einen einmaligen PIN-Code mitteilen
 msgid "Your accounts have been moved to"
 msgstr "Ihre Konten wurden hierhin verschoben:"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1803
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1803
 msgid "Your biometrics-based key for this wallet was reset. This means you will need to enter your password for this wallet again.\n\n"
 "(Then, you can optionally re-enable Touch/Face ID as before.)"
 msgstr "Ihr Biometrie-basierter Schlüssel für diese Geldbörse wurde zurückgesetzt. Das bedeutet, dass Sie Ihr Passwort für diese Geldbörse erneut eingeben müssen.\n\n"
 "(Dann können Sie Touch-/Face-ID wie zuvor erneut aktivieren.)"
 
 #: gui/qt/password_dialog.py:179
-#: ios/ElectronCash/electroncash_gui/ios_native/password_dialog.py:148
+#: ios/Vilight/vilight_gui/ios_native/password_dialog.py:148
 msgid "Your bitcoins are password protected. However, your wallet file is not encrypted."
 msgstr "Deine Bitcoins sind mit einem Passwort geschützt. Aber deine Geldbörse ist nicht verschlüsselt."
 
@@ -7230,7 +7230,7 @@ msgid "Your entire transaction history will be downloaded again from the server 
 msgstr "Ihr ganzer Transaktionsverlauf wird erneut vom Server heruntergeladen und von der Blockchain überprüft."
 
 #: gui/qt/main_window.py:2048
-#: ios/ElectronCash/electroncash_gui/ios_native/send.py:831
+#: ios/Vilight/vilight_gui/ios_native/send.py:831
 msgid "Your fee is too high.  Max is 500 sat/byte."
 msgstr "Ihre Gebühr ist zu hoch. Maximum ist 50 Sat/byte."
 
@@ -7246,7 +7246,7 @@ msgstr "Die Bezeichnungen wurden exportiert in"
 msgid "Your labels were imported from"
 msgstr "Die Bezeichnungen wurden importiert aus"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:1343
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:1343
 msgid "Your new imported wallet has been successfully created. Would you like to switch to it now?"
 msgstr "Ihre neue importierte Geldbörse wurde erfolgreich erstellt. Möchten Sie jetzt auf diese wechseln?"
 
@@ -7259,7 +7259,7 @@ msgid "Your own Vitae IDs are now shown"
 msgstr "Ihre eigenen Cash-Accounts werden jetzt angezeigt"
 
 #: gui/qt/seed_dialog.py:158
-#: ios/ElectronCash/electroncash_gui/ios_native/seed_dialog.py:79
+#: ios/Vilight/vilight_gui/ios_native/seed_dialog.py:79
 msgid "Your seed extension is"
 msgstr "Ihre Seed-Erweiterung lautet"
 
@@ -7268,12 +7268,12 @@ msgid "Your seed extension must be saved together with your seed."
 msgstr "Ihre Seed-Erweiterung muss zusammen mit Ihrem Seed gespeichert werden."
 
 #: gui/qt/installwizard.py:389
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:401
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:401
 msgid "Your seed is important!"
 msgstr "Der Seed ist wichtig!"
 
 #: gui/qt/network_dialog.py:535
-#: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:264
+#: ios/Vilight/vilight_gui/ios_native/network_dialog.py:264
 msgid "Your server is on branch"
 msgstr "Dein Server ist auf dem Zweig"
 
@@ -7286,7 +7286,7 @@ msgid "Your transaction was sent to the cosigning pool."
 msgstr "Ihre Transaktion wurde an den Cosigning-Pool gesandt."
 
 #: gui/qt/seed_dialog.py:211 gui/qt/installwizard.py:398
-#: ios/ElectronCash/electroncash_gui/ios_native/seed_dialog.py:78
+#: ios/Vilight/vilight_gui/ios_native/seed_dialog.py:78
 msgid "Your wallet generation seed is:"
 msgstr "Ihr Seed zum Generieren der Geldbörse lautet:"
 
@@ -7295,12 +7295,12 @@ msgid "Your wallet history has been successfully exported."
 msgstr "Ihr Transaktionsverlauf wurde erfolgreich exportiert."
 
 #: gui/qt/password_dialog.py:175
-#: ios/ElectronCash/electroncash_gui/ios_native/password_dialog.py:144
+#: ios/Vilight/vilight_gui/ios_native/password_dialog.py:144
 msgid "Your wallet is not protected."
 msgstr "Deine Geldbörse ist nicht geschützt."
 
 #: gui/qt/password_dialog.py:181
-#: ios/ElectronCash/electroncash_gui/ios_native/password_dialog.py:150
+#: ios/Vilight/vilight_gui/ios_native/password_dialog.py:150
 msgid "Your wallet is password protected and encrypted."
 msgstr "Deine Geldbörse ist verschlüsselt und Passwortgeschützt."
 
@@ -7313,7 +7313,7 @@ msgid "Your {} might not have support for this functionality."
 msgstr "Ihr {} unterstützt diese Funktion leider nicht."
 
 #: gui/qt/main_window.py:3881
-#: ios/ElectronCash/electroncash_gui/ios_native/prefs.py:319
+#: ios/Vilight/vilight_gui/ios_native/prefs.py:319
 msgid "Zeros after decimal point"
 msgstr "Anzahl der Nachkommastellen"
 
@@ -7374,7 +7374,7 @@ msgstr "[s] - Zahlungsanweisung senden"
 msgid "active"
 msgstr "aktiv"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:1540
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:1540
 msgid "and create your standard wallet or restore an existing one with any of the methods below"
 msgstr "und erstellen Sie Ihre Standard-Geldbörse oder stellen Sie eine vorhandene mit einer der folgenden Methoden wieder her"
 
@@ -7383,8 +7383,8 @@ msgid "are frozen"
 msgstr "sind gesperrt"
 
 #: gui/qt/network_dialog.py:523 gui/qt/network_dialog.py:536
-#: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:254
-#: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:265
+#: ios/Vilight/vilight_gui/ios_native/network_dialog.py:254
+#: ios/Vilight/vilight_gui/ios_native/network_dialog.py:265
 msgid "blocks"
 msgstr "Blöcke"
 
@@ -7392,8 +7392,8 @@ msgstr "Blöcke"
 msgid "color"
 msgstr "Farbig"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:497
-#: ios/ElectronCash/electroncash_gui/ios_native/history.py:540
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:497
+#: ios/Vilight/vilight_gui/ios_native/history.py:540
 msgid "confirmations"
 msgstr "Bestätigungen"
 
@@ -7405,7 +7405,7 @@ msgstr "Mitsignierer"
 msgid "decrypting..."
 msgstr "entschlüsseln..."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/wallets.py:601
+#: ios/Vilight/vilight_gui/ios_native/wallets.py:601
 msgid "delete"
 msgstr "löschen"
 
@@ -7421,7 +7421,7 @@ msgstr "Gebühr"
 msgid "initialized"
 msgstr "Eingerichtet"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:1197
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:1197
 msgid "invalid items will be discarded"
 msgstr "ungültige Elemente werden verworfen"
 
@@ -7446,7 +7446,7 @@ msgid "password incorrect"
 msgstr "Passwort falsch"
 
 #: gui/qt/main_window.py:2239
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1158
+#: ios/Vilight/vilight_gui/ios_native/gui.py:1158
 msgid "please wait..."
 msgstr "Bitte warten..."
 
@@ -7481,15 +7481,15 @@ msgstr "Unbestätigt"
 #: gui/qt/fee_slider.py:28 gui/qt/qrreader/camera_dialog.py:289
 #: gui/qt/transaction_dialog.py:396 gui/qt/transaction_dialog.py:558
 #: lib/wallet.py:1191
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:176
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:243
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:557
-#: ios/ElectronCash/electroncash_gui/ios_native/feeslider.py:76
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:176
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:243
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:557
+#: ios/Vilight/vilight_gui/ios_native/feeslider.py:76
 msgid "unknown"
 msgstr "unbekannt"
 
 #: gui/qt/transaction_dialog.py:373
-#: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:513
+#: ios/Vilight/vilight_gui/ios_native/txdetail.py:513
 msgid "unknown (low fee)"
 msgstr "Unbekannt (niedrige Gebühr)"
 
@@ -7510,7 +7510,7 @@ msgid "unverified"
 msgstr "Unverifiziert"
 
 #: gui/qt/main_window.py:451
-#: ios/ElectronCash/electroncash_gui/ios_native/addresses.py:190
+#: ios/Vilight/vilight_gui/ios_native/addresses.py:190
 msgid "watching only"
 msgstr "Beobachtungsmodus"
 
@@ -7518,7 +7518,7 @@ msgstr "Beobachtungsmodus"
 msgid "wiped"
 msgstr "Gelöscht"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:31
+#: ios/Vilight/vilight_gui/ios_native/newwallet.py:31
 msgid "without downloading the blockchain or running a full node."
 msgstr "ohne die Blockchain herunterzuladen oder einen kompletten Knoten auszuführen."
 
@@ -7583,15 +7583,15 @@ msgstr "{} Kontakte exportiert nach '{}'"
 msgid "{} contacts successfully imported."
 msgstr "{} Kontakte erfolgreich importiert."
 
-#: ios/ElectronCash/electroncash_gui/ios_native/utils.py:367
+#: ios/Vilight/vilight_gui/ios_native/utils.py:367
 msgid "{} copied to clipboard"
 msgstr "{} in die Zwischenablage kopiert"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:298
+#: ios/Vilight/vilight_gui/ios_native/receive.py:298
 msgid "{} days"
 msgstr "{} Tage"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/utils.py:377
+#: ios/Vilight/vilight_gui/ios_native/utils.py:377
 msgid "{} exported successfully"
 msgstr "{} erfolgreich exportiert"
 
@@ -7599,7 +7599,7 @@ msgstr "{} erfolgreich exportiert"
 msgid "{} firmware version too old. Please update at https://www.ledgerwallet.com"
 msgstr "{} Firmware-Version zu alt. Bitte aktualisieren Sie auf https://www.ledgerwallet.com"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:299
+#: ios/Vilight/vilight_gui/ios_native/receive.py:299
 msgid "{} hours"
 msgstr "{} Stunden"
 
@@ -7607,11 +7607,11 @@ msgstr "{} Stunden"
 msgid "{} is temporarily locked - please unplug it and replug it again"
 msgstr "{} ist vorübergehend gesperrt - bitte entfernen und erneut wiederholen"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:300
+#: ios/Vilight/vilight_gui/ios_native/receive.py:300
 msgid "{} mins"
 msgstr "{} Minuten"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/gui.py:775
+#: ios/Vilight/vilight_gui/ios_native/gui.py:775
 msgid "{} new transactions received: Total amount received in the new transactions {}"
 msgstr "{} neue Transaktionen erhalten: Gesamtbetrag aller neuen Transaktionen {}"
 
@@ -7623,23 +7623,23 @@ msgstr "{} neue Transaktion(en): {}"
 msgid "{} not in Vitae mode"
 msgstr "{} nicht im Vitae Modus"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/utils.py:369
+#: ios/Vilight/vilight_gui/ios_native/utils.py:369
 msgid "{} saved successfully"
 msgstr "{} erfolgreich gespeichert"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/utils.py:375
+#: ios/Vilight/vilight_gui/ios_native/utils.py:375
 msgid "{} saved to photo library"
 msgstr "{} in Fotobibliothek gespeichert"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/receive.py:301
+#: ios/Vilight/vilight_gui/ios_native/receive.py:301
 msgid "{} secs"
 msgstr "{} Sekunden"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/utils.py:371
+#: ios/Vilight/vilight_gui/ios_native/utils.py:371
 msgid "{} sent successfully"
 msgstr "{} erfolgreich gesendet"
 
-#: ios/ElectronCash/electroncash_gui/ios_native/utils.py:373
+#: ios/Vilight/vilight_gui/ios_native/utils.py:373
 msgid "{} sent to printer"
 msgstr "{} an Drucker gesendet"
 

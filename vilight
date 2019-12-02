@@ -91,28 +91,28 @@ def check_imports():
 if not is_android:  # Avoid unnecessarily slowing down app startup.
     check_imports()
 
-# load local lib etc modules as electroncash*
+# load local lib etc modules as vilight*
 if is_local:
     import imp
-    imp.load_module('electroncash', *imp.find_module('lib'))
-    imp.load_module('electroncash_gui', *imp.find_module('gui'))
-    imp.load_module('electroncash_plugins', *imp.find_module('plugins'))
+    imp.load_module('vilight', *imp.find_module('lib'))
+    imp.load_module('vilight_gui', *imp.find_module('gui'))
+    imp.load_module('vilight_plugins', *imp.find_module('plugins'))
 
-from electroncash import bitcoin, util
-from electroncash import SimpleConfig, Network
-from electroncash import networks
-from electroncash.wallet import Wallet, ImportedPrivkeyWallet, ImportedAddressWallet
-from electroncash.storage import WalletStorage
-from electroncash.util import (print_msg, print_stderr, json_encode, json_decode,
+from vilight import bitcoin, util
+from vilight import SimpleConfig, Network
+from vilight import networks
+from vilight.wallet import Wallet, ImportedPrivkeyWallet, ImportedAddressWallet
+from vilight.storage import WalletStorage
+from vilight.util import (print_msg, print_stderr, json_encode, json_decode,
                                set_verbosity, InvalidPassword)
-from electroncash.i18n import _
-from electroncash.commands import get_parser, known_commands, Commands, config_variables
-from electroncash import daemon
-from electroncash import keystore
-from electroncash.mnemonic import Mnemonic
-from electroncash.winconsole import create_or_attach_console  # Import ok on other platforms, won't be called.
-import electroncash_plugins
-import electroncash.web as web
+from vilight.i18n import _
+from vilight.commands import get_parser, known_commands, Commands, config_variables
+from vilight import daemon
+from vilight import keystore
+from vilight.mnemonic import Mnemonic
+from vilight.winconsole import create_or_attach_console  # Import ok on other platforms, won't be called.
+import vilight_plugins
+import vilight.web as web
 
 # get password routine
 def prompt_password(prompt, confirm=True):
@@ -303,7 +303,7 @@ def run_offline_command(config, config_options):
     return result
 
 def init_plugins(config, gui_name):
-    from electroncash.plugins import Plugins
+    from vilight.plugins import Plugins
     return Plugins(config, gui_name)
 
 
@@ -419,7 +419,7 @@ if __name__ == '__main__':
                 d = daemon.Daemon(config, fd, False)
                 d.start()
                 if config.get('websocket_server'):
-                    from electroncash import websockets
+                    from vilight import websockets
                     websockets.WebSocketServer(config, d.network).start()
                 if config.get('requests_dir'):
                     path = os.path.join(config.get('requests_dir'), 'index.html')

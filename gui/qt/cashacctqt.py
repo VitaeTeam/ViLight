@@ -38,12 +38,12 @@ import time
 import requests
 from typing import Tuple, List, Callable
 from enum import IntEnum
-from electroncash import cashacct
-from electroncash import util
-from electroncash import web
-from electroncash.address import Address, UnknownAddress
-from electroncash.i18n import _, ngettext
-from electroncash.wallet import Abstract_Wallet
+from vilight import cashacct
+from vilight import util
+from vilight import web
+from vilight.address import Address, UnknownAddress
+from vilight.i18n import _, ngettext
+from vilight.wallet import Abstract_Wallet
 
 
 class VerifyingDialog(WaitingDialog):

@@ -39,12 +39,12 @@ from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 
-from electroncash.plugins import BasePlugin, hook
-from electroncash.paymentrequest import PaymentRequest
-from electroncash.i18n import _
-from electroncash_gui.qt.util import EnterButton, Buttons, CloseButton
-from electroncash_gui.qt.util import OkButton, WindowModalDialog
-from electroncash.util import Weak
+from vilight.plugins import BasePlugin, hook
+from vilight.paymentrequest import PaymentRequest
+from vilight.i18n import _
+from vilight_gui.qt.util import EnterButton, Buttons, CloseButton
+from vilight_gui.qt.util import OkButton, WindowModalDialog
+from vilight.util import Weak
 
 
 class Processor(threading.Thread):
@@ -146,7 +146,7 @@ class Plugin(BasePlugin):
         menu.addAction(_("Send via e-mail"), lambda: self.send(window, addr))
 
     def send(self, window, addr):
-        from electroncash import paymentrequest
+        from vilight import paymentrequest
         r = window.wallet.receive_requests.get(addr)
         message = r.get('memo', '')
         if r.get('signature'):

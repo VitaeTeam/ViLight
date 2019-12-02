@@ -9,13 +9,13 @@
 # MIT LICENSE
 #
 '''
-    Monkey Patches -- mostly to modify electroncash.* package to suit our needs.
+    Monkey Patches -- mostly to modify vilight.* package to suit our needs.
     Don't hate me.  (This was needed to keep the iOS stuff self-contained.)
 '''
 from .uikit_bindings import *
-from electroncash.util import (InvalidPassword, profiler)
-import electroncash.bitcoin as ec_bitcoin
-from electroncash_gui.ios_native.utils import NSLog
+from vilight.util import (InvalidPassword, profiler)
+import vilight.bitcoin as ec_bitcoin
+from vilight_gui.ios_native.utils import NSLog
 import sys, ssl
 
 class MonkeyPatches:

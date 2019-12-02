@@ -1,4 +1,4 @@
-from electroncash.plugins import hook
+from vilight.plugins import hook
 from .ledger import LedgerPlugin
 from ..hw_wallet import CmdLineHandler
 

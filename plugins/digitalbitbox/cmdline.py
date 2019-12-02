@@ -1,4 +1,4 @@
-from electroncash.plugins import hook
+from vilight.plugins import hook
 from .digitalbitbox import DigitalBitboxPlugin
 from ..hw_wallet import CmdLineHandler
 

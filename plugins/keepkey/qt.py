@@ -9,11 +9,11 @@ from PyQt5.QtWidgets import (QVBoxLayout, QLabel, QGridLayout, QPushButton,
                              QMessageBox, QFileDialog, QSlider, QTabWidget,
                              QSizePolicy)
 
-from electroncash_gui.qt.util import (WindowModalDialog, WWLabel, Buttons, CancelButton,
+from vilight_gui.qt.util import (WindowModalDialog, WWLabel, Buttons, CancelButton,
                                       OkButton, CloseButton)
 
-from electroncash.util import _, bh2u
-from electroncash.plugins import hook
+from vilight.util import _, bh2u
+from vilight.plugins import hook
 
 from ..hw_wallet.qt import QtHandlerBase, QtPluginBase
 from ..hw_wallet.plugin import only_hook_if_libraries_available
@@ -257,7 +257,7 @@ class QtPlugin(QtPluginBase):
             else:
                 msg = _("Enter the master private key beginning with xprv:")
                 def set_enabled():
-                    from electroncash.bitcoin import is_xprv
+                    from vilight.bitcoin import is_xprv
                     wizard.next_button.setEnabled(is_xprv(clean_text(text)))
                 text.textChanged.connect(set_enabled)
                 next_enabled = False

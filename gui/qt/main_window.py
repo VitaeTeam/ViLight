@@ -37,28 +37,28 @@ from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 
-from electroncash import keystore, get_config
-from electroncash.address import Address, ScriptOutput
-from electroncash.bitcoin import COIN, TYPE_ADDRESS, TYPE_SCRIPT, MIN_AMOUNT
-from electroncash import networks
-from electroncash.plugins import run_hook
-from electroncash.i18n import _, ngettext
-from electroncash.util import (format_time, format_satoshis, PrintError,
+from vilight import keystore, get_config
+from vilight.address import Address, ScriptOutput
+from vilight.bitcoin import COIN, TYPE_ADDRESS, TYPE_SCRIPT, MIN_AMOUNT
+from vilight import networks
+from vilight.plugins import run_hook
+from vilight.i18n import _, ngettext
+from vilight.util import (format_time, format_satoshis, PrintError,
                                format_satoshis_plain, NotEnoughFunds,
                                ExcessiveFee, UserCancelled, InvalidPassword,
                                bh2u, bfh, format_fee_satoshis, Weak,
                                print_error)
-import electroncash.web as web
-from electroncash import Transaction
-from electroncash import util, bitcoin, commands, cashacct
-from electroncash import paymentrequest
-from electroncash.wallet import Multisig_Wallet, sweep_preparations
-from electroncash.contacts import Contact
+import vilight.web as web
+from vilight import Transaction
+from vilight import util, bitcoin, commands, cashacct
+from vilight import paymentrequest
+from vilight.wallet import Multisig_Wallet, sweep_preparations
+from vilight.contacts import Contact
 try:
-    from electroncash.plot import plot_history
+    from vilight.plot import plot_history
 except:
     plot_history = None
-import electroncash.web as web
+import vilight.web as web
 
 from .amountedit import AmountEdit, BTCAmountEdit, MyLineEdit, BTCkBEdit, BTCSatsByteEdit
 from .qrcodewidget import QRCodeWidget, QRDialog
@@ -89,7 +89,7 @@ class StatusBarButton(QPushButton):
             self.func()
 
 
-from electroncash.paymentrequest import PR_PAID
+from vilight.paymentrequest import PR_PAID
 
 
 class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
@@ -471,7 +471,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
         xkey = ((hasattr(self.wallet, 'get_master_public_key') and self.wallet.get_master_public_key())
                 or None)
         if xkey:
-            from electroncash.bitcoin import deserialize_xpub, InvalidXKeyFormat
+            from vilight.bitcoin import deserialize_xpub, InvalidXKeyFormat
             try:
                 xp = deserialize_xpub(xkey)
             except InvalidXKeyFormat:
@@ -673,7 +673,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
         help_menu.addAction(_("&Check for updates..."), lambda: self.gui_object.show_update_checker(self))
         help_menu.addAction(_("&Official website"), lambda: webopen("https://vitae.cc"))
         help_menu.addSeparator()
-#        help_menu.addAction(_("Documentation"), lambda: webopen("http://electroncash.readthedocs.io/")).setShortcut(QKeySequence.HelpContents)
+#        help_menu.addAction(_("Documentation"), lambda: webopen("http://vilight.readthedocs.io/")).setShortcut(QKeySequence.HelpContents)
         help_menu.addAction(_("&Report Bug"), self.show_report_bug)
         help_menu.addSeparator()
         help_menu.addAction(_("&Donate to server"), self.donate_to_server)
@@ -2998,7 +2998,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
         return PasswordDialog(parent, msg).run()
 
     def tx_from_text(self, txt):
-        from electroncash.transaction import tx_from_str
+        from vilight.transaction import tx_from_str
         try:
             txt_tx = tx_from_str(txt)
             tx = Transaction(txt_tx, sign_schnorr=self.wallet.is_schnorr_enabled())
@@ -3032,7 +3032,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
             return
         if self.gui_object.warn_if_cant_import_qrreader(self):
             return
-        from electroncash import get_config
+        from vilight import get_config
         from .qrreader import QrReaderCameraDialog
         data = ''
         self._qr_dialog = None
@@ -3088,7 +3088,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
         return tx
 
     def do_process_from_text(self):
-        from electroncash.transaction import SerializationError
+        from vilight.transaction import SerializationError
         text = text_dialog(self.top_level_window(), _('Input raw transaction'), _("Transaction:"), _("Load transaction"))
         if not text:
             return
@@ -3100,7 +3100,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
             self.show_critical(_("ViLight was unable to deserialize the transaction:") + "\n" + str(e))
 
     def do_process_from_file(self, *, fileName = None):
-        from electroncash.transaction import SerializationError
+        from vilight.transaction import SerializationError
         try:
             tx = self.read_tx_from_file(fileName=fileName)
             if tx:
@@ -3112,7 +3112,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
         parent = parent or self
         if self.gui_object.warn_if_no_network(parent):
             return
-        from electroncash import transaction
+        from vilight import transaction
         ok = txid is not None
         if not ok:
             txid, ok = QInputDialog.getText(parent, _('Lookup transaction'), _('Transaction ID') + ':')
@@ -3645,7 +3645,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
         lang_help = _('Select which language is used in the GUI (after restart).')
         lang_label = HelpLabel(_('Language') + ':', lang_help)
         lang_combo = QComboBox()
-        from electroncash.i18n import languages, get_system_language_match, match_language
+        from vilight.i18n import languages, get_system_language_match, match_language
 
         language_names = []
         language_keys = []
@@ -4417,7 +4417,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
         self.show_transaction(new_tx)
 
     def is_wallet_cashshuffle_compatible(self):
-        from electroncash.wallet import ImportedWalletBase, Multisig_Wallet
+        from vilight.wallet import ImportedWalletBase, Multisig_Wallet
         if (self.wallet.is_watching_only()
             or self.wallet.is_hardware()
             or isinstance(self.wallet, (Multisig_Wallet, ImportedWalletBase))):
@@ -4435,7 +4435,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
             return
         if self.cleaned_up or not self.wallet or not self.is_wallet_cashshuffle_compatible():
             return
-        from electroncash_plugins.shuffle.conf_keys import ConfKeys
+        from vilight_plugins.shuffle.conf_keys import ConfKeys
         p = self.cashshuffle_plugin_if_loaded()
         storage = self.wallet.storage
         cashshuffle_flag = storage.get(ConfKeys.PerWallet.ENABLED, False)

@@ -6,11 +6,11 @@
 #
 from . import utils
 from . import gui
-from electroncash.i18n import _, language
+from vilight.i18n import _, language
 from .uikit_bindings import *
 from .custom_objc import *
 from collections import namedtuple
-from electroncash import bitcoin
+from vilight import bitcoin
 
 def parent() -> object:
     return gui.ElectrumGui.gui

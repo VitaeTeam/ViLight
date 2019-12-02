@@ -5,7 +5,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import (QLineEdit, QStyle, QStyleOptionFrame)
 
 from decimal import Decimal as PyDecimal  # Qt 5.12 also exports Decimal
-from electroncash.util import format_satoshis_plain, inv_base_units
+from vilight.util import format_satoshis_plain, inv_base_units
 from .util import ColorScheme
 
 class MyLineEdit(QLineEdit):

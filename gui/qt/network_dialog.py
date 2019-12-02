@@ -30,10 +30,10 @@ from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 import PyQt5.QtCore as QtCore
 
-from electroncash.i18n import _
-from electroncash import networks
-from electroncash.util import print_error, Weak, PrintError
-from electroncash.network import serialize_server, deserialize_server, get_eligible_servers
+from vilight.i18n import _
+from vilight import networks
+from vilight.util import print_error, Weak, PrintError
+from vilight.network import serialize_server, deserialize_server, get_eligible_servers
 
 from .util import *
 

@@ -32,8 +32,8 @@ from typing import Callable, Any, Tuple
 from .uikit_bindings import *
 from .custom_objc import *
 
-from electroncash.i18n import _
-from electroncash.util import PrintError
+from vilight.i18n import _
+from vilight.util import PrintError
 
 
 def is_2x_screen() -> bool:

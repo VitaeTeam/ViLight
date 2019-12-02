@@ -1,10 +1,10 @@
 from decimal import Decimal as PyDecimal
 _ = lambda x:x
 #from i18n import _
-from electroncash import WalletStorage, Wallet
-from electroncash.util import format_satoshis, set_verbosity
-from electroncash.address import Address
-from electroncash.bitcoin import COIN, TYPE_ADDRESS
+from vilight import WalletStorage, Wallet
+from vilight.util import format_satoshis, set_verbosity
+from vilight.address import Address
+from vilight.bitcoin import COIN, TYPE_ADDRESS
 import getpass, datetime
 
 # minimal fdisk like gui for console usage
