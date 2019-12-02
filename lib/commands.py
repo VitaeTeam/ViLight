@@ -488,6 +488,14 @@ class Commands:
         return tx.as_dict()
 
     @command('wp')
+    def paytofrom(self, destination, amount, from_addr,fee=None, change_addr=None, nocheck=False, unsigned=False, password=None, locktime=None):
+        """Create a transaction. """
+        tx_fee = satoshis(fee)
+        domain = from_addr.split(',') if from_addr else None
+        tx = self._mktx([(destination, amount)], tx_fee, change_addr, domain, nocheck, unsigned, password, locktime)
+        return tx.as_dict()
+
+    @command('wp')
     def paytomany(self, outputs, fee=None, from_addr=None, change_addr=None, nocheck=False, unsigned=False, password=None, locktime=None):
         """Create a multi-output transaction. """
         tx_fee = satoshis(fee)
@@ -730,6 +738,7 @@ class Commands:
 param_descriptions = {
     'privkey': 'Private key. Type \'?\' to get a prompt.',
     'destination': 'Bitcoin Cash address, contact or alias',
+    'from_addr':'Addr(s) to select inputs from.if multiple seperate each addr with a comma (,)',
     'address': 'Bitcoin Cash address',
     'seed': 'Seed phrase',
     'txid': 'Transaction ID',
