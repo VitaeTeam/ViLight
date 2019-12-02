@@ -3,7 +3,7 @@
 
 ![CodeIcon](https://img.icons8.com/color/96/000000/smartphone-cpu.png)
 
-If you have gotten to this page, likely you have been sent here by Electron Cash. Vilight's  dialog informing you that you don't have **libsecp** installed.  The purpose of this document is to instruct you on how to rectify the situation.
+If you have gotten to this page, likely you have been sent here by Vilight. Vilight's  dialog informing you that you don't have **libsecp** installed.  The purpose of this document is to instruct you on how to rectify the situation.
 
 ### About libsecp256k1-0
 
@@ -13,13 +13,13 @@ This library was originally developed by [Peter Wuille](https://twitter.com/pwui
 
 Electron Cash's [CashShuffle](https://www.cashshuffle.com) makes heavy use elliptic curve cryptography with each message sent.  Since Python-only cryptography is incredibly slow (and potentially susceptible to side-channel exploits), libsecp is required for [CashShuffle](https://www.cashshuffle.com) within Electron Cash.  The reason for this requirement is simple: you would be interfering with the speed and security of other shufflers by *not* using libsecp. Thus in order to be a reliable partner for other shuffle participants, Electron Cash requires you to use this library if you want to enable [CashShuffle](https://www.cashshuffle.com).
 
-### Using libsecp with Electron Cash
+### Using libsecp with Vilight
 
 You have a few options:
 
   - If on **Windows**, it's recommended you run one of the [release .exe files available here](https://github.com/VitaeTeam/ViLight/releases). The library is included in the `.exe`.
   - If on **macOS**, it's recommended you install Electron Cash from the [release .dmg available here](https://github.com/VitaeTeam/ViLight/releases). The library is included in the `.app` bundle.
-  - For **Linux x86_64** (the most common architecture), the Electron Cash [release srcdist .tar.gz available here](https://github.com/VitaeTeam/ViLight/releases) should have the library pre-compiled and living in the `lib/` subfolder of the tarball. You can simply run Electron Cash "from source" (which, paradoxically, does include a compiled library embedded within it), and it should work.
+  - For **Linux x86_64** (the most common architecture), the Vilight [release srcdist .tar.gz available here](https://github.com/VitaeTeam/ViLight/releases) should have the library pre-compiled and living in the `lib/` subfolder of the tarball. You can simply run Electron Cash "from source" (which, paradoxically, does include a compiled library embedded within it), and it should work.
   - For other architectures and/or Unixey OS's, or if running from *git head* then proceed to the sections below.
 
 ### If running from github head -- dev mode ;)

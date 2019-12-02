@@ -360,9 +360,9 @@ class NetworkChoiceLayout(QObject, PrintError):
         grid.addWidget(label, 6, 0, 1, 4)
         msg = ' '.join([
             _("Preferred servers ({}) are servers you have designated as reliable and/or trustworthy.").format(ServerFlag.Symbol[ServerFlag.Preferred]),
-            _("Initially, the preferred list is the hard-coded list of known-good servers vetted by the Electron Cash developers."),
+            _("Initially, the preferred list is the hard-coded list of known-good servers vetted by the Vilight developers."),
             _("You can add or remove any server from this list and optionally elect to only connect to preferred servers."),
-            "\n\n"+_("Banned servers ({}) are servers deemed unreliable and/or untrustworthy, and so they will never be connected-to by Electron Cash. Vilight.").format(ServerFlag.Symbol[ServerFlag.Banned])
+            "\n\n"+_("Banned servers ({}) are servers deemed unreliable and/or untrustworthy, and so they will never be connected-to by Vilight. Vilight.").format(ServerFlag.Symbol[ServerFlag.Banned])
         ])
         grid.addWidget(HelpButton(msg), 6, 4)
 

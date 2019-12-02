@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Electron Cash - lightweight Bitcoin Cash client
+# Vilight - lightweight Vitae client
 # Copyright (C) 2019 calin.culianu@gmail.com
 #
 # Permission is hereby granted, free of charge, to any person

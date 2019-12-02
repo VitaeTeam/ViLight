@@ -166,7 +166,7 @@ def resolve_cashacct(parent : MessageBoxMixin, name : str, wallet : Abstract_Wal
         if not isinstance(info.address, Address):
             raise Bad(_("Unsupported payment data type.") + "\n\n"
                       + _("The Vitae ID {name} uses an account type that "
-                          "is not supported by Electron Cash. Vilight.").format(name=name))
+                          "is not supported by Vilight. Vilight.").format(name=name))
         return info, name
     except Bad as e:
         parent.show_error(str(e))
@@ -770,7 +770,7 @@ def cash_account_detail_dialog(parent : MessageBoxMixin,  # Should be an Electru
     if not isinstance(info.address, Address):
         parent.show_error(_("Unsupported payment data type.") + "\n\n"
                           + _("The Vitae ID {name} uses an account type that "
-                              "is not supported by Electron Cash. Vilight.").format(name=ca_string))
+                              "is not supported by Vilight. Vilight.").format(name=ca_string))
         return False
 
     title = title or _("Vitae ID Details")

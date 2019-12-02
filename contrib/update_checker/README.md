@@ -1,7 +1,7 @@
 # Electron Cash Update Checker
 ### (`releases.json`)
 
-This directory contains the `releases.json` file that the Electron Cash update checker uses to determine when a new version of ViLight is available.
+This directory contains the `releases.json` file that the Vilight update checker uses to determine when a new version of ViLight is available.
 
 #### Update Checker Overview
 As of version 3.3.6 of Electron Cash, there is an update-checking facility built-in to the Qt desktop app. The facility basically functions as follows:

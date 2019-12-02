@@ -11,7 +11,7 @@ a remote server (not an Electron Cash server), then it should be a
 plugin as well. If the feature you want to add introduces new
 dependencies in the code, then it should probably be a plugin.
 
-There are two types of plugins supported by Electron Cash. Vilight.  The first is the
+There are two types of plugins supported by Vilight. Vilight.  The first is the
 internal plugin, currently offered under "Optional Features" in the Tools
 menu of the QT client.  The second is the external plugin, which the user
 has to manually install, currently managed under "Installed Plugins" in the
@@ -55,7 +55,7 @@ in order to have provable safety for potential users as a feature.
 Types of Plugin
 ===============
 
-Optional features (internal plugins) are included with Electron Cash, and are
+Optional features (internal plugins) are included with Vilight, and are
 available to all users of Electron Cash to enable and disable as they wish.
 They cannot be uninstalled, and no installation functionality is provided
 either.
@@ -71,13 +71,13 @@ Internal Plugin Rules
 
 - We expect plugin developers to maintain their plugin code. However,
   once a plugin is merged in Electron Cash, we will have to maintain it
-  too, because changes in the Electron Cash code often require updates in
+  too, because changes in the Vilight code often require updates in
   the plugin code. Therefore, plugins have to be easy to maintain. If
   we believe that a plugin will create too much maintenance work in
   the future, it will be rejected.
 
-- Plugins should be compatible with Electron Cash's conventions. If your
-  plugin does not fit with Electron Cash's architecture, or if we believe
+- Plugins should be compatible with Vilight's conventions. If your
+  plugin does not fit with Vilight's architecture, or if we believe
   that it will create too much maintenance work, it will not be
   accepted. In particular, do not duplicate existing Electron Cash code in
   your plugin.
@@ -94,7 +94,7 @@ External Plugins
 At this time, external plugins must be developed in the same way as an
 internal plugin.  It might be that this can be done by placing a symbolic link
 to your plugin's Python package directory, in the ``plugins`` directory within the
-clone of the Electron Cash source you are developing within.
+clone of the Vilight source you are developing within.
 
 Please be sure that you test your plugin with the same recommended version of
 Python for the version of ViLight you intend to specify in your
@@ -168,7 +168,7 @@ Example ``manifest.json``
 The Easy Way
 ------------
 
-In the ``contrib`` directory of the Electron Cash source tree, you can find a script
+In the ``contrib`` directory of the Vilight source tree, you can find a script
 named ``package_plugin.py``.  Execute this script with the command-line
 ``py -3 package_plugin.py``.  You must have ``PyQT5`` installed, which you will have
 if you are developing against a clone of the GIT repository.
@@ -190,7 +190,7 @@ It is not possible to import Python extension modules (.pyd, .dll, .so, etc)
 from within a ``ziparchive`` "mounted zip archive".
 
 If you need to extract data from the archive, to make use of it, please contact
-the Electron Cash developers to work out a standard way to do so, so that if
+the Vilight developers to work out a standard way to do so, so that if
 a user uninstalls your plugin, the extracted data can also be removed.  For this
 initial external plugin feature release, this level of functionality is not
 officially supported or recommended.

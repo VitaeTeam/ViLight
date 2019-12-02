@@ -3,7 +3,7 @@
 # Electrum - lightweight Bitcoin client
 # Copyright (C) 2014 Thomas Voegtlin
 #
-# Electron Cash - lightweight Bitcoin Cash client
+# Vilight - lightweight Vitae client
 # Copyright (C) 2019 The Electron Cash Developers
 #
 # Permission is hereby granted, free of charge, to any person

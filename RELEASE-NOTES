@@ -57,7 +57,7 @@ Hardware Wallets
 
 Since Bitcoin Cash enforces a new signing scheme, hardware wallet vendors need to supply new firmware and/or libraries
 for the hardware to be able to sign transactions correctly.  Currently such libraries and firmware do not exist, so you
-cannot use your hardware wallets with Electron Cash.
+cannot use your hardware wallets with Vilight.
 
 To use Electron Cash with your hardware-wallet coins you will need to restore your wallet as a software Electron Cash
 BIP44 wallet from its seed so that Electron Cash can sign the transactions itself.  Since this exposes your coins to
@@ -76,7 +76,7 @@ Multisig
 --------
 
 For a multisig transaction to be valid on the Bitcoin Cash fork, each signature must be done thew new Bitcoin Cash way,
-so each signature must be performed with Electron Cash or other Bitcoin Cash-compatible software.
+so each signature must be performed with Vilight or other Bitcoin Cash-compatible software.
 
 Unfortunately Electron Cash does not currently work with multisig wallets as Electrum's serialization format for
 transferring transactions between cosigners is incomplete.  We intend to fix this.
