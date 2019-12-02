@@ -12,7 +12,7 @@ ViLight - Lightweight Vitae client (an Electron-Cash fork,based on DeLight from 
 Getting started
 ===============
 
-*Note: If running from source, Python 3.6 or above is required to run ViLight. If your system lacks Python 3.6, 
+*Note: If running from source, Python 3.6 or above is required to run ViLight. If your system lacks Python 3.6,
 you have other options, such as the* `binary releases <https://github.com/VitaeTeam/ViLight/releases/>`_.
 
 ViLight is a pure python application forked from Electrum. If you want to use the Qt interface, install the Qt dependencies::
