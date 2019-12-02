@@ -34,18 +34,18 @@ from . import networks
 from .util import format_satoshis_plain, bh2u, print_error
 
 
-DEFAULT_EXPLORER = "exploredvt.com"
+DEFAULT_EXPLORER = "vitaetoken.io"
 
 mainnet_block_explorers = {
-    'exploredvt.com': ('https://exploredvt.com/#/VITAE/mainnet',
+    'vitaetoken.io': ('https://explore.vitaetoken.io',
                        Address.FMT_CASHADDR,
                        {'tx': 'tx', 'addr': 'address', 'block' : 'block'}),
 }
 
-DEFAULT_EXPLORER_TESTNET = 'exploredvt.com'
+DEFAULT_EXPLORER_TESTNET = 'vitaetoken.io'
 
 testnet_block_explorers = {
-    'exploredvt.com'   : ('https://exploredvt.com/#/VITAE/testnet',
+    'vitaetoken.io'   : ('https://explore.vitaetoken.io/testnet',
                        Address.FMT_CASHADDR,
                        {'tx': 'tx', 'addr': 'address', 'block' : 'block'}),
 }
