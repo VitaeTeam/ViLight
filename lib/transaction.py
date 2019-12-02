@@ -838,23 +838,27 @@ class Transaction:
         return sig
 
 
-    def sign(self, keypairs) -> None:
-        # keypairs:  (x_)pubkey -> secret_bytes
+    def sign(self, keypairs):
         for i, txin in enumerate(self.inputs()):
+            num = txin['num_sig']
             pubkeys, x_pubkeys = self.get_sorted_pubkeys(txin)
-            for j, (pubkey, x_pubkey) in enumerate(zip(pubkeys, x_pubkeys)):
-                if self.is_txin_complete(txin):
+            for j, x_pubkey in enumerate(x_pubkeys):
+                signatures = list(filter(None, txin['signatures']))
+                if len(signatures) == num:
+                    # txin is complete
                     break
-                if pubkey in keypairs:
-                    _pubkey = pubkey
-                elif x_pubkey in keypairs:
-                    _pubkey = x_pubkey
-                else:
-                    continue
-                # _logger.info(f"adding signature for {_pubkey}")
-                sec, compressed = keypairs.get(_pubkey)
-                sig = self.sign_txin(i, sec)
-                self.add_signature_to_txin(i, j, sig)
+                if x_pubkey in keypairs.keys():
+                    print_error("adding signature for", x_pubkey, "use schnorr?", self._sign_schnorr)
+                    sec, compressed = keypairs.get(x_pubkey)
+                    pubkey = public_key_from_private_key(sec, compressed)
+                    # add signature
+                    pre_hash = Hash(bfh(self.serialize_preimage(i)))
+                    if self._sign_schnorr:
+                        sig = self._schnorr_sign(pubkey, sec, pre_hash)
+                    else:
+                        sig = self._ecdsa_sign(sec, pre_hash)
+                    txin['signatures'][j] = bh2u(sig) + '01'
+                    self._inputs[i] = txin
         print_error("is_complete", self.is_complete())
         self.raw = self.serialize()
 
