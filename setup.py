@@ -164,7 +164,7 @@ setup(
             'wordlist/*.txt',
             'libsecp256k1*',
             'libzbar*',
-            'locale/*/LC_MESSAGES/electron-cash.mo',
+            'locale/*/LC_MESSAGES/vilight.mo',
         ],
         'vilight_plugins.shuffle' : [
             'servers.json',

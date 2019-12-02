@@ -90,6 +90,6 @@ for lang in os.listdir('locale'):
     msg_dir = 'locale/{}/LC_MESSAGES'.format(lang)
     if not os.path.exists(msg_dir):
         os.mkdir(msg_dir)
-    cmd = 'msgfmt --output-file="{0}/electron-cash.mo" "{0}/electron-cash.po"'.format(msg_dir)
+    cmd = 'msgfmt --output-file="{0}/vilight.mo" "{0}/vilight.po"'.format(msg_dir)
     print('Installing', lang)
     os.system(cmd)
