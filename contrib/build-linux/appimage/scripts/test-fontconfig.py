@@ -1,4 +1,4 @@
-# Electron Cash - lightweight Bitcoin client
+# Vilight - lightweight Vitae client
 # Copyright (C) 2019 Axel Gembe <derago@gmail.com>
 # Copyright (C) 2019 Calin Culianu <calin.culianu@gmail.com>
 #

@@ -36,10 +36,10 @@ PLEASE NOTE: Ensure that you do not have another application (like Electrum, Bit
 
 The latest Nano S firmware was released on March 2017 (Secure Element 1.3.1)
 
-It is strongly recommended to upgrade to the latest firmware. 
+It is strongly recommended to upgrade to the latest firmware.
 
-To check which firmware version your Nano S is currently running, open the "Settings" application on your device and scroll until "Firmware" is displayed. 
-Press both buttons to enter the menu which displays your firmware version. 
+To check which firmware version your Nano S is currently running, open the "Settings" application on your device and scroll until "Firmware" is displayed.
+Press both buttons to enter the menu which displays your firmware version.
 
 Firmware Update Guide: https://ledger.zendesk.com/hc/en-us/articles/115005165409-How-can-I-update-my-Nano-S-
 
@@ -64,7 +64,7 @@ Install the Ledger Manager to download and install Bitcoin Cash application onto
        - If you want to use legacy Bitcoin addresses use m/44'/0'/0'
        - If you want to use Bitcoin Cash addresses use m/44'/145'/0'
 6. ???
-7. PROFIT!!! (Your Bitcoin wallet should now open in Electron-Cash)
+7. PROFIT!!! (Your Bitcoin wallet should now open in Vilight)
 
 ---
 
@@ -72,5 +72,5 @@ Install the Ledger Manager to download and install Bitcoin Cash application onto
 
 1. Uninstall and reinstall the Bitcoin Cash app on your Ledger device
 2. Try a different USB cable
-3. Try a different USB port 
+3. Try a different USB port
 4. Try on another computer (see compatibility)

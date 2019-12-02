@@ -132,10 +132,10 @@ prepare_wine() {
         pushd "$here"
         here=`pwd`
         # Please update these carefully, some versions won't work under Wine
-        NSIS_URL='https://github.com/cculianu/Electron-Cash-Build-Tools/releases/download/v1.0/nsis-3.02.1-setup.exe'
+        NSIS_URL='https://github.com/VitaeTeam/Vilight-Build-Tools/releases/download/v1.0.1/nsis-3.02.1-setup.exe'
         NSIS_SHA256=736c9062a02e297e335f82252e648a883171c98e0d5120439f538c81d429552e
 
-        LIBUSB_URL='https://github.com/cculianu/Electron-Cash-Build-Tools/releases/download/v1.0/libusb-1.0.21.7z'
+        LIBUSB_URL='https://github.com/VitaeTeam/Vilight-Build-Tools/releases/download/v1.0.1/libusb-1.0.21.7z'
         LIBUSB_SHA256=acdde63a40b1477898aee6153f9d91d1a2e8a5d93f832ca8ab876498f3a6d2b8
 
         PYINSTALLER_REPO='https://github.com/EchterAgo/pyinstaller.git'

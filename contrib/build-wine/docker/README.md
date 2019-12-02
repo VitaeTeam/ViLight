@@ -37,8 +37,8 @@ folder.
         rm -rf $FRESH_CLONE && \
         mkdir -p $FRESH_CLONE && \
         cd $FRESH_CLONE  && \
-        git clone https://github.com/Electron-Cash/Electron-Cash && \
-        cd Electron-Cash
+        git clone https://github.com/VitaeTeam/ViLight && \
+        cd Vilight
     ```
 
     And then build from this directory:
@@ -56,7 +56,7 @@ folder.
 
     _Note:_ If you are on a MacOS host, you should run the above command **without** `sudo`.
 
-4. The generated binaries are in `./contrib/build-wine/dist` (relative to the `fresh_clone/Electron-Cash` directory you should find yourself in if you followed 1-3 above).
+4. The generated binaries are in `./contrib/build-wine/dist` (relative to the `fresh_clone/Vilight` directory you should find yourself in if you followed 1-3 above).
 
 
 

@@ -230,7 +230,7 @@ SP_SET_METHODS = {
 
 # We store the config in the SharedPreferences because it's very easy to base an Android
 # settings UI on that. The reverse approach would be harder (using PreferenceDataStore to make
-# the settings UI access an Electron Cash config file).
+# the settings UI access an Vilight config file).
 class AndroidConfig(simple_config.SimpleConfig):
     def __init__(self, app):
         self.sp = PreferenceManager.getDefaultSharedPreferences(app)

@@ -5932,9 +5932,9 @@ msgstr "La clave proporcionada no parece se runa clave maestra válida. Las clav
 
 #: ios/ElectronCash/electroncash_gui/ios_native/history.py:607
 msgid "The requested transaction has dropped out of the wallet history.\n\n"
-"If this problem persists, please contact us at electroncash.org."
+"If this problem persists, please contact us at https://www.vitaetoken.io/."
 msgstr "La transacción solicitada ha abandonado el historial de la cartera.\n\n"
-"Si el problema continúa, por favor, ponte en contacto con nosotros en electroncash.org."
+"Si el problema continúa, por favor, ponte en contacto con nosotros en https://www.vitaetoken.io/."
 
 #: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:642
 msgid "The seed you entered does not appear to be a valid wallet seed."

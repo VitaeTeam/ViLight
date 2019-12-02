@@ -10,7 +10,7 @@ As of version 3.3.6 of Electron Cash, there is an update-checking facility built
 2. It downloads `releases.json` (the file in this directory)
 3. It checks the versions seen in `releases.json` -- if they are newer than the version in the running app, and if the signed message is valid and is signed with one of the addresses hard-coded in `update_checker.py`, it then informs the user that an update is available.
 
-*No automatic updating is performed* and the user must manually click on the URL hard-coded in the app to go to https://electroncash.org/#download.
+*No automatic updating is performed* and the user must manually click on the URL hard-coded in the app to go to https://https://www.vitaetoken.io//#download.
 
 The purpose of this facility is merely as a convenience for users who aren't on reddit or aren't constantly refreshing our website to be able to find out when a new version is available.
 

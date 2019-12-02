@@ -182,7 +182,7 @@ and there is no warning message.
 
 # Release 3.3
 
-* Add external plugins feature.  Please see https://github.com/Electron-Cash/Electron-Cash/blob/master/plugins/README.rst  and pay special attention to the risks involved with running external plugins.
+* Add external plugins feature.  Please see https://github.com/VitaeTeam/ViLight/blob/master/plugins/README.rst  and pay special attention to the risks involved with running external plugins.
 * Various bugfixes and improvements
 
 # Release 3.3.1
@@ -508,7 +508,7 @@ and there is no warning message.
   closer to that of a mini block explorer. (cculianu)
 * KeepKey: Fixed a packaging issue where loading BIP39 onto an uninitialized
   KeepKey would fail with a Python exception on Windows & Mac #1434 (cculianu)
-* Python 3.6 is officially the minimum Python version for Electron Cash now.
+* Python 3.6 is officially the minimum Python version for Vilight now.
   In the last version, you could still run on Python 3.5 (poorly), we just
   made it official. (Axel Gembe, cculianu)
 * Added OP_RETURN capability to the 'Receive' tab. You can now generate receive

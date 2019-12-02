@@ -126,13 +126,13 @@ info "Making locale..."
 python3 ./contrib/make_locale || fail "Failed to make locale..."
 
 info "Downloading libusb..."
-curl -L https://github.com/cculianu/Electron-Cash-Build-Tools/releases/download/v1.0/libusb-1.0.21.el_capitan.bottle.tar.gz | \
+curl -L https://github.com/VitaeTeam/Vilight-Build-Tools/releases/download/v1.0.1/libusb-1.0.21.el_capitan.bottle.tar.gz | \
     tar xz --directory $BUILDDIR || fail "Could not download libusb"
 verify_hash $BUILDDIR/libusb/1.0.21/lib/libusb-1.0.dylib d147e7382dfa676d93e8b17d160d50f68e4b01f58f3647c90a8899a7a0519ca3  # this exits on failure
 cp -fp $BUILDDIR/libusb/1.0.21/lib/libusb-1.0.dylib contrib/osx || fail "Could not copy libusb"
 
 info "Downloading ZBar dylib..."
-curl -L https://github.com/cculianu/Electron-Cash-Build-Tools/releases/download/v1.0/v0.23-libzbar.0.dylib.xz | \
+curl -L https://github.com/VitaeTeam/Vilight-Build-Tools/releases/download/v1.0.1/v0.23-libzbar.0.dylib.xz | \
     xz -d -c > contrib/osx/libzbar.0.dylib || fail "Could not download libzbar"
 verify_hash contrib/osx/libzbar.0.dylib 7b82238dd73e56d9f57913230ea5418c247b292cf96c8996becda961ab001c85
 

@@ -585,7 +585,7 @@ msgstr "Erweitert"
 
 #: gui/qt/main_window.py:4923
 msgid "After at least <i>1 confirmation</i>, you will be able to use your new <b>Vitae ID</b>, and it will be visible in ViLight in the <b>Addresses</b> tab."
-msgstr "Nach mindestens <i>1 Bestätigung</i>können Sie Ihr neues <b>Cash-Account</b>verwenden und es wird in Electron-Cash im Tab <b>Adressen</b> sichtbar sein."
+msgstr "Nach mindestens <i>1 Bestätigung</i>können Sie Ihr neues <b>Cash-Account</b>verwenden und es wird in Vilight im Tab <b>Adressen</b> sichtbar sein."
 
 #: plugins/keepkey/qt.py:385 plugins/trezor/qt.py:351
 msgid "After disabling passphrases, you can only pair this ViLight wallet if it had an empty passphrase. If its passphrase was not empty, you will need to create a new wallet with the install wizard. You can use this wallet again at any time by re-enabling passphrases and entering its passphrase."
@@ -2139,7 +2139,7 @@ msgstr "ViLight verbindet sich mit mehreren Knoten, um die Blockheader zu laden 
 
 #: gui/qt/cashacctqt.py:398
 msgid "ViLight currently only supports Vitae ID types 1 & 2"
-msgstr "Electron-Cash unterstützt derzeit nur Cash-Account-Typen 1 & 2"
+msgstr "Vilight" unterstützt derzeit nur Cash-Account-Typen 1 & 2"
 
 #: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:29
 msgid "ViLight is an SPV wallet for Vitae"
@@ -2164,7 +2164,7 @@ msgid "ViLight on Linux requires PyQt5 5.12+.\n\n"
 "Please upgrade otherwise you may experience font rendering issues with emojis and other unicode characters used by ViLight."
 msgstr "ViLight auf Linux benötigt PyQt5 5.12+.\n\n"
 "Sie haben Version {version_string} installiert.\n\n"
-"Bitte aktualisieren Sie dies, sonst können Probleme mit dem Rendering von Schriftarten und anderen Unicode-Zeichen, die von Electron-Cash verwendet werden, auftreten."
+"Bitte aktualisieren Sie dies, sonst können Probleme mit dem Rendering von Schriftarten und anderen Unicode-Zeichen, die von Vilight verwendet werden, auftreten."
 
 #: gui/qt/network_dialog.py:432
 #: ios/ElectronCash/electroncash_gui/ios_native/network_dialog.py:497
@@ -2173,11 +2173,11 @@ msgstr "ViLight sendet Ihre Adressen an einen einzelnen Server, um Ihren Transak
 
 #: gui/qt/installwizard.py:178
 msgid "ViLight wallet"
-msgstr "Electron-Cash-Geldbörse"
+msgstr "Vilight"-Geldbörse"
 
 #: gui/qt/main_window.py:540
 msgid "ViLight was unable to copy your wallet file to the specified location."
-msgstr "Electron-Cash konnte die Geldbörsendatei nicht in das angegebene Verzeichnis kopieren."
+msgstr "Vilight" konnte die Geldbörsendatei nicht in das angegebene Verzeichnis kopieren."
 
 #: gui/qt/main_window.py:3247 gui/qt/main_window.py:3256
 msgid "ViLight was unable to deserialize the transaction:"
@@ -2222,7 +2222,7 @@ msgstr "ViLight konnte den Transaktionsverlauf nicht exportieren."
 
 #: gui/qt/main_window.py:704
 msgid "ViLight's focus is speed, with low resource usage and simplifying Vitae. You do not need to perform regular backups, because your wallet can be recovered from a secret phrase that you can memorize or write on paper. Startup times are instant because it operates in conjunction with high-performance servers that handle the most complicated parts of the Vitae system."
-msgstr "Electron-Cash legt Wert auf Geschwindigkeit, Effizienz und Einfachheit. Es müssen keine regelmäßigen Backups angelegt werden, denn Ihre Geldbörse kann jederzeit durch den Seed (oder der zugehörigen Phrase) wiederhergestellt werden, welcher sich einfach ausdrucken oder aufschreiben lässt. Electron-Cash startet sofort, da es mit leistungsfähigen Servern zusammenarbeitet welche die komplizierteren Teile des Bitcoin-Cash-Systems übernehmen."
+msgstr "Vilight" legt Wert auf Geschwindigkeit, Effizienz und Einfachheit. Es müssen keine regelmäßigen Backups angelegt werden, denn Ihre Geldbörse kann jederzeit durch den Seed (oder der zugehörigen Phrase) wiederhergestellt werden, welcher sich einfach ausdrucken oder aufschreiben lässt. Electron-Cash startet sofort, da es mit leistungsfähigen Servern zusammenarbeitet welche die komplizierteren Teile des Bitcoin-Cash-Systems übernehmen."
 
 #: plugins/email_requests/__init__.py:3
 msgid "Email"
@@ -2547,7 +2547,7 @@ msgstr "Fehler: Öffentlicher Generalschlüssel doppelt vorhanden"
 
 #: gui/qt/__init__.py:373
 msgid "Exit ViLight"
-msgstr "Electron-Cash beenden"
+msgstr "Vilight" beenden"
 
 #: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:512
 msgid "Expected conf."
@@ -3237,7 +3237,7 @@ msgstr "Eingerichtet"
 
 #: gui/qt/network_dialog.py:363
 msgid "Initially, the preferred list is the hard-coded list of known-good servers vetted by the Vitae developers."
-msgstr "Die bevorzugte Liste ist die Liste der bekannten Server, die von den Electron-Cash-Entwicklern getestet wurden."
+msgstr "Die bevorzugte Liste ist die Liste der bekannten Server, die von den Vilight-Entwicklern getestet wurden."
 
 #: gui/qt/transaction_dialog.py:424 gui/qt/transaction_dialog.py:697
 #, python-brace-format
@@ -4689,7 +4689,7 @@ msgstr "Proxy"
 
 #: gui/qt/network_dialog.py:410
 msgid "Proxy settings apply to all connections: with ViLight servers, but also with third-party services."
-msgstr "Proxyeinstellungen werden auf alle Verbindungen angewendet, sowohl mit Electron-Cash-Servern als auch mit Servern von Drittanbietern."
+msgstr "Proxyeinstellungen werden auf alle Verbindungen angewendet, sowohl mit Vilight-Servern als auch mit Servern von Drittanbietern."
 
 #: gui/qt/network_dialog.py:385
 msgid "Proxy user"
@@ -5761,7 +5761,7 @@ msgstr "Der Text wurde in die Zwischenablage kopiert"
 
 #: gui/qt/main_window.py:1133
 msgid "The Vitae address never expires and will always be part of this ViLight wallet."
-msgstr "Die Bitcoin-Cash-Adresse wird niemals ablaufen und immer Teil dieser Electron-Cash-Geldbörse sein."
+msgstr "Die Bitcoin-Cash-Adresse wird niemals ablaufen und immer Teil dieser Vilight-Geldbörse sein."
 
 #: gui/qt/main_window.py:1019
 msgid "The Vitae ID (if any) associated with this address. It doesn't get saved with the request, but it is shown here for your convenience.\n\n"
@@ -5772,7 +5772,7 @@ msgstr "Das Cash-Account (falls vorhanden) das mit dieser Adresse verbunden ist.
 #: gui/qt/cashacctqt.py:168 gui/qt/cashacctqt.py:772
 #, python-brace-format
 msgid "The Vitae ID {name} uses an account type that is not supported by ViLight."
-msgstr "Das Cash-Account {name} verwendet einen Kontotyp, der nicht von Electron-Cash unterstützt wird."
+msgstr "Das Cash-Account {name} verwendet einen Kontotyp, der nicht von Vilight unterstützt wird."
 
 #: plugins/digitalbitbox/digitalbitbox.py:212
 msgid "The Digital Bitbox is already seeded. Choose an option:"
@@ -5780,7 +5780,7 @@ msgstr "Die Digital Bitbox verfügt bereits über einen Seed. Bitte auswählen:"
 
 #: gui/qt/external_plugins_window.py:119
 msgid "The ViLight Developers do NOT audit or vet any plugins."
-msgstr "Die Electron-Cash-Entwickler inspizieren oder prüfen Plugins NICHT."
+msgstr "Die Vilight-Entwickler inspizieren oder prüfen Plugins NICHT."
 
 #: plugins/keepkey/clientbase.py:54 plugins/trezor/clientbase.py:283
 msgid "The PIN cannot be longer than 9 characters."
@@ -5887,7 +5887,7 @@ msgstr "Die Mnemonik muss 12, 18 oder 24 Wörter sein."
 #: gui/qt/main_window.py:2997
 #: ios/ElectronCash/electroncash_gui/ios_native/sign_decrypt_dialog.py:241
 msgid "The operation is undefined. Not just in ViLight, but in general."
-msgstr "Diese Operation ist nicht definiert - nicht nur in Electron-Cash sondern überhaupt."
+msgstr "Diese Operation ist nicht definiert - nicht nur in Vilight sondern überhaupt."
 
 #: ios/ElectronCash/electroncash_gui/ios_native/gui.py:1675
 msgid "The password was incorrect for this encrypted wallet, please try again."
@@ -5931,7 +5931,7 @@ msgstr "Dem Plugin-Manifest fehlt ein gültiger Anzeigenamen."
 
 #: gui/qt/external_plugins_window.py:50
 msgid "The plugin manifest lacks a valid minimum ViLight version."
-msgstr "Dem Plugin-Manifest fehlt eine Mindestversion von Electron-Cash."
+msgstr "Dem Plugin-Manifest fehlt eine Mindestversion von Vilight."
 
 #: gui/qt/external_plugins_window.py:51
 msgid "The plugin manifest lacks a valid package name."
@@ -5947,9 +5947,9 @@ msgstr "Der angegebene Schlüssel scheint kein gültiger Generalschlüssel zu se
 
 #: ios/ElectronCash/electroncash_gui/ios_native/history.py:607
 msgid "The requested transaction has dropped out of the wallet history.\n\n"
-"If this problem persists, please contact us at electroncash.org."
+"If this problem persists, please contact us at https://www.vitaetoken.io/."
 msgstr "Die angeforderte Transaktion ist aus dem Geldbörsen-Verlauf herausgefallen.\n\n"
-"Wenn dieses Problem weiterhin besteht, kontaktieren Sie uns bitte unter electroncash.org."
+"Wenn dieses Problem weiterhin besteht, kontaktieren Sie uns bitte unter https://www.vitaetoken.io/."
 
 #: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:642
 msgid "The seed you entered does not appear to be a valid wallet seed."
@@ -7081,7 +7081,7 @@ msgstr "Sie möchten die aktuell aktive Geldbörse löschen. Um diese Geldbörse
 
 #: gui/qt/__init__.py:641 plugins/labels/qt.py:91
 msgid "You are using ViLight in offline mode; restart ViLight if you want to get connected"
-msgstr "Electron-Cash wird im Offline-Modus verwendet. Starten Sie Electron-Cash neu, um sich zu verbinden"
+msgstr "Vilight" wird im Offline-Modus verwendet. Starten Sie Electron-Cash neu, um sich zu verbinden"
 
 #: gui/qt/main_window.py:1319
 msgid "You are using a non-deterministic wallet, which cannot create new addresses."
@@ -7170,7 +7170,7 @@ msgstr "Sie können das \"Hardware-Geldbörsen-Unterstützung\" Werkzeug (unten)
 
 #: plugins/keepkey/qt.py:27 plugins/trezor/qt.py:25
 msgid "You need to create a separate ViLight wallet for each passphrase you use as they each generate different addresses. Changing your passphrase does not lose other wallets, each is still accessible behind its own passphrase."
-msgstr "Sie müssen eine weitere Electron-Cash-Geldbörse für jede Passphrase erstellen, da sie unterschiedliche Adressen generieren. Das Benutzen einer anderen Passphrase führt nicht zum Verlust der Geldbörse, jede ist weiterhin hinter ihrer Passphrase erreichbar."
+msgstr "Sie müssen eine weitere Vilight-Geldbörse für jede Passphrase erstellen, da sie unterschiedliche Adressen generieren. Das Benutzen einer anderen Passphrase führt nicht zum Verlust der Geldbörse, jede ist weiterhin hinter ihrer Passphrase erreichbar."
 
 #: ios/ElectronCash/electroncash_gui/ios_native/txdetail.py:454
 msgid "You need to sign this transaction in order for it to get a transaction ID."
@@ -7219,7 +7219,7 @@ msgstr "Ihre Kontaktliste ist leer."
 
 #: plugins/keepkey/qt.py:392 plugins/trezor/qt.py:358
 msgid "Your current ViLight wallet can only be used with an empty passphrase. You must create a separate wallet with the install wizard for other passphrases as each one generates a new set of addresses."
-msgstr "Ihrr aktuelle Electron-Cash-Geldbörse kann nur mit einer leeren Passphrase genutzt werden. Sie müssen eine separate Geldbörse mit dem Einrichtungsassistenten anlegen um andere Passphrasen zu nutzen, da jede davon eine eigene Geldbörse mit eigenen Adressen generiert."
+msgstr "Ihrr aktuelle Vilight-Geldbörse kann nur mit einer leeren Passphrase genutzt werden. Sie müssen eine separate Geldbörse mit dem Einrichtungsassistenten anlegen um andere Passphrasen zu nutzen, da jede davon eine eigene Geldbörse mit eigenen Adressen generiert."
 
 #: plugins/keepkey/keepkey.py:337
 msgid "Your device firmware is too old"

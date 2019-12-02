@@ -5918,7 +5918,7 @@ msgstr ""
 
 #: ios/ElectronCash/electroncash_gui/ios_native/history.py:607
 msgid "The requested transaction has dropped out of the wallet history.\n\n"
-"If this problem persists, please contact us at electroncash.org."
+"If this problem persists, please contact us at https://www.vitaetoken.io/."
 msgstr ""
 
 #: ios/ElectronCash/electroncash_gui/ios_native/newwallet.py:642
