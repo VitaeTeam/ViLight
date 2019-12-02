@@ -1,3 +1,5 @@
+### Please only use this branch for Vitaefiying and Vilightifying Text. Sometimes copy and replace will be used for changing text which can break things. So assume this branch will not compile as is. Please remove this line before commiting to master or develop. This branch will be squashed and deleted once finished.
+
 ViLight - Lightweight Vitae client (an Electron-Cash fork,based on DeLight from DeVault)
 =====================================
 
