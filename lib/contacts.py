@@ -45,7 +45,7 @@ class Contacts(util.PrintError):
     '''Electron Cash Contacts subsystem 2.0. Lightweight class for saving/laoding
     contacts to/from storage. This system replaces the old system which was
     a dict keyed off address, and which was limited to 1 contact per address
-    and thus unusable for Cash Accounts and other features.
+    and thus unusable for Vitae IDs and other features.
 
     Instead we model the contact list as a list, keyed off index. Multiple
     entries with the same name or address in the list are ok now. '''
@@ -140,7 +140,7 @@ class Contacts(util.PrintError):
     def _cleanup_address(address : str, _type : str) -> str:
         rm_prefix = (networks.net.CASHADDR_PREFIX + ":").lower()
         if _type in ('address', 'cashacct') and address.lower().startswith(rm_prefix):
-            address = address[len(rm_prefix):]  # chop off devault: prefix
+            address = address[len(rm_prefix):]  # chop off vitae: prefix
         return address
 
     @staticmethod
@@ -248,7 +248,7 @@ class Contacts(util.PrintError):
                 'type': 'openalias',
                 'validated': validated
             }
-        raise RuntimeWarning("Invalid DeVault address or alias", k)
+        raise RuntimeWarning("Invalid Vitae address or alias", k)
 
     @classmethod
     def resolve_openalias(cls, url):

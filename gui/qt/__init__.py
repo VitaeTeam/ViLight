@@ -77,6 +77,7 @@ class ElectrumGui(QObject, PrintError):
     update_available_signal = pyqtSignal(bool)
     cashaddr_toggled_signal = pyqtSignal()  # app-wide signal for when cashaddr format is toggled. This used to live in each ElectrumWindow instance but it was recently refactored to here.
     cashaddr_status_button_hidden_signal = pyqtSignal(bool)  # app-wide signal for when cashaddr toggle button is hidden from the status bar
+    shutdown_signal = pyqtSignal()  # signal for requesting an app-wide full shutdown
 
     instance = None
 
@@ -125,7 +126,7 @@ class ElectrumGui(QObject, PrintError):
         if hasattr(Qt, "AA_UseHighDpiPixmaps"):
             QCoreApplication.setAttribute(Qt.AA_UseHighDpiPixmaps)
         if hasattr(QGuiApplication, 'setDesktopFileName'):
-            QGuiApplication.setDesktopFileName('delight.desktop')
+            QGuiApplication.setDesktopFileName('vilight.desktop')
         self.config = config
         self.daemon = daemon
         self.plugins = plugins
@@ -140,7 +141,7 @@ class ElectrumGui(QObject, PrintError):
         self.gc_timer = QTimer(self); self.gc_timer.setSingleShot(True); self.gc_timer.timeout.connect(ElectrumGui.gc); self.gc_timer.setInterval(500) #msec
         self.nd = None
         self._last_active_window = None  # we remember the last activated ElectrumWindow as a Weak.ref
-        Address.show_cashaddr(self.is_cashaddr())
+        Address.show_cashaddr(False)
         # Dark Theme -- ideally set this before any widgets are created.
         self.set_dark_theme_if_needed()
         # /
@@ -158,7 +159,7 @@ class ElectrumGui(QObject, PrintError):
         # init tray
         self.dark_icon = self.config.get("dark_icon", False)
         self.tray = QSystemTrayIcon(self.tray_icon(), self)
-        self.tray.setToolTip('DeLight')
+        self.tray.setToolTip('ViLight')
         self.tray.activated.connect(self.tray_activated)
         self.build_tray_menu()
         self.tray.show()
@@ -166,6 +167,7 @@ class ElectrumGui(QObject, PrintError):
         if self.has_auto_update_check():
             self._start_auto_update_timer(first_run = True)
         self.app.focusChanged.connect(self.on_focus_change)  # track last window the user interacted with
+        self.shutdown_signal.connect(self.close, Qt.QueuedConnection)
         run_hook('init_qt', self)
         # We did this once already in the set_dark_theme call, but we do this
         # again here just in case some plugin modified the color scheme.
@@ -326,16 +328,16 @@ class ElectrumGui(QObject, PrintError):
 
     def _check_and_warn_qt_version(self):
         if sys.platform == 'linux' and self.qt_version() < (5, 12):
-            msg = _("DeLight on Linux requires PyQt5 5.12+.\n\n"
+            msg = _("ViLight on Linux requires PyQt5 5.12+.\n\n"
                     "You have version {version_string} installed.\n\n"
                     "Please upgrade otherwise you may experience "
                     "font rendering issues with emojis and other unicode "
-                    "characters used by DeLight.").format(version_string=QT_VERSION_STR)
+                    "characters used by ViLight.").format(version_string=QT_VERSION_STR)
             QMessageBox.warning(None, _("PyQt5 Upgrade Needed"), msg)  # this works even if app is not exec_() yet.
 
 
     def eventFilter(self, obj, event):
-        ''' This event filter allows us to open devault: URIs on macOS '''
+        ''' This event filter allows us to open vitae: URIs on macOS '''
         if event.type() == QEvent.FileOpen:
             if len(self.windows) >= 1:
                 self.windows[0].pay_to_URI(event.url().toString())
@@ -366,7 +368,7 @@ class ElectrumGui(QObject, PrintError):
         m.addSeparator()
         m.addAction(_("&Check for updates..."), lambda: self.show_update_checker(None))
         m.addSeparator()
-        m.addAction(_("Exit DeLight"), self.close)
+        m.addAction(_("Exit ViLight"), self.close)
         self.tray.setContextMenu(m)
 
     def tray_icon(self):
@@ -390,7 +392,7 @@ class ElectrumGui(QObject, PrintError):
                     w.hide()
 
     def close(self):
-        for window in self.windows:
+        for window in list(self.windows):
             window.close()
 
     def new_window(self, path, uri=None):
@@ -582,7 +584,7 @@ class ElectrumGui(QObject, PrintError):
         to the system tray. '''
         self.new_version_available = newver
         self.update_available_signal.emit(True)
-        self.notify(_("A new version of DeLight is available: {}").format(newver))
+        self.notify(_("A new version of ViLight is available: {}").format(newver))
 
     def show_update_checker(self, parent, *, skip_check = False):
         if self.warn_if_no_network(parent):
@@ -634,7 +636,7 @@ class ElectrumGui(QObject, PrintError):
 
     def warn_if_no_network(self, parent):
         if not self.daemon.network:
-            self.warning(message=_('You are using DeLight in offline mode; restart DeLight if you want to get connected'), title=_('Offline'), parent=parent, rich_text=True)
+            self.warning(message=_('You are using ViLight in offline mode; restart ViLight if you want to get connected'), title=_('Offline'), parent=parent, rich_text=True)
             return True
         return False
 
@@ -656,7 +658,7 @@ class ElectrumGui(QObject, PrintError):
             return True
 
         # else..
-        howto_url='https://github.com/devaultcrypto/DeLight/blob/master/contrib/secp_HOWTO.md#libsecp256k1-0-for-electron-cash'
+        howto_url='https://github.com/VitaeTeam/ViLight/blob/master/contrib/secp_HOWTO.md#libsecp256k1-0-for-electron-cash'
         template = '''
         <html><body>
             <p>
@@ -664,11 +666,11 @@ class ElectrumGui(QObject, PrintError):
             <p>
             {url_blurb}
             </p>
-            <p><a href="{url}">DeLight Secp Mini-HOWTO</a></p>
+            <p><a href="{url}">ViLight Secp Mini-HOWTO</a></p>
         </body></html>
         '''
         msg = template.format(
-            message = message or _("DeLight was unable to find the secp256k1 library on this system. Elliptic curve cryptography operations will be performed in slow Python-only mode."),
+            message = message or _("ViLight was unable to find the secp256k1 library on this system. Elliptic curve cryptography operations will be performed in slow Python-only mode."),
             url=howto_url,
             url_blurb = _("Please visit this page for instructions on how to correct the situation:")
         )
@@ -717,11 +719,11 @@ class ElectrumGui(QObject, PrintError):
             # the future -- it only appears on first-run if key was None
             self.config.set_key('qt_enable_highdpi', True)
             if is_lin:
-                msg = (_("Automatic high DPI scaling has been enabled for DeLight, which should result in improved graphics quality.")
+                msg = (_("Automatic high DPI scaling has been enabled for ViLight, which should result in improved graphics quality.")
                        + "\n\n" + _("However, on some esoteric Linux systems, this mode may cause disproportionately large status bar icons.")
                        + "\n\n" + _("If that is the case for you, then you may disable automatic DPI scaling in the preferences, under 'General'."))
             else: # is_win
-                msg = (_("Automatic high DPI scaling has been enabled for DeLight, which should result in improved graphics quality.")
+                msg = (_("Automatic high DPI scaling has been enabled for ViLight, which should result in improved graphics quality.")
                        + "\n\n" + _("However, on some Windows systems, bugs in Qt may result in minor graphics glitches in system 'message box' dialogs.")
                        + "\n\n" + _("If that is the case for you, then you may disable automatic DPI scaling in the preferences, under 'General'."))
             parent.show_message( title = _('Automatic High DPI'), msg = msg)
@@ -752,12 +754,12 @@ class ElectrumGui(QObject, PrintError):
         if self.tray:
             try:
                 # this requires Qt 5.9
-                self.tray.showMessage("DeLight", message, QIcon(":icons/electron.svg"), 20000)
+                self.tray.showMessage("ViLight", message, QIcon(":icons/electron.svg"), 20000)
             except TypeError:
-                self.tray.showMessage("DeLight", message, QSystemTrayIcon.Information, 20000)
+                self.tray.showMessage("ViLight", message, QSystemTrayIcon.Information, 20000)
 
     def is_cashaddr(self):
-        return bool(self.config.get('show_cashaddr', True))
+        return bool(self.config.get('show_cashaddr', False))
 
     def toggle_cashaddr(self, on = None):
         was = self.is_cashaddr()
@@ -795,7 +797,7 @@ class ElectrumGui(QObject, PrintError):
         path = self.config.get_wallet_path()
         if not self.start_new_window(path, self.config.get('url')):
             return
-        signal.signal(signal.SIGINT, lambda *args: self.app.quit())
+        signal.signal(signal.SIGINT, lambda signum, frame: self.shutdown_signal.emit())
 
         self.app.setQuitOnLastWindowClosed(True)
         self.app.lastWindowClosed.connect(__class__._quit_after_last_window)

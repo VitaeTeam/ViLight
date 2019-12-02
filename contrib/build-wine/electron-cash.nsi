@@ -6,10 +6,10 @@
 ;--------------------------------
 ;Variables
 
-  !define PRODUCT_NAME "DeLight"
-  !define INTERNAL_NAME "DeLight"
-  !define PRODUCT_WEB_SITE "https://github.com/devaultcrypto/DeLight"
-  !define PRODUCT_PUBLISHER "The DeVault Developers"
+  !define PRODUCT_NAME "ViLight"
+  !define INTERNAL_NAME "ViLight"
+  !define PRODUCT_WEB_SITE "https://github.com/VitaeTeam/ViLight"
+  !define PRODUCT_PUBLISHER "The Vitae Developers"
   !define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}"
 
 ;--------------------------------
@@ -73,7 +73,7 @@
   !define MUI_ABORTWARNING
   !define MUI_ABORTWARNING_TEXT "Are you sure you wish to abort the installation of ${PRODUCT_NAME}?"
 
-  !define MUI_ICON "\delight\icons\electron.ico"
+  !define MUI_ICON "\vilight\icons\electron.ico"
 
 ;--------------------------------
 ;Pages
@@ -137,11 +137,11 @@ Section
   CreateShortCut "$SMPROGRAMS\${PRODUCT_NAME}\${PRODUCT_NAME} Testnet.lnk" "$INSTDIR\${INTERNAL_NAME}-${PRODUCT_VERSION}.exe" "--testnet" "$INSTDIR\${INTERNAL_NAME}-${PRODUCT_VERSION}.exe" 0
 
 
-  ;Links devault: URI's to DeLight
-  WriteRegStr HKCU "Software\Classes\devault" "" "URL:devault Protocol"
-  WriteRegStr HKCU "Software\Classes\devault" "URL Protocol" ""
-  WriteRegStr HKCU "Software\Classes\devault" "DefaultIcon" "$\"$INSTDIR\electron.ico, 0$\""
-  WriteRegStr HKCU "Software\Classes\devault\shell\open\command" "" "$\"$INSTDIR\${INTERNAL_NAME}-${PRODUCT_VERSION}.exe$\" $\"%1$\""
+  ;Links vitae: URI's to ViLight
+  WriteRegStr HKCU "Software\Classes\vitae" "" "URL:vitae Protocol"
+  WriteRegStr HKCU "Software\Classes\vitae" "URL Protocol" ""
+  WriteRegStr HKCU "Software\Classes\vitae" "DefaultIcon" "$\"$INSTDIR\electron.ico, 0$\""
+  WriteRegStr HKCU "Software\Classes\vitae\shell\open\command" "" "$\"$INSTDIR\${INTERNAL_NAME}-${PRODUCT_VERSION}.exe$\" $\"%1$\""
 
   ;Adds an uninstaller possibilty to Windows Uninstall or change a program section
   WriteRegStr HKCU "${PRODUCT_UNINST_KEY}" "DisplayName" "$(^Name)"
@@ -186,7 +186,7 @@ Section "Uninstall"
   Delete "$SMPROGRAMS\${PRODUCT_NAME}\*.*"
   RMDir  "$SMPROGRAMS\${PRODUCT_NAME}"
 
-  DeleteRegKey HKCU "Software\Classes\devault"
+  DeleteRegKey HKCU "Software\Classes\vitae"
   DeleteRegKey HKCU "Software\${PRODUCT_NAME}"
   DeleteRegKey HKCU "${PRODUCT_UNINST_KEY}"
 SectionEnd

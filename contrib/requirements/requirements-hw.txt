@@ -2,3 +2,4 @@ trezor[hidapi]>=0.11.0
 keepkey>=6.1
 btchip-python
 hidapi
+pivx-quark-hash

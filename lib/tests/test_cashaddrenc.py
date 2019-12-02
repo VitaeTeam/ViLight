@@ -29,19 +29,19 @@ import random
 from .. import cashaddr
 
 
-DVT_PREFIX = "devault"
-DVT_TESTNET_PREFIX = "bchtest"
+VITAE_PREFIX = "vitae"
+VITAE_TESTNET_PREFIX = "bchtest"
 
 VALID_PUBKEY_ADDRESSES = [
-    "devault:qpm2qsznhks23z7629mms6s4cwef74vcwvy22gdx6a",
-    "devault:qr95sy3j9xwd2ap32xkykttr4cvcu7as4y0qverfuy",
-    "devault:qqq3728yw0y47sqn6l2na30mcw6zm78dzqre909m2r"
+    "vitae:qpm2qsznhks23z7629mms6s4cwef74vcwvy22gdx6a",
+    "vitae:qr95sy3j9xwd2ap32xkykttr4cvcu7as4y0qverfuy",
+    "vitae:qqq3728yw0y47sqn6l2na30mcw6zm78dzqre909m2r"
 ]
 
 VALID_SCRIPT_ADDRESSES = [
-    "devault:ppm2qsznhks23z7629mms6s4cwef74vcwvn0h829pq",
-    "devault:pr95sy3j9xwd2ap32xkykttr4cvcu7as4yc93ky28e",
-    "devault:pqq3728yw0y47sqn6l2na30mcw6zm78dzq5ucqzc37"
+    "vitae:ppm2qsznhks23z7629mms6s4cwef74vcwvn0h829pq",
+    "vitae:pr95sy3j9xwd2ap32xkykttr4cvcu7as4yc93ky28e",
+    "vitae:pqq3728yw0y47sqn6l2na30mcw6zm78dzq5ucqzc37"
 ]
 
 VALID_HASHES = [
@@ -64,15 +64,15 @@ class TestCashAddrAddress(unittest.TestCase):
         with self.assertRaises(TypeError):
             cashaddr.encode_full(2, cashaddr.PUBKEY_TYPE, bytes(20))
         with self.assertRaises(TypeError):
-            cashaddr.encode_full(DVT_PREFIX, cashaddr.PUBKEY_TYPE, '0' * 40)
+            cashaddr.encode_full(VITAE_PREFIX, cashaddr.PUBKEY_TYPE, '0' * 40)
         with self.assertRaises(ValueError):
-            cashaddr.encode_full(DVT_PREFIX, 15, bytes(20))
+            cashaddr.encode_full(VITAE_PREFIX, 15, bytes(20))
 
     def test_encode_decode(self):
         """Test whether valid addresses encode and decode properly, for all
         valid hash sizes.
         """
-        for prefix in (DVT_PREFIX, DVT_TESTNET_PREFIX):
+        for prefix in (VITAE_PREFIX, VITAE_TESTNET_PREFIX):
             for bits_size in self.valid_sizes:
                 size = bits_size // 8
                 # Convert to a valid number of bytes for a hash
@@ -93,7 +93,7 @@ class TestCashAddrAddress(unittest.TestCase):
             # Convert to a valid number of bytes for a hash
             hashbytes = bytes(random.randint(0, 255) for i in range(size))
             with self.assertRaises(ValueError):
-                cashaddr.encode_full(DVT_PREFIX, cashaddr.PUBKEY_TYPE,
+                cashaddr.encode_full(VITAE_PREFIX, cashaddr.PUBKEY_TYPE,
                                      hashbytes)
 
     def test_decode_bad_inputs(self):
@@ -110,22 +110,22 @@ class TestCashAddrAddress(unittest.TestCase):
             # Add some more 5-bit data after size has been encoded
             payload += bytes(random.randint(0, 15) for i in range(3))
             # Add checksum
-            payload += cashaddr._create_checksum(DVT_PREFIX, payload)
-            addr = DVT_PREFIX + ':' + ''.join(cashaddr._CHARSET[d] for d in payload)
+            payload += cashaddr._create_checksum(VITAE_PREFIX, payload)
+            addr = VITAE_PREFIX + ':' + ''.join(cashaddr._CHARSET[d] for d in payload)
             # Check decode fails.  This can trigger the length mismatch,
             # excess padding, or non-zero padding errors
             with self.assertRaises(ValueError):
                cashaddr.decode(addr)
 
     def test_address_case(self):
-        prefix, kind, hash160 = cashaddr.decode("devault:ppm2qsznhks23z7629mms6s4cwef74vcwvn0h829pq")
-        assert prefix == "devault"
+        prefix, kind, hash160 = cashaddr.decode("vitae:ppm2qsznhks23z7629mms6s4cwef74vcwvn0h829pq")
+        assert prefix == "vitae"
         prefix, kind, hash160 = cashaddr.decode("BITCOINCASH:PPM2QSZNHKS23Z7629MMS6S4CWEF74VCWVN0H829PQ")
         assert prefix == "BITCOINCASH"
         with self.assertRaises(ValueError):
-            cashaddr.decode("devault:PPM2QSZNHKS23Z7629MMS6S4CWEF74VCWVN0H829PQ")
+            cashaddr.decode("vitae:PPM2QSZNHKS23Z7629MMS6S4CWEF74VCWVN0H829PQ")
         with self.assertRaises(ValueError):
-            cashaddr.decode("devault:ppm2qsznhks23z7629mmS6s4cwef74vcwvn0h829pq")
+            cashaddr.decode("vitae:ppm2qsznhks23z7629mmS6s4cwef74vcwvn0h829pq")
 
     def test_prefix(self):
         with self.assertRaises(ValueError):
@@ -138,7 +138,7 @@ class TestCashAddrAddress(unittest.TestCase):
             cashaddr.decode("bitcoin cash:ab")
         # b is invalid
         with self.assertRaises(ValueError):
-            cashaddr.decode("devault:ppm2qsznbks23z7629mms6s4cwef74vcwvn0h82")
+            cashaddr.decode("vitae:ppm2qsznbks23z7629mms6s4cwef74vcwvn0h82")
 
     def test_bad_decode_checksum(self):
         """Test whether addresses with invalid checksums fail to decode."""
@@ -146,7 +146,7 @@ class TestCashAddrAddress(unittest.TestCase):
             size = bits_size // 8
             # Convert to a valid number of bytes for a hash
             hashbytes = bytes(random.randint(0, 255) for i in range(size))
-            addr = cashaddr.encode_full(DVT_PREFIX, cashaddr.PUBKEY_TYPE,
+            addr = cashaddr.encode_full(VITAE_PREFIX, cashaddr.PUBKEY_TYPE,
                                         hashbytes)
             addrlist = list(addr)
             # Inject an error
@@ -167,7 +167,7 @@ class TestCashAddrAddress(unittest.TestCase):
         """Test whether valid P2PK addresses decode to the correct output."""
         for (address, hashbytes) in zip(VALID_SCRIPT_ADDRESSES, VALID_HASHES):
             rprefix, kind, addr_hash = cashaddr.decode(address)
-            self.assertEqual(rprefix, DVT_PREFIX)
+            self.assertEqual(rprefix, VITAE_PREFIX)
             self.assertEqual(kind, cashaddr.SCRIPT_TYPE)
             self.assertEqual(addr_hash, hashbytes)
 
@@ -175,7 +175,7 @@ class TestCashAddrAddress(unittest.TestCase):
         """Test whether valid P2SH addresses decode to the correct output."""
         for (address, hashbytes) in zip(VALID_PUBKEY_ADDRESSES, VALID_HASHES):
             rprefix, kind, addr_hash = cashaddr.decode(address)
-            self.assertEqual(rprefix, DVT_PREFIX)
+            self.assertEqual(rprefix, VITAE_PREFIX)
             self.assertEqual(kind, cashaddr.PUBKEY_TYPE)
             self.assertEqual(addr_hash, hashbytes)
 

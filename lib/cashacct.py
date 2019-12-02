@@ -23,7 +23,7 @@
 # THE SOFTWARE.
 
 '''
-Cash Accounts related classes and functions.
+Vitae IDs related classes and functions.
 
 Note that this file also contains a unique class called `ScriptOutput` (which
 inherits from address.py's own ScriptOutput), so always import this file
@@ -47,12 +47,12 @@ from . import verifier
 from . import blockchain
 from . import caches
 
-# Cash Accounts protocol code prefix is 0x01010101
-# See OP_RETURN prefix guideline: https://github.com/devaultorg/devault.org/blob/master/spec/op_return-prefix-guideline.md
+# Vitae IDs protocol code prefix is 0x01010101
+# See OP_RETURN prefix guideline: https://github.com/devaultorg/vitae.org/blob/master/spec/op_return-prefix-guideline.md
 protocol_code = bytes.fromhex("01010101")
 
-activation_height = 20000  # all cash acct registrations are invalid if they appear before this block height
-height_modification = activation_height - 100  # compute the cashacct.number by subtracting this value from tx block height
+activation_height = 84001  # all cash acct registrations are invalid if they appear before this block height
+height_modification = activation_height - 1  # compute the cashacct.number by subtracting this value from tx block height
 collision_hash_length = 10  # DO NOT MODIFY -- this is hard-coded in spec
 
 # This RE is used to accept/reject names
@@ -80,7 +80,7 @@ class ArgumentError(ValueError):
     out of spec.'''
 
 class ScriptOutput(ScriptOutputBase):
-    '''A class to encapsulate a Cash Accounts script output. Use the __new__ or
+    '''A class to encapsulate a Vitae IDs script output. Use the __new__ or
     @classmethod factory methods to create instances. Suitable for including in
     a Transaction as an output.
 
@@ -110,7 +110,7 @@ class ScriptOutput(ScriptOutputBase):
 
     @classmethod
     def protocol_match(cls, script_bytes):
-        '''Returns true iff the `script_bytes` is a valid Cash Accounts
+        '''Returns true iff the `script_bytes` is a valid Vitae IDs
         registration script (has all the requisite fields, etc).'''
         try:
             res = cls.parse_script(script_bytes)
@@ -174,8 +174,8 @@ class ScriptOutput(ScriptOutputBase):
     def _check_number_collision_hash(number, collision_hash):
         '''Raises ArgumentError if either number or collision_hash aren't to spec.'''
         if number is not None:  # We don't raise on None
-            if not isinstance(number, int) or number < 100:
-                raise ArgumentError('Number must be an int >= 100')
+            if not isinstance(number, int) or number < 1:
+                raise ArgumentError('Number must be an int >= 1')
         if collision_hash is not None:  # We don't raise on None
             if isinstance(collision_hash, int): collision_hash = str(collision_hash)  # grr.. it was an int
             if not isinstance(collision_hash, str) or not collision_hash_accept_re.match(collision_hash):
@@ -355,13 +355,13 @@ class ScriptOutput(ScriptOutputBase):
         # prepare payload
         # From: https://gitlab.com/cash-accounts/specification/blob/master/SPECIFICATION.md
         #
-        # Sample payload (hex bytes) for registration of 'bv1' -> devault:qzgvpjawln2l8wfmsg2qwnnytcua02hy45vpdvrqu5
+        # Sample payload (hex bytes) for registration of 'bv1' -> vitae:qzgvpjawln2l8wfmsg2qwnnytcua02hy45vpdvrqu5
         # (This example is a real tx with txid: 4a2da2a69fba3ac07b7047dd17927a890091f13a9e89440a4cd4cfb4c009de1f)
         #
         # hex bytes:
         # 6a040101010103627631150190c0cbaefcd5f3b93b8214074e645e39d7aae4ad
         # | | |......|| |....|| | |......................................|
-        # | | |......|| |....|| | ↳ hash160 of devault:qzgvpjawln2l8wfmsg2qwnnytcua02hy45vpdvrqu5
+        # | | |......|| |....|| | ↳ hash160 of vitae:qzgvpjawln2l8wfmsg2qwnnytcua02hy45vpdvrqu5
         # | | |......|| |....|| |
         # | | |......|| |....|| ↳ type (01 = p2pkh)
         # | | |......|| |....||
@@ -539,10 +539,8 @@ class Info(namedtuple("Info", "name, address, number, collision_hash, emoji, txi
 
 
 servers = [
-    "https://cashacct.imaginary.cash",  # Runs official 'cash-accounts' lookup server software
-    "https://api.cashaccount.info",     # Runs official 'cash-accounts' lookup server software
-    "https://cashacct.electroncash.dk", # Runs official 'cash-accounts' lookup server software
-    "https://electrum.imaginary.cash"   # Runs alternative server software: https://gitlab.com/paOol/lookup-server
+    "https://api.devaultid.com"     # Runs official 'cash-accounts' lookup server software
+
 ]
 
 debug = False  # network debug setting. Set to True when developing to see more verbose information about network operations.
@@ -589,7 +587,7 @@ def lookup(server, number, name=None, collision_prefix=None, timeout=timeout, ex
         bnumber = bh2num(block)
         if bnumber != number:
             raise RuntimeError('Bad response')
-        if not isinstance(res, list) or number < 100:
+        if not isinstance(res, list) or number < 1:
             raise RuntimeError('Bad response')
         block_hash, header_prev = None, None
         unparseable = set()
@@ -625,7 +623,7 @@ def lookup(server, number, name=None, collision_prefix=None, timeout=timeout, ex
             util.print_error(f"lookup: Warning for block number {number}: got "
                              f"{len(res)} transactions from the server but "
                              f"unable to parse {len(unparseable)} of them."
-                             " See if the Cash Accounts spec has changed!", unparseable)
+                             " See if the Vitae IDs spec has changed!", unparseable)
         if debug:
             util.print_error(f"lookup: found {len(ret)} reg txs at block height {block} (number={number})")
         return block_hash, ret
@@ -896,7 +894,7 @@ class CashAcct(util.PrintError, verifier.SPVDelegate):
         return f"{name}#{number}{minimal_chash};{emojipart}"
 
 
-    _number_re = re.compile(r'^[0-9]{3,}$')
+    _number_re = re.compile(r'^[0-9]{1,}$')
     _collision_re = re.compile(r'^[0-9]{0,10}$')
 
     @staticmethod
@@ -947,12 +945,12 @@ class CashAcct(util.PrintError, verifier.SPVDelegate):
             number = int(number)
         except:
             return None
-        if number < 100:
+        if number < 1:
             return None
         return name, number, collision_prefix
 
     def resolve_verify(self, ca_string : str, timeout: float = timeout, exc: list = None) -> List[Tuple[Info, str]]:
-        ''' Blocking resolver for Cash Account names. Given a ca_string of the
+        ''' Blocking resolver for Vitae ID names. Given a ca_string of the
         form: name#number[.123], will verify the block it is on and do other
         magic. It will return a list of tuple of (Info, minimal_chash).
 
@@ -1181,7 +1179,7 @@ class CashAcct(util.PrintError, verifier.SPVDelegate):
         d = self.ext_reg_tx.copy()
         d.update(self.wallet_reg_tx)
         for txid, item in d.items():
-            if txid not in self.v_tx and item.script.number is not None and item.script.number >= 100:
+            if txid not in self.v_tx and item.script.number is not None and item.script.number >= 1:
                 self.ext_unverif[txid] = num2bh(item.script.number)
 
         # Note that 'wallet.load_transactions' will be called after this point
@@ -1292,7 +1290,7 @@ class CashAcct(util.PrintError, verifier.SPVDelegate):
         if not isinstance(script, ScriptOutput) or not isinstance(block_height, (int, float)) or not txid or not isinstance(txid, str):
             raise ArgumentError("bad args to add_ext_incomplete_tx")
         script.number = bh2num(block_height)
-        if script.number < 100:
+        if script.number < 1:
             raise ArgumentError("bad block height")
         with self.lock:
             self.ext_incomplete_tx[txid] = self.RegTx(txid, script)
@@ -1301,8 +1299,8 @@ class CashAcct(util.PrintError, verifier.SPVDelegate):
 
     @staticmethod
     def _do_verify_block_argchecks(network, number, exc=[], server='https://unknown'):
-        if not isinstance(number, int) or number < 100:
-            raise ArgumentError('number must be >= 100')
+        if not isinstance(number, int) or number < 1:
+            raise ArgumentError('number must be >= 1')
         if not isinstance(server, str) or not server:
             raise ArgumentError('bad server arg')
         if not isinstance(exc, list):
@@ -1376,7 +1374,7 @@ class CashAcct(util.PrintError, verifier.SPVDelegate):
         if len(pb.reg_txs) == 0:
             self.print_error(f"Warning, received a block from server with number {number}"
                              "but we didn't recognize any tx's in it. "
-                             "To the dev reading this: See if the Cash Account spec has changed!")
+                             "To the dev reading this: See if the Vitae ID spec has changed!")
         # REORG or BAD SERVER CHECK
         def check_sanity_detect_reorg_etc():
             minimal_ch_removed = []
@@ -1487,7 +1485,7 @@ class CashAcct(util.PrintError, verifier.SPVDelegate):
 
     def set_address_default(self, info : Info):
         ''' Set the default CashAccount for a particular address. Pass the Info
-        object pertaining to the Cash Account / Address in question. '''
+        object pertaining to the Vitae ID / Address in question. '''
         if not isinstance(info.address, Address):
             self.print_error("Warning: Info object does not have an Address", info)
             return
@@ -1890,7 +1888,7 @@ class CashAcct(util.PrintError, verifier.SPVDelegate):
     # Experimental Methods (stuff we may not use) #
     ###############################################
 
-    def scan_servers_for_registrations(self, start=100, stop=None, progress_cb=None, error_cb=None, timeout=timeout,
+    def scan_servers_for_registrations(self, start=1, stop=None, progress_cb=None, error_cb=None, timeout=timeout,
                                        add_only_mine=True, debug=debug):
         ''' This is slow and not particularly useful.  Will maybe delete this
         code soon. I used it for testing to populate wallet.
@@ -1909,7 +1907,7 @@ class CashAcct(util.PrintError, verifier.SPVDelegate):
             return
         cancel_evt = threading.Event()
         stop = num2bh(stop) if stop is not None else stop
-        start = num2bh(max(start or 0, 100))
+        start = num2bh(max(start or 0, 1))
         def stop_height():
             return stop or self.wallet.get_local_height()+1
         def progress(h, added):

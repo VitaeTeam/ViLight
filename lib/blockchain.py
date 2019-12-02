@@ -29,17 +29,26 @@ import threading
 from . import util
 from . import networks
 from .bitcoin import *
+import pivx_quark_hash as quark_hash
+
 
 class VerifyError(Exception):
     '''Exception used for blockchain verification errors.'''
+
 
 CHUNK_FORKS = -3
 CHUNK_BAD = -2
 CHUNK_LACKED_PROOF = -1
 CHUNK_ACCEPTED = 0
+HEADER_SIZE = 80
+ZC_HEADER_SIZE = 112
+ZC_VERSION = 5
+class InvalidHeader(Exception):
+    pass
 
 def bits_to_work(bits):
     return (1 << 256) // (bits_to_target(bits) + 1)
+
 
 def bits_to_target(bits):
     if bits == 0:
@@ -54,6 +63,7 @@ def bits_to_target(bits):
         return word >> (8 * (3 - size))
     else:
         return word << (8 * (size - 3))
+
 
 def target_to_bits(target):
     if target == 0:
@@ -73,7 +83,8 @@ def target_to_bits(target):
     assert size < 256
     return compact | size << 24
 
-HEADER_SIZE = 80 # bytes
+
+HEADER_SIZE = 80  # bytes
 LWMA_AVERAGING_WINDOW = 72
 MAX_BITS = 0x1d00ffff
 MAX_TARGET = bits_to_target(MAX_BITS)
@@ -82,6 +93,7 @@ NULL_HEADER = bytes([0]) * HEADER_SIZE
 NULL_HASH_BYTES = bytes([0]) * 32
 NULL_HASH_HEX = NULL_HASH_BYTES.hex()
 
+
 def serialize_header(res):
     s = int_to_hex(res.get('version'), 4) \
         + rev_hex(res.get('prev_block_hash')) \
@@ -89,21 +101,38 @@ def serialize_header(res):
         + int_to_hex(int(res.get('timestamp')), 4) \
         + int_to_hex(int(res.get('bits')), 4) \
         + int_to_hex(int(res.get('nonce')), 4)
+
+    if res.get('version') > 3:
+        s += rev_hex(res.get('accumulator_checkpoint'))
     return s
 
+
 def deserialize_header(s, height):
+    if not s:
+        raise InvalidHeader('Invalid header: {}'.format(s))
+    if len(s) != ZC_HEADER_SIZE:
+        raise InvalidHeader('Invalid header length: {}'.format(len(s)))
+    hex_to_int = lambda s: int.from_bytes(s, byteorder='little')
     h = {}
-    h['version'] = int.from_bytes(s[0:4], 'little')
+    h['version'] = hex_to_int(s[0:4])
     h['prev_block_hash'] = hash_encode(s[4:36])
     h['merkle_root'] = hash_encode(s[36:68])
-    h['timestamp'] = int.from_bytes(s[68:72], 'little')
-    h['bits'] = int.from_bytes(s[72:76], 'little')
-    h['nonce'] = int.from_bytes(s[76:80], 'little')
+    h['timestamp'] = hex_to_int(s[68:72])
+    h['bits'] = hex_to_int(s[72:76])
+    h['nonce'] = hex_to_int(s[76:80])
+
+    if height > 0:
+       h['accumulator_checkpoint'] = hash_encode(s[80:112])
+
     h['block_height'] = height
     return h
 
 def hash_header_hex(header_hex):
-    return hash_encode(Hash(bfh(header_hex)))
+    header = bfh(header_hex)
+    if header[0] >= 3:
+        return hash_encode(Hash(bfh(header_hex)))
+    else:
+        return hash_encode(quark_hash.getPoWHash(bfh(header)))
 
 def hash_header(header):
     if header is None:
@@ -145,7 +174,7 @@ def can_connect(header):
 def verify_proven_chunk(chunk_base_height, chunk_data):
     chunk = HeaderChunk(chunk_base_height, chunk_data)
 
-    header_count = len(chunk_data) // HEADER_SIZE
+    header_count = len(chunk_data) // ZC_HEADER_SIZE
     prev_header = None
     prev_header_hash = None
     for i in range(header_count):
@@ -173,8 +202,8 @@ def root_from_proof(hash, branch, index):
 class HeaderChunk:
     def __init__(self, base_height, data):
         self.base_height = base_height
-        self.header_count = len(data) // HEADER_SIZE
-        self.headers = [deserialize_header(data[i * HEADER_SIZE : (i + 1) * HEADER_SIZE],
+        self.header_count = len(data) // ZC_HEADER_SIZE
+        self.headers = [deserialize_header(data[i * ZC_HEADER_SIZE : (i + 1) * ZC_HEADER_SIZE],
                                            base_height + i)
                         for i in range(self.header_count)]
 
@@ -253,7 +282,7 @@ class Blockchain(util.PrintError):
 
     def update_size(self):
         p = self.path()
-        self._size = os.path.getsize(p)//HEADER_SIZE if os.path.exists(p) else 0
+        self._size = os.path.getsize(p)//ZC_HEADER_SIZE if os.path.exists(p) else 0
 
     def verify_header(self, header, bits=None):
         this_header_hash = hash_header(header)
@@ -263,9 +292,7 @@ class Blockchain(util.PrintError):
             # checkpoint 
             if bits != header.get('bits'):
                 raise VerifyError("bits mismatch: %x vs %x" % (bits, header.get('bits')))
-            target = bits_to_target(bits)
-            if int('0x' + this_header_hash, 16) > target:
-                raise VerifyError("insufficient proof of work: %s vs target %s" % (int('0x' + this_header_hash, 16), target))
+
 
     def verify_single_header(self, header, prev_header):
         prev_header_hash = hash_header(prev_header)
@@ -281,16 +308,16 @@ class Blockchain(util.PrintError):
         if chunk_base_height != 0:
             prev_header = self.read_header(chunk_base_height - 1)
 
-        header_count = len(chunk_data) // HEADER_SIZE
+        header_count = len(chunk_data) // ZC_HEADER_SIZE
         self.print_error("start loop in verify_check with base_height = ",chunk_base_height)
         for i in range(header_count-73):
             header = chunk.get_header_at_index(i)
-            lwma_header = chunk.get_header_at_index(i+73)
+            # lwma_header = chunk.get_header_at_index(i+73)
             # Check the chain of hashes and the difficulty.
             bits = self.get_bits(header, chunk)
             # for now .... HACK -- > NEED TO ADD BACK
-            #self.verify_single_header(header, prev_header)
-            self.verify_header(lwma_header, bits)
+            # self.verify_single_header(header, prev_header)
+            # self.verify_header(lwma_header, bits)
             prev_header = header
 
     def path(self):
@@ -299,13 +326,15 @@ class Blockchain(util.PrintError):
         return os.path.join(d, filename)
 
     def save_chunk(self, base_height, chunk_data):
-        chunk_offset = (base_height - self.base_height) * HEADER_SIZE
+        chunk_offset = (base_height - self.base_height) * ZC_HEADER_SIZE
+        assert len(chunk_data) % ZC_HEADER_SIZE == 0
+
         if chunk_offset < 0:
             chunk_data = chunk_data[-chunk_offset:]
             chunk_offset = 0
         # Headers at and before the verification checkpoint are sparsely filled.
         # Those should be overwritten and should not truncate the chain.
-        top_height = base_height + (len(chunk_data) // HEADER_SIZE) - 1
+        top_height = base_height + (len(chunk_data) // ZC_HEADER_SIZE) - 1
         truncate = top_height > networks.net.VERIFICATION_BLOCK_HEIGHT
         self.write(chunk_data, chunk_offset, truncate)
         self.swap_with_parent()
@@ -323,10 +352,10 @@ class Blockchain(util.PrintError):
         with open(self.path(), 'rb') as f:
             my_data = f.read()
         with open(parent.path(), 'rb') as f:
-            f.seek((base_height - parent.base_height)*HEADER_SIZE)
-            parent_data = f.read(parent_branch_size*HEADER_SIZE)
+            f.seek((base_height - parent.base_height)*ZC_HEADER_SIZE)
+            parent_data = f.read(parent_branch_size*ZC_HEADER_SIZE)
         self.write(parent_data, 0)
-        parent.write(my_data, (base_height - parent.base_height)*HEADER_SIZE)
+        parent.write(my_data, (base_height - parent.base_height)*ZC_HEADER_SIZE)
         # store file path
         for b in blockchains.values():
             b.old_path = b.path()
@@ -348,7 +377,7 @@ class Blockchain(util.PrintError):
         filename = self.path()
         with self.lock:
             with open(filename, 'rb+') as f:
-                if truncate and offset != self._size*HEADER_SIZE:
+                if truncate and offset != self._size*ZC_HEADER_SIZE:
                     f.seek(offset)
                     f.truncate()
                 f.seek(offset)
@@ -361,8 +390,8 @@ class Blockchain(util.PrintError):
         delta = header.get('block_height') - self.base_height
         data = bfh(serialize_header(header))
         assert delta == self.size()
-        assert len(data) == HEADER_SIZE
-        self.write(data, delta*HEADER_SIZE)
+        assert len(data) == ZC_HEADER_SIZE
+        self.write(data, delta*ZC_HEADER_SIZE)
         self.swap_with_parent()
 
     def read_header(self, height, chunk=None):
@@ -381,8 +410,8 @@ class Blockchain(util.PrintError):
         name = self.path()
         if os.path.exists(name):
             with open(name, 'rb') as f:
-                f.seek(delta * HEADER_SIZE)
-                h = f.read(HEADER_SIZE)
+                f.seek(delta * ZC_HEADER_SIZE)
+                h = f.read(ZC_HEADER_SIZE)
             # Is it a pre-checkpoint header that has never been requested?
             if h == NULL_HEADER:
                 return None
@@ -458,9 +487,9 @@ class Blockchain(util.PrintError):
         return sorted(times)[len(times) // 2]
 
     def get_suitable_block_height(self, suitableheight, chunk=None):
-        #In order to avoid a block in a very skewed timestamp to have too much
-        #influence, we select the median of the 3 top most block as a start point
-        #Reference: github.com/Bitcoin-ABC/bitcoin-abc/master/src/pow.cpp#L201
+        # In order to avoid a block in a very skewed timestamp to have too much
+        # influence, we select the median of the 3 top most block as a start point
+        # Reference: github.com/Bitcoin-ABC/bitcoin-abc/master/src/pow.cpp#L201
         blocks2 = self.read_header(suitableheight, chunk)
         blocks1 = self.read_header(suitableheight-1, chunk)
         blocks = self.read_header(suitableheight-2, chunk)
@@ -507,7 +536,7 @@ class Blockchain(util.PrintError):
     def connect_chunk(self, base_height, hexdata, proof_was_provided=False):
         chunk = HeaderChunk(base_height, hexdata)
 
-        header_count = len(hexdata) // HEADER_SIZE
+        header_count = len(hexdata) // ZC_HEADER_SIZE
         top_height = base_height + header_count - 1
         # We know that chunks before the checkpoint height, end at the checkpoint height, and
         # will be guaranteed to be covered by the checkpointing. If no proof is provided then

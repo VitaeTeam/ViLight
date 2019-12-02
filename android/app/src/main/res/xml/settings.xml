@@ -11,7 +11,7 @@
             android:key="auto_connect"
             android:title="@string/select_server_automatically"
             android:disableDependentsState="true"/>
-        <cc.devault.delight1.ServerPreference
+        <cc.vitae.vilight1.ServerPreference
             android:key="server"
             android:title="@string/server"
             android:dependency="auto_connect"/>
@@ -27,8 +27,8 @@
         <ListPreference
             android:key="base_unit"
             android:title="@string/base_unit"
-            android:defaultValue="DVT"
-            tools:summary="DVT"/>
+            android:defaultValue="VITAE"
+            tools:summary="VITAE"/>
         <ListPreference
             android:key="block_explorer"
             android:title="@string/block_explorer"

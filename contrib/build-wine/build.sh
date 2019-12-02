@@ -12,7 +12,7 @@ else
 fi
 
 if [ ! -d 'contrib' ]; then
-    fail "Please run this script form the top-level DeLight git directory"
+    fail "Please run this script form the top-level ViLight git directory"
 fi
 
 pushd .
@@ -46,8 +46,8 @@ $SUDO docker build -t electroncash-wine-builder-img contrib/build-wine/docker \
     || fail "Failed to create docker image"
 
 # This is the place where we checkout and put the exact revision we want to work
-# on. Docker will run mapping this directory to /opt/wine64/drive_c/delight
-# which inside wine will look lik c:\delight
+# on. Docker will run mapping this directory to /opt/wine64/drive_c/vilight
+# which inside wine will look lik c:\vilight
 FRESH_CLONE=`pwd`/contrib/build-wine/fresh_clone
 FRESH_CLONE_DIR=$FRESH_CLONE/$GIT_DIR_NAME
 
@@ -66,9 +66,9 @@ FRESH_CLONE_DIR=$FRESH_CLONE/$GIT_DIR_NAME
     $SUDO docker run -it \
     -e GIT_REPO="$GIT_REPO" \
     --name electroncash-wine-builder-cont \
-    -v $FRESH_CLONE_DIR:/opt/wine64/drive_c/delight \
+    -v $FRESH_CLONE_DIR:/opt/wine64/drive_c/vilight \
     --rm \
-    --workdir /opt/wine64/drive_c/delight/contrib/build-wine \
+    --workdir /opt/wine64/drive_c/vilight/contrib/build-wine \
     electroncash-wine-builder-img \
     ./_build.sh $REV
 ) || fail "Build inside docker container failed"

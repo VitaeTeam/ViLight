@@ -7,7 +7,7 @@
         <import type="android.view.View"/>
         <variable
             name="model"
-            type="cc.devault.delight1.TransactionModel"/>
+            type="cc.vitae.vilight1.TransactionModel"/>
     </data>
 
     <android.support.constraint.ConstraintLayout

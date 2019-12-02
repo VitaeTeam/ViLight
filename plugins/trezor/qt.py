@@ -28,10 +28,10 @@ PASSPHRASE_HELP = PASSPHRASE_HELP_SHORT + "  " + _(
     "accessible behind its own passphrase.")
 RECOMMEND_PIN = _(
     "You should enable PIN protection.  Your PIN is the only protection "
-    "for your DVT if your device is lost or stolen.")
+    "for your VITAE if your device is lost or stolen.")
 PASSPHRASE_NOT_PIN = _(
     "If you forget a passphrase you will be unable to access any "
-    "DVT in the wallet behind it.  A passphrase is not a PIN. "
+    "VITAE in the wallet behind it.  A passphrase is not a PIN. "
     "Only change this if you are sure you understand it.")
 MATRIX_RECOVERY = _(
     "Enter the recovery words by pressing the buttons according to what "
@@ -349,7 +349,7 @@ class SettingsDialog(WindowModalDialog):
             currently_enabled = self.features.passphrase_protection
             if currently_enabled:
                 msg = _("After disabling passphrases, you can only pair this "
-                        "DeLight wallet if it had an empty passphrase. "
+                        "ViLight wallet if it had an empty passphrase. "
                         "If its passphrase was not empty, you will need to "
                         "create a new wallet with the install wizard. You "
                         "can use this wallet again at any time by re-enabling "
@@ -491,7 +491,7 @@ class SettingsDialog(WindowModalDialog):
             if wallet and sum(wallet.get_balance()):
                 title = _("Confirm Device Wipe")
                 msg = _("Are you SURE you want to wipe the device?\n"
-                        "Your wallet still has DVT in it!")
+                        "Your wallet still has VITAE in it!")
                 if not self.question(msg, title=title,
                                      icon=QMessageBox.Critical):
                     return
@@ -563,7 +563,7 @@ class SettingsDialog(WindowModalDialog):
         settings_glayout.addWidget(pin_button, 2, 1)
         pin_msg = QLabel(_("PIN protection is strongly recommended.  "
                            "A PIN is your only protection against someone "
-                           "stealing your DVT if they obtain physical "
+                           "stealing your VITAE if they obtain physical "
                            "access to your {}.").format(plugin.device))
         pin_msg.setWordWrap(True)
         pin_msg.setStyleSheet("color: red")
@@ -624,7 +624,7 @@ class SettingsDialog(WindowModalDialog):
         clear_pin_button.clicked.connect(clear_pin)
         clear_pin_warning = QLabel(
             _("If you disable your PIN, anyone with physical access to your "
-              "{} device can spend your DVT.").format(plugin.device))
+              "{} device can spend your VITAE.").format(plugin.device))
         clear_pin_warning.setWordWrap(True)
         clear_pin_warning.setStyleSheet("color: red")
         advanced_glayout.addWidget(clear_pin_button, 0, 2)
@@ -649,7 +649,7 @@ class SettingsDialog(WindowModalDialog):
         wipe_device_msg.setWordWrap(True)
         wipe_device_warning = QLabel(
             _("Only wipe a device if you have the recovery seed written down "
-              "and the device wallet(s) are empty, otherwise the DVT "
+              "and the device wallet(s) are empty, otherwise the VITAE "
               "will be lost forever."))
         wipe_device_warning.setWordWrap(True)
         wipe_device_warning.setStyleSheet("color: red")

@@ -6,7 +6,7 @@
     <data>
         <variable
             name="model"
-            type="cc.devault.delight1.RequestModel"/>
+            type="cc.vitae.vilight1.RequestModel"/>
     </data>
 
     <android.support.constraint.ConstraintLayout

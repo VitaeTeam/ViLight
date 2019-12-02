@@ -1,0 +1,21 @@
+# If you want Electron Cash to appear in a linux app launcher ("start menu"),
+# install this file by doing:
+# sudo desktop-file-install vilight.desktop
+
+[Desktop Entry]
+Comment=Lightweight Vitae Client
+Exec=vilight %u
+GenericName=ViLight - Vitae Wallet
+Icon=vilight
+Name=ViLight
+Categories=Finance;Network;
+StartupNotify=true
+StartupWMClass=ViLight
+Terminal=false
+Type=Application
+MimeType=x-scheme-handler/bitcoincash;
+Actions=Testnet;
+
+[Desktop Action Testnet]
+Exec=electron-cash --testnet %u
+Name=Testnet mode

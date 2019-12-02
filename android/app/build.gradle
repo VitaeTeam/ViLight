@@ -18,13 +18,10 @@ android {
     compileSdkVersion 28
 
     defaultConfig {
-        applicationId "cc.devault.delight"
+        applicationId "cc.vitae.vilight"
         minSdkVersion 16
 
-        // Before increasing this to 28, all layouts must be reviewed to see whether they need
-        // <requestFocus/> tags
-        // (https://developer.android.com/about/versions/pie/android-9.0-changes-28#focus).
-        targetSdkVersion 26
+        targetSdkVersion 28
 
         def ecVersion = null
         file("$REPO_ROOT/lib/version.py").eachLine {
@@ -36,7 +33,7 @@ android {
         if (ecVersion == null) {
             throw new GradleException("Couldn't find version number")
         }
-        def BUILD_NUM = 0
+        def BUILD_NUM = 2
         versionName "$ecVersion-$BUILD_NUM"
         def verParsed = ecVersion.split(/\./).collect { Integer.parseInt(it) }
         versionCode((verParsed[0] * 1000000) + (verParsed[1] * 10000) + (verParsed[2] * 100) +
@@ -52,7 +49,7 @@ android {
             extractPackages "electroncash.locale"
         }
         ndk {
-            abiFilters "x86", "armeabi-v7a", "arm64-v8a"
+            abiFilters "x86", "x86_64", "armeabi-v7a", "arm64-v8a"
         }
     }
 
@@ -106,7 +103,7 @@ android {
 
     applicationVariants.all { variant ->
         variant.outputs.all {
-            outputFileName = "delight-${variant.versionName}.apk"
+            outputFileName = "vilight-${variant.versionName}.apk"
         }
     }
 }

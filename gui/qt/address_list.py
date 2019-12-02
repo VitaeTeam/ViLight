@@ -60,7 +60,7 @@ class AddressList(MyTreeWidget):
         assert self.wallet
         self.cleaned_up = False
 
-        # Cash Accounts support
+        # Vitae IDs support
         self._ca_cb_registered = False
         self._ca_minimal_chash_updated_signal.connect(self._ca_update_chash)
 
@@ -78,7 +78,7 @@ class AddressList(MyTreeWidget):
 
     def filter(self, p):
         ''' Reimplementation from superclass filter.  Chops off the
-        "devault:" prefix so that address filters ignore this prefix.
+        "vitae:" prefix so that address filters ignore this prefix.
         Closes #1440. '''
         cashaddr_prefix = f"{networks.net.CASHADDR_PREFIX}:".lower()
         p = p.strip()
@@ -169,7 +169,7 @@ class AddressList(MyTreeWidget):
             used_item = QTreeWidgetItem( [ _("Used"), '', '', '', '', ''] )
             used_flag = False
             addr_list = change_addresses if is_change else receiving_addresses
-            # Cash Account support - we do this here with the already-prepared addr_list for performance reasons
+            # Vitae ID support - we do this here with the already-prepared addr_list for performance reasons
             ca_list_all = self.wallet.cashacct.get_cashaccounts(addr_list)
             ca_by_addr = defaultdict(list)
             for info in ca_list_all:
@@ -181,10 +181,10 @@ class AddressList(MyTreeWidget):
                 is_used = self.wallet.is_used(address)
                 balance = sum(self.wallet.get_addr_balance(address))
                 address_text = address.to_ui_string()
-                # Cash Accounts
+                # Vitae IDs
                 ca_info, ca_list = None, ca_by_addr.get(address)
                 if ca_list:
-                    # Add Cash Account emoji -- the emoji used is the most
+                    # Add Vitae ID emoji -- the emoji used is the most
                     # recent cash account registration for said address
                     ca_list.sort(key=lambda x: ((x.number or 0), str(x.collision_hash)))
                     for ca in ca_list:
@@ -193,7 +193,7 @@ class AddressList(MyTreeWidget):
                     ca_info = self._ca_get_default(ca_list)
                     if ca_info:
                         address_text = ca_info.emoji + " " + address_text
-                # /Cash Accounts
+                # /Vitae IDs
                 label = self.wallet.labels.get(address.to_storage_string(), '')
                 balance_text = self.parent.format_amount(balance, whitespaces=True)
                 columns = [address_text, str(n), label, balance_text, str(num)]
@@ -203,7 +203,7 @@ class AddressList(MyTreeWidget):
                     columns.insert(4, fiat_balance)
                 address_item = SortableTreeWidgetItem(columns)
                 if ca_info:
-                    # Set Cash Accounts: tool tip.. this will read the minimal_chash attribute we added to this object above
+                    # Set Vitae IDs: tool tip.. this will read the minimal_chash attribute we added to this object above
                     self._ca_set_item_tooltip(address_item, ca_info)
                 address_item.setTextAlignment(3, Qt.AlignRight)
                 address_item.setFont(3, self.monospace_font)
@@ -279,10 +279,7 @@ class AddressList(MyTreeWidget):
             alt_copy_text, alt_column_title = None, None
             if col == 0:
                 copy_text = addr.to_full_ui_string()
-                if Address.FMT_UI == Address.FMT_LEGACY:
-                    alt_copy_text, alt_column_title = addr.to_full_string(Address.FMT_CASHADDR), _('Cash Address')
-                else:
-                    alt_copy_text, alt_column_title = addr.to_full_string(Address.FMT_LEGACY), _('Legacy Address')
+                alt_copy_text, alt_column_title = addr.to_full_string(Address.FMT_LEGACY), _('Legacy Address')
             else:
                 copy_text = item.text(col)
             menu.addAction(_("Copy {}").format(column_title), lambda: doCopy(copy_text))
@@ -372,12 +369,12 @@ class AddressList(MyTreeWidget):
                 self.parent.show_address(addr)
 
     #########################
-    # Cash Accounts related #
+    # Vitae IDs related #
     #########################
     def _ca_set_item_tooltip(self, item, ca_info):
         minimal_chash = getattr(ca_info, 'minimal_chash', None)
         info_str = self.wallet.cashacct.fmt_info(ca_info, minimal_chash)
-        item.setToolTip(0, "<i>" + _("Cash Account:") + "</i><p>&nbsp;&nbsp;<b>"
+        item.setToolTip(0, "<i>" + _("Vitae ID:") + "</i><p>&nbsp;&nbsp;<b>"
                            + f"{info_str}</b>")
 
     def _ca_update_chash(self, ca_info, minimal_chash):
@@ -416,7 +413,7 @@ class AddressList(MyTreeWidget):
         shows a tooltip optionally, and updates self. '''
         self.wallet.cashacct.set_address_default(ca_info)
         if show_tip:
-            QToolTip.showText(QCursor.pos(), _("Cash Account has been made the default for this address"), self)
+            QToolTip.showText(QCursor.pos(), _("Vitae ID has been made the default for this address"), self)
         self.parent.ca_address_default_changed_signal.emit(ca_info)  # eventually calls self.update
 
     def _ca_on_address_default_change(self, ignored):

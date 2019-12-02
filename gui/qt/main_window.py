@@ -459,8 +459,8 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
         if self.wallet.is_watching_only():
             msg = ' '.join([
                 _("This wallet is watching-only."),
-                _("This means you will not be able to spend DeVault with it."),
-                _("Make sure you own the seed phrase or the private keys, before you request DeVault to be sent to this wallet.")
+                _("This means you will not be able to spend Vitae with it."),
+                _("Make sure you own the seed phrase or the private keys, before you request Vitae to be sent to this wallet.")
             ])
             self.show_warning(msg, title=_('Information'))
 
@@ -487,7 +487,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
         if is_old_bad:
             msg = ' '.join([
                 _("This testnet wallet has an invalid master key format."),
-                _("(Old versions of DeLight before 3.3.6 produced invalid testnet wallets)."),
+                _("(Old versions of ViLight before 3.3.6 produced invalid testnet wallets)."),
                 '<br><br>',
                 _("In order to use this wallet without errors with this version of EC, please <b>re-generate this wallet from seed</b>."),
                 "<br><br><em><i>~SPV stopped~</i></em>"
@@ -536,7 +536,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
 
                 self.show_message(_("A copy of your wallet file was created in")+" '%s'" % str(new_path), title=_("Wallet backup created"))
             except (IOError, os.error) as reason:
-                self.show_critical(_("DeLight was unable to copy your wallet file to the specified location.") + "\n" + str(reason), title=_("Unable to create backup"))
+                self.show_critical(_("ViLight was unable to copy your wallet file to the specified location.") + "\n" + str(reason), title=_("Unable to create backup"))
 
     def update_recently_visited(self, filename):
         recent = self.config.get('recently_open', [])
@@ -636,7 +636,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
         tools_menu = menubar.addMenu(_("&Tools"))
 
         # Settings / Preferences are all reserved keywords in OSX using this as work around
-        prefs_tit = _("DeLight preferences") if sys.platform == 'darwin' else _("Preferences")
+        prefs_tit = _("ViLight preferences") if sys.platform == 'darwin' else _("Preferences")
         tools_menu.addAction(prefs_tit, self.settings_dialog, QKeySequence("Ctrl+,") )
         gui_object = self.gui_object
         weakSelf = Weak.ref(self)
@@ -671,7 +671,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
         help_menu.addAction(_("&About"), self.show_about)
         help_menu.addAction(_("About Qt"), self.app.aboutQt)
         help_menu.addAction(_("&Check for updates..."), lambda: self.gui_object.show_update_checker(self))
-        help_menu.addAction(_("&Official website"), lambda: webopen("https://devault.cc"))
+        help_menu.addAction(_("&Official website"), lambda: webopen("https://vitae.cc"))
         help_menu.addSeparator()
 #        help_menu.addAction(_("Documentation"), lambda: webopen("http://electroncash.readthedocs.io/")).setShortcut(QKeySequence.HelpContents)
         help_menu.addAction(_("&Report Bug"), self.show_report_bug)
@@ -690,24 +690,24 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
             self.show_error(_('No donation address for this server'))
 
     def show_about(self):
-        QMessageBox.about(self, "DeLight",
-            "<p><font size=+3><b>DeLight</b></font></p><p>" + _("Version") + f" {self.wallet.electrum_version}" + "</p>" +
-            '<p><span style="font-size:11pt; font-weight:500;">' + "Copyright © 2019<br>The DeVault Developers" + "</span></p>" +
+        QMessageBox.about(self, "ViLight",
+            "<p><font size=+3><b>ViLight</b></font></p><p>" + _("Version") + f" {self.wallet.electrum_version}" + "</p>" +
+            '<p><span style="font-size:11pt; font-weight:500;">' + "Copyright © 2019<br>The Vitae Developers" + "</span></p>" +
             '<p><span style="font-weight:200;">' +
             '<p><span style="font-size:11pt; font-weight:500;">' + "Copyright © 2017-2019<br>Electron Cash LLC &amp; The Electron Cash Developers" + "</span></p>" +
             '<p><span style="font-weight:200;">' +            
-            _("DeLight's focus is speed, with low resource usage and simplifying DeVault. You do not need to perform regular backups, because your wallet can be recovered from a secret phrase that you can memorize or write on paper. Startup times are instant because it operates in conjunction with high-performance servers that handle the most complicated parts of the DeVault system.") +
+            _("ViLight's focus is speed, with low resource usage and simplifying Vitae. You do not need to perform regular backups, because your wallet can be recovered from a secret phrase that you can memorize or write on paper. Startup times are instant because it operates in conjunction with high-performance servers that handle the most complicated parts of the Vitae system.") +
             "</span></p>"
         )
 
     def show_report_bug(self):
         msg = ' '.join([
             _("Please report any bugs as issues on github:<br/>"),
-            "<a href=\"https://github.com/devaultcrypto/DeLight/issues\">https://github.com/devaultcrypto/DeLight/issues</a><br/><br/>",
-            _("Before reporting a bug, upgrade to the most recent version of DeLight (latest release or git HEAD), and include the version number in your report."),
+            "<a href=\"https://github.com/VitaeTeam/ViLight/issues\">https://github.com/VitaeTeam/ViLight/issues</a><br/><br/>",
+            _("Before reporting a bug, upgrade to the most recent version of ViLight (latest release or git HEAD), and include the version number in your report."),
             _("Try to explain not only what the bug is, but how it occurs.")
          ])
-        self.show_message(msg, title="DeLight - " + _("Reporting Bugs"), rich_text = True)
+        self.show_message(msg, title="ViLight - " + _("Reporting Bugs"), rich_text = True)
 
     def notify(self, message):
         self.gui_object.notify(message)
@@ -1002,7 +1002,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
         self.receive_address_e = ButtonsLineEdit()
         self.receive_address_e.addCopyButton()
         self.receive_address_e.setReadOnly(True)
-        msg = _('DeVault address where the payment should be received. Note that each payment request uses a different DeVault address.')
+        msg = _('Vitae address where the payment should be received. Note that each payment request uses a different Vitae address.')
         label = HelpLabel(_('&Receiving address'), msg)
         label.setBuddy(self.receive_address_e)
         self.receive_address_e.textChanged.connect(self.update_receive_qr)
@@ -1057,8 +1057,8 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
         msg = ' '.join([
             _('Expiration date of your request.'),
             _('This information is seen by the recipient if you send them a signed payment request.'),
-            _('Expired requests have to be deleted manually from your list, in order to free the corresponding DeVault addresses.'),
-            _('The DeVault address never expires and will always be part of this DeLight wallet.'),
+            _('Expired requests have to be deleted manually from your list, in order to free the corresponding Vitae addresses.'),
+            _('The Vitae address never expires and will always be part of this ViLight wallet.'),
         ])
         label = HelpLabel(_('Request &expires'), msg)
         label.setBuddy(self.expires_combo)
@@ -1351,12 +1351,12 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
             if opret:
                 kwargs[arg] = opret
 
-        # Special case hack -- see #1473. Omit devault: prefix from
+        # Special case hack -- see #1473. Omit vitae: prefix from
         # legacy address if no other params present in receive request.
         if Address.FMT_UI == Address.FMT_LEGACY and not kwargs and not amount and not message:
             uri = self.receive_address.to_ui_string()
         else:
-            # Otherwise proceed as normal, prepending devault: to URI
+            # Otherwise proceed as normal, prepending vitae: to URI
             uri = web.create_URI(self.receive_address, amount, message, **kwargs)
 
         self.receive_qr.setData(uri)
@@ -1379,8 +1379,8 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
         msg = "<span style=\"font-weight:400;\">" + _('Recipient of the funds.') + " " + \
               _("You may enter:"
                 "<ul>"
-                "<li> DeVault <b>Address</b> <b>★</b>"
-                "<li> <b>Cash Account</b> <b>★</b> e.g. <i>satoshi#123</i>"
+                "<li> Vitae <b>Address</b> <b>★</b>"
+                "<li> <b>Vitae ID</b> <b>★</b> e.g. <i>satoshi#123</i>"
                 "<li> <b>Contact name</b> <b>★</b> from the Contacts tab"
                 "<li> <b>CoinText</b> e.g. <i>cointext:+1234567</i>"
                 "<li> <b>OpenAlias</b> e.g. <i>satoshi@domain.com</i>"
@@ -1414,7 +1414,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
         grid.addWidget(self.message_e, 2, 1, 1, -1)
 
         msg_opreturn = ( _('OP_RETURN data (optional).') + '\n\n'
-                        + _('Posts a PERMANENT note to the DVT blockchain as part of this transaction.')
+                        + _('Posts a PERMANENT note to the VITAE blockchain as part of this transaction.')
                         + '\n\n' + _('If you specify OP_RETURN text, you may leave the \'Pay to\' field blank.') )
         self.opreturn_label = HelpLabel(_('&OP_RETURN'), msg_opreturn)
         grid.addWidget(self.opreturn_label,  3, 0)
@@ -1466,7 +1466,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
         hbox.addStretch(1)
         grid.addLayout(hbox, 5, 4)
 
-        msg = _('DeVault transactions are in general not free. A transaction fee is paid by the sender of the funds.') + '\n\n'\
+        msg = _('Vitae transactions are in general not free. A transaction fee is paid by the sender of the funds.') + '\n\n'\
               + _('The amount of fee can be decided freely by the sender. However, transactions with low fees take more time to be processed.') + '\n\n'\
               + _('A suggested fee is automatically added to this field. You may override it. The suggested fee increases with the size of the transaction.')
         self.fee_e_label = HelpLabel(_('F&ee'), msg)
@@ -2071,7 +2071,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
                 return False, _("Payment request has expired")
             if pr:
                 refund_address = self.wallet.get_receiving_addresses()[0]
-                ack_status, ack_msg = pr.send_payment(str(tx), refund_address)
+                ack_status, ack_msg = pr.send_payment(str(tx), str(refund_address))
                 msg = ack_msg
                 if ack_status:
                     self.invoices.set_paid(pr, tx.txid())
@@ -2217,7 +2217,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
         try:
             out = web.parse_URI(URI, self.on_pr)
         except Exception as e:
-            self.show_error(_('Invalid devault URI:') + '\n' + str(e))
+            self.show_error(_('Invalid vitae URI:') + '\n' + str(e))
             return
         self.show_send_tab()
         r = out.get('r')
@@ -2394,13 +2394,13 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
             self.payto_e.setFocus()
 
     def resolve_cashacct(self, name):
-        ''' Throws up a WaitingDialog while it resolves a Cash Account.
+        ''' Throws up a WaitingDialog while it resolves a Vitae ID.
 
         Goes out to network, verifies all tx's.
 
         Returns: a tuple of: (Info, Minimally_Encoded_Formatted_AccountName)
 
-        Argument `name` should be a Cash Account name string of the form:
+        Argument `name` should be a Vitae ID name string of the form:
 
           name#number.123
           name#number
@@ -2408,7 +2408,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
 
         If the result would be ambigious, that is considered an error, so enough
         of the account name#number.collision_hash needs to be specified to
-        unambiguously resolve the Cash Account.
+        unambiguously resolve the Vitae ID.
 
         On failure throws up an error window and returns None.'''
         return cashacctqt.resolve_cashacct(self, name)
@@ -2556,7 +2556,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
                                  'network' : self.network,
                                  'plugins' : self.gui_object.plugins,
                                  'window': self})
-        console.updateNamespace({'util' : util, 'devault':bitcoin})
+        console.updateNamespace({'util' : util, 'vitae':bitcoin})
 
         set_json = Weak(self.console.set_json)
         c = commands.Commands(self.config, self.wallet, self.network, lambda: set_json(True))
@@ -2589,7 +2589,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
         sb.addPermanentWidget(self.search_box, 1)
 
         self.update_available_button = StatusBarButton(QIcon(":icons/electron-cash-update.svg"), _("Update available, click for details"), lambda: self.gui_object.show_update_checker(self, skip_check=True))
-        self.update_available_button.setStatusTip(_("A DeLight update is available"))
+        self.update_available_button.setStatusTip(_("A ViLight update is available"))
         sb.addPermanentWidget(self.update_available_button)
         self.update_available_button.setVisible(bool(self.gui_object.new_version_available))  # if hidden now gets unhidden by on_update_available when a new version comes in
 
@@ -2847,7 +2847,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
                 "private key, and verifying with the corresponding public key. The "
                 "address you have entered does not have a unique public key, so these "
                 "operations cannot be performed.") + '\n\n' + \
-               _('The operation is undefined. Not just in DeLight, but in general.')
+               _('The operation is undefined. Not just in ViLight, but in general.')
 
     @protected
     def do_sign(self, address, message, signature, password):
@@ -2856,7 +2856,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
         try:
             addr = Address.from_string(address)
         except:
-            self.show_message(_('Invalid DeVault address.'))
+            self.show_message(_('Invalid Vitae address.'))
             return
         if addr.kind != addr.ADDR_P2PKH:
             self.show_message(_('Cannot sign messages with this type of address.') + '\n\n' + self.msg_sign)
@@ -2876,7 +2876,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
         try:
             address = Address.from_string(address.text().strip())
         except:
-            self.show_message(_('Invalid DeVault address.'))
+            self.show_message(_('Invalid Vitae address.'))
             return
         message = message.toPlainText().strip().encode('utf-8')
         try:
@@ -3014,7 +3014,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
             return tx
         except:
             traceback.print_exc(file=sys.stdout)
-            self.show_critical(_("DeLight was unable to parse your transaction"))
+            self.show_critical(_("ViLight was unable to parse your transaction"))
             return
 
     # Due to the asynchronous nature of the qr reader we need to keep the
@@ -3048,7 +3048,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
                     return
                 if not result:
                     return
-                # if the user scanned a devault URI
+                # if the user scanned a vitae URI
                 if result.lower().startswith(networks.net.CASHADDR_PREFIX + ':'):
                     self.pay_to_URI(result)
                     return
@@ -3082,7 +3082,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
             file_content = file_content.strip()
             tx_file_dict = json.loads(str(file_content))
         except (ValueError, IOError, OSError, json.decoder.JSONDecodeError) as reason:
-            self.show_critical(_("DeLight was unable to open your transaction file") + "\n" + str(reason), title=_("Unable to read file or no transaction found"))
+            self.show_critical(_("ViLight was unable to open your transaction file") + "\n" + str(reason), title=_("Unable to read file or no transaction found"))
             return
         tx = self.tx_from_text(file_content)
         return tx
@@ -3097,7 +3097,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
             if tx:
                 self.show_transaction(tx)
         except SerializationError as e:
-            self.show_critical(_("DeLight was unable to deserialize the transaction:") + "\n" + str(e))
+            self.show_critical(_("ViLight was unable to deserialize the transaction:") + "\n" + str(e))
 
     def do_process_from_file(self, *, fileName = None):
         from electroncash.transaction import SerializationError
@@ -3106,7 +3106,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
             if tx:
                 self.show_transaction(tx)
         except SerializationError as e:
-            self.show_critical(_("DeLight was unable to deserialize the transaction:") + "\n" + str(e))
+            self.show_critical(_("ViLight was unable to deserialize the transaction:") + "\n" + str(e))
 
     def do_process_from_txid(self, *, txid=None, parent=None, tx_desc=None):
         parent = parent or self
@@ -3212,7 +3212,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
             self.do_export_privkeys(filename, private_keys, csv_button.isChecked())
         except (IOError, os.error) as reason:
             txt = "\n".join([
-                _("DeLight was unable to produce a private key-export."),
+                _("ViLight was unable to produce a private key-export."),
                 str(reason)
             ])
             self.show_critical(txt, title=_("Unable to create csv"))
@@ -3247,7 +3247,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
                 self.wallet.set_label(key, value)
             self.show_message(_("Your labels were imported from") + " '%s'" % str(labelsFile))
         except (IOError, OSError, json.decoder.JSONDecodeError) as reason:
-            self.show_critical(_("DeLight was unable to import your labels.") + "\n" + str(reason))
+            self.show_critical(_("ViLight was unable to import your labels.") + "\n" + str(reason))
         self.address_list.update()
         self.history_list.update()
         self.utxo_list.update()
@@ -3262,7 +3262,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
                     json.dump(labels, f, indent=4, sort_keys=True)
                 self.show_message(_("Your labels were exported to") + " '%s'" % str(fileName))
         except (IOError, os.error) as reason:
-            self.show_critical(_("DeLight was unable to export your labels.") + "\n" + str(reason))
+            self.show_critical(_("ViLight was unable to export your labels.") + "\n" + str(reason))
 
     def export_history_dialog(self):
         d = WindowModalDialog(self.top_level_window(), _('Export History'))
@@ -3287,7 +3287,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
         try:
             self.do_export_history(self.wallet, filename, csv_button.isChecked())
         except (IOError, os.error) as reason:
-            export_error_label = _("DeLight was unable to produce a transaction export.")
+            export_error_label = _("ViLight was unable to produce a transaction export.")
             self.show_critical(export_error_label + "\n" + str(reason), title=_("Unable to export history"))
             return
         self.show_message(_("Your wallet history has been successfully exported."))
@@ -3773,9 +3773,9 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
         SSL_id_e.setReadOnly(True)
         id_widgets.append((SSL_id_label, SSL_id_e))
 
-        units = util.base_unit_labels  # ( 'DVT', 'mDVT', 'bits' )
+        units = util.base_unit_labels  # ( 'VITAE', 'mVITAE', 'bits' )
         msg = _('Base unit of your wallet.')\
-              + '\n1 DVT = 1,000 mDVT = 1,000,000 bits.\n' \
+              + '\n1 VITAE = 1,000 mVITAE = 1,000,000 bits.\n' \
               + _(' These settings affects the fields in the Send tab')+' '
         unit_label = HelpLabel(_('Base unit') + ':', msg)
         unit_combo = QComboBox()
@@ -3886,7 +3886,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
         gui_widgets.append((None, None)) # spacer
         updatecheck_cb = QCheckBox(_("Automatically check for updates"))
         updatecheck_cb.setChecked(self.gui_object.has_auto_update_check())
-        updatecheck_cb.setToolTip(_("Enable this option if you wish to be notified as soon as a new version of DeLight becomes available"))
+        updatecheck_cb.setToolTip(_("Enable this option if you wish to be notified as soon as a new version of ViLight becomes available"))
         def on_set_updatecheck(v):
             self.gui_object.set_auto_update_check(v == Qt.Checked)
         updatecheck_cb.stateChanged.connect(on_set_updatecheck)
@@ -4134,7 +4134,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
 
         run_hook('close_settings_dialog')
         if self.need_restart:
-            self.show_message(_('Please restart DeLight to activate the new GUI settings'), title=_('Success'))
+            self.show_message(_('Please restart ViLight to activate the new GUI settings'), title=_('Success'))
 
     def closeEvent(self, event):
         # It seems in some rare cases this closeEvent() is called twice
@@ -4454,7 +4454,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
                 <p>{}</p>
                 '''.format(_("CashShuffle is disabled for this wallet.") if not cashshuffle_flag else _("CashShuffle is disabled."),
                            _("Would you like to enable CashShuffle for this wallet?"))
-                info = ' '.join([_("If you enable it, DeLight will shuffle your coins for greater <b>privacy</b>. However, you will pay fractions of a penny per shuffle in transaction fees."),
+                info = ' '.join([_("If you enable it, ViLight will shuffle your coins for greater <b>privacy</b>. However, you will pay fractions of a penny per shuffle in transaction fees."),
                                  _("(You can always toggle it later using the CashShuffle button.)")])
                 res, chkd = self.msg_box(icon=icon,
                                          parent=self.top_level_window(),
@@ -4548,13 +4548,13 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
             self.print_error("register_new_cash_account: no receive address specified")
             return
         def on_link(ignored):
-            webopen('https://www.cashaccount.info/')
+            webopen('https://www.vitaeid.com/')
         name, placeholder = '', 'Satoshi_Nakamoto'
         while True:
             lh = self.wallet.get_local_height()
-            name = line_dialog(self, _("Register A New Cash Account"),
-                               (_("You are registering a new <a href='ca'>Cash Account</a> for your address <b><pre>{address}</pre></b>").format(address=addr.to_ui_string())
-                                + "<<br>" + _("How it works: <a href='ca'>Cash Accounts</a> registrations work by issuing an <b>OP_RETURN</b> transaction to yourself, costing fractions of a penny. "
+            name = line_dialog(self, _("Register A New Vitae ID"),
+                               (_("You are registering a new <a href='ca'>Vitae ID</a> for your address <b><pre>{address}</pre></b>").format(address=addr.to_ui_string())
+                                + "<<br>" + _("How it works: <a href='ca'>Vitae IDs</a> registrations work by issuing an <b>OP_RETURN</b> transaction to yourself, costing fractions of a penny. "
                                               "You will be offered the opportunity to review the generated transaction before broadcasting it to the blockchain.")
                                 + "<br><br>" + _("The current block height is <b><i>{block_height}</i></b>, so the new cash account will likely look like: <b><u><i>AccountName<i>#{number}</u></b>.")
                                 .format(block_height=lh or '???', number=max(cashacct.bh2num(lh or 0)+1, 0) or '???')
@@ -4567,7 +4567,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
                 return
             name = name.strip()
             if not cashacct.name_accept_re.match(name):
-                self.show_error(_("The specified name cannot be used for a Cash Accounts registration. You must specify 1-99 alphanumeric (ASCII) characters, without spaces (underscores are permitted as well)."))
+                self.show_error(_("The specified name cannot be used for a Vitae IDs registration. You must specify 1-99 alphanumeric (ASCII) characters, without spaces (underscores are permitted as well)."))
                 continue
             self._reg_new_cash_account(name, addr)
             return
@@ -4595,7 +4595,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
 
         # Set a default description -- this we allow them to edit
         self.message_e.setText(
-            _("Cash Accounts Registration: '{name}' -> {address}").format(
+            _("Vitae IDs Registration: '{name}' -> {address}").format(
                 name=name, address=addr.to_ui_string()
             )
         )
@@ -4606,10 +4606,10 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
 
         if not cashaccounts_never_show_send_tab_hint:
             msg1 = (
-                _("The Send Tab has been filled-in with your <b>Cash Accounts</b> registration data.")
+                _("The Send Tab has been filled-in with your <b>Vitae IDs</b> registration data.")
                 + "<br><br>" + _("Please review the transaction, save it, and/or broadcast it at your leisure.")
             )
-            msg2 = ( _("After at least <i>1 confirmation</i>, you will be able to use your new <b>Cash Account</b>, and it will be visible in DeLight in the <b>Addresses</b> tab.")
+            msg2 = ( _("After at least <i>1 confirmation</i>, you will be able to use your new <b>Vitae ID</b>, and it will be visible in ViLight in the <b>Addresses</b> tab.")
             )
             msg3 = _("If you wish to control which specific coins are used to "
                      "fund this registration transaction, feel free to use the "
@@ -4619,7 +4619,7 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
             res = self.msg_box(
                 # TODO: get SVG icon..
                 parent = self, icon=QIcon(":icons/cashacct-logo.png").pixmap(75, 75),
-                title=_('Register A New Cash Account'), rich_text=True,
+                title=_('Register A New Vitae ID'), rich_text=True,
                 text = msg1, informative_text = msg2, detail_text = msg3,
                 checkbox_text=_("Never show this again"), checkbox_ischecked=False
             )
@@ -4743,7 +4743,7 @@ class TxUpdateMgr(QObject, PrintError):
                     if tx:
                         is_relevant, is_mine, v, fee = parent.wallet.get_wallet_delta(tx)
                         for _typ, addr, val in tx.outputs():
-                            # Find Cash Account registrations that are for addresses *in* this wallet
+                            # Find Vitae ID registrations that are for addresses *in* this wallet
                             if isinstance(addr, cashacct.ScriptOutput) and parent.wallet.is_mine(addr.address):
                                 n_cashacct += 1
                                 last_seen_ca_name = addr.name
@@ -4774,10 +4774,10 @@ class TxUpdateMgr(QObject, PrintError):
                     ca_text = ''
                     if n_cashacct > 1:
                         # plural
-                        ca_text = " + " + _("{number_of_cashaccounts} Cash Accounts registrations").format(number_of_cashaccounts = n_cashacct)
+                        ca_text = " + " + _("{number_of_cashaccounts} Vitae IDs registrations").format(number_of_cashaccounts = n_cashacct)
                     elif n_cashacct == 1:
                         # singular
-                        ca_text = " + " + _("1 Cash Accounts registration ({cash_accounts_name})").format(cash_accounts_name = last_seen_ca_name)
+                        ca_text = " + " + _("1 Vitae IDs registration ({cash_accounts_name})").format(cash_accounts_name = last_seen_ca_name)
                     if total_amount > 0:
                         self.print_error("Notifying GUI %d tx"%(max(n_ok, n_cashacct)))
                         if max(n_ok, n_cashacct) > 1:

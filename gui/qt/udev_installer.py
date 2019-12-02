@@ -38,7 +38,7 @@ from electroncash.plugins import Plugins
 from electroncash_gui.qt import WindowModalDialog
 
 class InstallHardwareWalletSupportDialog(PrintError, WindowModalDialog):
-    UDEV_RULES_FILE='/etc/udev/rules.d/20-delight-hw-wallets.rules'
+    UDEV_RULES_FILE='/etc/udev/rules.d/20-vilight-hw-wallets.rules'
     GRAPHICAL_SUDOS=['pkexec','gksudo','kdesudo']
 
     ADDITIONAL_HARDWARE_IDS = {
@@ -64,7 +64,7 @@ class InstallHardwareWalletSupportDialog(PrintError, WindowModalDialog):
         info_label = QLabel()
         info_label.setText(
             _('This tool installs hardware wallet "udev rules" on your system.') + ' ' +
-            _('Correct udev rules are required in order for a hardware wallet to be accessed by DeLight.') + '\n\n' +
+            _('Correct udev rules are required in order for a hardware wallet to be accessed by ViLight.') + '\n\n' +
             _('Note: Installing udev rules requires root access via "sudo", so make sure you are in the sudoers file and/or have Administrator rights on this system!')
             )
         info_label.setWordWrap(True)
@@ -153,12 +153,12 @@ class InstallHardwareWalletSupportDialog(PrintError, WindowModalDialog):
 
         ids_set = self.device_manager.recognised_hardware.union(self.ADDITIONAL_HARDWARE_IDS)
         lines = [line_format.format(ids[0], ids[1]) for ids in ids_set]
-        return '# DeLight hardware wallet rules file\n' + '\n'.join(lines) + '\n'
+        return '# ViLight hardware wallet rules file\n' + '\n'.join(lines) + '\n'
 
     def _runScriptAsRoot(self, script: str) -> bool:
         assert script
 
-        with tempfile.NamedTemporaryFile(mode='w', prefix='delight') as tf:
+        with tempfile.NamedTemporaryFile(mode='w', prefix='vilight') as tf:
             tf.write(script)
             tf.flush()
 

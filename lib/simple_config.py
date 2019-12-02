@@ -288,7 +288,7 @@ class SimpleConfig(PrintError):
         return min(range(len(dist)), key=dist.__getitem__)
 
     def has_fee_estimates(self):
-        # We disabled fee estimates for DVT (from BCH.  They do more harm than good.
+        # We disabled fee estimates for VITAE (from BCH.  They do more harm than good.
         # Our blocks aren't full and it is not the intention for them to ever
         # be full according to all the full node implementers.  This is a
         # coreism that must die. :)

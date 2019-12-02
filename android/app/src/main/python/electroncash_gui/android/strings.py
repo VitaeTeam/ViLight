@@ -9,7 +9,7 @@ def _(s):
     return s
 
 _("Block explorer")
-_("Copyright 2019 the DeVault developers.")
+_("Copyright 2019 the Vitae developers.")
 _("Cannot specify private keys and addresses in the same wallet.")
 _("Change password")
 _("Close wallet")
@@ -20,7 +20,7 @@ _("Delete wallet")
 _("Disconnect")
 _("ID")
 _("Enter password")
-_("Import addresses or private keys")
+_("Import addresses (watch only)")
 _("Invalid address")
 _("Made with <a href='https://chaquo.com/chaquopy'>Chaquopy</a>, the Python SDK for Android.")
 _("New password")

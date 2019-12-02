@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# Electron Cash - lightweight Bitcoin Cash client
+# ViLight - lightweight Vitae client
 # Copyright (C) 2012 thomasv@gitorious
 #
 # This file is:
@@ -61,9 +61,9 @@ class MonkeyPatches:
             try:
                 #
                 # The below is very important to allow OpenSSL to do SSL connections on iOS without verifying certs.
-                # If you take this out, blockchain_headers from http://devault.com will fail, and the
+                # If you take this out, blockchain_headers from http://vitae.com will fail, and the
                 # "downloading headers" thing will take ages.  So I left this in.
-                # TODO: Figure out how to get devault.com to not fail with cert verification.
+                # TODO: Figure out how to get vitae.com to not fail with cert verification.
                 #   - Calin May 24, 2018
                 #
                 if (getattr(ssl, '_create_unverified_context', None)):

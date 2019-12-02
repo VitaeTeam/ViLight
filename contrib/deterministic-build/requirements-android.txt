@@ -28,3 +28,5 @@ pycryptodomex==3.6.6 \
     --hash=sha256:4a22e5c064f9b36b395492431f9540ec7fa3f044eeceafcfe850021519c930cb \
     --hash=sha256:05b558187dc5c8aed31a992adfa07cce30197308e17aef97f901aeaee3cb7e3e \
     --hash=sha256:7ae36df1d4479379ed9e89c03be0aeb6a33c9c914e45b434fde7cb9e5f200d18
+pivx-quark-hash==1.2 \
+    --hash=sha256:4ccaf9567e1fdb2ff0bf5ffaae038dfc45942daa6b7b1a3a72a34d22ecae2171

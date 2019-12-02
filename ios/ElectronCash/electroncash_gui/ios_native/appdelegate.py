@@ -40,6 +40,10 @@ class PythonAppDelegate(UIResponder):
         #application.setMinimumBackgroundFetchInterval_(UIApplicationBackgroundFetchIntervalMinimum)
         #bgStatus = "Enabled for this app." if UIBackgroundRefreshStatusAvailable == int(application.backgroundRefreshStatus) else "DISABLED"
         #print("Background refresh status: %s\nBackground fetch minimum interval: %f s\nMinimum Keep Alive Timeout: %f s"%(bgStatus,UIApplicationBackgroundFetchIntervalMinimum,UIMinimumKeepAliveTimeout))
+
+        utils.ios13_status_bar_workaround.appdelegate_hook(appdelegate = self,
+                                                           application = application)
+
         return True
 
     @objc_method
@@ -58,8 +62,8 @@ class PythonAppDelegate(UIResponder):
         eg = gui.ElectrumGui.gui
         ret = True
         if eg:
-            if scheme == 'devault':
-                eg.open_devault_url(url_string)
+            if scheme == 'vitae':
+                eg.open_vitae_url(url_string)
             elif scheme == 'file':
                 data, filename = utils.nsurl_read_local_file(url)
                 utils.NSLog("App file openURL: %s Options: %s",str(filename),str(py_from_ns(options) if options else dict()))

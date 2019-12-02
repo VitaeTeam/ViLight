@@ -26,7 +26,10 @@ import os, sys, re, json, time
 from collections import defaultdict
 from datetime import datetime
 from decimal import Decimal as PyDecimal  # Qt 5.12 also exports Decimal
+from functools import lru_cache
 import traceback
+from typing import NamedTuple, Union, TYPE_CHECKING, Tuple, Optional, Callable, Any
+
 import threading
 import hmac
 import stat
@@ -44,15 +47,17 @@ def inv_dict(d):
     return {v: k for k, v in d.items()}
 
 
-base_units = {'DVT':8, 'mDVT':5}
+base_units = {'VITAE':8, 'mVITAE':5}
 inv_base_units = inv_dict(base_units)
-base_unit_labels = tuple(inv_base_units[dp] for dp in sorted(inv_base_units.keys(), reverse=True))  # ('DVT', 'mDVT', 'bits')
+base_unit_labels = tuple(inv_base_units[dp] for dp in sorted(inv_base_units.keys(), reverse=True))  # ('VITAE', 'mVITAE', 'bits')
 
 fee_levels = [_('Within 25 blocks'), _('Within 10 blocks'), _('Within 5 blocks'), _('Within 2 blocks'), _('In the next block')]
 
 class NotEnoughFunds(Exception): pass
 
 class ExcessiveFee(Exception): pass
+
+class WalletFileException(Exception): pass
 
 class InvalidPassword(Exception):
     def __str__(self):
@@ -85,7 +90,7 @@ class MyEncoder(json.JSONEncoder):
         return super(MyEncoder, self).default(obj)
 
 class PrintError:
-    '''A handy base class'''
+    '''A handy base class for printing formatted log messages'''
     def diagnostic_name(self):
         return self.__class__.__name__
 
@@ -98,6 +103,51 @@ class PrintError:
 
     def print_msg(self, *msg):
         print_msg("[%s]" % self.diagnostic_name(), *msg)
+
+def export_meta(meta, fileName):
+    try:
+        with open(fileName, 'w+', encoding='utf-8') as f:
+            json.dump(meta, f, indent=4, sort_keys=True)
+    except (IOError, os.error) as e:
+        _logger.exception('')
+        raise FileExportFailed(e)
+
+def import_meta(path, validater, load_meta):
+    try:
+        with open(path, 'r', encoding='utf-8') as f:
+            d = validater(json.loads(f.read()))
+        load_meta(d)
+    #backwards compatibility for JSONDecodeError
+    except ValueError:
+        _logger.exception('')
+        raise FileImportFailed(_("Invalid JSON code."))
+    except BaseException as e:
+        _logger.exception('')
+        raise FileImportFailed(e)
+
+def make_aiohttp_session(proxy: Optional[dict], headers=None, timeout=None):
+    if headers is None:
+        headers = {'User-Agent': 'Electrum'}
+    if timeout is None:
+        timeout = aiohttp.ClientTimeout(total=30)
+    elif isinstance(timeout, (int, float)):
+        timeout = aiohttp.ClientTimeout(total=timeout)
+    ssl_context = ssl.create_default_context(purpose=ssl.Purpose.SERVER_AUTH, cafile=ca_path)
+
+    if proxy:
+        connector = SocksConnector(
+            socks_ver=SocksVer.SOCKS5 if proxy['mode'] == 'socks5' else SocksVer.SOCKS4,
+            host=proxy['host'],
+            port=int(proxy['port']),
+            username=proxy.get('user', None),
+            password=proxy.get('password', None),
+            rdns=True,
+            ssl=ssl_context,
+        )
+    else:
+        connector = aiohttp.TCPConnector(ssl=ssl_context)
+
+    return aiohttp.ClientSession(headers=headers, timeout=timeout, connector=connector)
 
 class ThreadJob(ABC, PrintError):
     """A job that is run periodically from a thread's main loop.  run() is
@@ -215,13 +265,6 @@ class DaemonThread(threading.Thread, PrintError):
             self.running = False
 
     def on_stop(self):
-        if 'ANDROID_DATA' in os.environ:
-            try:
-                import jnius
-                jnius.detach()
-                self.print_error("jnius detach")
-            except ImportError:
-                pass  # Chaquopy detaches automatically.
         self.print_error("stopped")
 
 
@@ -317,32 +360,12 @@ def profiler(func):
     return lambda *args, **kw_args: do_profile(args, kw_args)
 
 
-def android_ext_dir():
-    try:
-        import jnius
-        env = jnius.autoclass('android.os.Environment')
-    except ImportError:
-        from android.os import Environment as env  # Chaquopy import hook
-    return env.getExternalStorageDirectory().getPath()
-
+@lru_cache()
 def android_data_dir():
-    try:
-        import jnius
-        context = jnius.autoclass('org.kivy.android.PythonActivity').mActivity
-    except ImportError:
-        from com.chaquo.python import Python
-        context = Python.getPlatform().getApplication()
+    from com.chaquo.python import Python
+    context = Python.getPlatform().getApplication()
     return context.getFilesDir().getPath() + '/data'
 
-def android_headers_dir():
-    try:
-        import jnius
-        d = android_ext_dir() + '/org.electron.electron'
-        if not os.path.exists(d):
-            os.mkdir(d)
-        return d
-    except ImportError:
-        return android_data_dir()
 
 def ensure_sparse_file(filename):
     if os.name == "nt":
@@ -352,7 +375,7 @@ def ensure_sparse_file(filename):
             pass
 
 def get_headers_dir(config):
-    return android_headers_dir() if 'ANDROID_DATA' in os.environ else config.path
+    return android_data_dir() if 'ANDROID_DATA' in os.environ else config.path
 
 def assert_datadir_available(config_path):
     path = config_path
@@ -451,7 +474,7 @@ def user_dir(prefer_local=False):
     if 'ANDROID_DATA' in os.environ:
         return android_data_dir()
     elif os.name == 'posix' and "HOME" in os.environ:
-        return os.path.join(os.environ["HOME"], ".delight" )
+        return os.path.join(os.environ["HOME"], ".vilight" )
     elif "APPDATA" in os.environ or "LOCALAPPDATA" in os.environ:
         app_dir = os.environ.get("APPDATA")
         localapp_dir = os.environ.get("LOCALAPPDATA")

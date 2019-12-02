@@ -154,7 +154,7 @@ class ExchangeBase(PrintError):
 class CoinGecko(ExchangeBase):
 
     def get_rates(self, ccy):
-        json = self.get_json('api.coingecko.com', '/api/v3/coins/devault?localization=False&sparkline=false')
+        json = self.get_json('api.coingecko.com', '/api/v3/coins/vitae?localization=False&sparkline=false')
         prices = json["market_data"]["current_price"]
         return dict([(a[0].upper(),PyDecimal(a[1])) for a in prices.items()])
 
@@ -167,7 +167,7 @@ class CoinGecko(ExchangeBase):
                 'TRY', 'TWD', 'USD', 'VEF', 'XAG', 'XAU', 'XDR', 'ZAR']
 
     def request_history(self, ccy):
-        history = self.get_json('api.coingecko.com', '/api/v3/coins/devault/market_chart?vs_currency=%s&days=max' % ccy)
+        history = self.get_json('api.coingecko.com', '/api/v3/coins/vitae/market_chart?vs_currency=%s&days=max' % ccy)
 
         from datetime import datetime as dt
         return dict([(dt.utcfromtimestamp(h[0]/1000).strftime('%Y-%m-%d'), h[1])

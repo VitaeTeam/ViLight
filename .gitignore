@@ -30,3 +30,11 @@ xcuserdata/
 
 # IntelliJ Pycharm IDE
 /.idea
+contrib/osx/libsecp256k1.0.dylib
+contrib/osx/libusb-1.0.dylib
+contrib/osx/libzbar.0.dylib
+ViLight.egg-info/dependency_links.txt
+ViLight.egg-info/PKG-INFO
+ViLight.egg-info/requires.txt
+ViLight.egg-info/SOURCES.txt
+ViLight.egg-info/top_level.txt

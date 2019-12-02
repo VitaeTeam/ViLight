@@ -4,11 +4,11 @@ require 'plist'
 require 'open3'
 
 # These should be edited by each user, if password for dev_team is not available
-bundle_id = "org.devault.DeLight";
+bundle_id = "org.vitae.ViLight";
 dev_team = "MN42Q8L42Y";
 #
 
-project_path = "iOS/DeLight.xcodeproj";
+project_path = "iOS/ViLight.xcodeproj";
 
 # Create project object
 project = Xcodeproj::Project.open(project_path);

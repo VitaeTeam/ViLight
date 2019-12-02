@@ -35,7 +35,7 @@ def main():
 
     _printStats(config_options)  # Prints some startup/debug stats such as Python version and SSL version (this is done in another thread to hopefully not impact startup overhead too much, as importing ssl may be a bit heavy)
 
-    return "Bitcoin Cash FTW!"
+    return "Vitae FTW!"
 
 def _printStats(config_options):
     import threading
@@ -43,7 +43,7 @@ def _printStats(config_options):
         # lazy init of SSL
         import ssl, sys
         from electroncash import version
-        NSLog("DeLight lib version: %s (using server protocol: %s)", version.PACKAGE_VERSION, version.PROTOCOL_VERSION)
+        NSLog("ViLight lib version: %s (using server protocol: %s)", version.PACKAGE_VERSION, version.PROTOCOL_VERSION)
         NSLog("Python version: %s", ' '.join(sys.version.split('\n')))
         NSLog("OpenSSL version: %s", ssl.OPENSSL_VERSION)
         #NSLog("Environment Vars:")
