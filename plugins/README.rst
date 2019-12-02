@@ -11,7 +11,7 @@ a remote server (not an Electron Cash server), then it should be a
 plugin as well. If the feature you want to add introduces new
 dependencies in the code, then it should probably be a plugin.
 
-There are two types of plugins supported by Electron Cash.  The first is the
+There are two types of plugins supported by Electron Cash. Vilight.  The first is the
 internal plugin, currently offered under "Optional Features" in the Tools
 menu of the QT client.  The second is the external plugin, which the user
 has to manually install, currently managed under "Installed Plugins" in the

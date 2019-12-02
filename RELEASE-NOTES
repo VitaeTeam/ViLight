@@ -39,7 +39,7 @@ signs transactions using this scheme, so its transactions are only valid on the 
 has occurred.
 
 If you want to send Bitcoin before the fork, or Segwitcoins after the fork, you should continue to use the standard
-Electrum client, Electron Cash will not work.
+Electrum client, ViLight will not work.
 
 Once the network forks, it will take time for the Electrum server network to split into servers of the Segwit fork, and
 servers of the Bitcoin Cash fork.  You should ensure you are connected to a Bitcoin Cash Electrum server in order to

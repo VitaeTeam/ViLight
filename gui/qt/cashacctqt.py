@@ -166,7 +166,7 @@ def resolve_cashacct(parent : MessageBoxMixin, name : str, wallet : Abstract_Wal
         if not isinstance(info.address, Address):
             raise Bad(_("Unsupported payment data type.") + "\n\n"
                       + _("The Vitae ID {name} uses an account type that "
-                          "is not supported by Electron Cash.").format(name=name))
+                          "is not supported by Electron Cash. Vilight.").format(name=name))
         return info, name
     except Bad as e:
         parent.show_error(str(e))
@@ -574,7 +574,7 @@ def lookup_cash_account_dialog(
 
 
     #acct.setFixedWidth(280)
-    label = HelpLabel(_("&Vitae ID Name"), _("Enter a Vitae ID name of the form Name#123.45, and Electron Cash will search for the contact and present you with its resolved address."))
+    label = HelpLabel(_("&Vitae ID Name"), _("Enter a Vitae ID name of the form Name#123.45, and ViLight will search for the contact and present you with its resolved address."))
     label.setBuddy(acct)
     search = QPushButton(_("Lookup"))
     search.setEnabled(False)
@@ -770,7 +770,7 @@ def cash_account_detail_dialog(parent : MessageBoxMixin,  # Should be an Electru
     if not isinstance(info.address, Address):
         parent.show_error(_("Unsupported payment data type.") + "\n\n"
                           + _("The Vitae ID {name} uses an account type that "
-                              "is not supported by Electron Cash.").format(name=ca_string))
+                              "is not supported by Electron Cash. Vilight.").format(name=ca_string))
         return False
 
     title = title or _("Vitae ID Details")

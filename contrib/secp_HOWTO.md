@@ -3,7 +3,7 @@
 
 ![CodeIcon](https://img.icons8.com/color/96/000000/smartphone-cpu.png)
 
-If you have gotten to this page, likely you have been sent here by Electron Cash's  dialog informing you that you don't have **libsecp** installed.  The purpose of this document is to instruct you on how to rectify the situation.
+If you have gotten to this page, likely you have been sent here by Electron Cash. Vilight's  dialog informing you that you don't have **libsecp** installed.  The purpose of this document is to instruct you on how to rectify the situation.
 
 ### About libsecp256k1-0
 
@@ -43,7 +43,7 @@ The steps are as follows:
 
 ### Last resort: Try your package manager
 
-We say this is a last resort because in the future Electron Cash will benefit from the customized *[Bitcoin ABC](https://github.com/Bitcoin-ABC/bitcoin-abc/tree/master/src/secp256k1)* based libsecp we provide (with the Schnorr signature module enabled).  But for now, your package manager's `libsecp256k1-0` will be sufficient.  *Note: Not all distributions provide this library as a package, so your mileage may vary.*
+We say this is a last resort because in the future ViLight will benefit from the customized *[Bitcoin ABC](https://github.com/Bitcoin-ABC/bitcoin-abc/tree/master/src/secp256k1)* based libsecp we provide (with the Schnorr signature module enabled).  But for now, your package manager's `libsecp256k1-0` will be sufficient.  *Note: Not all distributions provide this library as a package, so your mileage may vary.*
 
 Example Ubuntu command:
 ```

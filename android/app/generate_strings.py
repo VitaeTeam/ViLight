@@ -83,7 +83,7 @@ def main():
         print(lang_region)
         if not lang_region=="__pycache__":
              lang, region = lang_region.split("_")
-             catalog = read_catalog(join(locale_dir, lang_region, "LC_MESSAGES","electron-cash.mo"))
+             catalog = read_catalog(join(locale_dir, lang_region, "LC_MESSAGES","vilight.mo"))
              lang_strings[lang].append((region, catalog))
 
     src_strings = read_catalog(join(locale_dir, "messages.pot"))

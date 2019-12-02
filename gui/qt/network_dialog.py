@@ -320,8 +320,8 @@ class NetworkChoiceLayout(QObject, PrintError):
         self.autoconnect_cb.clicked.connect(self.update)
 
         msg = ' '.join([
-            _("If auto-connect is enabled, Electron Cash will always use a server that is on the longest blockchain."),
-            _("If it is disabled, you have to choose a server you want to use. Electron Cash will warn you if your server is lagging.")
+            _("If auto-connect is enabled, ViLight will always use a server that is on the longest blockchain."),
+            _("If it is disabled, you have to choose a server you want to use. ViLight will warn you if your server is lagging.")
         ])
         grid.addWidget(self.autoconnect_cb, 0, 0, 1, 3)
         grid.addWidget(HelpButton(msg), 0, 4)
@@ -333,7 +333,7 @@ class NetworkChoiceLayout(QObject, PrintError):
         self.preferred_only_cb.clicked.connect(self.set_whitelisted_only) # re-set the config key and notify network.py
 
         msg = '\n\n'.join([
-            _("If 'Connect only to preferred servers' is enabled, Electron Cash will only connect to servers marked as 'preferred' servers ({}).").format(ServerFlag.Symbol[ServerFlag.Preferred]),
+            _("If 'Connect only to preferred servers' is enabled, ViLight will only connect to servers marked as 'preferred' servers ({}).").format(ServerFlag.Symbol[ServerFlag.Preferred]),
             _("This feature was added in response to the potential for a malicious actor to deny service via launching many servers (aka a sybil attack)."),
             _("If unsure, most of the time it's safe to leave this option disabled. However leaving it enabled is safer (if a little bit discouraging to new server operators wanting to populate their servers).")
         ])
@@ -362,7 +362,7 @@ class NetworkChoiceLayout(QObject, PrintError):
             _("Preferred servers ({}) are servers you have designated as reliable and/or trustworthy.").format(ServerFlag.Symbol[ServerFlag.Preferred]),
             _("Initially, the preferred list is the hard-coded list of known-good servers vetted by the Electron Cash developers."),
             _("You can add or remove any server from this list and optionally elect to only connect to preferred servers."),
-            "\n\n"+_("Banned servers ({}) are servers deemed unreliable and/or untrustworthy, and so they will never be connected-to by Electron Cash.").format(ServerFlag.Symbol[ServerFlag.Banned])
+            "\n\n"+_("Banned servers ({}) are servers deemed unreliable and/or untrustworthy, and so they will never be connected-to by Electron Cash. Vilight.").format(ServerFlag.Symbol[ServerFlag.Banned])
         ])
         grid.addWidget(HelpButton(msg), 6, 4)
 
@@ -407,7 +407,7 @@ class NetworkChoiceLayout(QObject, PrintError):
 
         grid.addWidget(self.tor_cb, 1, 0, 1, 3)
         grid.addWidget(self.proxy_cb, 2, 0, 1, 3)
-        grid.addWidget(HelpButton(_('Proxy settings apply to all connections: with Electron Cash servers, but also with third-party services.')), 2, 4)
+        grid.addWidget(HelpButton(_('Proxy settings apply to all connections: with ViLight servers, but also with third-party services.')), 2, 4)
         grid.addWidget(self.proxy_mode, 4, 1)
         grid.addWidget(self.proxy_host, 4, 2)
         grid.addWidget(self.proxy_port, 4, 3)
