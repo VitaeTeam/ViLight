@@ -583,6 +583,17 @@ class Commands:
                 raise BaseException("Unknown transaction")
         return tx.as_dict()
 
+    @command('n')
+    def getblockheightinfo(self):
+        """Retrieve a transaction. """
+        response = {
+                    'blockchain_height': self.network.get_local_height(),
+                    'server_height': self.network.get_server_height(),
+                    'connected': self.network.is_connected(),
+                }
+
+        return response
+
     @command('')
     def encrypt(self, pubkey, message):
         """Encrypt a message with a public key. Use quotes if the message contains whitespaces."""
