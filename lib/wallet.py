@@ -48,7 +48,7 @@ from .version import *
 from .keystore import load_keystore, Hardware_KeyStore, Imported_KeyStore, BIP32_KeyStore, xpubkey_to_address
 from . import networks
 from .storage import multisig_type
-
+from . import util
 from . import transaction
 from .transaction import Transaction
 from .plugins import run_hook
@@ -1023,17 +1023,35 @@ class Abstract_Wallet(PrintError, SPVDelegate):
         self.add_transaction(tx_hash, tx)
         self.add_unverified_tx(tx_hash, tx_height)
         if self.shouldpost_newtxnotifs:
-           send_received_tx_post(tx_hash,tx_height)
+           send_received_tx_post(self,tx_hash,tx_height)
 
-    def send_received_tx_post(tx_hash,tx_height):
+    def send_received_tx_post(self,tx_hash,tx_height):
         import urllib.request
-        headers = {'content-type':'application/json'}
         data = {'tx':tx_hash, 'height':tx_height}
-        serialized_data = util.to_bytes(json.dumps(data))
+        serialized_data = json.dumps(data)
+        serialized_data = str(serialized_data)
+        serialized_data = serialized_data.encode('utf-8')
         try:
-            req = urllib.request.Request(self.notifposturl, serialized_data, headers)
+            req = urllib.request.Request(self.notifposturl, serialized_data)
             response_stream = urllib.request.urlopen(req, timeout=5)
             util.print_error('Got Response for %s' % address)
+        except BaseException as e:
+                util.print_error(str(e))
+
+    def send_received_tx_post_test(self):
+        import urllib.request
+        # headers = {'content-type':'application/json'}
+        data = {'tx':"123ddfffasdasdasdasd", 'height':123456}
+        data = json.dumps(data)
+        # Convert to String
+        data = str(data)
+        # Convert string to byte
+        data = data.encode('utf-8')
+        # serialized_data = util.to_bytes(json.dumps(data))
+        try:
+            req = urllib.request.Request(self.notifposturl, data)
+            response_stream = urllib.request.urlopen(req, timeout=5)
+            # util.print_error('Got Response for %s' % address)
         except BaseException as e:
                 util.print_error(str(e))
 

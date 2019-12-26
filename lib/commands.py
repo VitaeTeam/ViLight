@@ -736,6 +736,11 @@ class Commands:
         self.wallet.setshouldnotif(True,URL)
         return True
 
+    @command('n')
+    def getposturl(self):
+        """Get url given in wallettxnotify"""
+        return self.wallet.notifposturl
+
     @command('wn')
     def is_synchronized(self):
         """ return wallet synchronization status """
