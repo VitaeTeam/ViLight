@@ -730,6 +730,12 @@ class Commands:
         self.network.send([('blockchain.scripthash.subscribe', [h])], callback)
         return True
 
+    @command('n')
+    def wallettxnotify(self, URL):
+        """Watch for new tx in wallet. Everytime a new tx arrives, a http POST is sent to the URL."""
+        self.wallet.setshouldnotif(True,URL)
+        return True
+
     @command('wn')
     def is_synchronized(self):
         """ return wallet synchronization status """
