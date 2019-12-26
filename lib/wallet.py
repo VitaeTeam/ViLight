@@ -1023,7 +1023,7 @@ class Abstract_Wallet(PrintError, SPVDelegate):
         self.add_transaction(tx_hash, tx)
         self.add_unverified_tx(tx_hash, tx_height)
         if self.shouldpost_newtxnotifs:
-           self.send_received_tx_post(self,tx_hash,tx_height)
+           self.send_received_tx_post(tx_hash,tx_height)
 
     def send_received_tx_post(self,tx_hash,tx_height):
         import urllib.request
