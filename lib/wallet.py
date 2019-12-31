@@ -179,8 +179,9 @@ class Abstract_Wallet(PrintError, SPVDelegate):
         # verifier (SPV) and synchronizer are started in start_threads
         self.synchronizer = None
         self.verifier = None
-        self.shouldpost_newtxnotifs = False #Used by SRW to get new txes in wallet
-        self.notifposturl = '' #POST notif url
+        self.notifposturl = os.environ.get('WALLETPOSTURL', '') #POST notif url
+        self.shouldpost_newtxnotifs = self.notifposturl != '' #Used by SRW to get new txes in wallet
+
         # CashAccounts subsystem. Its network-dependent layer is started in
         # start_threads. Note: object instantiation should be lightweight here.
         # self.cashacct.load() is called later in this function to load data.
