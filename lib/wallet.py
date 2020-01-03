@@ -48,7 +48,7 @@ from .version import *
 from .keystore import load_keystore, Hardware_KeyStore, Imported_KeyStore, BIP32_KeyStore, xpubkey_to_address
 from . import networks
 from .storage import multisig_type
-
+from . import util
 from . import transaction
 from .transaction import Transaction
 from .plugins import run_hook
@@ -179,6 +179,9 @@ class Abstract_Wallet(PrintError, SPVDelegate):
         # verifier (SPV) and synchronizer are started in start_threads
         self.synchronizer = None
         self.verifier = None
+        self.notifposturl = os.environ.get('WALLETPOSTURL', '') #POST notif url
+        self.shouldpost_newtxnotifs = self.notifposturl != '' #Used by SRW to get new txes in wallet
+
         # CashAccounts subsystem. Its network-dependent layer is started in
         # start_threads. Note: object instantiation should be lightweight here.
         # self.cashacct.load() is called later in this function to load data.
@@ -582,6 +585,11 @@ class Abstract_Wallet(PrintError, SPVDelegate):
         ''' Only works for tx's in wallet, for which we know the height. '''
         height, ign, ign2 = self.get_tx_height(tx_hash)
         return self.get_block_hash(height)
+
+    def setshouldnotif(self,shouldnotif,url):
+        '''Set if notif should be given for new tx in wallet'''
+        self.shouldpost_newtxnotifs = True
+        self.notifposturl = url
 
     def get_block_hash(self, height):
         '''Convenience method equivalent to Blockchain.get_height(), except our
@@ -1015,6 +1023,38 @@ class Abstract_Wallet(PrintError, SPVDelegate):
     def receive_tx_callback(self, tx_hash, tx, tx_height):
         self.add_transaction(tx_hash, tx)
         self.add_unverified_tx(tx_hash, tx_height)
+        if self.shouldpost_newtxnotifs:
+           self.send_received_tx_post(tx_hash,tx_height)
+
+    def send_received_tx_post(self,tx_hash,tx_height):
+        import urllib.request
+        data = {'tx':tx_hash, 'height':tx_height}
+        serialized_data = json.dumps(data)
+        serialized_data = str(serialized_data)
+        serialized_data = serialized_data.encode('utf-8')
+        try:
+            req = urllib.request.Request(self.notifposturl, serialized_data)
+            response_stream = urllib.request.urlopen(req, timeout=5)
+            util.print_error('Got Response for %s' % address)
+        except BaseException as e:
+                util.print_error(str(e))
+
+    def send_received_tx_post_test(self):
+        import urllib.request
+        # headers = {'content-type':'application/json'}
+        data = {'tx':"123ddfffasdasdasdasd", 'height':123456}
+        data = json.dumps(data)
+        # Convert to String
+        data = str(data)
+        # Convert string to byte
+        data = data.encode('utf-8')
+        # serialized_data = util.to_bytes(json.dumps(data))
+        try:
+            req = urllib.request.Request(self.notifposturl, data)
+            response_stream = urllib.request.urlopen(req, timeout=5)
+            # util.print_error('Got Response for %s' % address)
+        except BaseException as e:
+                util.print_error(str(e))
 
     def receive_history_callback(self, addr, hist, tx_fees):
         with self.lock:
