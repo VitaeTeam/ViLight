@@ -488,6 +488,14 @@ class Commands:
         return tx.as_dict()
 
     @command('wp')
+    def paytofrom(self, destination, amount, from_addr,fee=None, change_addr=None, nocheck=False, unsigned=False, password=None, locktime=None):
+        """Create a transaction. """
+        tx_fee = satoshis(fee)
+        domain = from_addr.split(',') if from_addr else None
+        tx = self._mktx([(destination, amount)], tx_fee, change_addr, domain, nocheck, unsigned, password, locktime)
+        return tx.as_dict()
+
+    @command('wp')
     def paytomany(self, outputs, fee=None, from_addr=None, change_addr=None, nocheck=False, unsigned=False, password=None, locktime=None):
         """Create a multi-output transaction. """
         tx_fee = satoshis(fee)
@@ -574,6 +582,17 @@ class Commands:
             else:
                 raise BaseException("Unknown transaction")
         return tx.as_dict()
+
+    @command('n')
+    def getblockheightinfo(self):
+        """Retrieve a transaction. """
+        response = {
+                    'blockchain_height': self.network.get_local_height(),
+                    'server_height': self.network.get_server_height(),
+                    'connected': self.network.is_connected(),
+                }
+
+        return response
 
     @command('')
     def encrypt(self, pubkey, message):
@@ -711,6 +730,17 @@ class Commands:
         self.network.send([('blockchain.scripthash.subscribe', [h])], callback)
         return True
 
+    @command('n')
+    def wallettxnotify(self, URL):
+        """Watch for new tx in wallet. Everytime a new tx arrives, a http POST is sent to the URL."""
+        self.wallet.setshouldnotif(True,URL)
+        return True
+
+    @command('n')
+    def getposturl(self):
+        """Get url given in wallettxnotify"""
+        return self.wallet.notifposturl
+
     @command('wn')
     def is_synchronized(self):
         """ return wallet synchronization status """
@@ -730,6 +760,7 @@ class Commands:
 param_descriptions = {
     'privkey': 'Private key. Type \'?\' to get a prompt.',
     'destination': 'Bitcoin Cash address, contact or alias',
+    'from_addr':'Addr(s) to select inputs from.if multiple seperate each addr with a comma (,)',
     'address': 'Bitcoin Cash address',
     'seed': 'Seed phrase',
     'txid': 'Transaction ID',
