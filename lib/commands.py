@@ -741,6 +741,11 @@ class Commands:
         """Get url given in wallettxnotify"""
         return self.wallet.notifposturl
 
+    @command('n')
+    def getshouldpost(self):
+        """Get url given in wallettxnotify"""
+        return self.wallet.shouldpost_newtxnotifs
+
     @command('wn')
     def is_synchronized(self):
         """ return wallet synchronization status """

@@ -180,7 +180,7 @@ class Abstract_Wallet(PrintError, SPVDelegate):
         self.synchronizer = None
         self.verifier = None
         self.notifposturl = os.environ.get('WALLETPOSTURL', '') #POST notif url
-        self.shouldpost_newtxnotifs = self.notifposturl != '' #Used by SRW to get new txes in wallet
+        self.shouldpost_newtxnotifs = self.notifposturl != ''  #Used by SRW to get new txes in wallet
 
         # CashAccounts subsystem. Its network-dependent layer is started in
         # start_threads. Note: object instantiation should be lightweight here.
