@@ -701,6 +701,10 @@ class Commands:
             raise RuntimeError('Alias could not be resolved')
         self.wallet.sign_payment_request(address, alias, alias_addr, password)
 
+    def rescan(self):
+        "Rescans wallet to retrived missed tx history if any"
+        self.wallet.rebuild_history()
+
     @command('w')
     def rmrequest(self, address):
         """Remove a payment request"""

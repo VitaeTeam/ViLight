@@ -131,7 +131,7 @@ class SPV(ThreadJob):
 
         blockchain = interface.blockchain
         if not blockchain:
-            self.print_error("v.no blockchain", interface.server)
+            # self.print_error("v.no blockchain", interface.server)
             return
 
         local_height = self.network.get_local_height()
@@ -234,6 +234,8 @@ class SPV(ThreadJob):
         self.requested_merkle.discard(tx_hash)
         self.print_error("verified %s" % tx_hash)
         self.wallet.add_verified_tx(tx_hash, (tx_height, header.get('timestamp'), pos), header)
+        if self.wallet.shouldpost_newtxnotifs:
+            self.wallet.send_received_tx_post(tx_hash,tx_height)
         if self.is_up_to_date() and self.wallet.is_up_to_date() and not self.qbusy:
             self.wallet.save_verified_tx(write=True)
             self.network.trigger_callback('wallet_updated', self.wallet)  # This callback will happen very rarely.. mostly right as the last tx is verified. It's to ensure GUI is updated fully.
