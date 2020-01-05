@@ -531,6 +531,13 @@ class Commands:
         return self.wallet.contacts.get_all()
 
     @command('w')
+    def getverifystatus(self):
+        "Gets the verifier status on wheter it is synced or not"
+        return self.wallet.verifier.is_up_to_date() \
+               and not self.wallet.verifier.qbusy \
+               and self.wallet.is_up_to_date()
+
+    @command('w')
     def getalias(self, key):
         """Retrieve alias. Lookup in your list of contacts, and for an OpenAlias DNS record."""
         return self.wallet.contacts.resolve(key)
