@@ -26,6 +26,7 @@
 from threading import Lock
 import hashlib
 import traceback
+from typing import Tuple
 
 from .transaction import Transaction
 from .util import ThreadJob, bh2u
@@ -50,6 +51,7 @@ class Synchronizer(ThreadJob):
         self.cleaned_up = False
         self._need_release = False
         self.new_addresses = set()
+        self._reset_request_counters()
         # Entries are (tx_hash, tx_height) tuples
         self.requested_tx = {}
         self.requested_histories = {}
@@ -98,8 +100,13 @@ class Synchronizer(ThreadJob):
         with self.lock:
             self.new_addresses.add(address)
 
+    def _reset_request_counters(self):
+        self._requests_sent = 0
+        self._requests_answered = 0
+
     def subscribe_to_addresses(self, addresses):
         hashes = [addr.to_scripthash_hex() for addr in addresses]
+        self._requests_sent += len(addresses)
         # Keep a hash -> address mapping
         self.h2addr.update({h:addr for h, addr in zip(hashes, addresses)})
         self.network.subscribe_to_scripthashes(hashes, self.on_address_status)
@@ -131,6 +138,7 @@ class Synchronizer(ThreadJob):
                 self.requested_histories[scripthash] = result
                 self.network.request_scripthash_history(scripthash,
                                                         self.on_address_history)
+        self._requests_answered += 1
         # remove addr from list only after it is added to requested_histories
         self.requested_hashes.discard(scripthash)  # Notifications won't be in
 
@@ -167,6 +175,9 @@ class Synchronizer(ThreadJob):
             self.wallet.receive_history_callback(addr, hist, tx_fees)
             # Request transactions we don't have
             self.request_missing_txs(hist)
+
+    def num_requests_sent_and_answered(self) -> Tuple[int, int]:
+        return self._requests_sent, self._requests_answered
 
     def tx_response(self, response):
         if self.cleaned_up:
@@ -253,6 +264,8 @@ class Synchronizer(ThreadJob):
 
             # 3. Detect if situation has changed
             up_to_date = self.is_up_to_date()
+            if up_to_date:
+                    self._reset_request_counters()
             if up_to_date != self.wallet.is_up_to_date():
                 self.wallet.set_up_to_date(up_to_date)
                 self.network.trigger_callback('wallet_updated', self.wallet)

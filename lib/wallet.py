@@ -38,6 +38,7 @@ import errno
 from collections import defaultdict
 from decimal import Decimal as PyDecimal  # Qt 5.12 also exports Decimal
 from functools import partial
+from typing import Tuple
 
 from .i18n import ngettext
 from .util import NotEnoughFunds, ExcessiveFee, PrintError, UserCancelled, profiler, format_satoshis, format_time, finalization_print_error
@@ -419,6 +420,12 @@ class Abstract_Wallet(PrintError, SPVDelegate):
 
     def is_up_to_date(self):
         with self.lock: return self.up_to_date
+
+    def get_history_sync_state_details(self) -> Tuple[int, int]:
+        if self.synchronizer:
+            return self.synchronizer.num_requests_sent_and_answered()
+        else:
+            return 0, 0
 
     def set_label(self, name, text = None):
         with self.lock:

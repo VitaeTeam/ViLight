@@ -869,7 +869,9 @@ class ElectrumWindow(QMainWindow, MessageBoxMixin, PrintError):
             # until we get a headers subscription request response.
             # Display the synchronizing message in that case.
             if not self.wallet.up_to_date or server_height == 0:
-                text = _("Synchronizing...")
+                num_sent, num_answered = self.wallet.get_history_sync_state_details()
+                text = ("{} ({}/{})"
+                        .format(_("Synchronizing..."), num_answered, num_sent))
                 icon = icon_dict["status_waiting"]
                 status_tip = status_tip_dict["status_waiting"]
             elif server_lag > 1:

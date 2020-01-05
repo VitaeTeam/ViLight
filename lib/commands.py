@@ -713,6 +713,12 @@ class Commands:
         self.wallet.rebuild_history()
 
     @command('w')
+    def getsyncprogress(self):
+        "Gets resync or sync progress request count"
+        num_sent, num_answered = self.wallet.get_history_sync_state_details()
+        return {"reqs_sent":num_sent,"reqs_answered":num_answered}
+
+    @command('w')
     def rmrequest(self, address):
         """Remove a payment request"""
         return self.wallet.remove_payment_request(address, self.config)
