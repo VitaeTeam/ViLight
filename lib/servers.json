@@ -4,6 +4,12 @@
         "s": "50002",
         "t": "50001",
         "version": "1.10.1"
+    },
+    "vitelectrumxserver02.vitae.co": {
+        "pruning": "-",
+        "s": "50002",
+        "t": "50001",
+        "version": "1.10.1"
     }
 }
 
