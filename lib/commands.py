@@ -702,6 +702,12 @@ class Commands:
         self.wallet.sign_payment_request(address, alias, alias_addr, password)
 
     @command('w')
+    def setwalletgap(self,gap):
+        "Set wallet gap"
+        self.wallet.change_gap_limit(gap)
+        self.wallet.storage.write()
+
+    @command('w')
     def rescan(self):
         "Rescans wallet to retrived missed tx history if any"
         self.wallet.rebuild_history()
