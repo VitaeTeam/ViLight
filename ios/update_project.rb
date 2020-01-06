@@ -46,7 +46,7 @@ project.save();
 
 #Update plist file to be consistent
 
-infoplist="iOS/ElectronCash/ElectronCash-Info.plist"
+infoplist="iOS/Vilight/Vilight-Info.plist"
 result = Plist.parse_xml(infoplist)
 result['CFBundleIdentifier'] = bundle_id
 result.save_plist(infoplist)

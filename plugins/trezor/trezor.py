@@ -3,15 +3,15 @@ from collections import defaultdict
 import traceback
 import sys
 
-from electroncash.util import bfh, bh2u, versiontuple, UserCancelled
-from electroncash.bitcoin import (b58_address_to_hash160, xpub_from_pubkey, deserialize_xpub,
+from vilight.util import bfh, bh2u, versiontuple, UserCancelled
+from vilight.bitcoin import (b58_address_to_hash160, xpub_from_pubkey, deserialize_xpub,
                                   TYPE_ADDRESS, TYPE_SCRIPT)
-from electroncash.i18n import _
-from electroncash.networks import NetworkConstants
-from electroncash.plugins import BasePlugin, Device
-from electroncash.transaction import deserialize
-from electroncash.keystore import Hardware_KeyStore, is_xpubkey, parse_xpubkey
-from electroncash.address import ScriptOutput
+from vilight.i18n import _
+from vilight.networks import NetworkConstants
+from vilight.plugins import BasePlugin, Device
+from vilight.transaction import deserialize
+from vilight.keystore import Hardware_KeyStore, is_xpubkey, parse_xpubkey
+from vilight.address import ScriptOutput
 
 from ..hw_wallet import HW_PluginBase
 

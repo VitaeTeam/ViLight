@@ -9,19 +9,19 @@ from . import gui
 from .history import HistoryEntry
 from . import txdetail
 from . import contacts
-from electroncash import WalletStorage, Wallet
-from electroncash.util import timestamp_to_datetime, NotEnoughFunds, ExcessiveFee
-from electroncash.transaction import Transaction
-from electroncash.i18n import _
+from vilight import WalletStorage, Wallet
+from vilight.util import timestamp_to_datetime, NotEnoughFunds, ExcessiveFee
+from vilight.transaction import Transaction
+from vilight.i18n import _
 from .custom_objc import *
 from .uikit_bindings import *
-from electroncash import networks
-from electroncash.address import Address, ScriptOutput
-from electroncash.paymentrequest import PaymentRequest
-from electroncash import bitcoin
+from vilight import networks
+from vilight.address import Address, ScriptOutput
+from vilight.paymentrequest import PaymentRequest
+from vilight import bitcoin
 from .feeslider import FeeSlider
 from .amountedit import BTCAmountEdit
-from electroncash.plugins import run_hook
+from vilight.plugins import run_hook
 import time, html, re, sys, traceback
 from decimal import Decimal
 

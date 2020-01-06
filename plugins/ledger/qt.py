@@ -2,12 +2,12 @@ import threading
 
 from PyQt5.QtWidgets import QInputDialog, QLineEdit, QVBoxLayout, QLabel
 
-from electroncash.i18n import _
-from electroncash.plugins import hook
-from electroncash.wallet import Standard_Wallet
+from vilight.i18n import _
+from vilight.plugins import hook
+from vilight.wallet import Standard_Wallet
 from .ledger import LedgerPlugin
 from ..hw_wallet.qt import QtHandlerBase, QtPluginBase
-from electroncash_gui.qt.util import *
+from vilight_gui.qt.util import *
 
 #from btchip.btchipPersoWizard import StartBTChipPersoDialog
 

@@ -27,10 +27,10 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QHBoxLayout, QVBoxLayout, QWidget, QDialog, QPushButton, QSizePolicy
 
 
-from electroncash_gui.qt.qrcodewidget import QRCodeWidget, save_to_file, copy_to_clipboard
+from vilight_gui.qt.qrcodewidget import QRCodeWidget, save_to_file, copy_to_clipboard
 from .util import WWLabel, Buttons, MessageBoxMixin
-from electroncash.i18n import _
-from electroncash.util import Weak
+from vilight.i18n import _
+from vilight.util import Weak
 
 class QR_Window(QWidget, MessageBoxMixin):
 

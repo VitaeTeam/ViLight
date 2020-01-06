@@ -8,13 +8,13 @@ from . import utils
 from . import gui
 from . import addresses
 from .amountedit import BTCAmountEdit, FiatAmountEdit, BTCkBEdit  # Makes sure ObjC classes are imported into ObjC runtime
-from electroncash import WalletStorage, Wallet
-from electroncash.util import timestamp_to_datetime, format_time
-from electroncash.i18n import _, language
-from electroncash.address import Address, ScriptOutput
-from electroncash.paymentrequest import PR_UNPAID, PR_EXPIRED, PR_UNKNOWN, PR_PAID
-from electroncash import bitcoin
-import electroncash.web as web
+from vilight import WalletStorage, Wallet
+from vilight.util import timestamp_to_datetime, format_time
+from vilight.i18n import _, language
+from vilight.address import Address, ScriptOutput
+from vilight.paymentrequest import PR_UNPAID, PR_EXPIRED, PR_UNKNOWN, PR_PAID
+from vilight import bitcoin
+import vilight.web as web
 import sys, traceback, time
 from .uikit_bindings import *
 from .custom_objc import *

@@ -1,42 +1,42 @@
 # Verifying Electron-Cash Downloads using File Hashes
 PLEASE NOTE: sha256sum is known as gsha256sum in MACOS
 
-1. Download the SHA256SUMS file to the same directory as the installer. 
+1. Download the SHA256SUMS file to the same directory as the installer.
 
 
     cd Downloads
 
-    wget https://raw.githubusercontent.com/Electron-Cash/keys-n-hashes/master/sigs-and-sums/3.1/mac/SHA256.Electron-Cash-3.1-macosx.dmg.txt
+    wget https://raw.githubusercontent.com/Electron-Cash/keys-n-hashes/master/sigs-and-sums/3.1/mac/SHA256.Vilight-4.0.10-macosx.dmg.txt
 
 Compare the file hashes
 
-    sha256sum -c SHA256.Electron-Cash-3.1-macosx.dmg.txt 2>&1
-    
-If the file hashes match, "OK" will be displayed on your screen. 
+    sha256sum -c SHA256.Vilight-4.0.10-macosx.dmg.txt 2>&1
 
-    Electron-Cash-3.1-macosx.dmg: OK
-    
+If the file hashes match, "OK" will be displayed on your screen.
+
+    Vilight-4.0.10-macosx.dmg: OK
+
 If the hashes do not match, then there was a problem with either the download or a problem with the server. You should download the file again.
 
 ## Manual Verification of File Hashes
 
 Download the SHA256SUMS files
 
-    wget https://raw.githubusercontent.com/Electron-Cash/keys-n-hashes/master/sigs-and-sums/3.1/mac/SHA256.Electron-Cash-3.1-macosx.dmg.txt
-    
+    wget https://raw.githubusercontent.com/Electron-Cash/keys-n-hashes/master/sigs-and-sums/3.1/mac/SHA256.Vilight-4.0.10-macosx.dmg.txt
+
 View the SHA256SUMS file
 
-    cat SHA256.Electron-Cash-3.1-macosx.dmg.txt
-    670d6851908720195d58a1d94a53e77e4120e0e98f6940ee93a76f4468e2c6c5  Electron-Cash-3.1-macosx.dmg
-    
+    cat SHA256.Vilight-4.0.10-macosx.dmg.txt
+    670d6851908720195d58a1d94a53e77e4120e0e98f6940ee93a76f4468e2c6c5  Vilight-4.0.10-macosx.dmg
+
 Generate a SHA256 hash of the file you downloaded
 
-    sha256sum Electron-Cash-3.1-macosx.dmg
-    670d6851908720195d58a1d94a53e77e4120e0e98f6940ee93a76f4468e2c6c5  Electron-Cash-3.1-macosx.dmg
-    
+    sha256sum Vilight-4.0.10-macosx.dmg
+    670d6851908720195d58a1d94a53e77e4120e0e98f6940ee93a76f4468e2c6c5  Vilight-4.0.10-macosx.dmg
+
 Now compare the hash that your machine calculated with the corresponding hash in the SHA256SUMS file.
 
-When both hashes match exactly then the downloaded file is almost certainly intact. 
+When both hashes match exactly then the downloaded file is almost certainly intact.
 
 # Verifying Electron-Cash Downloads using GNU Privacy Guard
 
@@ -49,7 +49,7 @@ When both hashes match exactly then the downloaded file is almost certainly inta
 
         gpg --generate-key
 
-    Choose RSA/DSA key with 4096 bits. 
+    Choose RSA/DSA key with 4096 bits.
     Enter your name, email and make sure to choose a strong password.
 
 2. Download the public key of the person/institution you want to verify. For TrueCrypt, their public key is available here.
@@ -59,14 +59,14 @@ When both hashes match exactly then the downloaded file is almost certainly inta
 3. Import the person’s public key into your key ring
 
         gpg --import TrueCrypt-Foundation-Public-Key.asc
-        
+
     You should see output similar to
-    
+
         gpg: key 21810A542031C02C: public key "Calin Culianu (NilacTheGrim)         <calin.culianu@gmail.com>" imported
         gpg: Total number processed: 1
         gpg:               imported: 1
 
-4. You need to sign the person’s public key with your private key, to tell GPG that you “accept” the key. 
+4. You need to sign the person’s public key with your private key, to tell GPG that you “accept” the key.
 
         gpg --list-keys
 
@@ -83,15 +83,15 @@ When both hashes match exactly then the downloaded file is almost certainly inta
 
 6. Download the corresponding signature file
 
-        wget https://github.com/Electron-Cash/keys-n-hashes/raw/master/sigs-and-sums/3.1/mac/Electron-Cash-3.1-macosx.dmg.sig
-        
+        wget https://github.com/Electron-Cash/keys-n-hashes/raw/master/sigs-and-sums/3.1/mac/Vilight-4.0.10-macosx.dmg.sig
+
 7. Now you can verify the signature of the file you downloaded
 
-        gpg --verify Electron-Cash-3.1-macosx.dmg.sig
-      
+        gpg --verify Vilight-4.0.10-macosx.dmg.sig
+
     Example of successful output
-    
-        gpg: assuming signed data in 'Electron-Cash-3.1-macosx.dmg'
+
+        gpg: assuming signed data in 'Vilight-4.0.10-macosx.dmg'
         gpg: Signature made Sat  6 Jan 03:51:06 2018 AEDT
         gpg:                using DSA key 21810A542031C02C
         gpg: checking the trustdb

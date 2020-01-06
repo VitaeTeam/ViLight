@@ -3,7 +3,7 @@
 # Electrum - lightweight Bitcoin client
 # Copyright (C) 2014 Thomas Voegtlin
 #
-# Electron Cash - lightweight Bitcoin Cash client
+# Vilight - lightweight Vitae client
 # Copyright (C) 2019 The Electron Cash Developers
 #
 # Permission is hereby granted, free of charge, to any person
@@ -34,14 +34,14 @@ from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 
-from electroncash import bitcoin, util, keystore
-from electroncash import transaction
-from electroncash.plugins import BasePlugin, hook
-from electroncash.i18n import _
-from electroncash.wallet import Multisig_Wallet
-from electroncash.util import bh2u, bfh, Weak, InvalidPassword, print_error
+from vilight import bitcoin, util, keystore
+from vilight import transaction
+from vilight.plugins import BasePlugin, hook
+from vilight.i18n import _
+from vilight.wallet import Multisig_Wallet
+from vilight.util import bh2u, bfh, Weak, InvalidPassword, print_error
 
-from electroncash_gui.qt.transaction_dialog import show_transaction, TxDialog
+from vilight_gui.qt.transaction_dialog import show_transaction, TxDialog
 
 # Workarounds to the fact that xmlrpc.client doesn't take a timeout= arg.
 class TimeoutTransport(Transport):
@@ -280,7 +280,7 @@ class Plugin(BasePlugin):
         return None, None
 
     def cosigner_can_sign(self, tx, cosigner_xpub):
-        from electroncash.keystore import is_xpubkey, parse_xpubkey
+        from vilight.keystore import is_xpubkey, parse_xpubkey
         xpub_set = set([])
         for txin in tx.inputs():
             for x_pubkey in txin['x_pubkeys']:

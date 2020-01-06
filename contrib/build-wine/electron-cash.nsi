@@ -113,7 +113,7 @@ Section
   Delete "$SMPROGRAMS\${PRODUCT_NAME}\*.*"
 
   ;Files to pack into the installer
-  File /r "dist\electroncash\*.*"
+  File /r "dist\vilight\*.*"
   File "..\..\icons\electron.ico"
 
   ;Store installation folder

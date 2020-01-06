@@ -4,13 +4,13 @@ from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import (QHBoxLayout, QLabel, QVBoxLayout)
 
-from electroncash.plugins import hook
-from electroncash.i18n import _
-from electroncash_gui.qt import EnterButton
-from electroncash_gui.qt.main_window import ElectrumWindow
-from electroncash_gui.qt.util import ThreadedButton, Buttons
-from electroncash_gui.qt.util import WindowModalDialog, OkButton, WaitingDialog
-from electroncash.util import Weak
+from vilight.plugins import hook
+from vilight.i18n import _
+from vilight_gui.qt import EnterButton
+from vilight_gui.qt.main_window import ElectrumWindow
+from vilight_gui.qt.util import ThreadedButton, Buttons
+from vilight_gui.qt.util import WindowModalDialog, OkButton, WaitingDialog
+from vilight.util import Weak
 
 from .labels import LabelsPlugin
 

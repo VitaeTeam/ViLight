@@ -2,9 +2,9 @@
 
 import sys
 import time
-from electroncash import SimpleConfig, Network
-from electroncash.util import print_msg, json_encode
-from electroncash.address import Address
+from vilight import SimpleConfig, Network
+from vilight.util import print_msg, json_encode
+from vilight.address import Address
 
 try:
     addr = Address.from_string(sys.argv[1])

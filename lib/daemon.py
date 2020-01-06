@@ -320,6 +320,6 @@ class Daemon(DaemonThread):
             # be used for an installer-generated shortcut.
             #
             os.environ['QT_OPENGL'] = str(config.get('qt_opengl'))
-        gui = __import__('electroncash_gui.' + gui_name, fromlist=['electroncash_gui'])
+        gui = __import__('vilight_gui.' + gui_name, fromlist=['vilight_gui'])
         self.gui = gui.ElectrumGui(config, self, plugins)
         self.gui.main()

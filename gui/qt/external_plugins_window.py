@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# Electron Cash - lightweight Bitcoin client
+# Vilight - lightweight Vitae client
 # Copyright (C) 2018 Electron Cash developers
 #
 # Permission is hereby granted, free of charge, to any person
@@ -31,8 +31,8 @@ from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 
-from electroncash.i18n import _
-from electroncash.plugins import ExternalPluginCodes, run_hook
+from vilight.i18n import _
+from vilight.plugins import ExternalPluginCodes, run_hook
 from .util import MyTreeWidget, MessageBoxMixin, WindowModalDialog, Buttons, CloseButton
 
 

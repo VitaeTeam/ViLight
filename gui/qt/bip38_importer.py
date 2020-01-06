@@ -9,8 +9,8 @@ from PyQt5.QtWidgets import *
 
 from .util import *
 
-from electroncash.i18n import _
-from electroncash import util, bitcoin, address
+from vilight.i18n import _
+from vilight import util, bitcoin, address
 
 class Bip38Importer(WindowModalDialog, util.PrintError):
     ''' A drop-in GUI element for implementing a BIP38 import dialog.

@@ -14,16 +14,16 @@
 	<url type="help">https://github.com/vitaecrypto/Delight/issues?q=is%3Aissue</url>
 	<screenshots>
 		<screenshot type="default">
-			<image type="source">https://www.electroncash.org/images/shot4.png</image>
+			<image type="source">https://www.https://www.vitaetoken.io//images/shot4.png</image>
 			<caption>Main application window</caption>
 		</screenshot>
 	</screenshots>
 	<translation type="gettext">electron-cash</translation>
 	<provides>
 		<binary>vilight</binary>
-		<python3>electroncash</python3>
-		<python3>electroncash_gui</python3>
-		<python3>electroncash_plugins</python3>
+		<python3>vilight</python3>
+		<python3>vilight_gui</python3>
+		<python3>vilight_plugins</python3>
 	</provides>
 	<update_contact>hello@vitae.cc</update_contact>
 </component>

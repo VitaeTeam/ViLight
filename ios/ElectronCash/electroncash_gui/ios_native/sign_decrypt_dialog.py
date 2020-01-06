@@ -9,9 +9,9 @@ from .custom_objc import *
 from . import utils
 from . import gui
 from . import addresses
-from electroncash.i18n import _, language
-from electroncash import bitcoin
-from electroncash.address import Address
+from vilight.i18n import _, language
+from vilight import bitcoin
+from vilight.address import Address
 import sys, traceback, base64
 from collections import namedtuple
 

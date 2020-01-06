@@ -50,6 +50,6 @@ git checkout master  # Undo the previous explicit checkout to this hash
 git clean -dfxq
 popd
 
-info "$libzbar_lib has been placed in the electroncash 'lib' folder."
+info "$libzbar_lib has been placed in the vilight 'lib' folder."
 
 popd

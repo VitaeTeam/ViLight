@@ -8,10 +8,10 @@ from os.path import exists, join
 import pkg_resources
 import unittest
 
-from electroncash import commands, daemon, keystore, simple_config, storage, util
-from electroncash.i18n import _
-from electroncash.storage import WalletStorage
-from electroncash.wallet import (ImportedAddressWallet, ImportedPrivkeyWallet, Standard_Wallet,
+from vilight import commands, daemon, keystore, simple_config, storage, util
+from vilight.i18n import _
+from vilight.storage import WalletStorage
+from vilight.wallet import (ImportedAddressWallet, ImportedPrivkeyWallet, Standard_Wallet,
                                  Wallet)
 
 from android.preference import PreferenceManager
@@ -192,7 +192,7 @@ class AndroidCommands(commands.Commands):
         """Run all unit tests. Expect failures with functionality not present on Android,
         such as Trezor.
         """
-        test_pkg = "electroncash.tests"
+        test_pkg = "vilight.tests"
         suite = unittest.defaultTestLoader.loadTestsFromNames(
             [test_pkg + "." + filename[:-3]
              for filename in pkg_resources.resource_listdir(test_pkg, "")
@@ -230,7 +230,7 @@ SP_SET_METHODS = {
 
 # We store the config in the SharedPreferences because it's very easy to base an Android
 # settings UI on that. The reverse approach would be harder (using PreferenceDataStore to make
-# the settings UI access an Electron Cash config file).
+# the settings UI access an Vilight config file).
 class AndroidConfig(simple_config.SimpleConfig):
     def __init__(self, app):
         self.sp = PreferenceManager.getDefaultSharedPreferences(app)

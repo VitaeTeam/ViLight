@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Electron Cash - lightweight Bitcoin Cash client
+# Vilight - lightweight Vitae client
 # Copyright (C) 2019 calin.culianu@gmail.com
 #
 # Permission is hereby granted, free of charge, to any person
@@ -28,8 +28,8 @@ from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 
 from .util import *
-from electroncash.util import PrintError, ServerError
-from electroncash.i18n import _
+from vilight.util import PrintError, ServerError
+from vilight.i18n import _
 
 class ScanBeyondGap(WindowModalDialog, PrintError):
     progress_sig = pyqtSignal(int, int, int, int)

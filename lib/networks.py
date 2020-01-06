@@ -1,4 +1,4 @@
-# Electron Cash - lightweight Bitcoin Cash client
+# Vilight - lightweight Vitae client
 # Copyright (C) 2011 thomasv@gitorious
 # Copyright (C) 2017 Neil Booth
 #

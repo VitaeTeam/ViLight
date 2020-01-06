@@ -6,12 +6,12 @@
 
 from . import utils
 from . import gui
-from electroncash.i18n import _
+from vilight.i18n import _
 
 from .uikit_bindings import *
 from .custom_objc import *
 import json, traceback, requests, sys
-from electroncash import PACKAGE_VERSION
+from vilight import PACKAGE_VERSION
 
 
 issue_template = """<font face=arial color="#414141">

@@ -1,4 +1,4 @@
-from electroncash.plugins import hook
+from vilight.plugins import hook
 from .trezor import TrezorPlugin
 from ..hw_wallet import CmdLineHandler
 

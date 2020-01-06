@@ -27,11 +27,11 @@
 import threading
 
 from PyQt5.QtWidgets import QVBoxLayout, QLabel
-from electroncash_gui.qt.password_dialog import PasswordDialog, PW_PASSPHRASE
-from electroncash_gui.qt.util import *
+from vilight_gui.qt.password_dialog import PasswordDialog, PW_PASSPHRASE
+from vilight_gui.qt.util import *
 
-from electroncash.i18n import _
-from electroncash.util import PrintError
+from vilight.i18n import _
+from vilight.util import PrintError
 
 # The trickiest thing about this handler was getting windows properly
 # parented on MacOSX.
@@ -183,9 +183,9 @@ class QtHandlerBase(QObject, PrintError):
 
 
 
-from electroncash.plugins import hook
-from electroncash.util import UserCancelled
-from electroncash_gui.qt.main_window import StatusBarButton
+from vilight.plugins import hook
+from vilight.util import UserCancelled
+from vilight_gui.qt.main_window import StatusBarButton
 
 class QtPluginBase(object):
 

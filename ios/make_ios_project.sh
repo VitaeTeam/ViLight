@@ -49,12 +49,12 @@ if [ -d iOS ]; then
 	rm -fr iOS
 fi
 
-if [ -d ${compact_name}/electroncash ]; then
-	echo "Deleting old ${compact_name}/electroncash..."
-	rm -fr ${compact_name}/electroncash
+if [ -d ${compact_name}/vilight ]; then
+	echo "Deleting old ${compact_name}/vilight..."
+	rm -fr ${compact_name}/vilight
 fi
 
-echo "Pulling 'electroncash' libs into project from ../lib ..."
+echo "Pulling 'vilight' libs into project from ../lib ..."
 if [ ! -d ../lib/locale ]; then
 	(cd .. && contrib/make_locale && cd ios)
 	if [ "$?" != 0 ]; then
@@ -62,9 +62,9 @@ if [ ! -d ../lib/locale ]; then
 		exit 1
 	fi
 fi
-cp -fpR ../lib ${compact_name}/electroncash
+cp -fpR ../lib ${compact_name}/vilight
 echo "Removing lib/tests..."
-rm -fr ${compact_name}/electroncash/tests
+rm -fr ${compact_name}/vilight/tests
 find ${compact_name} -name \*.pyc -exec rm -f {} \;
 
 echo ""
@@ -243,13 +243,13 @@ fi
 echo ""
 echo "Copying google protobuf paymentrequests.proto to app lib dir..."
 echo ""
-cp -fva ${compact_name}/electroncash/*.proto iOS/app/${compact_name}/electroncash
+cp -fva ${compact_name}/vilight/*.proto iOS/app/${compact_name}/vilight
 if [ "$?" != "0" ]; then
 	echo "** WARNING: Failed to copy google protobuf .proto file to app lib dir!"
 fi
 
-# Clean up no-longer-needed electroncash/ dir that is outside of Xcode project
-rm -fr ${compact_name}/electroncash/*
+# Clean up no-longer-needed vilight/ dir that is outside of Xcode project
+rm -fr ${compact_name}/vilight/*
 
 # Can add this back when it works uniformly without issues
 /usr/bin/env ruby update_project.rb

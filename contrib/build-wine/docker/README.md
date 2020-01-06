@@ -20,7 +20,7 @@ folder.
 2. Build image
 
     ```
-    $ sudo docker build -t electroncash-wine-builder-img contrib/build-wine/docker
+    $ sudo docker build -t vilight-wine-builder-img contrib/build-wine/docker
     ```
 
     _Note 1:_ see [this](https://stackoverflow.com/a/40516974/7499128) if having dns problems
@@ -37,8 +37,8 @@ folder.
         rm -rf $FRESH_CLONE && \
         mkdir -p $FRESH_CLONE && \
         cd $FRESH_CLONE  && \
-        git clone https://github.com/Electron-Cash/Electron-Cash && \
-        cd Electron-Cash
+        git clone https://github.com/VitaeTeam/ViLight && \
+        cd Vilight
     ```
 
     And then build from this directory:
@@ -46,17 +46,17 @@ folder.
     $ REV=4.0.0  # Replace this with whatever Electron Cash revision tag you want to build
     $ git checkout $REV
     $ sudo docker run -it \
-        --name electroncash-wine-builder-cont \
-        -v $PWD:/opt/wine64/drive_c/electroncash \
+        --name vilight-wine-builder-cont \
+        -v $PWD:/opt/wine64/drive_c/vilight \
         --rm \
-        --workdir /opt/wine64/drive_c/electroncash/contrib/build-wine \
-        electroncash-wine-builder-img \
+        --workdir /opt/wine64/drive_c/vilight/contrib/build-wine \
+        vilight-wine-builder-img \
         ./_build.sh $REV
     ```
 
     _Note:_ If you are on a MacOS host, you should run the above command **without** `sudo`.
 
-4. The generated binaries are in `./contrib/build-wine/dist` (relative to the `fresh_clone/Electron-Cash` directory you should find yourself in if you followed 1-3 above).
+4. The generated binaries are in `./contrib/build-wine/dist` (relative to the `fresh_clone/Vilight` directory you should find yourself in if you followed 1-3 above).
 
 
 

@@ -53,14 +53,14 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 
-from electroncash.i18n import _, set_language
-from electroncash.plugins import run_hook
-from electroncash import WalletStorage
-from electroncash.util import (UserCancelled, PrintError, print_error,
+from vilight.i18n import _, set_language
+from vilight.plugins import run_hook
+from vilight import WalletStorage
+from vilight.util import (UserCancelled, PrintError, print_error,
                                standardize_path, finalization_print_error, Weak,
                                get_new_wallet_name)
-from electroncash import version
-from electroncash.address import Address
+from vilight import version
+from vilight.address import Address
 
 from .installwizard import InstallWizard, GoBack
 
@@ -96,10 +96,10 @@ class ElectrumGui(QObject, PrintError):
         # Uncomment this call to verify objects are being properly
         # GC-ed when windows are closed
         #if daemon.network:
-        #    from electroncash.util import DebugMem
-        #    from electroncash.wallet import Abstract_Wallet
-        #    from electroncash.verifier import SPV
-        #    from electroncash.synchronizer import Synchronizer
+        #    from vilight.util import DebugMem
+        #    from vilight.wallet import Abstract_Wallet
+        #    from vilight.verifier import SPV
+        #    from vilight.synchronizer import Synchronizer
         #    daemon.network.add_jobs([DebugMem([Abstract_Wallet, SPV, Synchronizer,
         #                                       ElectrumWindow], interval=5)])
         QCoreApplication.setAttribute(Qt.AA_X11InitThreads)
@@ -647,13 +647,13 @@ class ElectrumGui(QObject, PrintError):
         Pass message (rich text) to provide a custom message.
 
         Note that the URL link to the HOWTO will always be appended to the custom message.'''
-        from electroncash import ecc_fast
+        from vilight import ecc_fast
         has_secp = ecc_fast.is_using_fast_ecc()
         if has_secp:
             return False
 
         # When relaxwarn is set return True without showing the warning
-        from electroncash import get_config
+        from vilight import get_config
         if relaxed and get_config().cmdline_options["relaxwarn"]:
             return True
 

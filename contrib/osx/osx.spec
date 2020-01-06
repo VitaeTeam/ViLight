@@ -4,8 +4,8 @@ from PyInstaller.utils.hooks import collect_data_files, collect_submodules, coll
 import sys, os
 
 PACKAGE='ViLight'
-BUNDLE_IDENTIFIER='org.electroncash.' + PACKAGE # Used for info.plist
-PYPKG='electroncash'
+BUNDLE_IDENTIFIER='org.vilight.' + PACKAGE # Used for info.plist
+PYPKG='vilight'
 MAIN_SCRIPT='vilight'
 ICONS_FILE='electron.icns'
 

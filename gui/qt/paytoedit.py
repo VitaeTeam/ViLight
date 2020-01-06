@@ -31,11 +31,11 @@ from .qrtextedit import ScanQRTextEdit
 import re
 import sys
 from decimal import Decimal as PyDecimal  # Qt 5.12 also exports Decimal
-from electroncash import bitcoin
-from electroncash.address import Address, ScriptOutput
-from electroncash import networks
-from electroncash.util import PrintError
-from electroncash.contacts import Contact
+from vilight import bitcoin
+from vilight.address import Address, ScriptOutput
+from vilight import networks
+from vilight.util import PrintError
+from vilight.contacts import Contact
 
 from . import util
 from . import cashacctqt

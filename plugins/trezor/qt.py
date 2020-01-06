@@ -7,11 +7,11 @@ from PyQt5.QtGui import QImage, QBitmap, qRed, qGreen, qBlue
 from PyQt5.QtWidgets import QGridLayout, QInputDialog, QPushButton
 from PyQt5.QtWidgets import QVBoxLayout, QLabel
 
-from electroncash_gui.qt.util import *
-from electroncash.i18n import _
-from electroncash.plugins import hook, DeviceMgr
-from electroncash.util import PrintError, UserCancelled, bh2u
-from electroncash.wallet import Wallet, Standard_Wallet
+from vilight_gui.qt.util import *
+from vilight.i18n import _
+from vilight.plugins import hook, DeviceMgr
+from vilight.util import PrintError, UserCancelled, bh2u
+from vilight.wallet import Wallet, Standard_Wallet
 
 from ..hw_wallet.qt import QtHandlerBase, QtPluginBase
 from .trezor import (TrezorPlugin, TIM_NEW, TIM_RECOVER,

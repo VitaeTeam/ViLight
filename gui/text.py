@@ -3,11 +3,11 @@ import curses, datetime, locale
 from decimal import Decimal as PyDecimal
 import getpass
 
-import electroncash
-from electroncash.address import Address
-from electroncash.util import format_satoshis, set_verbosity
-from electroncash.bitcoin import COIN, TYPE_ADDRESS
-from electroncash import Wallet, WalletStorage
+import vilight
+from vilight.address import Address
+from vilight.util import format_satoshis, set_verbosity
+from vilight.bitcoin import COIN, TYPE_ADDRESS
+from vilight import Wallet, WalletStorage
 
 _ = lambda x:x
 

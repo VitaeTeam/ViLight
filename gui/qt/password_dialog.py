@@ -30,9 +30,9 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QLineEdit, QVBoxLayout, QLabel, QGridLayout, QCheckBox
 
-from electroncash.i18n import _
+from vilight.i18n import _
 
-from electroncash.plugins import run_hook
+from vilight.plugins import run_hook
 
 from .util import WindowModalDialog, OkButton, Buttons, CancelButton
 

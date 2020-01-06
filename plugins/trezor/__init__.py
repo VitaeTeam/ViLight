@@ -1,4 +1,4 @@
-from electroncash.i18n import _
+from vilight.i18n import _
 
 fullname = 'TREZOR Wallet'
 description = _('Provides support for TREZOR hardware wallet')

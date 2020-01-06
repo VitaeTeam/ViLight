@@ -6,17 +6,17 @@
 #
 from . import utils
 from . import gui
-from electroncash.i18n import _, language
-from electroncash.mnemonic import Mnemonic
-from electroncash.old_mnemonic import words as old_words
+from vilight.i18n import _, language
+from vilight.mnemonic import Mnemonic
+from vilight.old_mnemonic import words as old_words
 from typing import Any
 from .uikit_bindings import *
 from .custom_objc import *
 import sys
 from collections import namedtuple
-import electroncash.bitcoin as bitcoin
-import electroncash.keystore as keystore
-from electroncash.address import Address, PublicKey
+import vilight.bitcoin as bitcoin
+import vilight.keystore as keystore
+from vilight.address import Address, PublicKey
 
 if False:
     # this is here for translate i18n to pick up these strings

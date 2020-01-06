@@ -42,7 +42,7 @@ if [ $(uname) = "Linux" ]; then
 fi
 
 info "Creating docker image ..."
-$SUDO docker build -t electroncash-wine-builder-img contrib/build-wine/docker \
+$SUDO docker build -t vilight-wine-builder-img contrib/build-wine/docker \
     || fail "Failed to create docker image"
 
 # This is the place where we checkout and put the exact revision we want to work
@@ -65,11 +65,11 @@ FRESH_CLONE_DIR=$FRESH_CLONE/$GIT_DIR_NAME
     # just in case it needs to see it.
     $SUDO docker run -it \
     -e GIT_REPO="$GIT_REPO" \
-    --name electroncash-wine-builder-cont \
+    --name vilight-wine-builder-cont \
     -v $FRESH_CLONE_DIR:/opt/wine64/drive_c/vilight \
     --rm \
     --workdir /opt/wine64/drive_c/vilight/contrib/build-wine \
-    electroncash-wine-builder-img \
+    vilight-wine-builder-img \
     ./_build.sh $REV
 ) || fail "Build inside docker container failed"
 

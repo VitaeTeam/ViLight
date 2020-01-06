@@ -30,12 +30,12 @@ from .util import MyTreeWidget, MONOSPACE_FONT, SortableTreeWidgetItem, rate_lim
 from PyQt5.QtCore import Qt, pyqtSignal
 from PyQt5.QtGui import QFont, QColor, QKeySequence, QCursor, QIcon
 from PyQt5.QtWidgets import QTreeWidgetItem, QAbstractItemView, QMenu, QToolTip
-from electroncash.i18n import _
-from electroncash.address import Address
-from electroncash.plugins import run_hook
-import electroncash.web as web
-from electroncash.util import profiler
-from electroncash import networks
+from vilight.i18n import _
+from vilight.address import Address
+from vilight.plugins import run_hook
+import vilight.web as web
+from vilight.util import profiler
+from vilight import networks
 from enum import IntEnum
 from . import cashacctqt
 
@@ -246,7 +246,7 @@ class AddressList(MyTreeWidget):
 
 
     def create_menu(self, position):
-        from electroncash.wallet import Multisig_Wallet
+        from vilight.wallet import Multisig_Wallet
         is_multisig = isinstance(self.wallet, Multisig_Wallet)
         can_delete = self.wallet.can_delete_address()
         selected = self.selectedItems()

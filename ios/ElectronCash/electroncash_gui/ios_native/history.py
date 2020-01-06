@@ -6,11 +6,11 @@
 #
 from . import utils
 from . import gui
-from electroncash import WalletStorage, Wallet
-from electroncash.address import Address, PublicKey
-from electroncash.util import timestamp_to_datetime, PrintError, profiler
-from electroncash.i18n import _, language
-from electroncash.transaction import Transaction
+from vilight import WalletStorage, Wallet
+from vilight.address import Address, PublicKey
+from vilight.util import timestamp_to_datetime, PrintError, profiler
+from vilight.i18n import _, language
+from vilight.transaction import Transaction
 
 import time, math, sys, os
 from collections import namedtuple
@@ -604,7 +604,7 @@ class TxHistoryHelper(TxHistoryHelperBase):
         if tx is None:
             # I'm not sure why this would happen but we did get issue #810 where it happened to 1 user.
             # Perhaps a chain split led to an "old" history view on-screen.  That's my theory, at least. -Calin
-            parent.show_error(_("The requested transaction has dropped out of the wallet history.\n\nIf this problem persists, please contact us at electroncash.org."),
+            parent.show_error(_("The requested transaction has dropped out of the wallet history.\n\nIf this problem persists, please contact us at https://www.vitaetoken.io/."),
                               title = _("Transaction Not Found"),
                               onOk = lambda: parent.refresh_components('history'))
             return

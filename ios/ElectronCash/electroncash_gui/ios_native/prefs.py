@@ -8,12 +8,12 @@ from . import utils
 from . import gui
 from . import addrconv
 from . import amountedit
-from electroncash.util import timestamp_to_datetime, base_units, base_unit_labels
-from electroncash.i18n import _, language
+from vilight.util import timestamp_to_datetime, base_units, base_unit_labels
+from vilight.i18n import _, language
 import time
 import html
 from .uikit_bindings import *
-import electroncash.web as web
+import vilight.web as web
 
 
 SECTION_TITLES = [ 'Tools', 'Fees', 'Transactions', 'Appearance', 'Fiat',

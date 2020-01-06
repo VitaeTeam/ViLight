@@ -1,4 +1,4 @@
-# Electron Cash - lightweight Bitcoin client
+# Vilight - lightweight Vitae client
 # Copyright (C) 2019 Axel Gembe <derago@gmail.com>
 #
 # Permission is hereby granted, free of charge, to any person
@@ -33,9 +33,9 @@ from PyQt5.QtCore import Qt, QObject
 from PyQt5.QtGui import QFont
 from PyQt5.QtWidgets import QDialog, QVBoxLayout, QLabel, QHBoxLayout, QPushButton, QMessageBox, QFrame, QWidget
 
-from electroncash.util import _, PrintError
-from electroncash.plugins import Plugins
-from electroncash_gui.qt import WindowModalDialog
+from vilight.util import _, PrintError
+from vilight.plugins import Plugins
+from vilight_gui.qt import WindowModalDialog
 
 class InstallHardwareWalletSupportDialog(PrintError, WindowModalDialog):
     UDEV_RULES_FILE='/etc/udev/rules.d/20-vilight-hw-wallets.rules'

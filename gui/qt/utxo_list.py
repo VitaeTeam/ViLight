@@ -23,10 +23,10 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 from .util import *
-from electroncash.i18n import _
-from electroncash.plugins import run_hook
-from electroncash.address import Address
-from electroncash import cashacct
+from vilight.i18n import _
+from vilight.plugins import run_hook
+from vilight.address import Address
+from vilight import cashacct
 from collections import defaultdict
 from functools import wraps
 from enum import IntEnum

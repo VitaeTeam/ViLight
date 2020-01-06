@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# Electron Cash - lightweight Bitcoin client
+# Vilight - lightweight Vitae client
 # Copyright (C) 2019 Axel Gembe <derago@gmail.com>
 #
 # Permission is hereby granted, free of charge, to any person
@@ -34,12 +34,12 @@ from PyQt5.QtWidgets import QDialog, QVBoxLayout, QHBoxLayout, QCheckBox, QPushB
 from PyQt5.QtGui import QImage, QPixmap
 from PyQt5.QtCore import QSize, QRect, Qt, pyqtSignal, PYQT_VERSION
 
-from electroncash import get_config
-from electroncash.i18n import _
-from electroncash.util import print_error, PrintError
-from electroncash.qrreaders import get_qr_reader, QrCodeResult
+from vilight import get_config
+from vilight.i18n import _
+from vilight.util import print_error, PrintError
+from vilight.qrreaders import get_qr_reader, QrCodeResult
 
-from electroncash_gui.qt.utils import FixedAspectRatioLayout, ImageGraphicsEffect
+from vilight_gui.qt.utils import FixedAspectRatioLayout, ImageGraphicsEffect
 
 from .video_widget import QrReaderVideoWidget
 from .video_overlay import QrReaderVideoOverlay

@@ -1,4 +1,4 @@
-# Electron Cash - lightweight Bitcoin client
+# Vilight - lightweight Vitae client
 # Copyright (C) 2017 The Electron Cash Developers
 #
 # Permission is hereby granted, free of charge, to any person

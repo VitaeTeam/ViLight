@@ -300,7 +300,7 @@ class MainActivity : AppCompatActivity() {
         ft.attach(newFrag)
 
         // BottomNavigationView onClick is sometimes triggered after state has been saved
-        // (https://github.com/Electron-Cash/Electron-Cash/issues/1091).
+        // (https://github.com/VitaeTeam/ViLight/issues/1091).
         ft.commitNowAllowingStateLoss()
     }
 

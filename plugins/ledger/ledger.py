@@ -4,16 +4,16 @@ import sys
 import traceback
 import inspect
 
-from electroncash import bitcoin
-from electroncash.address import Address, OpCodes
-from electroncash.bitcoin import TYPE_ADDRESS, TYPE_SCRIPT, int_to_hex, var_int
-from electroncash.i18n import _
-from electroncash.plugins import BasePlugin
-from electroncash.keystore import Hardware_KeyStore
-from electroncash.transaction import Transaction
+from vilight import bitcoin
+from vilight.address import Address, OpCodes
+from vilight.bitcoin import TYPE_ADDRESS, TYPE_SCRIPT, int_to_hex, var_int
+from vilight.i18n import _
+from vilight.plugins import BasePlugin
+from vilight.keystore import Hardware_KeyStore
+from vilight.transaction import Transaction
 from ..hw_wallet import HW_PluginBase
 from ..hw_wallet.plugin import is_any_tx_output_on_change_branch, validate_op_return_output_and_get_data
-from electroncash.util import print_error, is_verbose, bfh, bh2u, versiontuple
+from vilight.util import print_error, is_verbose, bfh, bh2u, versiontuple
 
 try:
     import hid

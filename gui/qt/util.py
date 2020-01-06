@@ -9,10 +9,10 @@ import webbrowser
 from collections import namedtuple
 from functools import partial, wraps
 
-from electroncash.i18n import _
-from electroncash.address import Address
-from electroncash.util import print_error, PrintError, Weak, finalization_print_error
-from electroncash.wallet import Abstract_Wallet
+from vilight.i18n import _
+from vilight.address import Address
+from vilight.util import print_error, PrintError, Weak, finalization_print_error
+from vilight.wallet import Abstract_Wallet
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
@@ -27,7 +27,7 @@ else:
 
 dialogs = []
 
-from electroncash.paymentrequest import PR_UNPAID, PR_PAID, PR_EXPIRED
+from vilight.paymentrequest import PR_UNPAID, PR_PAID, PR_EXPIRED
 
 pr_icons = {
     PR_UNPAID:":icons/unpaid.svg",

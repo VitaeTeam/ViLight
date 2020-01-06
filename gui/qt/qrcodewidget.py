@@ -9,8 +9,8 @@ from PyQt5.QtWidgets import (
 import os
 import qrcode
 
-from electroncash import util
-from electroncash.i18n import _
+from vilight import util
+from vilight.i18n import _
 from .util import WindowModalDialog, MessageBoxMixin
 
 

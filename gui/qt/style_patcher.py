@@ -4,7 +4,7 @@ It reads the current stylesheet, appends our modifications and sets the new styl
 """
 
 from PyQt5 import QtWidgets
-from electroncash.util import print_error
+from vilight.util import print_error
 
 def patch(dark: bool = False, darkstyle_ver: tuple = None):
     if not dark:
