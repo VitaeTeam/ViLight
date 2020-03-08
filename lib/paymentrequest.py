@@ -201,15 +201,24 @@ class PaymentRequest:
 
     def verify_dnssec(self, pr, contacts):
         sig = pr.signature
-        alias = pr.pki_data
-        info = contacts.resolve(alias)
+        alias = util.to_string(pr.pki_data)
+        try:
+            info = contacts.resolve(alias)
+        except RuntimeWarning as e:
+            # Failed to resolve openalias or contact
+            self.error = ' '.join(e.args)
+            return False
+        except Exception as e:
+            # misc other parse error (bad address, etc)
+            self.error = str(e)
+            return False
         if info.get('validated') is not True:
             self.error = "Alias verification failed (DNSSEC)"
             return False
         if pr.pki_type == "dnssec+btc":
             self.requestor = alias
             address = info.get('address')
-            pr.signature = ''
+            pr.signature = b''
             message = pr.SerializeToString()
             if bitcoin.verify_message(address, sig, message):
                 self.error = 'Verified with DNSSEC'
@@ -301,6 +310,7 @@ class PaymentRequest:
 
 def make_unsigned_request(req):
     from .transaction import Transaction
+    from .address import Address
     addr = req['address']
     time = req.get('time', 0)
     exp = req.get('exp', 0)
@@ -312,6 +322,8 @@ def make_unsigned_request(req):
     if amount is None:
         amount = 0
     memo = req['memo']
+    if not isinstance(addr, Address):
+        addr = Address.from_string(addr)
     script = bfh(Transaction.pay_script(addr))
     outputs = [(script, amount)]
     pd = pb2.PaymentDetails()
@@ -321,6 +333,20 @@ def make_unsigned_request(req):
     pd.expires = time + exp if exp else 0
     pd.memo = memo
     pr = pb2.PaymentRequest()
+
+    # Note: We explicitly set this again here to 1 (default was already 1).
+    # The reason we need to do this is because __setattr__ for this class
+    # will trigger the Serialization to be 4 bytes of this field, rather than 2,
+    # if it was explicitly set programmatically.
+    #
+    # This works around possible bugs with google protobuf for Javascript
+    # seen in the field -- in particular bitcoin.com was rejecting our BIP70 files
+    # because payment_details_version needed to be 4 bytes, not 2.
+    # Forcing the encoding to 4 bytes for payment_details_version fixed the
+    # rejection.  This workaround is likely needed due to bugs in the protobuf.js
+    # library.
+    pr.payment_details_version = int(pr.payment_details_version)
+
     pr.serialized_payment_details = pd.SerializeToString()
     pr.signature = util.to_bytes('')
     return pr
@@ -328,12 +354,11 @@ def make_unsigned_request(req):
 
 def sign_request_with_alias(pr, alias, alias_privkey):
     pr.pki_type = 'dnssec+btc'
-    pr.pki_data = str(alias)
+    pr.pki_data = util.to_bytes(alias)
     message = pr.SerializeToString()
-    ec_key = bitcoin.regenerate_key(alias_privkey)
-    address = bitcoin.address_from_private_key(alias_privkey)
-    compressed = bitcoin.is_compressed(alias_privkey)
-    pr.signature = ec_key.sign_message(message, compressed, address)
+    _typ, raw_key, compressed = bitcoin.deserialize_privkey(alias_privkey)
+    ec_key = bitcoin.regenerate_key(raw_key)
+    pr.signature = ec_key.sign_message(message, compressed)
 
 
 def verify_cert_chain(chain):
@@ -423,7 +448,7 @@ def sign_request_with_x509(pr, key_path, cert_path):
     certificates = pb2.X509Certificates()
     certificates.certificate.extend(map(bytes, bList))
     pr.pki_type = 'x509+sha256'
-    pr.pki_data = certificates.SerializeToString()
+    pr.pki_data = util.to_bytes(certificates.SerializeToString())
     msgBytes = bytearray(pr.SerializeToString())
     hashBytes = bytearray(hashlib.sha256(msgBytes).digest())
     sig = privkey.sign(x509.PREFIX_RSA_SHA256 + hashBytes)
@@ -437,7 +462,7 @@ def serialize_request(req):
     if requestor and signature:
         pr.signature = bfh(signature)
         pr.pki_type = 'dnssec+btc'
-        pr.pki_data = str(requestor)
+        pr.pki_data = util.to_bytes(requestor)
     return pr
 
 

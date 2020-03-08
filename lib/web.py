@@ -122,8 +122,9 @@ def parse_URI(uri, on_pr=None):
 
     u = urllib.parse.urlparse(uri)
     # The scheme always comes back in lower case
-    if u.scheme != networks.net.CASHADDR_PREFIX:
-        raise Exception("Not a {} URI".format(networks.net.CASHADDR_PREFIX))
+    accept_schemes = parseable_schemes(net=net)
+    if u.scheme not in accept_schemes:
+        raise BadSchemeError(_("Not a {schemes} URI").format(schemes=str(accept_schemes)))
     address = u.path
 
     # python for android fails to parse query
