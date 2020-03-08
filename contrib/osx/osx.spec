@@ -118,7 +118,7 @@ exe = EXE(pyz,
           name=PACKAGE,
           debug=False,
           strip=False,
-          upx=True,
+          upx=False,
           icon=home+ICONS_FILE,
           console=False)
 
